@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="support__moving__average_8cpp" kind="file" language="C++">
+    <compoundname>support_moving_average.cpp</compoundname>
+    <includes refid="support__moving__average_8h" local="yes">support_moving_average.h</includes>
+    <incdepgraph>
+      <node id="135">
+        <label>support_moving_average.h</label>
+        <link refid="support__moving__average_8h"/>
+      </node>
+      <node id="134">
+        <label>src/support_moving_average.cpp</label>
+        <link refid="support_moving_average.cpp"/>
+        <childnode refid="135" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Support module that creates a moving average filter for data. </para>    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="support__moving__average_8h" kindref="compound">support_moving_average.h</ref> for details. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="support__moving__average_8h" kindref="compound">support_moving_average.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_moving_average_filter_1a2845e489c746ffaeb9113e3f87bad8e1" kindref="member">MovingAverageFilter::MovingAverageFilter</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newDataPointsCount)<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>k<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//initialize<sp/>so<sp/>that<sp/>we<sp/>start<sp/>to<sp/>write<sp/>at<sp/>index<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newDataPointsCount<sp/>&lt;<sp/><ref refid="support__moving__average_8h_1a1c0a61ecb2e23d904616be132b1f4467" kindref="member">MAX_DATA_POINTS</ref>)</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>dataPointsCount<sp/>=<sp/>newDataPointsCount;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>dataPointsCount<sp/>=<sp/><ref refid="support__moving__average_8h_1a1c0a61ecb2e23d904616be132b1f4467" kindref="member">MAX_DATA_POINTS</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;dataPointsCount;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>values[i]<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>fill<sp/>the<sp/>array<sp/>with<sp/>0&apos;s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_moving_average_filter_1af050822d0acb5a8d32559beb1af0519d" kindref="member">MovingAverageFilter::process</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>in)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>out<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/>values[k]<sp/>=<sp/>in;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>k<sp/>=<sp/>(k+1)<sp/>%<sp/>dataPointsCount;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;dataPointsCount;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>+=<sp/>values[i];</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out/dataPointsCount;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.cpp"/>
+  </compounddef>
+</doxygen>

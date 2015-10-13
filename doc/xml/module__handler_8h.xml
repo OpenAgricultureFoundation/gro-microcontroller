@@ -1,0 +1,251 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="module__handler_8h" kind="file" language="C++">
+    <compoundname>module_handler.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includedby refid="actuator__relay_8h" local="yes">src/actuator_relay.h</includedby>
+    <includedby refid="module__handler_8cpp" local="yes">src/module_handler.cpp</includedby>
+    <includedby refid="sensor__dfr0161__0300_8h" local="yes">src/sensor_dfr0161_0300.h</includedby>
+    <includedby refid="sensor__tsl2561_8h" local="yes">src/sensor_tsl2561.h</includedby>
+    <includedby refid="sensor__dht22_8h" local="yes">src/sensor_dht22.h</includedby>
+    <includedby refid="sensor__gc0011_8h" local="yes">src/sensor_gc0011.h</includedby>
+    <includedby refid="sensor__contact__switch_8h" local="yes">src/sensor_contact_switch.h</includedby>
+    <incdepgraph>
+      <node id="39">
+        <label>src/module_handler.h</label>
+        <link refid="module_handler.h"/>
+        <childnode refid="40" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>WProgram.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="42">
+        <label>src/actuator_relay.h</label>
+        <link refid="actuator__relay_8h"/>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>src/sensor_tsl2561.h</label>
+        <link refid="sensor__tsl2561_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>src/module_handler.h</label>
+        <link refid="module_handler.h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>src/sensor_dht22.h</label>
+        <link refid="sensor__dht22_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>src/sensor_dfr0161_0300.h</label>
+        <link refid="sensor__dfr0161__0300_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>src/sensor_contact_switch.cpp</label>
+        <link refid="sensor__contact__switch_8cpp"/>
+      </node>
+      <node id="44">
+        <label>src/module_handler.cpp</label>
+        <link refid="module__handler_8cpp"/>
+      </node>
+      <node id="43">
+        <label>src/actuator_relay.cpp</label>
+        <link refid="actuator__relay_8cpp"/>
+      </node>
+      <node id="50">
+        <label>src/sensor_dht22.cpp</label>
+        <link refid="sensor__dht22_8cpp"/>
+      </node>
+      <node id="53">
+        <label>src/sensor_contact_switch.h</label>
+        <link refid="sensor__contact__switch_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>src/sensor_dfr0161_0300.cpp</label>
+        <link refid="sensor__dfr0161__0300_8cpp"/>
+      </node>
+      <node id="52">
+        <label>src/sensor_gc0011.cpp</label>
+        <link refid="sensor__gc0011_8cpp"/>
+      </node>
+      <node id="51">
+        <label>src/sensor_gc0011.h</label>
+        <link refid="sensor__gc0011_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>src/sensor_tsl2561.cpp</label>
+        <link refid="sensor__tsl2561_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sensor_actuator_module" prot="public">SensorActuatorModule</innerclass>
+    <innerclass refid="struct_instruction" prot="public">Instruction</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="module__handler_8h_1aea7eb84b3bdf67ce76b8b3d1a7c1b64d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void initializeModules</definition>
+        <argsstring>(void)</argsstring>
+        <name>initializeModules</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once to initialize all modules. Runs once at the beginning of the program. Calls all module *.begin() functions. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="59" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.cpp" bodystart="34" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="module__handler_8h_1a691a0d8c2404cb4ce0c088e9857560ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateIncomingMessage</definition>
+        <argsstring>(void)</argsstring>
+        <name>updateIncomingMessage</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Handles all incoming messages from the controller. If new message is available, receive message and pass to handler function. If handler function returns response message, send out. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="66" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.cpp" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="module__handler_8h_1a5897de55f349106cd3e341df9bc6ddcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void updateStreamMessage</definition>
+        <argsstring>(void)</argsstring>
+        <name>updateStreamMessage</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Handles all outgoing messages to the controller. Polls all objects using their *.get() function and appends to message stream Sends message stream to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="73" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.cpp" bodystart="70" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="module__handler_8h_1a84d5c9e2f57b3fcb377800f72edea419" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String handleIncomingMessage</definition>
+        <argsstring>(void)</argsstring>
+        <name>handleIncomingMessage</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Messages from controller are handled by this function. Each message is a single instruction string. <ref refid="struct_instruction" kindref="compound">Instruction</ref> string gets broken into instruction code, id, and parameter. Passed in piecewise to &lt;module&gt;.set function. If a return message is generated from the &lt;module&gt;.set function, this function returns that message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="97" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.cpp" bodystart="96" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="module__handler_8h_1afcbd04d77356acd5e3dcf91fefb8bd11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_instruction" kindref="compound">Instruction</ref></type>
+        <definition>Instruction parseIncomingMessage</definition>
+        <argsstring>(String message)</argsstring>
+        <name>parseIncomingMessage</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Formats an instruction string into an instruction struct. Message is broken into 3 parts: <ref refid="struct_instruction" kindref="compound">Instruction</ref> Code, <ref refid="struct_instruction" kindref="compound">Instruction</ref> ID, <ref refid="struct_instruction" kindref="compound">Instruction</ref> Parameter then returns the parts as an <ref refid="struct_instruction" kindref="compound">Instruction</ref> Object Also, the <ref refid="struct_instruction" kindref="compound">Instruction</ref> Valid parameter is set accordingly. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="105" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.cpp" bodystart="121" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles all module integration. </para>    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jake Rye </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="23"><highlight class="preprocessor">#ifndef<sp/>MODULE_HANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MODULE_HANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_sensor_actuator_module" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sensor_actuator_module" kindref="compound">SensorActuatorModule</ref><sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>String<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(void)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>String<sp/><ref refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc" kindref="member">set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>instruction_parameter)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="module__handler_8h_1aea7eb84b3bdf67ce76b8b3d1a7c1b64d" kindref="member">initializeModules</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="module__handler_8h_1a691a0d8c2404cb4ce0c088e9857560ee" kindref="member">updateIncomingMessage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="module__handler_8h_1a5897de55f349106cd3e341df9bc6ddcd" kindref="member">updateStreamMessage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="struct_instruction" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_instruction" kindref="compound">Instruction</ref><sp/>{</highlight></codeline>
+<codeline lineno="84" refid="struct_instruction_1ad888a5bd187437c04dca0f5574ce4ebd" refkind="member"><highlight class="normal"><sp/><sp/>String<sp/><ref refid="struct_instruction_1ad888a5bd187437c04dca0f5574ce4ebd" kindref="member">code</ref>;</highlight></codeline>
+<codeline lineno="85" refid="struct_instruction_1aca74587d9d1a44daca3b0965af207a4c" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_instruction_1aca74587d9d1a44daca3b0965af207a4c" kindref="member">id</ref>;</highlight></codeline>
+<codeline lineno="86" refid="struct_instruction_1a61c139a5e35c88092611020e999e220d" refkind="member"><highlight class="normal"><sp/><sp/>String<sp/><ref refid="struct_instruction_1a61c139a5e35c88092611020e999e220d" kindref="member">parameter</ref>;</highlight></codeline>
+<codeline lineno="87" refid="struct_instruction_1a3951b82b53920c98582baa6be7210180" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_instruction_1a3951b82b53920c98582baa6be7210180" kindref="member">valid</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal">String<sp/><ref refid="module__handler_8h_1a84d5c9e2f57b3fcb377800f72edea419" kindref="member">handleIncomingMessage</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><ref refid="struct_instruction" kindref="compound">Instruction</ref><sp/><ref refid="module__handler_8h_1afcbd04d77356acd5e3dcf91fefb8bd11" kindref="member">parseIncomingMessage</ref>(String<sp/>message);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MODULE_HANDLER_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h"/>
+  </compounddef>
+</doxygen>

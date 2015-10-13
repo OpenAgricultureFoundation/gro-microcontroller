@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="sensor__dht22_8cpp" kind="file" language="C++">
+    <compoundname>sensor_dht22.cpp</compoundname>
+    <includes refid="sensor__dht22_8h" local="yes">sensor_dht22.h</includes>
+    <incdepgraph>
+      <node id="88">
+        <label>module_handler.h</label>
+        <link refid="module__handler_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>sensor_dht22.h</label>
+        <link refid="sensor__dht22_8h"/>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>WProgram.h</label>
+      </node>
+      <node id="85">
+        <label>src/sensor_dht22.cpp</label>
+        <link refid="sensor_dht22.cpp"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Sensor module for air temperature and humidity. </para>    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="sensor__dht22_8h" kindref="compound">sensor_dht22.h</ref> for details. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sensor__dht22_8h" kindref="compound">sensor_dht22.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="class_sensor_dht22_1a417840f2a31737059e6b0885d89de32f" kindref="member">SensorDht22::SensorDht22</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin,<sp/>String<sp/>temperature_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temperature_instruction_id,<sp/>String<sp/>humidity_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>humidity_instruction_id){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/>pin_<sp/>=<sp/>pin;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>humidity_instruction_code_<sp/>=<sp/>humidity_instruction_code;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>humidity_instruction_id_<sp/>=<sp/>humidity_instruction_id;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>temperature_instruction_code_<sp/>=<sp/>temperature_instruction_code;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>temperature_instruction_id_<sp/>=<sp/>temperature_instruction_id;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>count_<sp/>=<sp/>COUNT;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>first_reading_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_dht22_1ae4de2976d82d060c9dc12bf84195a347" kindref="member">SensorDht22::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>pinMode(pin_,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>digitalWrite(pin_,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>last_read_time_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">String<sp/><ref refid="class_sensor_dht22_1ad939eefeb967eea7029d9505cc6aad6f" kindref="member">SensorDht22::get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Sensor<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>getSensorData();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>String<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Temperature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>temperature_instruction_code_;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>temperature_instruction_id_;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_dht22_1af35665067c66e887afa5fef5611fb48a" kindref="member">temperature</ref>,1);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Humidity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>humidity_instruction_code_;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/><sp/>humidity_instruction_id_;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_dht22_1a93f9363f3086e00f440fc89a7f1f8a1b" kindref="member">humidity</ref>,1);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>message;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">String<sp/><ref refid="class_sensor_dht22_1a177a42edbc33d5cf4fa0c4c38dc0047c" kindref="member">SensorDht22::set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>parameter)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorDht22::getRawSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>humidity_raw_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>temperature_raw_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(read())<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>humidity_raw_<sp/>=<sp/>data[0];</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>humidity_raw_<sp/>*=<sp/>256;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>humidity_raw_<sp/>+=<sp/>data[1];</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>humidity_raw_<sp/>/=<sp/>10;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature_raw_<sp/>=<sp/>data[2]<sp/>&amp;<sp/>0x7F;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature_raw_<sp/>*=<sp/>256;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature_raw_<sp/>+=<sp/>data[3];</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature_raw_<sp/>/=<sp/>10;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(data[2]<sp/>&amp;<sp/>0x80)<sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>temperature_raw_<sp/>*=<sp/>-1;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorDht22::getSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>getRawSensorData();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/>filterSensorData();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorDht22::filterSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_dht22_1a93f9363f3086e00f440fc89a7f1f8a1b" kindref="member">humidity</ref><sp/>=<sp/>humidity_raw_;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_dht22_1af35665067c66e887afa5fef5611fb48a" kindref="member">temperature</ref><sp/>=<sp/>temperature_raw_;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>SensorDht22::read(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>uint8_t<sp/>last_state<sp/>=<sp/>HIGH;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/>uint8_t<sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/>uint8_t<sp/>j<sp/>=<sp/>0,<sp/>i;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>current_time;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/>digitalWrite(pin_,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>delay(2);<sp/></highlight><highlight class="comment">//<sp/>old<sp/>delay<sp/>time<sp/>was<sp/>250</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>current_time<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(current_time<sp/>&lt;<sp/>last_read_time_)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ie<sp/>there<sp/>was<sp/>a<sp/>rollover</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>last_read_time_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!first_reading_<sp/>&amp;&amp;<sp/>((current_time<sp/>-<sp/>last_read_time_)<sp/>&lt;<sp/>2000))<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>return<sp/>last<sp/>correct<sp/>measurement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>delay(2000<sp/>-<sp/>(currenttime<sp/>-<sp/>_lastreadtime));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>first_reading_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/>last_read_time_<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/>data[0]<sp/>=<sp/>data[1]<sp/>=<sp/>data[2]<sp/>=<sp/>data[3]<sp/>=<sp/>data[4]<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>pull<sp/>it<sp/>low<sp/>for<sp/>~20<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/>pinMode(pin_,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>digitalWrite(pin_,<sp/>LOW);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>delay(20);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//cli();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/>digitalWrite(pin_,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/>delayMicroseconds(40);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/>pinMode(pin_,<sp/>INPUT);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>read<sp/>in<sp/>timings</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>i=0;<sp/>i&lt;<sp/><ref refid="sensor__dht22_8h_1ae5bff2303df6eb64654365e5d0fd1e9e" kindref="member">MAXTIMINGS</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>counter<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(digitalRead(pin_)<sp/>==<sp/>last_state)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>counter++;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>delayMicroseconds(1);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counter<sp/>==<sp/>255)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>last_state<sp/>=<sp/>digitalRead(pin_);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counter<sp/>==<sp/>255)<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ignore<sp/>first<sp/>3<sp/>transitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((i<sp/>&gt;=<sp/>4)<sp/>&amp;&amp;<sp/>(i%2<sp/>==<sp/>0))<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>shove<sp/>each<sp/>bit<sp/>into<sp/>the<sp/>storage<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>data[j/8]<sp/>&lt;&lt;=<sp/>1;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(counter<sp/>&gt;<sp/>count_)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[j/8]<sp/>|=<sp/>1;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>j++;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>we<sp/>read<sp/>40<sp/>bits<sp/>and<sp/>that<sp/>the<sp/>checksum<sp/>matches</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((j<sp/>&gt;=<sp/>40)<sp/>&amp;&amp;<sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>(data[4]<sp/>==<sp/>((data[0]<sp/>+<sp/>data[1]<sp/>+<sp/>data[2]<sp/>+<sp/>data[3])<sp/>&amp;<sp/>0xFF))<sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal">String<sp/>SensorDht22::floatToString(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>precision)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">//<sp/>prints<sp/>val<sp/>with<sp/>number<sp/>of<sp/>decimal<sp/>places<sp/>determine<sp/>by<sp/>precision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>precision<sp/>is<sp/>1<sp/>followed<sp/>by<sp/>the<sp/>number<sp/>of<sp/>zeros<sp/>for<sp/>the<sp/>desired<sp/>number<sp/>of<sp/>decimial<sp/>places</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//<sp/>example:<sp/>printDouble(<sp/>3.1415,<sp/>100);<sp/>//<sp/>prints<sp/>3.14<sp/>(two<sp/>decimal<sp/>places)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>String<sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>str<sp/>+=<sp/>int(val);<sp/><sp/></highlight><highlight class="comment">//prints<sp/>the<sp/>int<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>str<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>print<sp/>the<sp/>decimal<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frac;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(val<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>frac<sp/>=<sp/>(val<sp/>-<sp/>int(val))<sp/>*<sp/>precision;</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>frac<sp/>=<sp/>(int(val)-<sp/>val<sp/>)<sp/>*<sp/>precision;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/>str<sp/>+=<sp/>int(frac);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>str;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp"/>
+  </compounddef>
+</doxygen>

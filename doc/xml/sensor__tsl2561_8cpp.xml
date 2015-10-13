@@ -1,0 +1,292 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="sensor__tsl2561_8cpp" kind="file" language="C++">
+    <compoundname>sensor_tsl2561.cpp</compoundname>
+    <includes refid="sensor__tsl2561_8h" local="yes">sensor_tsl2561.h</includes>
+    <incdepgraph>
+      <node id="114">
+        <label>sensor_tsl2561.h</label>
+        <link refid="sensor__tsl2561_8h"/>
+        <childnode refid="115" relation="include">
+        </childnode>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="119" relation="include">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>module_handler.h</label>
+        <link refid="module__handler_8h"/>
+        <childnode refid="120" relation="include">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>support_wire.h</label>
+        <link refid="support__wire_8h"/>
+        <childnode refid="117" relation="include">
+        </childnode>
+        <childnode refid="118" relation="include">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>WProgram.h</label>
+      </node>
+      <node id="115">
+        <label>Arduino.h</label>
+      </node>
+      <node id="118">
+        <label>Stream.h</label>
+      </node>
+      <node id="117">
+        <label>inttypes.h</label>
+      </node>
+      <node id="113">
+        <label>src/sensor_tsl2561.cpp</label>
+        <link refid="sensor_tsl2561.cpp"/>
+        <childnode refid="114" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Sensor module for light intensity and par. </para>    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="sensor__tsl2561_8h" kindref="compound">sensor_tsl2561.h</ref> for details. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sensor__tsl2561_8h" kindref="compound">sensor_tsl2561.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//----------------------------------------------PUBLIC------------------=----------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="class_sensor_tsl2561_1acb66b0b6127d1d889ff31085dbb9d8c2" kindref="member">SensorTsl2561::SensorTsl2561</ref>(String<sp/>lux_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lux_instruction_id,<sp/>String<sp/>par_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>par_instruction_id)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>lux_instruction_code_<sp/>=<sp/>lux_instruction_code;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>lux_instruction_id_<sp/>=<sp/>lux_instruction_id;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>par_instruction_code_<sp/>=<sp/>par_instruction_code;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>par_instruction_id_<sp/>=<sp/>par_instruction_id;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_tsl2561_1ace17c892222366185df021bda708cc10" kindref="member">SensorTsl2561::begin</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>writeRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1aab8e4882f253d35cd521c2f4abc45149" kindref="member">TSL2561_Control</ref>,0x03);<sp/><sp/></highlight><highlight class="comment">//<sp/>POWER<sp/>UP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>writeRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1a0372d3100b18a1258eafec1925b214fc" kindref="member">TSL2561_Timing</ref>,0x00);<sp/><sp/></highlight><highlight class="comment">//No<sp/>High<sp/>Gain<sp/>(1x),<sp/>integration<sp/>time<sp/>of<sp/>13ms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/>writeRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1aed0e05fa7dea08bdcbf5828d4622724c" kindref="member">TSL2561_Interrupt</ref>,0x00);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/>writeRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1aab8e4882f253d35cd521c2f4abc45149" kindref="member">TSL2561_Control</ref>,0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>POWER<sp/>Down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>calibrtion_to_vernier_lux_<sp/>=<sp/>0.78;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>calibration_to_vernier_par_<sp/>=<sp/>0.02;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>measuring_indoor_par_correction_<sp/>=<sp/>0.86;<sp/></highlight><highlight class="comment">//reduction<sp/>by<sp/>14%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>read_register_timeout_<sp/>=<sp/>5;<sp/></highlight><highlight class="comment">//<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">String<sp/><ref refid="class_sensor_tsl2561_1a1d9dff52af755218abca50f9025f0f5c" kindref="member">SensorTsl2561::get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Sensor<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>getSensorData();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/>String<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Handle<sp/>Errors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(read_register_error_)<sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;GERR<sp/>4\&quot;:\&quot;tsl2561<sp/>read<sp/>register<sp/>timeout\&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" kindref="member">lux_</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Light<sp/>Intensity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>lux_instruction_code_;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>lux_instruction_id_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/><ref refid="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" kindref="member">lux_</ref>;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Light<sp/>Par</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>par_instruction_code_;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>par_instruction_id_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>floatToString(<ref refid="class_sensor_tsl2561_1a1159f0229bf7cfc07da35366f81661f7" kindref="member">par_</ref>,<sp/>100);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>message;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">String<sp/><ref refid="class_sensor_tsl2561_1ab4eb3d8197c96867f43857876df46b33" kindref="member">SensorTsl2561::set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>instruction_parameter){</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------PRIVATE--------------------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorTsl2561::getSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>lux_average<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>writeRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1aab8e4882f253d35cd521c2f4abc45149" kindref="member">TSL2561_Control</ref>,0x03);<sp/><sp/></highlight><highlight class="comment">//<sp/>POWER<sp/>UP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>delay(14);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>samples<sp/>=<sp/>40;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;<sp/>i&lt;samples;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>getLux();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(ch0/ch1<sp/>&lt;<sp/>2<sp/>&amp;&amp;<sp/>ch0<sp/>&gt;<sp/>4900)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" kindref="member">lux_</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//ch0<sp/>out<sp/>of<sp/>range,<sp/>but<sp/>ch1<sp/>not.<sp/>the<sp/>lux<sp/>is<sp/>not<sp/>valid<sp/>in<sp/>this<sp/>situation.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>lux_average<sp/>+=<sp/>(float)<sp/>calculateLux(0,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/>lux_average<sp/>/=<sp/>samples;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" kindref="member">lux_</ref><sp/>=<sp/>lux_average*calibrtion_to_vernier_lux_;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_tsl2561_1a1159f0229bf7cfc07da35366f81661f7" kindref="member">par_</ref><sp/>=<sp/>lux_average*calibration_to_vernier_par_*measuring_indoor_par_correction_;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/>writeRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1aab8e4882f253d35cd521c2f4abc45149" kindref="member">TSL2561_Control</ref>,0x00);<sp/><sp/></highlight><highlight class="comment">//<sp/>POWER<sp/>Down</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal">uint8_t<sp/>SensorTsl2561::readRegister(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deviceAddress,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>read_register_error_<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>uint8_t<sp/>value;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1a8d55f00ea8ac3d7427d62e0c71e95ec2" kindref="member">beginTransmission</ref>(deviceAddress);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" kindref="member">write</ref>(address);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>register<sp/>to<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1af80f9a7b85a3a81a035ca94c95bcdc1d" kindref="member">endTransmission</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">requestFrom</ref>(deviceAddress,<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>read<sp/>a<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/>uint32_t<sp/>start_time<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1)<sp/>{</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1aee57bc52bee06508e231c5fc6bc35ada" kindref="member">available</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(millis()<sp/>-<sp/>start_time<sp/>&gt;<sp/>read_register_timeout_)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>read_register_error_<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>value<sp/>=<sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1aa361b83500d00dfb93bb25b6473b33e9" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorTsl2561::writeRegister(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deviceAddress,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address,<sp/>uint8_t<sp/>val)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1a8d55f00ea8ac3d7427d62e0c71e95ec2" kindref="member">beginTransmission</ref>(deviceAddress);<sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>transmission<sp/>to<sp/>device</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" kindref="member">write</ref>(address);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>register<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" kindref="member">write</ref>(val);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>send<sp/>value<sp/>to<sp/>write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref>.<ref refid="class_two_wire_1af80f9a7b85a3a81a035ca94c95bcdc1d" kindref="member">endTransmission</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>transmission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//delay(100);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorTsl2561::getLux(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>CH0_LOW=readRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1a8a25922147204b8fadfac78ae06a3eeb" kindref="member">TSL2561_Channal0L</ref>);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>CH0_HIGH=readRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1a25c20b0a9db2eb2120056ba3c927b7d7" kindref="member">TSL2561_Channal0H</ref>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//read<sp/>two<sp/>bytes<sp/>from<sp/>registers<sp/>0x0E<sp/>and<sp/>0x0F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>CH1_LOW=readRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1a36de2c81ed9acc5d08ea68a49b898c8d" kindref="member">TSL2561_Channal1L</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>CH1_HIGH=readRegister(<ref refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" kindref="member">TSL2561_Address</ref>,<ref refid="sensor__tsl2561_8h_1a3d6221afdaefda8d471cbb33c6066240" kindref="member">TSL2561_Channal1H</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>ch0<sp/>=<sp/>(CH0_HIGH&lt;&lt;8)<sp/>|<sp/>CH0_LOW;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/>ch1<sp/>=<sp/>(CH1_HIGH&lt;&lt;8)<sp/>|<sp/>CH1_LOW;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>SensorTsl2561::calculateLux(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iGain,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tInt,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iType)<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(tInt)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/><sp/></highlight><highlight class="comment">//<sp/>13.7<sp/>msec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>chScale<sp/>=<sp/><ref refid="sensor__tsl2561_8h_1af740a064eaa0da3339e7eba683a671ed" kindref="member">CHSCALE_TINT0</ref>;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight><highlight class="comment">//<sp/>101<sp/>msec</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>chScale<sp/>=<sp/><ref refid="sensor__tsl2561_8h_1a1f741d16494e81486136c73489097cdd" kindref="member">CHSCALE_TINT1</ref>;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:<sp/></highlight><highlight class="comment">//<sp/>assume<sp/>no<sp/>scaling</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>chScale<sp/>=<sp/>(1<sp/>&lt;&lt;<sp/><ref refid="sensor__tsl2561_8h_1ae77b11d54490369c690da18aef1e76e5" kindref="member">CH_SCALE</ref>);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!iGain)<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>chScale<sp/>=<sp/>chScale<sp/>&lt;&lt;<sp/>4;<sp/></highlight><highlight class="comment">//<sp/>scale<sp/>1X<sp/>to<sp/>16X</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>scale<sp/>the<sp/>channel<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/>channel0<sp/>=<sp/>(ch0<sp/>*<sp/>chScale)<sp/>&gt;&gt;<sp/><ref refid="sensor__tsl2561_8h_1ae77b11d54490369c690da18aef1e76e5" kindref="member">CH_SCALE</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>channel1<sp/>=<sp/>(ch1<sp/>*<sp/>chScale)<sp/>&gt;&gt;<sp/><ref refid="sensor__tsl2561_8h_1ae77b11d54490369c690da18aef1e76e5" kindref="member">CH_SCALE</ref>;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>ratio1<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(channel0!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>ratio1<sp/>=<sp/>(channel1<sp/>&lt;&lt;<sp/>(<ref refid="sensor__tsl2561_8h_1a2d36ccf8157f890c015eddd64276d77c" kindref="member">RATIO_SCALE</ref>+1))/channel0;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>round<sp/>the<sp/>ratio<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>ratio<sp/>=<sp/>(ratio1<sp/>+<sp/>1)<sp/>&gt;&gt;<sp/>1;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(iType)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/></highlight><highlight class="comment">//<sp/>T<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ratio<sp/>&gt;=<sp/>0)<sp/>&amp;&amp;<sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a8d1758888413b06317d05260d023c6f1" kindref="member">K1T</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a77a115660299dfe589547bd1c9313e18" kindref="member">B1T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a9cee464de95fd9f1cc41e4737cdfcf56" kindref="member">M1T</ref>;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1af3f76dac869af6d4fb8834ba8e5baa72" kindref="member">K2T</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a0a24c8d38c744a6706fbef06cc0d045e" kindref="member">B2T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1af13d82736a980dd7f78a0c8633c656c0" kindref="member">M2T</ref>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a96898795c866703216e3035ecc1c29aa" kindref="member">K3T</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1aa58a8a3b4010f1d8ab947e2351b6cf1d" kindref="member">B3T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a6d02cd58020bf44d98927446668a2f7b" kindref="member">M3T</ref>;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1aa3489bee2d8a1e25002669517f4b6f7d" kindref="member">K4T</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a836fd96912939cd386f83e20ed1061ee" kindref="member">B4T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1ac5983b281c3a2f1d4ea1f87236cfcb44" kindref="member">M4T</ref>;</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a7df915d6ba425afa9a463f249168d6bd" kindref="member">K5T</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a8a3732432706e9a5a5ae3d3485d47043" kindref="member">B5T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a2d9fce4a16f258b5ab02b09a954648f6" kindref="member">M5T</ref>;</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a677e2edf3cf15bef63405c35a7be1310" kindref="member">K6T</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1ab01465ad82a39e8d02c2dd79279bfe38" kindref="member">B6T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a48074a633649636c0748b851a23776df" kindref="member">M6T</ref>;</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a7e788fd48d058b89ffcc0438bc3d558e" kindref="member">K7T</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1ad61180572632999584ac8b582a00e2c8" kindref="member">B7T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1aa3094566ff7a1a2bcd210e256c7b50cc" kindref="member">M7T</ref>;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&gt;<sp/><ref refid="sensor__tsl2561_8h_1aa0dc3961e2039ad7d91faf6829ec1404" kindref="member">K8T</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1ab5d069e613c69aaf71ea97b129cc5ec1" kindref="member">B8T</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1acb54eadab753bfe327548d7216edd9a2" kindref="member">M8T</ref>;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:</highlight><highlight class="comment">//<sp/>CS<sp/>package</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((ratio<sp/>&gt;=<sp/>0)<sp/>&amp;&amp;<sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a5d91e3222633d82540d7ce0e8d2e1bb2" kindref="member">K1C</ref>))<sp/>{</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a93aa8f0bb51f43d51e78656a352c6d16" kindref="member">B1C</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a4ec6175326ca3eb8b731a162b6fcd866" kindref="member">M1C</ref>;</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1ac91e954471045fdbd9b3d01933373c1e" kindref="member">K2C</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a95f02da704fdc6c1cabd0c29713cee66" kindref="member">B2C</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1ab70590fa6ebed50a3ab8ff17c22b55b2" kindref="member">M2C</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1acbc83f137380f27faf46af997f35f882" kindref="member">K3C</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1ac03c4526fc8c17d71c8ee2171537facd" kindref="member">B3C</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a172d826f878378caa7889305ad29011f" kindref="member">M3C</ref>;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a2fccbc87358653185282ba16b03a64ee" kindref="member">K4C</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a6bd8165e32f19978994245c552b8ee2d" kindref="member">B4C</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1abca79308fb0392b1f8c9d5cfeb5310a0" kindref="member">M4C</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1aa39a8eec5ffe9f84c4ac098724c70c91" kindref="member">K5C</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1af4a1b651ec51bb418ce1bffb87fa79e4" kindref="member">B5C</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a7c5adce134d8d2be44024c075f55c5c1" kindref="member">M5C</ref>;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1a9dccc63bcf43c1b4714e913053a906c1" kindref="member">K6C</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1abe71d8a87f6d974ee3d26693d1a2ea51" kindref="member">B6C</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1a2140b89133d826e76d2a717a3d863551" kindref="member">M6C</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ratio<sp/>&lt;=<sp/><ref refid="sensor__tsl2561_8h_1ac104bf3b33df4e42b14dc31078283565" kindref="member">K7C</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b=<ref refid="sensor__tsl2561_8h_1a5750be8469107d68ea4bdd4e4947316b" kindref="member">B7C</ref>;<sp/>m=<ref refid="sensor__tsl2561_8h_1acc5b1974656133787900e9bd5219c5ce" kindref="member">M7C</ref>;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/>temp=((channel0*b)-(channel1*m));</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp&lt;0)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>temp=0;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>temp+=(1&lt;&lt;(<ref refid="sensor__tsl2561_8h_1abe3540b1f05e5974dfa40491719b322a" kindref="member">LUX_SCALE</ref>-1));</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>strip<sp/>off<sp/>fractional<sp/>portion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/>lux=temp&gt;&gt;<ref refid="sensor__tsl2561_8h_1abe3540b1f05e5974dfa40491719b322a" kindref="member">LUX_SCALE</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(lux);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal">String<sp/>SensorTsl2561::floatToString(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>precision)<sp/>{</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight><highlight class="comment">//<sp/>prints<sp/>val<sp/>with<sp/>number<sp/>of<sp/>decimal<sp/>places<sp/>determine<sp/>by<sp/>precision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>precision<sp/>is<sp/>1<sp/>followed<sp/>by<sp/>the<sp/>number<sp/>of<sp/>zeros<sp/>for<sp/>the<sp/>desired<sp/>number<sp/>of<sp/>decimial<sp/>places</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight><highlight class="comment">//<sp/>example:<sp/>printDouble(<sp/>3.1415,<sp/>100);<sp/>//<sp/>prints<sp/>3.14<sp/>(two<sp/>decimal<sp/>places)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/>String<sp/>str<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/>str<sp/>+=<sp/>int(val);<sp/><sp/></highlight><highlight class="comment">//prints<sp/>the<sp/>int<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/>str<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>print<sp/>the<sp/>decimal<sp/>point</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>frac;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(val<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/>frac<sp/>=<sp/>(val<sp/>-<sp/>int(val))<sp/>*<sp/>precision;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>frac<sp/>=<sp/>(int(val)-<sp/>val<sp/>)<sp/>*<sp/>precision;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/>str<sp/>+=<sp/>int(frac);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>str;</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">}<sp/></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp"/>
+  </compounddef>
+</doxygen>

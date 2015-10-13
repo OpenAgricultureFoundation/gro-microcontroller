@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="struct_instruction" kind="struct" language="C++" prot="public">
+    <compoundname>Instruction</compoundname>
+    <includes refid="module__handler_8h" local="no">module_handler.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_instruction_1ad888a5bd187437c04dca0f5574ce4ebd" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String Instruction::code</definition>
+        <argsstring></argsstring>
+        <name>code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="84" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_instruction_1aca74587d9d1a44daca3b0965af207a4c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Instruction::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="85" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_instruction_1a61c139a5e35c88092611020e999e220d" prot="public" static="no" mutable="no">
+        <type>String</type>
+        <definition>String Instruction::parameter</definition>
+        <argsstring></argsstring>
+        <name>parameter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="86" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_instruction_1a3951b82b53920c98582baa6be7210180" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Instruction::valid</definition>
+        <argsstring></argsstring>
+        <name>valid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="87" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A structure to represent instruction parameters. </para>    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is a 4-letter instruction code, not necessarily unique </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the unique ID for the instance of the module </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>parameter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the string that contains the message addressed to that specific instruction code and id pair </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>indicates whether or not the instruction is valid </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>    </detaileddescription>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="83" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" bodystart="83" bodyend="88"/>
+    <listofallmembers>
+      <member refid="struct_instruction_1ad888a5bd187437c04dca0f5574ce4ebd" prot="public" virt="non-virtual"><scope>Instruction</scope><name>code</name></member>
+      <member refid="struct_instruction_1aca74587d9d1a44daca3b0965af207a4c" prot="public" virt="non-virtual"><scope>Instruction</scope><name>id</name></member>
+      <member refid="struct_instruction_1a61c139a5e35c88092611020e999e220d" prot="public" virt="non-virtual"><scope>Instruction</scope><name>parameter</name></member>
+      <member refid="struct_instruction_1a3951b82b53920c98582baa6be7210180" prot="public" virt="non-virtual"><scope>Instruction</scope><name>valid</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

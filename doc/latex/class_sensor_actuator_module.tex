@@ -1,0 +1,84 @@
+\hypertarget{class_sensor_actuator_module}{}\section{Sensor\+Actuator\+Module Class Reference}
+\label{class_sensor_actuator_module}\index{Sensor\+Actuator\+Module@{Sensor\+Actuator\+Module}}
+
+
+Abstract class used as the interface for all Sensor Actuator Modules.  
+
+
+
+
+{\ttfamily \#include $<$module\+\_\+handler.\+h$>$}
+
+Inheritance diagram for Sensor\+Actuator\+Module\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.244444cm]{class_sensor_actuator_module}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{begin} (void)=0
+\begin{DoxyCompactList}\small\item\em Called once at beginning of program to initialize modules. \end{DoxyCompactList}\item 
+virtual String \hyperlink{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{get} (void)=0
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update and report module data to controller. \end{DoxyCompactList}\item 
+virtual String \hyperlink{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{set} (String instruction\+\_\+code, int instruction\+\_\+id, String instruction\+\_\+parameter)=0
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstract class used as the interface for all Sensor Actuator Modules. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{}\index{Sensor\+Actuator\+Module@{Sensor\+Actuator\+Module}!begin@{begin}}
+\index{begin@{begin}!Sensor\+Actuator\+Module@{Sensor\+Actuator\+Module}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Sensor\+Actuator\+Module\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}
+
+
+Called once at beginning of program to initialize modules. 
+
+
+
+Implemented in \hyperlink{class_sensor_tsl2561_ace17c892222366185df021bda708cc10}{Sensor\+Tsl2561}, \hyperlink{class_sensor_dfr01610300_a456221ff4728d8985c8e980d4f22b692}{Sensor\+Dfr01610300}, \hyperlink{class_actuator_relay_abd921e88bb8fcecfbd5e1213e1faad56}{Actuator\+Relay}, \hyperlink{class_sensor_dht22_ae4de2976d82d060c9dc12bf84195a347}{Sensor\+Dht22}, \hyperlink{class_sensor_gc0011_a661743d47448c6b9c965fd8e1f123fbc}{Sensor\+Gc0011}, and \hyperlink{class_sensor_contact_switch_a037d866b1e40776cc6fa00a46169b150}{Sensor\+Contact\+Switch}.
+
+\hypertarget{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{}\index{Sensor\+Actuator\+Module@{Sensor\+Actuator\+Module}!get@{get}}
+\index{get@{get}!Sensor\+Actuator\+Module@{Sensor\+Actuator\+Module}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}virtual String Sensor\+Actuator\+Module\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}
+
+
+Called once per loop iteration to update and report module data to controller. 
+
+
+
+Implemented in \hyperlink{class_sensor_tsl2561_a1d9dff52af755218abca50f9025f0f5c}{Sensor\+Tsl2561}, \hyperlink{class_sensor_dfr01610300_a21bbd0f8ee7e6576eabd9acf0e1e4d89}{Sensor\+Dfr01610300}, \hyperlink{class_actuator_relay_affbcfa491c42a0aae3d69450cf7295b1}{Actuator\+Relay}, \hyperlink{class_sensor_dht22_ad939eefeb967eea7029d9505cc6aad6f}{Sensor\+Dht22}, \hyperlink{class_sensor_gc0011_a2920401f54e121bba1398d52e9b2c90a}{Sensor\+Gc0011}, and \hyperlink{class_sensor_contact_switch_a99a5906b45ed441eea56fb2960d35191}{Sensor\+Contact\+Switch}.
+
+\hypertarget{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{}\index{Sensor\+Actuator\+Module@{Sensor\+Actuator\+Module}!set@{set}}
+\index{set@{set}!Sensor\+Actuator\+Module@{Sensor\+Actuator\+Module}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}virtual String Sensor\+Actuator\+Module\+::set (
+\begin{DoxyParamCaption}
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id, }
+\item[{String}]{instruction\+\_\+parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}\label{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}
+
+
+Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. 
+
+
+
+Implemented in \hyperlink{class_sensor_tsl2561_ab4eb3d8197c96867f43857876df46b33}{Sensor\+Tsl2561}, \hyperlink{class_sensor_dfr01610300_ab675c2708ff9d5d0d9bbe10bab3d97e8}{Sensor\+Dfr01610300}, \hyperlink{class_actuator_relay_a29995263e5a05a3fdff0761cb4730306}{Actuator\+Relay}, \hyperlink{class_sensor_dht22_a177a42edbc33d5cf4fa0c4c38dc0047c}{Sensor\+Dht22}, \hyperlink{class_sensor_gc0011_a658b7856221577342b54e4dc7fe06d2a}{Sensor\+Gc0011}, and \hyperlink{class_sensor_contact_switch_ab49acd5d6132eed50d7342717649abc2}{Sensor\+Contact\+Switch}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{module__handler_8h}{module\+\_\+handler.\+h}\end{DoxyCompactItemize}

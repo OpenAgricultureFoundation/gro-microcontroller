@@ -1,0 +1,117 @@
+\hypertarget{class_sensor_dht22}{}\section{Sensor\+Dht22 Class Reference}
+\label{class_sensor_dht22}\index{Sensor\+Dht22@{Sensor\+Dht22}}
+
+
+Sensor module for air temperature and humidity.  
+
+
+
+
+{\ttfamily \#include $<$sensor\+\_\+dht22.\+h$>$}
+
+Inheritance diagram for Sensor\+Dht22\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sensor_dht22}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sensor_dht22_a417840f2a31737059e6b0885d89de32f}{Sensor\+Dht22} (int pin, String temperature\+\_\+instruction\+\_\+code, int temperature\+\_\+instruction\+\_\+id, String humidity\+\_\+instruction\+\_\+code, int humidity\+\_\+instruction\+\_\+id)
+\item 
+void \hyperlink{class_sensor_dht22_ae4de2976d82d060c9dc12bf84195a347}{begin} (void)
+\begin{DoxyCompactList}\small\item\em Called once at beginning of program to initialize modules. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_dht22_ad939eefeb967eea7029d9505cc6aad6f}{get} (void)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update and report module data to controller. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_dht22_a177a42edbc33d5cf4fa0c4c38dc0047c}{set} (String instruction\+\_\+code, int instruction\+\_\+id, String parameter)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_sensor_dht22_a93f9363f3086e00f440fc89a7f1f8a1b}{humidity}
+\item 
+float \hyperlink{class_sensor_dht22_af35665067c66e887afa5fef5611fb48a}{temperature}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor module for air temperature and humidity. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sensor_dht22_a417840f2a31737059e6b0885d89de32f}{}\index{Sensor\+Dht22@{Sensor\+Dht22}!Sensor\+Dht22@{Sensor\+Dht22}}
+\index{Sensor\+Dht22@{Sensor\+Dht22}!Sensor\+Dht22@{Sensor\+Dht22}}
+\subsubsection[{Sensor\+Dht22}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\+Dht22\+::\+Sensor\+Dht22 (
+\begin{DoxyParamCaption}
+\item[{int}]{pin, }
+\item[{String}]{temperature\+\_\+instruction\+\_\+code, }
+\item[{int}]{temperature\+\_\+instruction\+\_\+id, }
+\item[{String}]{humidity\+\_\+instruction\+\_\+code, }
+\item[{int}]{humidity\+\_\+instruction\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_sensor_dht22_a417840f2a31737059e6b0885d89de32f}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sensor_dht22_ae4de2976d82d060c9dc12bf84195a347}{}\index{Sensor\+Dht22@{Sensor\+Dht22}!begin@{begin}}
+\index{begin@{begin}!Sensor\+Dht22@{Sensor\+Dht22}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\+Dht22\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_dht22_ae4de2976d82d060c9dc12bf84195a347}
+
+
+Called once at beginning of program to initialize modules. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_dht22_ad939eefeb967eea7029d9505cc6aad6f}{}\index{Sensor\+Dht22@{Sensor\+Dht22}!get@{get}}
+\index{get@{get}!Sensor\+Dht22@{Sensor\+Dht22}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Dht22\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_dht22_ad939eefeb967eea7029d9505cc6aad6f}
+
+
+Called once per loop iteration to update and report module data to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_dht22_a177a42edbc33d5cf4fa0c4c38dc0047c}{}\index{Sensor\+Dht22@{Sensor\+Dht22}!set@{set}}
+\index{set@{set}!Sensor\+Dht22@{Sensor\+Dht22}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Dht22\+::set (
+\begin{DoxyParamCaption}
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id, }
+\item[{String}]{instruction\+\_\+parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_dht22_a177a42edbc33d5cf4fa0c4c38dc0047c}
+
+
+Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{Sensor\+Actuator\+Module}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_sensor_dht22_a93f9363f3086e00f440fc89a7f1f8a1b}{}\index{Sensor\+Dht22@{Sensor\+Dht22}!humidity@{humidity}}
+\index{humidity@{humidity}!Sensor\+Dht22@{Sensor\+Dht22}}
+\subsubsection[{humidity}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dht22\+::humidity}\label{class_sensor_dht22_a93f9363f3086e00f440fc89a7f1f8a1b}
+\hypertarget{class_sensor_dht22_af35665067c66e887afa5fef5611fb48a}{}\index{Sensor\+Dht22@{Sensor\+Dht22}!temperature@{temperature}}
+\index{temperature@{temperature}!Sensor\+Dht22@{Sensor\+Dht22}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dht22\+::temperature}\label{class_sensor_dht22_af35665067c66e887afa5fef5611fb48a}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sensor__dht22_8h}{sensor\+\_\+dht22.\+h}\item 
+src/\hyperlink{sensor__dht22_8cpp}{sensor\+\_\+dht22.\+cpp}\end{DoxyCompactItemize}

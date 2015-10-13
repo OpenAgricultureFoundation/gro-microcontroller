@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="actuator__relay_8cpp">actuator_relay.cpp</innerfile>
+    <innerfile refid="actuator__relay_8h">actuator_relay.h</innerfile>
+    <innerfile refid="communication_8cpp">communication.cpp</innerfile>
+    <innerfile refid="communication_8h">communication.h</innerfile>
+    <innerfile refid="module__handler_8cpp">module_handler.cpp</innerfile>
+    <innerfile refid="module__handler_8h">module_handler.h</innerfile>
+    <innerfile refid="sensor__contact__switch_8cpp">sensor_contact_switch.cpp</innerfile>
+    <innerfile refid="sensor__contact__switch_8h">sensor_contact_switch.h</innerfile>
+    <innerfile refid="sensor__dfr0161__0300_8cpp">sensor_dfr0161_0300.cpp</innerfile>
+    <innerfile refid="sensor__dfr0161__0300_8h">sensor_dfr0161_0300.h</innerfile>
+    <innerfile refid="sensor__dht22_8cpp">sensor_dht22.cpp</innerfile>
+    <innerfile refid="sensor__dht22_8h">sensor_dht22.h</innerfile>
+    <innerfile refid="sensor__gc0011_8cpp">sensor_gc0011.cpp</innerfile>
+    <innerfile refid="sensor__gc0011_8h">sensor_gc0011.h</innerfile>
+    <innerfile refid="sensor__tsl2561_8cpp">sensor_tsl2561.cpp</innerfile>
+    <innerfile refid="sensor__tsl2561_8h">sensor_tsl2561.h</innerfile>
+    <innerfile refid="src_8ino">src.ino</innerfile>
+    <innerfile refid="support__moving__average_8cpp">support_moving_average.cpp</innerfile>
+    <innerfile refid="support__moving__average_8h">support_moving_average.h</innerfile>
+    <innerfile refid="support__one__wire_8cpp">support_one_wire.cpp</innerfile>
+    <innerfile refid="support__one__wire_8h">support_one_wire.h</innerfile>
+    <innerfile refid="support__software__serial_8cpp">support_software_serial.cpp</innerfile>
+    <innerfile refid="support__software__serial_8h">support_software_serial.h</innerfile>
+    <innerfile refid="support__time_8cpp">support_time.cpp</innerfile>
+    <innerfile refid="support__time_8h">support_time.h</innerfile>
+    <innerfile refid="support__twi_8h">support_twi.h</innerfile>
+    <innerfile refid="support__wire_8cpp">support_wire.cpp</innerfile>
+    <innerfile refid="support__wire_8h">support_wire.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_moving_average_filter" kind="class" language="C++" prot="public">
+    <compoundname>MovingAverageFilter</compoundname>
+    <includes refid="support__moving__average_8h" local="no">support_moving_average.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_moving_average_filter_1a348266d6aa4e54c653409a5df60a534f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MovingAverageFilter::values[MAX_DATA_POINTS]</definition>
+        <argsstring>[MAX_DATA_POINTS]</argsstring>
+        <name>values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="22" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_moving_average_filter_1a82f23589732914f1ca9f2d5723c91ab0" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MovingAverageFilter::k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="23" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_moving_average_filter_1a1e157723539f80e5b59e329f63dbcacf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MovingAverageFilter::dataPointsCount</definition>
+        <argsstring></argsstring>
+        <name>dataPointsCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="24" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_moving_average_filter_1a2dc08683d38f654c016051424a0bcdf1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MovingAverageFilter::out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="25" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_moving_average_filter_1ac3c9064235cc1067f5571e34519c718f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MovingAverageFilter::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="26" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_moving_average_filter_1a2845e489c746ffaeb9113e3f87bad8e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MovingAverageFilter::MovingAverageFilter</definition>
+        <argsstring>(unsigned int newDataPointsCount)</argsstring>
+        <name>MovingAverageFilter</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>newDataPointsCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="17" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.cpp" bodystart="8" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_moving_average_filter_1af050822d0acb5a8d32559beb1af0519d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float MovingAverageFilter::process</definition>
+        <argsstring>(float in)</argsstring>
+        <name>process</name>
+        <param>
+          <type>float</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="19" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.cpp" bodystart="20" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" line="14" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_moving_average.h" bodystart="14" bodyend="27"/>
+    <listofallmembers>
+      <member refid="class_moving_average_filter_1a1e157723539f80e5b59e329f63dbcacf" prot="private" virt="non-virtual"><scope>MovingAverageFilter</scope><name>dataPointsCount</name></member>
+      <member refid="class_moving_average_filter_1ac3c9064235cc1067f5571e34519c718f" prot="private" virt="non-virtual"><scope>MovingAverageFilter</scope><name>i</name></member>
+      <member refid="class_moving_average_filter_1a82f23589732914f1ca9f2d5723c91ab0" prot="private" virt="non-virtual"><scope>MovingAverageFilter</scope><name>k</name></member>
+      <member refid="class_moving_average_filter_1a2845e489c746ffaeb9113e3f87bad8e1" prot="public" virt="non-virtual"><scope>MovingAverageFilter</scope><name>MovingAverageFilter</name></member>
+      <member refid="class_moving_average_filter_1a2dc08683d38f654c016051424a0bcdf1" prot="private" virt="non-virtual"><scope>MovingAverageFilter</scope><name>out</name></member>
+      <member refid="class_moving_average_filter_1af050822d0acb5a8d32559beb1af0519d" prot="public" virt="non-virtual"><scope>MovingAverageFilter</scope><name>process</name></member>
+      <member refid="class_moving_average_filter_1a348266d6aa4e54c653409a5df60a534f" prot="private" virt="non-virtual"><scope>MovingAverageFilter</scope><name>values</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="support__software__serial_8h" kind="file" language="C++">
+    <compoundname>support_software_serial.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="no">Stream.h</includes>
+    <includedby refid="sensor__gc0011_8h" local="yes">src/sensor_gc0011.h</includedby>
+    <includedby refid="support__software__serial_8cpp" local="yes">src/support_software_serial.cpp</includedby>
+    <incdepgraph>
+      <node id="167">
+        <label>src/support_software_serial.h</label>
+        <link refid="support_software_serial.h"/>
+        <childnode refid="168" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>Stream.h</label>
+      </node>
+      <node id="168">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="174">
+        <label>src/support_software_serial.cpp</label>
+        <link refid="support__software__serial_8cpp"/>
+      </node>
+      <node id="170">
+        <label>src/support_software_serial.h</label>
+        <link refid="support_software_serial.h"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>src/module_handler.cpp</label>
+        <link refid="module__handler_8cpp"/>
+      </node>
+      <node id="173">
+        <label>src/sensor_gc0011.cpp</label>
+        <link refid="sensor__gc0011_8cpp"/>
+      </node>
+      <node id="171">
+        <label>src/sensor_gc0011.h</label>
+        <link refid="sensor__gc0011_8h"/>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_software_serial" prot="public">SoftwareSerial</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="support__software__serial_8h_1af67c8adbca054838dd8a5b9043ffd64a" prot="public" static="no">
+        <name>_SS_MAX_RX_BUFF</name>
+        <initializer>64</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="47" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__software__serial_8h_1adbba0f726fc66d7100916c683b7568ae" prot="public" static="no">
+        <name>GCC_VERSION</name>
+        <initializer>(__GNUC__ * 10000 + __GNUC_MINOR__ * 100 + __GNUC_PATCHLEVEL__)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="49" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Support module for serial communication. </para>    </briefdescription>
+    <detaileddescription>
+<para>See arduino software serial module for details: <ulink url="https://www.arduino.cc/en/Reference/SoftwareSerial">https://www.arduino.cc/en/Reference/SoftwareSerial</ulink> </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">SoftwareSerial.h<sp/>(formerly<sp/>NewSoftSerial.h)<sp/>-<sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="comment">Multi-instance<sp/>software<sp/>serial<sp/>library<sp/>for<sp/>Arduino/Wiring</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">--<sp/>Interrupt-driven<sp/>receive<sp/>and<sp/>other<sp/>improvements<sp/>by<sp/>ladyada</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/>(http://ladyada.net)</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">--<sp/>Tuning,<sp/>circular<sp/>buffer,<sp/>derivation<sp/>from<sp/>class<sp/>Print/Stream,</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/><sp/>multi-instance<sp/>support,<sp/>porting<sp/>to<sp/>8MHz<sp/>processors,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/>various<sp/>optimizations,<sp/>PROGMEM<sp/>delay<sp/>tables,<sp/>inverse<sp/>logic<sp/>and<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/><sp/>direct<sp/>port<sp/>writing<sp/>by<sp/>Mikal<sp/>Hart<sp/>(http://www.arduiniana.org)</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">--<sp/>Pin<sp/>change<sp/>interrupt<sp/>macros<sp/>by<sp/>Paul<sp/>Stoffregen<sp/>(http://www.pjrc.com)</highlight></codeline>
+<codeline lineno="16"><highlight class="comment">--<sp/>20MHz<sp/>processor<sp/>support<sp/>by<sp/>Garrett<sp/>Mace<sp/>(http://www.macetech.com)</highlight></codeline>
+<codeline lineno="17"><highlight class="comment">--<sp/>ATmega1280/2560<sp/>support<sp/>by<sp/>Brett<sp/>Hagman<sp/>(http://www.roguerobotics.com/)</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment">This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="20"><highlight class="comment">modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="22"><highlight class="comment">version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"></highlight></codeline>
+<codeline lineno="24"><highlight class="comment">This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="25"><highlight class="comment">but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="27"><highlight class="comment">Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="30"><highlight class="comment">License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">The<sp/>latest<sp/>version<sp/>of<sp/>this<sp/>library<sp/>can<sp/>always<sp/>be<sp/>found<sp/>at</highlight></codeline>
+<codeline lineno="34"><highlight class="comment">http://arduiniana.org.</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SUPPORT_SOFTWARE_SERIAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUPPORT_SOFTWARE_SERIAL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Stream.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************</highlight></codeline>
+<codeline lineno="44"><highlight class="comment">*<sp/>Definitions</highlight></codeline>
+<codeline lineno="45"><highlight class="comment">******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="support__software__serial_8h_1af67c8adbca054838dd8a5b9043ffd64a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SS_MAX_RX_BUFF<sp/>64<sp/>//<sp/>RX<sp/>buffer<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GCC_VERSION</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="support__software__serial_8h_1adbba0f726fc66d7100916c683b7568ae" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GCC_VERSION<sp/>(__GNUC__<sp/>*<sp/>10000<sp/>+<sp/>__GNUC_MINOR__<sp/>*<sp/>100<sp/>+<sp/>__GNUC_PATCHLEVEL__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="class_software_serial" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_software_serial" kindref="compound">SoftwareSerial</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Stream</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>per<sp/>object<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_receivePin;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_receiveBitMask;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*_receivePortRegister;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_transmitBitMask;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*_transmitPortRegister;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>*_pcint_maskreg;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>uint8_t<sp/>_pcint_maskvalue;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Expressed<sp/>as<sp/>4-cycle<sp/>delays<sp/>(must<sp/>never<sp/>be<sp/>0!)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>uint16_t<sp/>_rx_delay_centering;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>uint16_t<sp/>_rx_delay_intrabit;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>uint16_t<sp/>_rx_delay_stopbit;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>uint16_t<sp/>_tx_delay;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>uint16_t<sp/>_buffer_overflow:1;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>uint16_t<sp/>_inverse_logic:1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>static<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>_receive_buffer[<ref refid="support__software__serial_8h_1af67c8adbca054838dd8a5b9043ffd64a" kindref="member">_SS_MAX_RX_BUFF</ref>];<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>_receive_buffer_tail;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>uint8_t<sp/>_receive_buffer_head;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_software_serial" kindref="compound">SoftwareSerial</ref><sp/>*active_object;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>recv()<sp/>__attribute__((__always_inline__));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/>uint8_t<sp/>rx_pin_read();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tx_pin_write(uint8_t<sp/>pin_state)<sp/>__attribute__((__always_inline__));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setTX(uint8_t<sp/>transmitPin);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRX(uint8_t<sp/>receivePin);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setRxIntMsk(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enable)<sp/>__attribute__((__always_inline__));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>num<sp/>-<sp/>sub,<sp/>or<sp/>1<sp/>if<sp/>the<sp/>result<sp/>would<sp/>be<sp/>&lt;<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/>subtract_cap(uint16_t<sp/>num,<sp/>uint16_t<sp/>sub);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>static<sp/>method<sp/>for<sp/>timing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>tunedDelay(uint16_t<sp/>delay);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>public<sp/>methods</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><ref refid="class_software_serial_1aab36336db4a1ca5073071c07d910cb87" kindref="member">SoftwareSerial</ref>(uint8_t<sp/>receivePin,<sp/>uint8_t<sp/>transmitPin,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>inverse_logic<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><ref refid="class_software_serial_1af6b8fff282e09a6cecc5df669ae71ee7" kindref="member">~SoftwareSerial</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1af1b194359d70894b3a2f38236a68480e" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>speed);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1ad235539ef28939836bd0bde9387eb8fc" kindref="member">listen</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a9034270f7de617b3cc7d3f38f3a8e0df" kindref="member">end</ref>();</highlight></codeline>
+<codeline lineno="100" refid="class_software_serial_1a7b3fb4a8f57d2b5f2233f841d71ef80f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a7b3fb4a8f57d2b5f2233f841d71ef80f" kindref="member">isListening</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>==<sp/>active_object;<sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a1c87a6b43c176c104f28e2c2eec2841e" kindref="member">stopListening</ref>();</highlight></codeline>
+<codeline lineno="102" refid="class_software_serial_1ac6d4d5dfbe05515bf23766e2c8abfd46" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1ac6d4d5dfbe05515bf23766e2c8abfd46" kindref="member">overflow</ref>()<sp/>{<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ret<sp/>=<sp/>_buffer_overflow;<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ret)<sp/>_buffer_overflow<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;<sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a51c2d2e79f0d982b1ef9cc9ac4453648" kindref="member">peek</ref>();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1ac24e5c6af203ec636c0a200b0cb3caf0" kindref="member">write</ref>(uint8_t<sp/>byte);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a2d0b2f2868d519c716114777f482705b" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a4cbf77a4e90e15ca576972d7952659c5" kindref="member">available</ref>();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a9a46db376a19fc958e011e38799b902c" kindref="member">flush</ref>();</highlight></codeline>
+<codeline lineno="109" refid="class_software_serial_1ab0cba63b2a27fcfa4760a2f3f7389de0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>bool()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>Print::write;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>public<sp/>only<sp/>for<sp/>easy<sp/>access<sp/>by<sp/>interrupt<sp/>handlers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_software_serial_1a8700c768d3c5d681362253324852ceee" kindref="member">handle_interrupt</ref>()<sp/>__attribute__((__always_inline__));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Arduino<sp/>0012<sp/>workaround</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>int</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>char</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>float</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>abs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="preprocessor">#undef<sp/>round</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SUPPORT_SOFTWARE_SERIAL_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h"/>
+  </compounddef>
+</doxygen>

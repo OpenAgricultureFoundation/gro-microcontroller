@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="sensor__dfr0161__0300_8cpp" kind="file" language="C++">
+    <compoundname>sensor_dfr0161_0300.cpp</compoundname>
+    <includes refid="sensor__dfr0161__0300_8h" local="yes">sensor_dfr0161_0300.h</includes>
+    <incdepgraph>
+      <node id="69">
+        <label>module_handler.h</label>
+        <link refid="module__handler_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>pins_arduino.h</label>
+      </node>
+      <node id="67">
+        <label>sensor_dfr0161_0300.h</label>
+        <link refid="sensor__dfr0161__0300_8h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>support_moving_average.h</label>
+        <link refid="support__moving__average_8h"/>
+      </node>
+      <node id="71">
+        <label>support_one_wire.h</label>
+        <link refid="support__one__wire_8h"/>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>WProgram.h</label>
+      </node>
+      <node id="66">
+        <label>src/sensor_dfr0161_0300.cpp</label>
+        <link refid="sensor_dfr0161_0300.cpp"/>
+        <childnode refid="67" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Sensor module for water ph, ec, and temperature. </para>    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="sensor__dfr0161__0300_8h" kindref="compound">sensor_dfr0161_0300.h</ref> for details. <simplesect kind="author"><para>Jake Rye </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sensor__dfr0161__0300_8h" kindref="compound">sensor_dfr0161_0300.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------PUBLIC<sp/>FUNCTIONS----------------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="class_sensor_dfr01610300_1aeb40fef336ad2b2d82f7c5eddf9d318e" kindref="member">SensorDfr01610300::SensorDfr01610300</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ph_pin,<sp/>String<sp/>ph_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ph_instruction_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temperature_pin,<sp/>String<sp/>temperature_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temperature_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ec_pin,<sp/>String<sp/>ec_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ec_id,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ec_enable_pin)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>ph_pin_<sp/>=<sp/>ph_pin;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>ph_instruction_code_<sp/>=<sp/>ph_instruction_code;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>ph_instruction_id_<sp/>=<sp/>ph_instruction_id;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>temperature_pin_<sp/>=<sp/>temperature_pin;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>temperature_instruction_code_<sp/>=<sp/>temperature_instruction_code;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>temperature_id_<sp/>=<sp/>temperature_id;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>ec_pin_<sp/>=<sp/>ec_pin;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>ec_instruction_code_<sp/>=<sp/>ec_instruction_code;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/>ec_id_<sp/>=<sp/>ec_id;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/>ec_enable_pin_<sp/>=<sp/>ec_enable_pin;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_dfr01610300_1a456221ff4728d8985c8e980d4f22b692" kindref="member">SensorDfr01610300::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>Objects</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>ds_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_one_wire" kindref="compound">OneWire</ref>(temperature_pin_);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>ph_filter_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_moving_average_filter" kindref="compound">MovingAverageFilter</ref>(10);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>ec_filter_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_moving_average_filter" kindref="compound">MovingAverageFilter</ref>(10);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>temperature_filter_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_moving_average_filter" kindref="compound">MovingAverageFilter</ref>(10);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Configure<sp/>Initial<sp/>State</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>pinMode(ec_enable_pin_,<sp/>OUTPUT);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>digitalWrite(ec_enable_pin_,<sp/>LOW);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>last_update_was_ec_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>prev_update_time_<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Configuration<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/>ec_on_delay_<sp/>=<sp/>400;<sp/></highlight><highlight class="comment">//<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>ec_off_delay_<sp/>=<sp/>400;<sp/></highlight><highlight class="comment">//<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>Calibration<sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>ph_calibration_coefficient_<sp/>=<sp/>3.5;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/>ph_calibration_offset_<sp/>=<sp/>-0.1;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/>ec_calibration_offset_<sp/>=<sp/>0.15;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">String<sp/><ref refid="class_sensor_dfr01610300_1a21bbd0f8ee7e6576eabd9acf0e1e4d89" kindref="member">SensorDfr01610300::get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>PH,<sp/>Temperature,<sp/>&amp;<sp/>EC<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>getSensorData();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/>String<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>PH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>ph_instruction_code_;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>ph_instruction_id_;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_dfr01610300_1a09ae20cb63d44609c717dda168b8e454" kindref="member">ph_filtered</ref>,1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Temperature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>temperature_instruction_code_;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>temperature_id_;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_dfr01610300_1a598f2f18f66d626a3ce392478fcadcc8" kindref="member">temperature_filtered</ref>,1);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>EC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>ec_instruction_code_;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>ec_id_;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_dfr01610300_1a3183d77d8012266006113a3d8647a2a9" kindref="member">ec_filtered</ref>,1);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>message;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">String<sp/><ref refid="class_sensor_dfr01610300_1ab675c2708ff9d5d0d9bbe10bab3d97e8" kindref="member">SensorDfr01610300::set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>instruction_parameter)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------PRIVATE<sp/>FUNCTIONS----------------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorDfr01610300::getSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>Temperature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_dfr01610300_1a483485c4c8a91569e8f45819e641e38c" kindref="member">temperature_raw</ref><sp/>=<sp/>getTemperature();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_dfr01610300_1a598f2f18f66d626a3ce392478fcadcc8" kindref="member">temperature_filtered</ref><sp/>=<sp/>(float)round(temperature_filter_-&gt;<ref refid="class_moving_average_filter_1af050822d0acb5a8d32559beb1af0519d" kindref="member">process</ref>(<ref refid="class_sensor_dfr01610300_1a483485c4c8a91569e8f45819e641e38c" kindref="member">temperature_raw</ref>)*10)/10;<sp/></highlight><highlight class="comment">//<sp/>set<sp/>accuracy<sp/>to<sp/>+-0.05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Alternate<sp/>Updating<sp/>pH<sp/>&amp;<sp/>EC<sp/>With<sp/>Enforced<sp/>Delays</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Need<sp/>to<sp/>do<sp/>this<sp/>because<sp/>EC<sp/>interferes<sp/>with<sp/>PH<sp/>sensor.<sp/>EC<sp/>power<sp/>lines<sp/>connected<sp/>to<sp/>a<sp/>relay<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>controlled<sp/>by<sp/>ec_enable_pin_.<sp/>Need<sp/>on_delay<sp/>because<sp/>takes<sp/>some<sp/>time<sp/>for<sp/>ec<sp/>sensor<sp/>to<sp/>initialize</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Need<sp/>off_delay<sp/>becasue<sp/>takes<sp/>some<sp/>time<sp/>for<sp/>ec<sp/>noise<sp/>to<sp/>dissipate.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(last_update_was_ec_<sp/>&amp;&amp;<sp/>(millis()<sp/>-<sp/>prev_update_time_<sp/>&gt;<sp/>ec_off_delay_))<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>pH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_dfr01610300_1aa0ab70c745bde253adaa343afba56473" kindref="member">ph_raw</ref><sp/>=<sp/>getPh();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_dfr01610300_1a09ae20cb63d44609c717dda168b8e454" kindref="member">ph_filtered</ref><sp/>=<sp/>(float)round(ph_filter_-&gt;<ref refid="class_moving_average_filter_1af050822d0acb5a8d32559beb1af0519d" kindref="member">process</ref>(<ref refid="class_sensor_dfr01610300_1aa0ab70c745bde253adaa343afba56473" kindref="member">ph_raw</ref>)*10)/10;<sp/></highlight><highlight class="comment">//<sp/>set<sp/>accuracy<sp/>to<sp/>+-0.05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(ec_enable_pin_,<sp/>HIGH);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>prev_update_time_<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>last_update_was_ec_<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!last_update_was_ec_<sp/>&amp;&amp;<sp/>(millis()<sp/>-<sp/>prev_update_time_<sp/>&gt;<sp/>ec_on_delay_))<sp/>{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>EC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_dfr01610300_1af0fc005c44506d277f792acd29f64c3e" kindref="member">ec_raw</ref><sp/>=<sp/>getEc(<ref refid="class_sensor_dfr01610300_1a598f2f18f66d626a3ce392478fcadcc8" kindref="member">temperature_filtered</ref>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_dfr01610300_1a3183d77d8012266006113a3d8647a2a9" kindref="member">ec_filtered</ref><sp/>=<sp/>(float)round(ec_filter_-&gt;<ref refid="class_moving_average_filter_1af050822d0acb5a8d32559beb1af0519d" kindref="member">process</ref>(<ref refid="class_sensor_dfr01610300_1af0fc005c44506d277f792acd29f64c3e" kindref="member">ec_raw</ref>)*10)/10;<sp/></highlight><highlight class="comment">//<sp/>set<sp/>accuracy<sp/>to<sp/>+-0.05</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>digitalWrite(ec_enable_pin_,<sp/>LOW);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>prev_update_time_<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>last_update_was_ec_<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SensorDfr01610300::getPh(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Sampling<sp/>Specifications</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>samples<sp/>=<sp/>40;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>voltage[samples];</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sample_time_delta<sp/>=<sp/>20;<sp/></highlight><highlight class="comment">//<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Acquire<sp/>Samples</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;samples;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>voltage[i]<sp/>=<sp/>analogRead(ph_pin_);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>Min<sp/>&amp;<sp/>Max<sp/>Samples,<sp/>Average,<sp/>Convert<sp/>to<sp/>Voltage</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>volts<sp/>=<sp/>avergeArray(voltage,<sp/>samples)*5.0/1024;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>Average<sp/>Voltage<sp/>to<sp/>pH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ph_calibration_coefficient_*volts<sp/>+<sp/>ph_calibration_offset_;;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SensorDfr01610300::getTemperature(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temperature_value;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>Temperature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>byte<sp/>present<sp/>=<sp/>ds_-&gt;<ref refid="class_one_wire_1a6a742a9112392567eae3d06dde067c07" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/>ds_-&gt;<ref refid="class_one_wire_1accf808390abd63d3c7bce35677784384" kindref="member">select</ref>(temperature_address_);<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>ds_-&gt;<ref refid="class_one_wire_1a843e9e7e57ed615b4880be0b76b40b7d" kindref="member">write</ref>(0xBE);<sp/></highlight><highlight class="comment">//<sp/>Read<sp/>Scratchpad<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>9;<sp/>i++)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>we<sp/>need<sp/>9<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>temperature_data_[i]<sp/>=<sp/>ds_-&gt;<ref refid="class_one_wire_1afd9bdb8b5a5b69b394dfc76352e00e21" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/>ds_-&gt;<ref refid="class_one_wire_1aae5efdf67928b5ee312ab7d7906416fa" kindref="member">reset_search</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>byte<sp/>MSB<sp/>=<sp/>temperature_data_[1];</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/>byte<sp/>LSB<sp/>=<sp/>temperature_data_[0];<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tempRead<sp/>=<sp/>((MSB<sp/>&lt;&lt;<sp/>8)<sp/>|<sp/>LSB);<sp/></highlight><highlight class="comment">//<sp/>using<sp/>two&apos;s<sp/>compliment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/>temperature_value<sp/>=<sp/>tempRead<sp/>/<sp/>16;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>Conversion<sp/>For<sp/>Next<sp/>Temperature<sp/>Reading</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!ds_-&gt;<ref refid="class_one_wire_1a383dc74fc9f8a27b76366a2859c3820a" kindref="member">search</ref>(temperature_address_))<sp/>{</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Serial.println(&quot;no<sp/>more<sp/>sensors<sp/>on<sp/>chain,<sp/>reset<sp/>search!&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>ds_-&gt;<ref refid="class_one_wire_1aae5efdf67928b5ee312ab7d7906416fa" kindref="member">reset_search</ref>();</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/><ref refid="class_one_wire_1ae3486a669581b750e4fdf3f3a12b05f1" kindref="member">OneWire::crc8</ref>(temperature_address_,<sp/>7)<sp/>!=<sp/>temperature_address_[7])<sp/>{</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Serial.println(&quot;CRC<sp/>is<sp/>not<sp/>valid!&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>temperature_address_[0]<sp/>!=<sp/>0x10<sp/>&amp;&amp;<sp/>temperature_address_[0]<sp/>!=<sp/>0x28)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Serial.print(&quot;Device<sp/>is<sp/>not<sp/>recognized!&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/>ds_-&gt;<ref refid="class_one_wire_1a6a742a9112392567eae3d06dde067c07" kindref="member">reset</ref>();</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/>ds_-&gt;<ref refid="class_one_wire_1accf808390abd63d3c7bce35677784384" kindref="member">select</ref>(temperature_address_);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>ds_-&gt;<ref refid="class_one_wire_1a843e9e7e57ed615b4880be0b76b40b7d" kindref="member">write</ref>(0x44,1);<sp/></highlight><highlight class="comment">//<sp/>start<sp/>conversion,<sp/>with<sp/>parasite<sp/>power<sp/>on<sp/>at<sp/>the<sp/>end</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Return<sp/>Temperature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temperature_value;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SensorDfr01610300::getEc(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temperature_value)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>analog_sum<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>samples<sp/>=<sp/>20;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i&lt;samples;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>analog_sum<sp/>+=<sp/>analogRead(ec_pin_);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>analog_average<sp/>=<sp/>(float)<sp/>analog_sum<sp/>/<sp/>samples;</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>analog_voltage<sp/>=<sp/>analog_average*(float)5000/1024;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>temperature_coefficient<sp/>=<sp/>1.0<sp/>+<sp/>0.0185*(temperature_value<sp/>-<sp/>25.0);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>voltage_coefficient<sp/>=<sp/>analog_voltage<sp/>/<sp/>temperature_coefficient;<sp/></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(voltage_coefficient<sp/>&lt;<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Serial.println(&quot;No<sp/>solution!&quot;);<sp/><sp/><sp/>//25^C<sp/>1413us/cm&lt;--&gt;about<sp/>216mv<sp/><sp/>if<sp/>the<sp/>voltage(compensate)&lt;150,that<sp/>is<sp/>&lt;1ms/cm,out<sp/>of<sp/>the<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(voltage_coefficient<sp/>&gt;<sp/>3300)<sp/>{</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Serial.println(&quot;Out<sp/>of<sp/>the<sp/>range!&quot;);<sp/><sp/>//&gt;20ms/cm,out<sp/>of<sp/>the<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{<sp/></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(voltage_coefficient<sp/>&lt;=<sp/>448)<sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(6.84*voltage_coefficient-64.32)/1000<sp/>+<sp/>ec_calibration_offset_;<sp/><sp/><sp/></highlight><highlight class="comment">//1ms/cm&lt;EC&lt;=3ms/cm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(voltage_coefficient<sp/>&lt;=<sp/>1457)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(6.98*voltage_coefficient-127)/1000<sp/>+<sp/>ec_calibration_offset_;<sp/><sp/></highlight><highlight class="comment">//3ms/cm&lt;EC&lt;=10ms/cm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(5.3*voltage_coefficient+2278)/1000<sp/>+<sp/>ec_calibration_offset_;<sp/></highlight><highlight class="comment">//10ms/cm&lt;EC&lt;20ms/cm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SensorDfr01610300::avergeArray(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>arr,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>number){</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>max,min;</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>avg;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>amount=0;</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(number&lt;=0){</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>Serial.println(</highlight><highlight class="stringliteral">&quot;Error<sp/>number<sp/>for<sp/>the<sp/>array<sp/>to<sp/>averaging!/n&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(number&lt;5){<sp/><sp/><sp/></highlight><highlight class="comment">//less<sp/>than<sp/>5,<sp/>calculated<sp/>directly<sp/>statistics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=0;i&lt;number;i++){</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>amount+=arr[i];</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>avg<sp/>=<sp/>amount/number;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>avg;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(arr[0]&lt;arr[1]){</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>min<sp/>=<sp/>arr[0];max=arr[1];</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>min=arr[1];max=arr[0];</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(i=2;i&lt;number;i++){</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(arr[i]&lt;min){</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount+=min;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arr&lt;min</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>min=arr[i];</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(arr[i]&gt;max){</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount+=max;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arr&gt;max</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>max=arr[i];</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>amount+=arr[i];<sp/></highlight><highlight class="comment">//min&lt;=arr&lt;=max</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>avg<sp/>=<sp/>(float)amount/(number-2);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="comment">//if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>avg;</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp"/>
+  </compounddef>
+</doxygen>

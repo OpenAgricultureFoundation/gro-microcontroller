@@ -1,0 +1,368 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="support__one__wire_8h" kind="file" language="C++">
+    <compoundname>support_one_wire.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includes local="yes">WProgram.h</includes>
+    <includes local="yes">pins_arduino.h</includes>
+    <includedby refid="sensor__dfr0161__0300_8h" local="yes">src/sensor_dfr0161_0300.h</includedby>
+    <includedby refid="support__one__wire_8cpp" local="yes">src/support_one_wire.cpp</includedby>
+    <incdepgraph>
+      <node id="152">
+        <label>pins_arduino.h</label>
+      </node>
+      <node id="149">
+        <label>src/support_one_wire.h</label>
+        <link refid="support_one_wire.h"/>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>WProgram.h</label>
+      </node>
+      <node id="150">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="154">
+        <label>src/sensor_dfr0161_0300.h</label>
+        <link refid="sensor__dfr0161__0300_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>src/module_handler.cpp</label>
+        <link refid="module__handler_8cpp"/>
+      </node>
+      <node id="153">
+        <label>src/support_one_wire.h</label>
+        <link refid="support_one_wire.h"/>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>src/support_one_wire.cpp</label>
+        <link refid="support__one__wire_8cpp"/>
+      </node>
+      <node id="156">
+        <label>src/sensor_dfr0161_0300.cpp</label>
+        <link refid="sensor__dfr0161__0300_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_one_wire" prot="public">OneWire</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="support__one__wire_8h_1a54d103f9749934ceeb9e6bf1268365e5" prot="public" static="no">
+        <name>ONEWIRE_SEARCH</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="30" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__one__wire_8h_1a8e51c50263d3dcc4b5e4596c0021722a" prot="public" static="no">
+        <name>ONEWIRE_CRC</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="35" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__one__wire_8h_1a62b54381428ba2f8d44a1b11f47b10de" prot="public" static="no">
+        <name>ONEWIRE_CRC8_TABLE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="44" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__one__wire_8h_1af218a02bdd87cddd058147e435a6b1ee" prot="public" static="no">
+        <name>ONEWIRE_CRC16</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="50" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__one__wire_8h_1aa93f0eb578d23995850d61f7d61c55c1" prot="public" static="no">
+        <name>FALSE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="53" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__one__wire_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" prot="public" static="no">
+        <name>TRUE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="54" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Support module for the one wire protocol. </para>    </briefdescription>
+    <detaileddescription>
+<para>See arduino one wire module for details: <ulink url="http://playground.arduino.cc/Learning/OneWire">http://playground.arduino.cc/Learning/OneWire</ulink> </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#ifndef<sp/>SUPPORT_ONEWIRE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SUPPORT_ONEWIRE_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>delayMicroseconds,<sp/>digitalPinToBitMask,<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>delayMicroseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;pins_arduino.h&quot;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>digitalPinToBitMask,<sp/>etc</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>exclude<sp/>certain<sp/>features<sp/>from<sp/>OneWire.<sp/><sp/>In<sp/>theory,<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>might<sp/>save<sp/>some<sp/>space.<sp/><sp/>In<sp/>practice,<sp/>the<sp/>compiler<sp/>automatically</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>removes<sp/>unused<sp/>code<sp/>(technically,<sp/>the<sp/>linker,<sp/>using<sp/>-fdata-sections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>-ffunction-sections<sp/>when<sp/>compiling,<sp/>and<sp/>Wl,--gc-sections</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>when<sp/>linking),<sp/>so<sp/>most<sp/>of<sp/>these<sp/>will<sp/>not<sp/>result<sp/>in<sp/>any<sp/>code<sp/>size</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>reduction.<sp/><sp/>Well,<sp/>unless<sp/>you<sp/>try<sp/>to<sp/>use<sp/>the<sp/>missing<sp/>features</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>and<sp/>redesign<sp/>your<sp/>program<sp/>to<sp/>not<sp/>need<sp/>them!<sp/><sp/>ONEWIRE_CRC8_TABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>is<sp/>the<sp/>exception,<sp/>because<sp/>it<sp/>selects<sp/>a<sp/>fast<sp/>but<sp/>large<sp/>algorithm</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>a<sp/>small<sp/>but<sp/>slow<sp/>algorithm.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/>you<sp/>can<sp/>exclude<sp/>onewire_search<sp/>by<sp/>defining<sp/>that<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ONEWIRE_SEARCH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="support__one__wire_8h_1a54d103f9749934ceeb9e6bf1268365e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ONEWIRE_SEARCH<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>exclude<sp/>CRC<sp/>checks<sp/>altogether<sp/>by<sp/>defining<sp/>this<sp/>to<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ONEWIRE_CRC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="support__one__wire_8h_1a8e51c50263d3dcc4b5e4596c0021722a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ONEWIRE_CRC<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Select<sp/>the<sp/>table-lookup<sp/>method<sp/>of<sp/>computing<sp/>the<sp/>8-bit<sp/>CRC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/>by<sp/>setting<sp/>this<sp/>to<sp/>1.<sp/><sp/>The<sp/>lookup<sp/>table<sp/>enlarges<sp/>code<sp/>size<sp/>by</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>about<sp/>250<sp/>bytes.<sp/><sp/>It<sp/>does<sp/>NOT<sp/>consume<sp/>RAM<sp/>(but<sp/>did<sp/>in<sp/>very</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">//<sp/>old<sp/>versions<sp/>of<sp/>OneWire).<sp/><sp/>If<sp/>you<sp/>disable<sp/>this,<sp/>a<sp/>slower</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/>but<sp/>very<sp/>compact<sp/>algorithm<sp/>is<sp/>used.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ONEWIRE_CRC8_TABLE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="support__one__wire_8h_1a62b54381428ba2f8d44a1b11f47b10de" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ONEWIRE_CRC8_TABLE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>can<sp/>allow<sp/>16-bit<sp/>CRC<sp/>checks<sp/>by<sp/>defining<sp/>this<sp/>to<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>(Note<sp/>that<sp/>ONEWIRE_CRC<sp/>must<sp/>also<sp/>be<sp/>1.)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ONEWIRE_CRC16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="support__one__wire_8h_1af218a02bdd87cddd058147e435a6b1ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ONEWIRE_CRC16<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="support__one__wire_8h_1aa93f0eb578d23995850d61f7d61c55c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FALSE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="support__one__wire_8h_1aa8cecfc5c5c054d2875c03e77b7be15d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRUE<sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Platform<sp/>specific<sp/>I/O<sp/>definitions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__AVR__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BASEREG(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(portInputRegister(digitalPinToPort(pin)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BITMASK(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(digitalPinToBitMask(pin))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_TYPE<sp/>uint8_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_ASM<sp/>asm(&quot;r30&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_READ(base,<sp/>mask)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((*(base))<sp/>&amp;<sp/>(mask))<sp/>?<sp/>1<sp/>:<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_INPUT(base,<sp/>mask)<sp/><sp/><sp/>((*((base)+1))<sp/>&amp;=<sp/>~(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_OUTPUT(base,<sp/>mask)<sp/><sp/>((*((base)+1))<sp/>|=<sp/>(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_LOW(base,<sp/>mask)<sp/><sp/><sp/><sp/>((*((base)+2))<sp/>&amp;=<sp/>~(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_HIGH(base,<sp/>mask)<sp/><sp/><sp/>((*((base)+2))<sp/>|=<sp/>(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__MK20DX128__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BASEREG(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(portOutputRegister(pin))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BITMASK(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_TYPE<sp/>uint8_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_ASM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_READ(base,<sp/>mask)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*((base)+512))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_INPUT(base,<sp/>mask)<sp/><sp/><sp/>(*((base)+640)<sp/>=<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_OUTPUT(base,<sp/>mask)<sp/><sp/>(*((base)+640)<sp/>=<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_LOW(base,<sp/>mask)<sp/><sp/><sp/><sp/>(*((base)+256)<sp/>=<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_HIGH(base,<sp/>mask)<sp/><sp/><sp/>(*((base)+128)<sp/>=<sp/>1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__SAM3X8E__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Arduino<sp/>1.5.1<sp/>may<sp/>have<sp/>a<sp/>bug<sp/>in<sp/>delayMicroseconds()<sp/>on<sp/>Arduino<sp/>Due.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://arduino.cc/forum/index.php/topic,141030.msg1076268.html#msg1076268</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>If<sp/>you<sp/>have<sp/>trouble<sp/>with<sp/>OneWire<sp/>on<sp/>Arduino<sp/>Due,<sp/>please<sp/>check<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/>status<sp/>of<sp/>delayMicroseconds()<sp/>before<sp/>reporting<sp/>a<sp/>bug<sp/>in<sp/>OneWire!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BASEREG(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(&amp;(digitalPinToPort(pin)-&gt;PIO_PER))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BITMASK(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(digitalPinToBitMask(pin))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_TYPE<sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_ASM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_READ(base,<sp/>mask)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((*((base)+15))<sp/>&amp;<sp/>(mask))<sp/>?<sp/>1<sp/>:<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_INPUT(base,<sp/>mask)<sp/><sp/><sp/>((*((base)+5))<sp/>=<sp/>(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_OUTPUT(base,<sp/>mask)<sp/><sp/>((*((base)+4))<sp/>=<sp/>(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_LOW(base,<sp/>mask)<sp/><sp/><sp/><sp/>((*((base)+13))<sp/>=<sp/>(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_HIGH(base,<sp/>mask)<sp/><sp/><sp/>((*((base)+12))<sp/>=<sp/>(mask))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>PROGMEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PROGMEM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>pgm_read_byte</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>pgm_read_byte(addr)<sp/>(*(const<sp/>uint8_t<sp/>*)(addr))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="preprocessor">#elif<sp/>defined(__PIC32MX__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BASEREG(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(portModeRegister(digitalPinToPort(pin)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>PIN_TO_BITMASK(pin)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(digitalPinToBitMask(pin))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_TYPE<sp/>uint32_t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>IO_REG_ASM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_READ(base,<sp/>mask)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(((*(base+4))<sp/>&amp;<sp/>(mask))<sp/>?<sp/>1<sp/>:<sp/>0)<sp/><sp/>//PORTX<sp/>+<sp/>0x10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_INPUT(base,<sp/>mask)<sp/><sp/><sp/>((*(base+2))<sp/>=<sp/>(mask))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//TRISXSET<sp/>+<sp/>0x08</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_MODE_OUTPUT(base,<sp/>mask)<sp/><sp/>((*(base+1))<sp/>=<sp/>(mask))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//TRISXCLR<sp/>+<sp/>0x04</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_LOW(base,<sp/>mask)<sp/><sp/><sp/><sp/>((*(base+8+1))<sp/>=<sp/>(mask))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//LATXCLR<sp/><sp/>+<sp/>0x24</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DIRECT_WRITE_HIGH(base,<sp/>mask)<sp/><sp/><sp/>((*(base+8+2))<sp/>=<sp/>(mask))<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//LATXSET<sp/>+<sp/>0x28</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="preprocessor">#error<sp/>&quot;Please<sp/>define<sp/>I/O<sp/>register<sp/>types<sp/>here&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="class_one_wire" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_one_wire" kindref="compound">OneWire</ref></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>IO_REG_TYPE<sp/>bitmask;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">volatile</highlight><highlight class="normal"><sp/>IO_REG_TYPE<sp/>*baseReg;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ONEWIRE_SEARCH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>global<sp/>search<sp/>state</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>ROM_NO[8];</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>LastDiscrepancy;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>LastFamilyDiscrepancy;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>LastDeviceFlag;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_one_wire_1aa3f23dc51d861a8d257648c507b14e8d" kindref="member">OneWire</ref>(<sp/>uint8_t<sp/>pin);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Perform<sp/>a<sp/>1-Wire<sp/>reset<sp/>cycle.<sp/>Returns<sp/>1<sp/>if<sp/>a<sp/>device<sp/>responds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>with<sp/>a<sp/>presence<sp/>pulse.<sp/><sp/>Returns<sp/>0<sp/>if<sp/>there<sp/>is<sp/>no<sp/>device<sp/>or<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bus<sp/>is<sp/>shorted<sp/>or<sp/>otherwise<sp/>held<sp/>low<sp/>for<sp/>more<sp/>than<sp/>250uS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_one_wire_1a6a742a9112392567eae3d06dde067c07" kindref="member">reset</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Issue<sp/>a<sp/>1-Wire<sp/>rom<sp/>select<sp/>command,<sp/>you<sp/>do<sp/>the<sp/>reset<sp/>first.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1accf808390abd63d3c7bce35677784384" kindref="member">select</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>rom[8]);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Issue<sp/>a<sp/>1-Wire<sp/>rom<sp/>skip<sp/>command,<sp/>to<sp/>address<sp/>all<sp/>on<sp/>bus.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1ae3780e2b0ea2ebf6be88298412ac7798" kindref="member">skip</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>a<sp/>byte.<sp/>If<sp/>&apos;power&apos;<sp/>is<sp/>one<sp/>then<sp/>the<sp/>wire<sp/>is<sp/>held<sp/>high<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>end<sp/>for<sp/>parasitically<sp/>powered<sp/>devices.<sp/>You<sp/>are<sp/>responsible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>eventually<sp/>depowering<sp/>it<sp/>by<sp/>calling<sp/>depower()<sp/>or<sp/>doing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>another<sp/>read<sp/>or<sp/>write.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1a843e9e7e57ed615b4880be0b76b40b7d" kindref="member">write</ref>(uint8_t<sp/>v,<sp/>uint8_t<sp/>power<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1a0fc1e0bdc2ab1f062c98567fa60a69ae" kindref="member">write_bytes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*buf,<sp/>uint16_t<sp/>count,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>power<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>a<sp/>byte.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_one_wire_1afd9bdb8b5a5b69b394dfc76352e00e21" kindref="member">read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1a2407440e8e25b624617593f8ad6447d4" kindref="member">read_bytes</ref>(uint8_t<sp/>*buf,<sp/>uint16_t<sp/>count);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>a<sp/>bit.<sp/>The<sp/>bus<sp/>is<sp/>always<sp/>left<sp/>powered<sp/>at<sp/>the<sp/>end,<sp/>see</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>note<sp/>in<sp/>write()<sp/>about<sp/>that.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1a6bbc58276d1cb08653dab3ea35378f94" kindref="member">write_bit</ref>(uint8_t<sp/>v);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>a<sp/>bit.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_one_wire_1aeae4c2798b70d9d0ba3091c03ee2d056" kindref="member">read_bit</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stop<sp/>forcing<sp/>power<sp/>onto<sp/>the<sp/>bus.<sp/>You<sp/>only<sp/>need<sp/>to<sp/>do<sp/>this<sp/>if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>you<sp/>used<sp/>the<sp/>&apos;power&apos;<sp/>flag<sp/>to<sp/>write()<sp/>or<sp/>used<sp/>a<sp/>write_bit()<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>and<sp/>aren&apos;t<sp/>about<sp/>to<sp/>do<sp/>another<sp/>read<sp/>or<sp/>write.<sp/>You<sp/>would<sp/>rather</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>not<sp/>leave<sp/>this<sp/>powered<sp/>if<sp/>you<sp/>don&apos;t<sp/>have<sp/>to,<sp/>just<sp/>in<sp/>case</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>someone<sp/>shorts<sp/>your<sp/>bus.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1aa8e0f62e830ad05d8035e55c7a309256" kindref="member">depower</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ONEWIRE_SEARCH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clear<sp/>the<sp/>search<sp/>state<sp/>so<sp/>that<sp/>if<sp/>will<sp/>start<sp/>from<sp/>the<sp/>beginning<sp/>again.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1aae5efdf67928b5ee312ab7d7906416fa" kindref="member">reset_search</ref>();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>the<sp/>search<sp/>to<sp/>find<sp/>the<sp/>device<sp/>type<sp/>&apos;family_code&apos;<sp/>on<sp/>the<sp/>next<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>to<sp/>search(*newAddr)<sp/>if<sp/>it<sp/>is<sp/>present.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1a0a1b8457adb609a693b865dd474e5116" kindref="member">target_search</ref>(uint8_t<sp/>family_code);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Look<sp/>for<sp/>the<sp/>next<sp/>device.<sp/>Returns<sp/>1<sp/>if<sp/>a<sp/>new<sp/>address<sp/>has<sp/>been</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>returned.<sp/>A<sp/>zero<sp/>might<sp/>mean<sp/>that<sp/>the<sp/>bus<sp/>is<sp/>shorted,<sp/>there<sp/>are</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>devices,<sp/>or<sp/>you<sp/>have<sp/>already<sp/>retrieved<sp/>all<sp/>of<sp/>them.<sp/><sp/>It</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>might<sp/>be<sp/>a<sp/>good<sp/>idea<sp/>to<sp/>check<sp/>the<sp/>CRC<sp/>to<sp/>make<sp/>sure<sp/>you<sp/>didn&apos;t</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>garbage.<sp/><sp/>The<sp/>order<sp/>is<sp/>deterministic.<sp/>You<sp/>will<sp/>always<sp/>get</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>same<sp/>devices<sp/>in<sp/>the<sp/>same<sp/>order.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/><ref refid="class_one_wire_1a383dc74fc9f8a27b76366a2859c3820a" kindref="member">search</ref>(uint8_t<sp/>*newAddr);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ONEWIRE_CRC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>a<sp/>Dallas<sp/>Semiconductor<sp/>8<sp/>bit<sp/>CRC,<sp/>these<sp/>are<sp/>used<sp/>in<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROM<sp/>and<sp/>scratchpad<sp/>registers.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint8_t<sp/><ref refid="class_one_wire_1ae3486a669581b750e4fdf3f3a12b05f1" kindref="member">crc8</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*addr,<sp/>uint8_t<sp/>len);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ONEWIRE_CRC16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>the<sp/>1-Wire<sp/>CRC16<sp/>and<sp/>compare<sp/>it<sp/>against<sp/>the<sp/>received<sp/>CRC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Example<sp/>usage<sp/>(reading<sp/>a<sp/>DS2408):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>//<sp/>Put<sp/>everything<sp/>in<sp/>a<sp/>buffer<sp/>so<sp/>we<sp/>can<sp/>compute<sp/>the<sp/>CRC<sp/>easily.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>uint8_t<sp/>buf[13];</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>buf[0]<sp/>=<sp/>0xF0;<sp/><sp/><sp/><sp/>//<sp/>Read<sp/>PIO<sp/>Registers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>buf[1]<sp/>=<sp/>0x88;<sp/><sp/><sp/><sp/>//<sp/>LSB<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>buf[2]<sp/>=<sp/>0x00;<sp/><sp/><sp/><sp/>//<sp/>MSB<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>WriteBytes(net,<sp/>buf,<sp/>3);<sp/><sp/><sp/><sp/>//<sp/>Write<sp/>3<sp/>cmd<sp/>bytes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>ReadBytes(net,<sp/>buf+3,<sp/>10);<sp/><sp/>//<sp/>Read<sp/>6<sp/>data<sp/>bytes,<sp/>2<sp/>0xFF,<sp/>2<sp/>CRC16</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>if<sp/>(!CheckCRC16(buf,<sp/>11,<sp/>&amp;buf[11]))<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Handle<sp/>error.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>}<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@param<sp/>input<sp/>-<sp/>Array<sp/>of<sp/>bytes<sp/>to<sp/>checksum.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@param<sp/>len<sp/>-<sp/>How<sp/>many<sp/>bytes<sp/>to<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@param<sp/>inverted_crc<sp/>-<sp/>The<sp/>two<sp/>CRC16<sp/>bytes<sp/>in<sp/>the<sp/>received<sp/>data.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>This<sp/>should<sp/>just<sp/>point<sp/>into<sp/>the<sp/>received<sp/>data,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*not*<sp/>at<sp/>a<sp/>16-bit<sp/>integer.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@param<sp/>crc<sp/>-<sp/>The<sp/>crc<sp/>starting<sp/>value<sp/>(optional)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@return<sp/>True,<sp/>iff<sp/>the<sp/>CRC<sp/>matches.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_one_wire_1a089c502d26caca5214264261db82d011" kindref="member">check_crc16</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>input,<sp/>uint16_t<sp/>len,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>inverted_crc,<sp/>uint16_t<sp/>crc<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>a<sp/>Dallas<sp/>Semiconductor<sp/>16<sp/>bit<sp/>CRC.<sp/><sp/>This<sp/>is<sp/>required<sp/>to<sp/>check</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>integrity<sp/>of<sp/>data<sp/>received<sp/>from<sp/>many<sp/>1-Wire<sp/>devices.<sp/><sp/>Note<sp/>that<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>CRC<sp/>computed<sp/>here<sp/>is<sp/>*not*<sp/>what<sp/>you&apos;ll<sp/>get<sp/>from<sp/>the<sp/>1-Wire<sp/>network,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>two<sp/>reasons:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>1)<sp/>The<sp/>CRC<sp/>is<sp/>transmitted<sp/>bitwise<sp/>inverted.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>2)<sp/>Depending<sp/>on<sp/>the<sp/>endian-ness<sp/>of<sp/>your<sp/>processor,<sp/>the<sp/>binary</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>representation<sp/>of<sp/>the<sp/>two-byte<sp/>return<sp/>value<sp/>may<sp/>have<sp/>a<sp/>different</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>byte<sp/>order<sp/>than<sp/>the<sp/>two<sp/>bytes<sp/>you<sp/>get<sp/>from<sp/>1-Wire.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@param<sp/>input<sp/>-<sp/>Array<sp/>of<sp/>bytes<sp/>to<sp/>checksum.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@param<sp/>len<sp/>-<sp/>How<sp/>many<sp/>bytes<sp/>to<sp/>use.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@param<sp/>crc<sp/>-<sp/>The<sp/>crc<sp/>starting<sp/>value<sp/>(optional)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>@return<sp/>The<sp/>CRC16,<sp/>as<sp/>defined<sp/>by<sp/>Dallas<sp/>Semiconductor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>uint16_t<sp/><ref refid="class_one_wire_1a685131803ff9bd250926de68fb477998" kindref="member">crc16</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*<sp/>input,<sp/>uint16_t<sp/>len,<sp/>uint16_t<sp/>crc<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SUPPORT_ONEWIRE_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="sensor__gc0011_8h" kind="file" language="C++">
+    <compoundname>sensor_gc0011.h</compoundname>
+    <includes local="yes">WProgram.h</includes>
+    <includes refid="support__software__serial_8h" local="yes">support_software_serial.h</includes>
+    <includes refid="module__handler_8h" local="yes">module_handler.h</includes>
+    <includedby refid="module__handler_8cpp" local="yes">src/module_handler.cpp</includedby>
+    <includedby refid="sensor__gc0011_8cpp" local="yes">src/sensor_gc0011.cpp</includedby>
+    <incdepgraph>
+      <node id="109">
+        <label>module_handler.h</label>
+        <link refid="module__handler_8h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+      </node>
+      <node id="106">
+        <label>support_software_serial.h</label>
+        <link refid="support__software__serial_8h"/>
+        <childnode refid="107" relation="include">
+        </childnode>
+        <childnode refid="108" relation="include">
+        </childnode>
+      </node>
+      <node id="105">
+        <label>WProgram.h</label>
+      </node>
+      <node id="108">
+        <label>Stream.h</label>
+      </node>
+      <node id="104">
+        <label>src/sensor_gc0011.h</label>
+        <link refid="sensor_gc0011.h"/>
+        <childnode refid="105" relation="include">
+        </childnode>
+        <childnode refid="106" relation="include">
+        </childnode>
+        <childnode refid="109" relation="include">
+        </childnode>
+      </node>
+      <node id="107">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="111">
+        <label>src/module_handler.cpp</label>
+        <link refid="module__handler_8cpp"/>
+      </node>
+      <node id="112">
+        <label>src/sensor_gc0011.cpp</label>
+        <link refid="sensor__gc0011_8cpp"/>
+      </node>
+      <node id="110">
+        <label>src/sensor_gc0011.h</label>
+        <link refid="sensor_gc0011.h"/>
+        <childnode refid="111" relation="include">
+        </childnode>
+        <childnode refid="112" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sensor_gc0011" prot="public">SensorGc0011</innerclass>
+    <briefdescription>
+<para>Sensor module for air co2, temperature, and humidity. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">//<sp/>Library<sp/>based<sp/>off:<sp/>Cozir<sp/>Example<sp/>Sketch<sp/>from<sp/>CO2Meter.com</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Library<sp/>found<sp/>at:<sp/>http://www.co2meters.com/Documentation/AppNotes/AN128-%20Cozir_Arduino.pdf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Component<sp/>found<sp/>at:<sp/>http://www.co2meter.com/products/cozir-0-2-co2-sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Modified<sp/>by<sp/>Jake<sp/>Rye</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>July<sp/>15,<sp/>2015</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SENSOR_GC0011_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSOR_GC0011_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>ARDUINO<sp/>&gt;=<sp/>100</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;Arduino.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;WProgram.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="support__software__serial_8h" kindref="compound">support_software_serial.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="module__handler_8h" kindref="compound">module_handler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_sensor_gc0011" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sensor_gc0011" kindref="compound">SensorGc0011</ref><sp/>:<sp/><ref refid="class_sensor_actuator_module" kindref="compound">SensorActuatorModule</ref><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_gc0011_1ac8b12368b4b524198210048fbd1d0c81" kindref="member">SensorGc0011</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rx_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx_pin,<sp/>String<sp/>co2_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>co2_instruction_id,<sp/>String<sp/>temperature_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temperature_instruction_id,String<sp/>humidity_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>humidity_instruction_id);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_gc0011_1a661743d47448c6b9c965fd8e1f123fbc" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(void);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/><ref refid="class_sensor_gc0011_1a658b7856221577342b54e4dc7fe06d2a" kindref="member">set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>instruction_parameter);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="class_sensor_gc0011_1a6da77eb384ff77e28c2fa092a03a4cbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_sensor_gc0011_1a6da77eb384ff77e28c2fa092a03a4cbb" kindref="member">temperature</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_sensor_gc0011_1af5964ea62f030dd4ea2f219224afa4e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_sensor_gc0011_1af5964ea62f030dd4ea2f219224afa4e6" kindref="member">humidity</ref>;</highlight></codeline>
+<codeline lineno="38" refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" kindref="member">co2</ref>;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>sendMessage(String<sp/>message);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>receiveMessage();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rx_pin_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx_pin_;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>co2_instruction_code_;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>co2_instruction_id_;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>temperature_instruction_code_;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temperature_instruction_id_;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>humidity_instruction_code_;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>humidity_instruction_id_;<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_software_serial" kindref="compound">SoftwareSerial</ref><sp/>*ss_;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>timeout_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SENSOR_GC0011_H_</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="src_8ino" kind="file" language="C++">
+    <compoundname>src.ino</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">/**<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>\file<sp/>src.ino</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>\brief<sp/>Enables<sp/>project<sp/>to<sp/>run<sp/>in<sp/>arduino<sp/>IDE.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>\details<sp/>See<sp/>module_handler.h<sp/>for<sp/>introductory<sp/>documentation.</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/><sp/>\author<sp/>Jake<sp/>Rye</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;module_handler.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>setup()<sp/>{<sp/>//<sp/>runs<sp/>once</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>initializeModules();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>loop()<sp/>{<sp/>//<sp/>runs<sp/>FOREVER!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>updateIncomingMessage();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>updateStreamMessage();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>//delay(3000);<sp/></highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/src.ino"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_sensor_contact_switch" kind="class" language="C++" prot="public">
+    <compoundname>SensorContactSwitch</compoundname>
+    <basecompoundref refid="class_sensor_actuator_module" prot="private" virt="non-virtual">SensorActuatorModule</basecompoundref>
+    <includes refid="sensor__contact__switch_8h" local="no">sensor_contact_switch.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_sensor_contact_switch_1a38d5bad22015b2013e776dec61bc8622" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensorContactSwitch::is_connected_</definition>
+        <argsstring></argsstring>
+        <name>is_connected_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="29" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sensor_contact_switch_1a4153cff505b95ff654be49791eb33668" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorContactSwitch::pin_</definition>
+        <argsstring></argsstring>
+        <name>pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="36" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_contact_switch_1a28a98a4d653b6f14eeadc65cb9297b6b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorContactSwitch::instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="37" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_contact_switch_1ab37134d83a9ba8b177d70d1bb0d2ab82" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorContactSwitch::instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="38" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensor_contact_switch_1a821878d797ea7b94dd2870f98df8fdf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SensorContactSwitch::SensorContactSwitch</definition>
+        <argsstring>(int pin, String instruction_code, int instruction_id)</argsstring>
+        <name>SensorContactSwitch</name>
+        <param>
+          <type>int</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="23" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.cpp" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_contact_switch_1a037d866b1e40776cc6fa00a46169b150" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SensorContactSwitch::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9">begin</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once at beginning of program to initialize modules. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="24" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_contact_switch_1a99a5906b45ed441eea56fb2960d35191" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorContactSwitch::get</definition>
+        <argsstring>(void)</argsstring>
+        <name>get</name>
+        <reimplements refid="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af">get</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update and report module data to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="25" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.cpp" bodystart="20" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_contact_switch_1ab49acd5d6132eed50d7342717649abc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorContactSwitch::set</definition>
+        <argsstring>(String instruction_code, int instruction_id, String instruction_parameter)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc">set</reimplements>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="26" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sensor_contact_switch_1adb4c23504b9a2751f42082cd651f3138" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SensorContactSwitch::getData</definition>
+        <argsstring>(void)</argsstring>
+        <name>getData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="33" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sensor module for all sensors that behave like a contact switch. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="20">
+        <label>SensorContactSwitch</label>
+        <link refid="class_sensor_contact_switch"/>
+        <childnode refid="21" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="23">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="22">
+        <label>SensorContactSwitch</label>
+        <link refid="class_sensor_contact_switch"/>
+        <childnode refid="23" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" line="20" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.h" bodystart="20" bodyend="39"/>
+    <listofallmembers>
+      <member refid="class_sensor_contact_switch_1a037d866b1e40776cc6fa00a46169b150" prot="public" virt="virtual"><scope>SensorContactSwitch</scope><name>begin</name></member>
+      <member refid="class_sensor_contact_switch_1a99a5906b45ed441eea56fb2960d35191" prot="public" virt="virtual"><scope>SensorContactSwitch</scope><name>get</name></member>
+      <member refid="class_sensor_contact_switch_1adb4c23504b9a2751f42082cd651f3138" prot="private" virt="non-virtual"><scope>SensorContactSwitch</scope><name>getData</name></member>
+      <member refid="class_sensor_contact_switch_1ab37134d83a9ba8b177d70d1bb0d2ab82" prot="private" virt="non-virtual"><scope>SensorContactSwitch</scope><name>instruction_code_</name></member>
+      <member refid="class_sensor_contact_switch_1a28a98a4d653b6f14eeadc65cb9297b6b" prot="private" virt="non-virtual"><scope>SensorContactSwitch</scope><name>instruction_id_</name></member>
+      <member refid="class_sensor_contact_switch_1a38d5bad22015b2013e776dec61bc8622" prot="public" virt="non-virtual"><scope>SensorContactSwitch</scope><name>is_connected_</name></member>
+      <member refid="class_sensor_contact_switch_1a4153cff505b95ff654be49791eb33668" prot="private" virt="non-virtual"><scope>SensorContactSwitch</scope><name>pin_</name></member>
+      <member refid="class_sensor_contact_switch_1a821878d797ea7b94dd2870f98df8fdf5" prot="public" virt="non-virtual"><scope>SensorContactSwitch</scope><name>SensorContactSwitch</name></member>
+      <member refid="class_sensor_contact_switch_1ab49acd5d6132eed50d7342717649abc2" prot="public" virt="virtual"><scope>SensorContactSwitch</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

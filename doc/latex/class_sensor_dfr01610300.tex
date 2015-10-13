@@ -1,0 +1,142 @@
+\hypertarget{class_sensor_dfr01610300}{}\section{Sensor\+Dfr01610300 Class Reference}
+\label{class_sensor_dfr01610300}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+
+
+Sensor module for water ph, ec, and temperature.  
+
+
+
+
+{\ttfamily \#include $<$sensor\+\_\+dfr0161\+\_\+0300.\+h$>$}
+
+Inheritance diagram for Sensor\+Dfr01610300\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sensor_dfr01610300}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sensor_dfr01610300_aeb40fef336ad2b2d82f7c5eddf9d318e}{Sensor\+Dfr01610300} (int ph\+\_\+pin, String ph\+\_\+instruction\+\_\+code, int ph\+\_\+instruction\+\_\+id, int temperature\+\_\+pin, String temperature\+\_\+instruction\+\_\+code, int temperature\+\_\+id, int ec\+\_\+pin, String ec\+\_\+instruction\+\_\+code, int ec\+\_\+id, int ec\+\_\+enable\+\_\+pin)
+\item 
+void \hyperlink{class_sensor_dfr01610300_a456221ff4728d8985c8e980d4f22b692}{begin} (void)
+\begin{DoxyCompactList}\small\item\em Called once to setup module. Declares objects, configures initial state, sets configuration \& calibration parameters. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_dfr01610300_a21bbd0f8ee7e6576eabd9acf0e1e4d89}{get} (void)
+\begin{DoxyCompactList}\small\item\em Returns J\+S\+O\+N string with module data. Module data\+: ph, temperature, ec. Data\+: \char`\"{}$<$instruction\+\_\+code$>$ $<$instruction\+\_\+id$>$ $<$value$>$\char`\"{}. Example\+: \char`\"{}\+S\+W\+P\+H 1 1\char`\"{}, \char`\"{}\+S\+W\+T\+M 1 1\char`\"{}, \char`\"{}\+S\+W\+E\+C 1 1\char`\"{},. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_dfr01610300_ab675c2708ff9d5d0d9bbe10bab3d97e8}{set} (String instruction\+\_\+code, int instruction\+\_\+id, String instruction\+\_\+parameter)
+\begin{DoxyCompactList}\small\item\em Reserved to passing data string to object Currently unused. Exists to comply with S\+A\+Module interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_sensor_dfr01610300_aa0ab70c745bde253adaa343afba56473}{ph\+\_\+raw}
+\item 
+float \hyperlink{class_sensor_dfr01610300_a09ae20cb63d44609c717dda168b8e454}{ph\+\_\+filtered}
+\item 
+float \hyperlink{class_sensor_dfr01610300_a483485c4c8a91569e8f45819e641e38c}{temperature\+\_\+raw}
+\item 
+float \hyperlink{class_sensor_dfr01610300_a598f2f18f66d626a3ce392478fcadcc8}{temperature\+\_\+filtered}
+\item 
+float \hyperlink{class_sensor_dfr01610300_af0fc005c44506d277f792acd29f64c3e}{ec\+\_\+raw}
+\item 
+float \hyperlink{class_sensor_dfr01610300_a3183d77d8012266006113a3d8647a2a9}{ec\+\_\+filtered}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor module for water ph, ec, and temperature. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sensor_dfr01610300_aeb40fef336ad2b2d82f7c5eddf9d318e}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{Sensor\+Dfr01610300}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\+Dfr01610300\+::\+Sensor\+Dfr01610300 (
+\begin{DoxyParamCaption}
+\item[{int}]{ph\+\_\+pin, }
+\item[{String}]{ph\+\_\+instruction\+\_\+code, }
+\item[{int}]{ph\+\_\+instruction\+\_\+id, }
+\item[{int}]{temperature\+\_\+pin, }
+\item[{String}]{temperature\+\_\+instruction\+\_\+code, }
+\item[{int}]{temperature\+\_\+id, }
+\item[{int}]{ec\+\_\+pin, }
+\item[{String}]{ec\+\_\+instruction\+\_\+code, }
+\item[{int}]{ec\+\_\+id, }
+\item[{int}]{ec\+\_\+enable\+\_\+pin}
+\end{DoxyParamCaption}
+)}\label{class_sensor_dfr01610300_aeb40fef336ad2b2d82f7c5eddf9d318e}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sensor_dfr01610300_a456221ff4728d8985c8e980d4f22b692}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!begin@{begin}}
+\index{begin@{begin}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\+Dfr01610300\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_dfr01610300_a456221ff4728d8985c8e980d4f22b692}
+
+
+Called once to setup module. Declares objects, configures initial state, sets configuration \& calibration parameters. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_dfr01610300_a21bbd0f8ee7e6576eabd9acf0e1e4d89}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!get@{get}}
+\index{get@{get}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Dfr01610300\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_dfr01610300_a21bbd0f8ee7e6576eabd9acf0e1e4d89}
+
+
+Returns J\+S\+O\+N string with module data. Module data\+: ph, temperature, ec. Data\+: \char`\"{}$<$instruction\+\_\+code$>$ $<$instruction\+\_\+id$>$ $<$value$>$\char`\"{}. Example\+: \char`\"{}\+S\+W\+P\+H 1 1\char`\"{}, \char`\"{}\+S\+W\+T\+M 1 1\char`\"{}, \char`\"{}\+S\+W\+E\+C 1 1\char`\"{},. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_dfr01610300_ab675c2708ff9d5d0d9bbe10bab3d97e8}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!set@{set}}
+\index{set@{set}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Dfr01610300\+::set (
+\begin{DoxyParamCaption}
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id, }
+\item[{String}]{instruction\+\_\+parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_dfr01610300_ab675c2708ff9d5d0d9bbe10bab3d97e8}
+
+
+Reserved to passing data string to object Currently unused. Exists to comply with S\+A\+Module interface. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{Sensor\+Actuator\+Module}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_sensor_dfr01610300_a3183d77d8012266006113a3d8647a2a9}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!ec\+\_\+filtered@{ec\+\_\+filtered}}
+\index{ec\+\_\+filtered@{ec\+\_\+filtered}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{ec\+\_\+filtered}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dfr01610300\+::ec\+\_\+filtered}\label{class_sensor_dfr01610300_a3183d77d8012266006113a3d8647a2a9}
+\hypertarget{class_sensor_dfr01610300_af0fc005c44506d277f792acd29f64c3e}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!ec\+\_\+raw@{ec\+\_\+raw}}
+\index{ec\+\_\+raw@{ec\+\_\+raw}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{ec\+\_\+raw}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dfr01610300\+::ec\+\_\+raw}\label{class_sensor_dfr01610300_af0fc005c44506d277f792acd29f64c3e}
+\hypertarget{class_sensor_dfr01610300_a09ae20cb63d44609c717dda168b8e454}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!ph\+\_\+filtered@{ph\+\_\+filtered}}
+\index{ph\+\_\+filtered@{ph\+\_\+filtered}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{ph\+\_\+filtered}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dfr01610300\+::ph\+\_\+filtered}\label{class_sensor_dfr01610300_a09ae20cb63d44609c717dda168b8e454}
+\hypertarget{class_sensor_dfr01610300_aa0ab70c745bde253adaa343afba56473}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!ph\+\_\+raw@{ph\+\_\+raw}}
+\index{ph\+\_\+raw@{ph\+\_\+raw}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{ph\+\_\+raw}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dfr01610300\+::ph\+\_\+raw}\label{class_sensor_dfr01610300_aa0ab70c745bde253adaa343afba56473}
+\hypertarget{class_sensor_dfr01610300_a598f2f18f66d626a3ce392478fcadcc8}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!temperature\+\_\+filtered@{temperature\+\_\+filtered}}
+\index{temperature\+\_\+filtered@{temperature\+\_\+filtered}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{temperature\+\_\+filtered}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dfr01610300\+::temperature\+\_\+filtered}\label{class_sensor_dfr01610300_a598f2f18f66d626a3ce392478fcadcc8}
+\hypertarget{class_sensor_dfr01610300_a483485c4c8a91569e8f45819e641e38c}{}\index{Sensor\+Dfr01610300@{Sensor\+Dfr01610300}!temperature\+\_\+raw@{temperature\+\_\+raw}}
+\index{temperature\+\_\+raw@{temperature\+\_\+raw}!Sensor\+Dfr01610300@{Sensor\+Dfr01610300}}
+\subsubsection[{temperature\+\_\+raw}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Dfr01610300\+::temperature\+\_\+raw}\label{class_sensor_dfr01610300_a483485c4c8a91569e8f45819e641e38c}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sensor__dfr0161__0300_8h}{sensor\+\_\+dfr0161\+\_\+0300.\+h}\item 
+src/\hyperlink{sensor__dfr0161__0300_8cpp}{sensor\+\_\+dfr0161\+\_\+0300.\+cpp}\end{DoxyCompactItemize}

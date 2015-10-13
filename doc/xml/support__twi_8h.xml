@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="support__twi_8h" kind="file" language="C++">
+    <compoundname>support_twi.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includedby refid="support__wire_8cpp" local="yes">src/support_wire.cpp</includedby>
+    <incdepgraph>
+      <node id="181">
+        <label>src/support_twi.h</label>
+        <link refid="support_twi.h"/>
+        <childnode refid="182" relation="include">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="184">
+        <label>src/support_wire.cpp</label>
+        <link refid="support__wire_8cpp"/>
+      </node>
+      <node id="183">
+        <label>src/support_twi.h</label>
+        <link refid="support_twi.h"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="support__twi_8h_1a3e79c6425e8cc6a0ce853eb49a45e5b9" prot="public" static="no">
+        <name>TWI_FREQ</name>
+        <initializer>100000L</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="33" column="11" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__twi_8h_1a18f2336f01cb5b7f479e65ee78020c76" prot="public" static="no">
+        <name>TWI_BUFFER_LENGTH</name>
+        <initializer>32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="37" column="11" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__twi_8h_1a78f8e40420d26b512b064b1902f5d559" prot="public" static="no">
+        <name>TWI_READY</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="40" column="11" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__twi_8h_1a4e51cef0c946abc25dca6e7edaa1653b" prot="public" static="no">
+        <name>TWI_MRX</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="41" column="11" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__twi_8h_1a18bbad08828cae8d1e9fd9b8105e3ebc" prot="public" static="no">
+        <name>TWI_MTX</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="42" column="11" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__twi_8h_1a0c36c496c84490bf65979fcc79e5e1b4" prot="public" static="no">
+        <name>TWI_SRX</name>
+        <initializer>3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="43" column="11" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="support__twi_8h_1afa37d05db1b20f3567371ef9e7bbbc48" prot="public" static="no">
+        <name>TWI_STX</name>
+        <initializer>4</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="44" column="11" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="support__twi_8h_1a16f0e6b2fa5a26eadbf4086ab6d54467" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void twi_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>twi_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1a77c13a875e935f91b58c3b8596aae88d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void twi_setAddress</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>twi_setAddress</name>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1a8f8b3d441d9dd1bd867b83729211b183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t twi_readFrom</definition>
+        <argsstring>(uint8_t, uint8_t *, uint8_t, uint8_t)</argsstring>
+        <name>twi_readFrom</name>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1a090e0c5c98f5f7255d43a349c4bb1b72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t twi_writeTo</definition>
+        <argsstring>(uint8_t, uint8_t *, uint8_t, uint8_t, uint8_t)</argsstring>
+        <name>twi_writeTo</name>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1a4fbb74866c71979506ac52d758cfdeac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t twi_transmit</definition>
+        <argsstring>(const uint8_t *, uint8_t)</argsstring>
+        <name>twi_transmit</name>
+        <param>
+          <type>const uint8_t *</type>
+        </param>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1ac8e9aa6430dccea8d986ca33f76fe487" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void twi_attachSlaveRxEvent</definition>
+        <argsstring>(void(*)(uint8_t *, int))</argsstring>
+        <name>twi_attachSlaveRxEvent</name>
+        <param>
+          <type>void(*)(uint8_t *, int)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1a73cd75244e3fa0d7e288adb7bc7430e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void twi_attachSlaveTxEvent</definition>
+        <argsstring>(void(*)(void))</argsstring>
+        <name>twi_attachSlaveTxEvent</name>
+        <param>
+          <type>void(*)(void)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1a54e17133aa927c4c76725f1f55e37531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void twi_reply</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>twi_reply</name>
+        <param>
+          <type>uint8_t</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1acf52d6c93df110dee6d402b389e5042e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void twi_stop</definition>
+        <argsstring>(void)</argsstring>
+        <name>twi_stop</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="support__twi_8h_1a7f830793058786f5597ddd1d80b885ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void twi_releaseBus</definition>
+        <argsstring>(void)</argsstring>
+        <name>twi_releaseBus</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Support module for the two wire interface module. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/><sp/>twi.h<sp/>-<sp/>TWI/I2C<sp/>library<sp/>for<sp/>Wiring<sp/>&amp;<sp/>Arduino</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>Copyright<sp/>(c)<sp/>2006<sp/>Nicholas<sp/>Zambetti.<sp/><sp/>All<sp/>right<sp/>reserved.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"></highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/><sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>twi_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>twi_h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//#define<sp/>ATMEGA8</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>TWI_FREQ</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="support__twi_8h_1a3e79c6425e8cc6a0ce853eb49a45e5b9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>TWI_FREQ<sp/>100000L</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#ifndef<sp/>TWI_BUFFER_LENGTH</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="support__twi_8h_1a18f2336f01cb5b7f479e65ee78020c76" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>TWI_BUFFER_LENGTH<sp/>32</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="support__twi_8h_1a78f8e40420d26b512b064b1902f5d559" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>TWI_READY<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="support__twi_8h_1a4e51cef0c946abc25dca6e7edaa1653b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>TWI_MRX<sp/><sp/><sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="support__twi_8h_1a18bbad08828cae8d1e9fd9b8105e3ebc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>TWI_MTX<sp/><sp/><sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="support__twi_8h_1a0c36c496c84490bf65979fcc79e5e1b4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>TWI_SRX<sp/><sp/><sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="support__twi_8h_1afa37d05db1b20f3567371ef9e7bbbc48" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#define<sp/>TWI_STX<sp/><sp/><sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="support__twi_8h_1a16f0e6b2fa5a26eadbf4086ab6d54467" kindref="member">twi_init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="support__twi_8h_1a77c13a875e935f91b58c3b8596aae88d" kindref="member">twi_setAddress</ref>(uint8_t);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="support__twi_8h_1a8f8b3d441d9dd1bd867b83729211b183" kindref="member">twi_readFrom</ref>(uint8_t,<sp/>uint8_t*,<sp/>uint8_t,<sp/>uint8_t);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="support__twi_8h_1a090e0c5c98f5f7255d43a349c4bb1b72" kindref="member">twi_writeTo</ref>(uint8_t,<sp/>uint8_t*,<sp/>uint8_t,<sp/>uint8_t,<sp/>uint8_t);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="support__twi_8h_1a4fbb74866c71979506ac52d758cfdeac" kindref="member">twi_transmit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t*,<sp/>uint8_t);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="support__twi_8h_1ac8e9aa6430dccea8d986ca33f76fe487" kindref="member">twi_attachSlaveRxEvent</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(uint8_t*,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="support__twi_8h_1a73cd75244e3fa0d7e288adb7bc7430e8" kindref="member">twi_attachSlaveTxEvent</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="support__twi_8h_1a54e17133aa927c4c76725f1f55e37531" kindref="member">twi_reply</ref>(uint8_t);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="support__twi_8h_1acf52d6c93df110dee6d402b389e5042e" kindref="member">twi_stop</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="support__twi_8h_1a7f830793058786f5597ddd1d80b885ae" kindref="member">twi_releaseBus</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_twi.h"/>
+  </compounddef>
+</doxygen>

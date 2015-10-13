@@ -1,0 +1,248 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_actuator_relay" kind="class" language="C++" prot="public">
+    <compoundname>ActuatorRelay</compoundname>
+    <basecompoundref refid="class_sensor_actuator_module" prot="private" virt="non-virtual">SensorActuatorModule</basecompoundref>
+    <includes refid="actuator__relay_8h" local="no">actuator_relay.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_actuator_relay_1a8f63c9df6e8dfc90425838f6c1c8fb0e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ActuatorRelay::value_</definition>
+        <argsstring></argsstring>
+        <name>value_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="66" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_actuator_relay_1aee7387b16533da553d0251565e53fc67" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ActuatorRelay::pin_</definition>
+        <argsstring></argsstring>
+        <name>pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="75" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_actuator_relay_1afe696181678cfe09cfa10aaaf180db0a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ActuatorRelay::instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="76" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_actuator_relay_1aa099dae9ab5528ff382979da41a90bfa" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String ActuatorRelay::instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="77" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_actuator_relay_1a0a19fabbd9a3ee500d906a55579ae4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ActuatorRelay::ActuatorRelay</definition>
+        <argsstring>(int pin, String instruction_code, int instruction_id)</argsstring>
+        <name>ActuatorRelay</name>
+        <param>
+          <type>int</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <briefdescription>
+<para>Used to construct an instance of the <ref refid="class_actuator_relay" kindref="compound">ActuatorRelay</ref> class. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the control line for the relay </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">instruction_code</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the 4-letter instruction code associated with the actuation the relay is switching. <ref refid="struct_instruction" kindref="compound">Instruction</ref> codes are not necessarily unique. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">instruction_id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>is the ID associated with the specific actuator that is being switched. Each ID is unique.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+To clarify how parameters are used, consider the following case. Imagine there are two air heaters each connected to their own relay. They would have the same instruction code: AAHE (Actuator Air Heater) but would both need to be addressable. Thus the instruction_ids of the heaters would be 1 and 2. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="40" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.cpp" bodystart="10" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="class_actuator_relay_1abd921e88bb8fcecfbd5e1213e1faad56" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ActuatorRelay::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9">begin</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once to setup module. Sets specified control pin to be in OUTPUT mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="46" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.cpp" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_actuator_relay_1affbcfa491c42a0aae3d69450cf7295b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String ActuatorRelay::get</definition>
+        <argsstring>(void)</argsstring>
+        <name>get</name>
+        <reimplements refid="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af">get</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns JSON string with module data. Data: &quot;&lt;instruction_code&gt; &lt;instruction_id&gt; &lt;value&gt;&quot;, Example: &quot;AAHU 1 1&quot;,. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="53" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.cpp" bodystart="21" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_actuator_relay_1a29995263e5a05a3fdff0761cb4730306" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String ActuatorRelay::set</definition>
+        <argsstring>(String instruction_code, int instruction_id, String instruction_parameter)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc">set</reimplements>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Sets relay to be on / off. If instruction_code &amp; instruction_id match the code and id module was instantiated with, the relay will enter the state passed in through instruction_parameter. If instruction_parameter = &quot;1&quot;, relay is ON (switch closed). If instruction_paremerter = &quot;0&quot;, relay is OFF (switch open). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="63" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.cpp" bodystart="37" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_actuator_relay_1a7474a93211dd2e804372f5578db85658" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ActuatorRelay::turnOn</definition>
+        <argsstring>(void)</argsstring>
+        <name>turnOn</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="71" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.cpp" bodystart="52" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_actuator_relay_1ac62dd8fbb4a33c829fb9dacc04aab33f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ActuatorRelay::turnOff</definition>
+        <argsstring>(void)</argsstring>
+        <name>turnOff</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="72" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.cpp" bodystart="57" bodyend="60"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Actuator module for an active low SPST-NO relay. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>ActuatorRelay</label>
+        <link refid="class_actuator_relay"/>
+        <childnode refid="1" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ActuatorRelay</label>
+        <link refid="class_actuator_relay"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" line="21" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/actuator_relay.h" bodystart="21" bodyend="78"/>
+    <listofallmembers>
+      <member refid="class_actuator_relay_1a0a19fabbd9a3ee500d906a55579ae4f3" prot="public" virt="non-virtual"><scope>ActuatorRelay</scope><name>ActuatorRelay</name></member>
+      <member refid="class_actuator_relay_1abd921e88bb8fcecfbd5e1213e1faad56" prot="public" virt="virtual"><scope>ActuatorRelay</scope><name>begin</name></member>
+      <member refid="class_actuator_relay_1affbcfa491c42a0aae3d69450cf7295b1" prot="public" virt="virtual"><scope>ActuatorRelay</scope><name>get</name></member>
+      <member refid="class_actuator_relay_1aa099dae9ab5528ff382979da41a90bfa" prot="private" virt="non-virtual"><scope>ActuatorRelay</scope><name>instruction_code_</name></member>
+      <member refid="class_actuator_relay_1afe696181678cfe09cfa10aaaf180db0a" prot="private" virt="non-virtual"><scope>ActuatorRelay</scope><name>instruction_id_</name></member>
+      <member refid="class_actuator_relay_1aee7387b16533da553d0251565e53fc67" prot="private" virt="non-virtual"><scope>ActuatorRelay</scope><name>pin_</name></member>
+      <member refid="class_actuator_relay_1a29995263e5a05a3fdff0761cb4730306" prot="public" virt="virtual"><scope>ActuatorRelay</scope><name>set</name></member>
+      <member refid="class_actuator_relay_1ac62dd8fbb4a33c829fb9dacc04aab33f" prot="private" virt="non-virtual"><scope>ActuatorRelay</scope><name>turnOff</name></member>
+      <member refid="class_actuator_relay_1a7474a93211dd2e804372f5578db85658" prot="private" virt="non-virtual"><scope>ActuatorRelay</scope><name>turnOn</name></member>
+      <member refid="class_actuator_relay_1a8f63c9df6e8dfc90425838f6c1c8fb0e" prot="public" virt="non-virtual"><scope>ActuatorRelay</scope><name>value_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

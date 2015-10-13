@@ -1,0 +1,357 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_communication" kind="class" language="C++" prot="public">
+    <compoundname>Communication</compoundname>
+    <includes refid="communication_8h" local="no">communication.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_communication_1a566d648baea3543f997db397e7467a75" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Communication::not_connected_</definition>
+        <argsstring></argsstring>
+        <name>not_connected_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="29" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_communication_1aec41477701a310337e3c2de54175f357" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Communication::kBaudRate</definition>
+        <argsstring></argsstring>
+        <name>kBaudRate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="42" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1a01f72772a83ac17dc6f1de88aadf2b8d" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Communication::kEstablishConnectionTimeout</definition>
+        <argsstring></argsstring>
+        <name>kEstablishConnectionTimeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="43" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1ae4aa2b745fa8dad923d84588740ea77a" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Communication::kReceiveTimeout</definition>
+        <argsstring></argsstring>
+        <name>kReceiveTimeout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="44" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1abe573177125a577197c7697bee44c5f3" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Communication::kStartOfHeaderChar</definition>
+        <argsstring></argsstring>
+        <name>kStartOfHeaderChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="45" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1afa3d275984d6cda6c714d5cd1d5b3ace" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Communication::kStartOfTextChar</definition>
+        <argsstring></argsstring>
+        <name>kStartOfTextChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="46" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1a3a5eb61e42b09e6cb525f9b9b4f47a87" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Communication::kEndOfTextChar</definition>
+        <argsstring></argsstring>
+        <name>kEndOfTextChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="47" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1a249184beb6f92cce0979138aea03da2b" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Communication::kEndOfTransmissionChar</definition>
+        <argsstring></argsstring>
+        <name>kEndOfTransmissionChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="48" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1a81bc855b047ce96557cc274e9d470f28" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Communication::kEnquireChar</definition>
+        <argsstring></argsstring>
+        <name>kEnquireChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="49" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_communication_1a47cd417ff6cb9b0ce01eada8b6ed8fc3" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Communication::kAcknowledgeChar</definition>
+        <argsstring></argsstring>
+        <name>kAcknowledgeChar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="50" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_communication_1af7eea76d811d38b02fb67ec5133e6eec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="23" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="9" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1a7905fe8302c11cc1c1dc8a10bc71fdc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Communication::send</definition>
+        <argsstring>(String message)</argsstring>
+        <name>send</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="24" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="40" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1a086f2246c7e3715c8de1bc96cfbce262" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Communication::available</definition>
+        <argsstring>(void)</argsstring>
+        <name>available</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="25" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="52" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1ad53d6b2efc619612fb542afdfda43ec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Communication::receive</definition>
+        <argsstring>(void)</argsstring>
+        <name>receive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="26" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="61" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_communication_1a605bbf81096857e9bdc1ae0654b5ee9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Communication::getPackedMessage</definition>
+        <argsstring>(String message)</argsstring>
+        <name>getPackedMessage</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="33" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="101" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1ac85b94747e459ab56beb14d8ba79d7bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Communication::getChecksum</definition>
+        <argsstring>(String message)</argsstring>
+        <name>getChecksum</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="34" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="114" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1afdac1c8dc6b88c8c1c8b50deaa28d340" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Communication::getUnpackedMessage</definition>
+        <argsstring>(String message)</argsstring>
+        <name>getUnpackedMessage</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="35" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="133" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1a70376e84447a7f10688c16924774ae98" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Communication::checkStartOfHeader</definition>
+        <argsstring>(String message)</argsstring>
+        <name>checkStartOfHeader</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="36" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="167" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1ad8648463502278242ded56324c20020f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Communication::parseHeader</definition>
+        <argsstring>(String message)</argsstring>
+        <name>parseHeader</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="37" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="176" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1a1c78c8e39e232b232ac2121bbb98fe7e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Communication::parseText</definition>
+        <argsstring>(String message)</argsstring>
+        <name>parseText</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="38" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="184" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="class_communication_1afe33a0af679045de0cb7b0e159c748f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String Communication::parseFooter</definition>
+        <argsstring>(String message)</argsstring>
+        <name>parseFooter</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="39" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.cpp" bodystart="196" bodyend="206"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Handles a character based serial communication protocol. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/communication.h" line="20" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/communication.h" bodystart="20" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_communication_1a086f2246c7e3715c8de1bc96cfbce262" prot="public" virt="non-virtual"><scope>Communication</scope><name>available</name></member>
+      <member refid="class_communication_1af7eea76d811d38b02fb67ec5133e6eec" prot="public" virt="non-virtual"><scope>Communication</scope><name>begin</name></member>
+      <member refid="class_communication_1a70376e84447a7f10688c16924774ae98" prot="private" virt="non-virtual"><scope>Communication</scope><name>checkStartOfHeader</name></member>
+      <member refid="class_communication_1ac85b94747e459ab56beb14d8ba79d7bc" prot="private" virt="non-virtual"><scope>Communication</scope><name>getChecksum</name></member>
+      <member refid="class_communication_1a605bbf81096857e9bdc1ae0654b5ee9c" prot="private" virt="non-virtual"><scope>Communication</scope><name>getPackedMessage</name></member>
+      <member refid="class_communication_1afdac1c8dc6b88c8c1c8b50deaa28d340" prot="private" virt="non-virtual"><scope>Communication</scope><name>getUnpackedMessage</name></member>
+      <member refid="class_communication_1a47cd417ff6cb9b0ce01eada8b6ed8fc3" prot="private" virt="non-virtual"><scope>Communication</scope><name>kAcknowledgeChar</name></member>
+      <member refid="class_communication_1aec41477701a310337e3c2de54175f357" prot="private" virt="non-virtual"><scope>Communication</scope><name>kBaudRate</name></member>
+      <member refid="class_communication_1a3a5eb61e42b09e6cb525f9b9b4f47a87" prot="private" virt="non-virtual"><scope>Communication</scope><name>kEndOfTextChar</name></member>
+      <member refid="class_communication_1a249184beb6f92cce0979138aea03da2b" prot="private" virt="non-virtual"><scope>Communication</scope><name>kEndOfTransmissionChar</name></member>
+      <member refid="class_communication_1a81bc855b047ce96557cc274e9d470f28" prot="private" virt="non-virtual"><scope>Communication</scope><name>kEnquireChar</name></member>
+      <member refid="class_communication_1a01f72772a83ac17dc6f1de88aadf2b8d" prot="private" virt="non-virtual"><scope>Communication</scope><name>kEstablishConnectionTimeout</name></member>
+      <member refid="class_communication_1ae4aa2b745fa8dad923d84588740ea77a" prot="private" virt="non-virtual"><scope>Communication</scope><name>kReceiveTimeout</name></member>
+      <member refid="class_communication_1abe573177125a577197c7697bee44c5f3" prot="private" virt="non-virtual"><scope>Communication</scope><name>kStartOfHeaderChar</name></member>
+      <member refid="class_communication_1afa3d275984d6cda6c714d5cd1d5b3ace" prot="private" virt="non-virtual"><scope>Communication</scope><name>kStartOfTextChar</name></member>
+      <member refid="class_communication_1a566d648baea3543f997db397e7467a75" prot="public" virt="non-virtual"><scope>Communication</scope><name>not_connected_</name></member>
+      <member refid="class_communication_1afe33a0af679045de0cb7b0e159c748f8" prot="private" virt="non-virtual"><scope>Communication</scope><name>parseFooter</name></member>
+      <member refid="class_communication_1ad8648463502278242ded56324c20020f" prot="private" virt="non-virtual"><scope>Communication</scope><name>parseHeader</name></member>
+      <member refid="class_communication_1a1c78c8e39e232b232ac2121bbb98fe7e" prot="private" virt="non-virtual"><scope>Communication</scope><name>parseText</name></member>
+      <member refid="class_communication_1ad53d6b2efc619612fb542afdfda43ec0" prot="public" virt="non-virtual"><scope>Communication</scope><name>receive</name></member>
+      <member refid="class_communication_1a7905fe8302c11cc1c1dc8a10bc71fdc6" prot="public" virt="non-virtual"><scope>Communication</scope><name>send</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

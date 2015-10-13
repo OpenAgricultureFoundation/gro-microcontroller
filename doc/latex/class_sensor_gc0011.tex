@@ -1,0 +1,125 @@
+\hypertarget{class_sensor_gc0011}{}\section{Sensor\+Gc0011 Class Reference}
+\label{class_sensor_gc0011}\index{Sensor\+Gc0011@{Sensor\+Gc0011}}
+
+
+Sensor module for air co2, temperature, and humidity.  
+
+
+
+
+{\ttfamily \#include $<$sensor\+\_\+gc0011.\+h$>$}
+
+Inheritance diagram for Sensor\+Gc0011\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sensor_gc0011}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sensor_gc0011_ac8b12368b4b524198210048fbd1d0c81}{Sensor\+Gc0011} (int rx\+\_\+pin, int tx\+\_\+pin, String co2\+\_\+instruction\+\_\+code, int co2\+\_\+instruction\+\_\+id, String temperature\+\_\+instruction\+\_\+code, int temperature\+\_\+instruction\+\_\+id, String humidity\+\_\+instruction\+\_\+code, int humidity\+\_\+instruction\+\_\+id)
+\item 
+void \hyperlink{class_sensor_gc0011_a661743d47448c6b9c965fd8e1f123fbc}{begin} (void)
+\begin{DoxyCompactList}\small\item\em Called once at beginning of program to initialize modules. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_gc0011_a2920401f54e121bba1398d52e9b2c90a}{get} (void)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update and report module data to controller. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_gc0011_a658b7856221577342b54e4dc7fe06d2a}{set} (String instruction\+\_\+code, int instruction\+\_\+id, String instruction\+\_\+parameter)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_sensor_gc0011_a6da77eb384ff77e28c2fa092a03a4cbb}{temperature}
+\item 
+float \hyperlink{class_sensor_gc0011_af5964ea62f030dd4ea2f219224afa4e6}{humidity}
+\item 
+float \hyperlink{class_sensor_gc0011_acd7c57373be1c5fb21c8da8c25861138}{co2}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor module for air co2, temperature, and humidity. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sensor_gc0011_ac8b12368b4b524198210048fbd1d0c81}{}\index{Sensor\+Gc0011@{Sensor\+Gc0011}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\index{Sensor\+Gc0011@{Sensor\+Gc0011}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\subsubsection[{Sensor\+Gc0011}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\+Gc0011\+::\+Sensor\+Gc0011 (
+\begin{DoxyParamCaption}
+\item[{int}]{rx\+\_\+pin, }
+\item[{int}]{tx\+\_\+pin, }
+\item[{String}]{co2\+\_\+instruction\+\_\+code, }
+\item[{int}]{co2\+\_\+instruction\+\_\+id, }
+\item[{String}]{temperature\+\_\+instruction\+\_\+code, }
+\item[{int}]{temperature\+\_\+instruction\+\_\+id, }
+\item[{String}]{humidity\+\_\+instruction\+\_\+code, }
+\item[{int}]{humidity\+\_\+instruction\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_sensor_gc0011_ac8b12368b4b524198210048fbd1d0c81}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sensor_gc0011_a661743d47448c6b9c965fd8e1f123fbc}{}\index{Sensor\+Gc0011@{Sensor\+Gc0011}!begin@{begin}}
+\index{begin@{begin}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\+Gc0011\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_gc0011_a661743d47448c6b9c965fd8e1f123fbc}
+
+
+Called once at beginning of program to initialize modules. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_gc0011_a2920401f54e121bba1398d52e9b2c90a}{}\index{Sensor\+Gc0011@{Sensor\+Gc0011}!get@{get}}
+\index{get@{get}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Gc0011\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_gc0011_a2920401f54e121bba1398d52e9b2c90a}
+
+
+Called once per loop iteration to update and report module data to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_gc0011_a658b7856221577342b54e4dc7fe06d2a}{}\index{Sensor\+Gc0011@{Sensor\+Gc0011}!set@{set}}
+\index{set@{set}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Gc0011\+::set (
+\begin{DoxyParamCaption}
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id, }
+\item[{String}]{instruction\+\_\+parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_gc0011_a658b7856221577342b54e4dc7fe06d2a}
+
+
+Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{Sensor\+Actuator\+Module}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_sensor_gc0011_acd7c57373be1c5fb21c8da8c25861138}{}\index{Sensor\+Gc0011@{Sensor\+Gc0011}!co2@{co2}}
+\index{co2@{co2}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\subsubsection[{co2}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Gc0011\+::co2}\label{class_sensor_gc0011_acd7c57373be1c5fb21c8da8c25861138}
+\hypertarget{class_sensor_gc0011_af5964ea62f030dd4ea2f219224afa4e6}{}\index{Sensor\+Gc0011@{Sensor\+Gc0011}!humidity@{humidity}}
+\index{humidity@{humidity}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\subsubsection[{humidity}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Gc0011\+::humidity}\label{class_sensor_gc0011_af5964ea62f030dd4ea2f219224afa4e6}
+\hypertarget{class_sensor_gc0011_a6da77eb384ff77e28c2fa092a03a4cbb}{}\index{Sensor\+Gc0011@{Sensor\+Gc0011}!temperature@{temperature}}
+\index{temperature@{temperature}!Sensor\+Gc0011@{Sensor\+Gc0011}}
+\subsubsection[{temperature}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Gc0011\+::temperature}\label{class_sensor_gc0011_a6da77eb384ff77e28c2fa092a03a4cbb}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sensor__gc0011_8h}{sensor\+\_\+gc0011.\+h}\item 
+src/\hyperlink{sensor__gc0011_8cpp}{sensor\+\_\+gc0011.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,24 @@
+\hypertarget{sensor__dfr0161__0300_8h}{}\section{src/sensor\+\_\+dfr0161\+\_\+0300.h File Reference}
+\label{sensor__dfr0161__0300_8h}\index{src/sensor\+\_\+dfr0161\+\_\+0300.\+h@{src/sensor\+\_\+dfr0161\+\_\+0300.\+h}}
+
+
+Sensor module for water ph, ec, and temperature.  
+
+
+{\ttfamily \#include \char`\"{}W\+Program.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}module\+\_\+handler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}support\+\_\+moving\+\_\+average.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}support\+\_\+one\+\_\+wire.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_sensor_dfr01610300}{Sensor\+Dfr01610300}
+\begin{DoxyCompactList}\small\item\em Sensor module for water ph, ec, and temperature. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor module for water ph, ec, and temperature. 
+
+These 3 sensors are contained in the same module due to their dependencies. Water temperature is used to calculate ec and when the ec sensor is on, it interferes with the ph sensor. Temperature is updated every time the the $\ast$.get() function is called. Ph and ec will alternate updates assuming the time since the previous $\ast$.get() was called is greater than the required delay durations for the amount of time the ec sensor needs to turn on as well as the the amount of time the ph sensor needs for ec\+\_\+sensor noise to settle once turned off. As implied by the previous statement, the ec sensor\textquotesingle{}s G\+N\+D and V\+C\+C lines are tied to a D\+P\+S\+T-\/\+N\+O relay (2-\/\+Type\+A) that is controlled by the ec\+\_\+enable\+\_\+pin. As some relays can be very loud when switching, a reed relay should be used instead of a latching relay. The audible noise produced from the reed relay used in this system is neglidgable. As audible noise can be bothersome to have in a system, a reasonable thought might be to use a solid-\/state relay. This will not work as solid state relays do not provide complete electrical isolation which will cause the ec sensor to interfere with the ph sensor thus defeating the purpose of having the relay. If alternating ph and ec sensor reading is inadequate to your sensing purposes, analog optoisolators may be of use. The specific components intended for use with this module are the D\+F\+R0161 p\+H sensor, D\+F\+R0300 E\+C sensor, and the D\+S18\+B20 temperature sensor. The temperature sensor is included in the D\+F\+R0300 package. The relay used is the 8\+L02-\/05-\/01. \begin{DoxyAuthor}{Author}
+Jake Rye 
+\end{DoxyAuthor}

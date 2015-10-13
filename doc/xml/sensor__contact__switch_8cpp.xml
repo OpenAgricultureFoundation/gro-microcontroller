@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="sensor__contact__switch_8cpp" kind="file" language="C++">
+    <compoundname>sensor_contact_switch.cpp</compoundname>
+    <includes refid="sensor__contact__switch_8h" local="yes">sensor_contact_switch.h</includes>
+    <incdepgraph>
+      <node id="58">
+        <label>module_handler.h</label>
+        <link refid="module__handler_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>src/sensor_contact_switch.cpp</label>
+        <link refid="sensor_contact_switch.cpp"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>WProgram.h</label>
+      </node>
+      <node id="56">
+        <label>sensor_contact_switch.h</label>
+        <link refid="sensor__contact__switch_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Sensor module for all sensors that behave like a contact switch. </para>    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="sensor__contact__switch_8h" kindref="compound">sensor_contact_switch.h</ref> for details. <simplesect kind="author"><para>Jake Rye </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sensor__contact__switch_8h" kindref="compound">sensor_contact_switch.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//--------------------------------------------------PUBLIC-------------------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="class_sensor_contact_switch_1a821878d797ea7b94dd2870f98df8fdf5" kindref="member">SensorContactSwitch::SensorContactSwitch</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pin,<sp/>String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/>pin_<sp/>=<sp/>pin;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/>instruction_code_<sp/>=<sp/>instruction_code;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/>instruction_id_<sp/>=<sp/>instruction_id;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_contact_switch_1a037d866b1e40776cc6fa00a46169b150" kindref="member">SensorContactSwitch::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/>pinMode(pin_,INPUT_PULLUP);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">String<sp/><ref refid="class_sensor_contact_switch_1a99a5906b45ed441eea56fb2960d35191" kindref="member">SensorContactSwitch::get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Sensor<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_contact_switch_1a38d5bad22015b2013e776dec61bc8622" kindref="member">is_connected_</ref><sp/>=<sp/>getData();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>String<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Actuator<sp/>State</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>instruction_code_;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>instruction_id_;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/><ref refid="class_sensor_contact_switch_1a38d5bad22015b2013e776dec61bc8622" kindref="member">is_connected_</ref>;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>return<sp/>&quot;&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>message;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">String<sp/><ref refid="class_sensor_contact_switch_1ab49acd5d6132eed50d7342717649abc2" kindref="member">SensorContactSwitch::set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>instruction_parameter)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//-------------------------------------------------PRIVATE-------------------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>SensorContactSwitch::getData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>digitalRead(pin_);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_contact_switch.cpp"/>
+  </compounddef>
+</doxygen>

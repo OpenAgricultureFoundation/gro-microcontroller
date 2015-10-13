@@ -1,0 +1,620 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_sensor_tsl2561" kind="class" language="C++" prot="public">
+    <compoundname>SensorTsl2561</compoundname>
+    <basecompoundref refid="class_sensor_actuator_module" prot="private" virt="non-virtual">SensorActuatorModule</basecompoundref>
+    <includes refid="sensor__tsl2561_8h" local="no">sensor_tsl2561.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorTsl2561::lux_</definition>
+        <argsstring></argsstring>
+        <name>lux_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="97" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a1159f0229bf7cfc07da35366f81661f7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorTsl2561::par_</definition>
+        <argsstring></argsstring>
+        <name>par_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="98" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a91e00dec788362624f9710ca15058e89" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorTsl2561::lux_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>lux_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="111" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1acad5738bd3cf0e1ec2f4d460481625ed" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorTsl2561::lux_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>lux_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="112" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a67f9c713d4233a7e1ac8dfd147e2c2ca" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorTsl2561::par_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>par_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="113" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1af9fbf22dba97a3a05ff438db88ef6ea8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorTsl2561::par_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>par_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="114" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1ae6833565371c08cbdbb743ee76051af6" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorTsl2561::calibrtion_to_vernier_lux_</definition>
+        <argsstring></argsstring>
+        <name>calibrtion_to_vernier_lux_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="115" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a77b48ab50eb76183b73f59f38d68abfa" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorTsl2561::calibration_to_vernier_par_</definition>
+        <argsstring></argsstring>
+        <name>calibration_to_vernier_par_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="116" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a3029df4c17b568ad28da263b437cf126" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorTsl2561::measuring_indoor_par_correction_</definition>
+        <argsstring></argsstring>
+        <name>measuring_indoor_par_correction_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="117" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a6eec8b6d787aa3fc8f5cdb23fc0aaf38" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SensorTsl2561::read_register_timeout_</definition>
+        <argsstring></argsstring>
+        <name>read_register_timeout_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="118" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1af8a5f90c246006ba80153fc52e71ea09" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensorTsl2561::read_register_error_</definition>
+        <argsstring></argsstring>
+        <name>read_register_error_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="119" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1aa7db37ebd46e54f65466465419fe2be5" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorTsl2561::CH0_LOW</definition>
+        <argsstring></argsstring>
+        <name>CH0_LOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="120" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1ad168af159474b094058de9874317bd6c" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorTsl2561::CH0_HIGH</definition>
+        <argsstring></argsstring>
+        <name>CH0_HIGH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="120" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1ad8521ba653fb44a2c5dbf41052b3db7f" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorTsl2561::CH1_LOW</definition>
+        <argsstring></argsstring>
+        <name>CH1_LOW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="120" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a13d25c86f722c1a0c6c39169fb38bf5f" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorTsl2561::CH1_HIGH</definition>
+        <argsstring></argsstring>
+        <name>CH1_HIGH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="120" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1ab71eab390990a22ffab69809f13e54e9" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SensorTsl2561::ch0</definition>
+        <argsstring></argsstring>
+        <name>ch0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="121" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1adafe9c8f892d9ee328237916350ce5df" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SensorTsl2561::ch1</definition>
+        <argsstring></argsstring>
+        <name>ch1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="121" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1ab1178be32d6095c5af76e0c06e0c9d2f" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorTsl2561::chScale</definition>
+        <argsstring></argsstring>
+        <name>chScale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="122" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a7fcfaebf6f3f1748a341142eb9e124f7" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorTsl2561::channel1</definition>
+        <argsstring></argsstring>
+        <name>channel1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="123" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1aab3c8516d83e753d3522892a8521db14" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorTsl2561::channel0</definition>
+        <argsstring></argsstring>
+        <name>channel0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="124" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a912a955a5e3b73667746021153a8b9a4" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorTsl2561::ratio1</definition>
+        <argsstring></argsstring>
+        <name>ratio1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="125" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1ac916e575695c313046ba1f4d123621fd" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SensorTsl2561::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="126" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a1080efffbba964e1382928bdf0969075" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int SensorTsl2561::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="127" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a24380584580cc82c28eb819d37d0ddca" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorTsl2561::temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="128" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_tsl2561_1a2d00cdc15f85ac37e102db1943352185" prot="private" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorTsl2561::lux</definition>
+        <argsstring></argsstring>
+        <name>lux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="129" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensor_tsl2561_1acb66b0b6127d1d889ff31085dbb9d8c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SensorTsl2561::SensorTsl2561</definition>
+        <argsstring>(String lux_instruction_code, int lux_instruction_id, String par_instruction_code, int par_instruction_id)</argsstring>
+        <name>SensorTsl2561</name>
+        <param>
+          <type>String</type>
+          <declname>lux_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lux_instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>par_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>par_instruction_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="91" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="9" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1ace17c892222366185df021bda708cc10" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SensorTsl2561::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9">begin</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once at beginning of program to initialize modules. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="92" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1a1d9dff52af755218abca50f9025f0f5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorTsl2561::get</definition>
+        <argsstring>(void)</argsstring>
+        <name>get</name>
+        <reimplements refid="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af">get</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update and report module data to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="93" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="30" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1ab4eb3d8197c96867f43857876df46b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorTsl2561::set</definition>
+        <argsstring>(String instruction_code, int instruction_id, String instruction_parameter)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc">set</reimplements>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="94" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sensor_tsl2561_1a401df16eee50eabf54a7bae0d68f6038" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorTsl2561::getSensorData</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSensorData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="103" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="73" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1a202ba4ab2926426ef2f7da195d89d74f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorTsl2561::getLux</definition>
+        <argsstring>(void)</argsstring>
+        <name>getLux</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="104" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="125" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1abec691198633bdb8a853fc41fb2c2ee5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long</type>
+        <definition>unsigned long SensorTsl2561::calculateLux</definition>
+        <argsstring>(unsigned int iGain, unsigned int tInt, int iType)</argsstring>
+        <name>calculateLux</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>iGain</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>tInt</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>iType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="105" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="136" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1a0d465105d12308ee3d8fe90f8ca07fa7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorTsl2561::readRegister</definition>
+        <argsstring>(int deviceAddress, int address)</argsstring>
+        <name>readRegister</name>
+        <param>
+          <type>int</type>
+          <declname>deviceAddress</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="106" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="95" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1ab20e1126ec252a21f96a6ab75d6a44fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorTsl2561::writeRegister</definition>
+        <argsstring>(int deviceAddress, int address, uint8_t val)</argsstring>
+        <name>writeRegister</name>
+        <param>
+          <type>int</type>
+          <declname>deviceAddress</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="107" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="117" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_tsl2561_1add841e0d866ded1a7b77111f46b5a2dc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String SensorTsl2561::floatToString</definition>
+        <argsstring>(double val, unsigned int precision)</argsstring>
+        <name>floatToString</name>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="108" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.cpp" bodystart="222" bodyend="238"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sensor module for light intensity and par. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="36">
+        <label>SensorTsl2561</label>
+        <link refid="class_sensor_tsl2561"/>
+        <childnode refid="37" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="38">
+        <label>SensorTsl2561</label>
+        <link refid="class_sensor_tsl2561"/>
+        <childnode refid="39" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="88" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="88" bodyend="130"/>
+    <listofallmembers>
+      <member refid="class_sensor_tsl2561_1ac916e575695c313046ba1f4d123621fd" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>b</name></member>
+      <member refid="class_sensor_tsl2561_1ace17c892222366185df021bda708cc10" prot="public" virt="virtual"><scope>SensorTsl2561</scope><name>begin</name></member>
+      <member refid="class_sensor_tsl2561_1abec691198633bdb8a853fc41fb2c2ee5" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>calculateLux</name></member>
+      <member refid="class_sensor_tsl2561_1a77b48ab50eb76183b73f59f38d68abfa" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>calibration_to_vernier_par_</name></member>
+      <member refid="class_sensor_tsl2561_1ae6833565371c08cbdbb743ee76051af6" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>calibrtion_to_vernier_lux_</name></member>
+      <member refid="class_sensor_tsl2561_1ab71eab390990a22ffab69809f13e54e9" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>ch0</name></member>
+      <member refid="class_sensor_tsl2561_1ad168af159474b094058de9874317bd6c" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>CH0_HIGH</name></member>
+      <member refid="class_sensor_tsl2561_1aa7db37ebd46e54f65466465419fe2be5" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>CH0_LOW</name></member>
+      <member refid="class_sensor_tsl2561_1adafe9c8f892d9ee328237916350ce5df" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>ch1</name></member>
+      <member refid="class_sensor_tsl2561_1a13d25c86f722c1a0c6c39169fb38bf5f" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>CH1_HIGH</name></member>
+      <member refid="class_sensor_tsl2561_1ad8521ba653fb44a2c5dbf41052b3db7f" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>CH1_LOW</name></member>
+      <member refid="class_sensor_tsl2561_1aab3c8516d83e753d3522892a8521db14" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>channel0</name></member>
+      <member refid="class_sensor_tsl2561_1a7fcfaebf6f3f1748a341142eb9e124f7" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>channel1</name></member>
+      <member refid="class_sensor_tsl2561_1ab1178be32d6095c5af76e0c06e0c9d2f" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>chScale</name></member>
+      <member refid="class_sensor_tsl2561_1add841e0d866ded1a7b77111f46b5a2dc" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>floatToString</name></member>
+      <member refid="class_sensor_tsl2561_1a1d9dff52af755218abca50f9025f0f5c" prot="public" virt="virtual"><scope>SensorTsl2561</scope><name>get</name></member>
+      <member refid="class_sensor_tsl2561_1a202ba4ab2926426ef2f7da195d89d74f" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>getLux</name></member>
+      <member refid="class_sensor_tsl2561_1a401df16eee50eabf54a7bae0d68f6038" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>getSensorData</name></member>
+      <member refid="class_sensor_tsl2561_1a2d00cdc15f85ac37e102db1943352185" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>lux</name></member>
+      <member refid="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" prot="public" virt="non-virtual"><scope>SensorTsl2561</scope><name>lux_</name></member>
+      <member refid="class_sensor_tsl2561_1a91e00dec788362624f9710ca15058e89" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>lux_instruction_code_</name></member>
+      <member refid="class_sensor_tsl2561_1acad5738bd3cf0e1ec2f4d460481625ed" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>lux_instruction_id_</name></member>
+      <member refid="class_sensor_tsl2561_1a1080efffbba964e1382928bdf0969075" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>m</name></member>
+      <member refid="class_sensor_tsl2561_1a3029df4c17b568ad28da263b437cf126" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>measuring_indoor_par_correction_</name></member>
+      <member refid="class_sensor_tsl2561_1a1159f0229bf7cfc07da35366f81661f7" prot="public" virt="non-virtual"><scope>SensorTsl2561</scope><name>par_</name></member>
+      <member refid="class_sensor_tsl2561_1a67f9c713d4233a7e1ac8dfd147e2c2ca" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>par_instruction_code_</name></member>
+      <member refid="class_sensor_tsl2561_1af9fbf22dba97a3a05ff438db88ef6ea8" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>par_instruction_id_</name></member>
+      <member refid="class_sensor_tsl2561_1a912a955a5e3b73667746021153a8b9a4" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>ratio1</name></member>
+      <member refid="class_sensor_tsl2561_1af8a5f90c246006ba80153fc52e71ea09" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>read_register_error_</name></member>
+      <member refid="class_sensor_tsl2561_1a6eec8b6d787aa3fc8f5cdb23fc0aaf38" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>read_register_timeout_</name></member>
+      <member refid="class_sensor_tsl2561_1a0d465105d12308ee3d8fe90f8ca07fa7" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>readRegister</name></member>
+      <member refid="class_sensor_tsl2561_1acb66b0b6127d1d889ff31085dbb9d8c2" prot="public" virt="non-virtual"><scope>SensorTsl2561</scope><name>SensorTsl2561</name></member>
+      <member refid="class_sensor_tsl2561_1ab4eb3d8197c96867f43857876df46b33" prot="public" virt="virtual"><scope>SensorTsl2561</scope><name>set</name></member>
+      <member refid="class_sensor_tsl2561_1a24380584580cc82c28eb819d37d0ddca" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>temp</name></member>
+      <member refid="class_sensor_tsl2561_1ab20e1126ec252a21f96a6ab75d6a44fb" prot="private" virt="non-virtual"><scope>SensorTsl2561</scope><name>writeRegister</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

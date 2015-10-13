@@ -1,0 +1,321 @@
+\hypertarget{support__time_8cpp}{}\section{src/support\+\_\+time.cpp File Reference}
+\label{support__time_8cpp}\index{src/support\+\_\+time.\+cpp@{src/support\+\_\+time.\+cpp}}
+
+
+Support module for timekeeping.  
+
+
+{\ttfamily \#include \char`\"{}support\+\_\+time.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{support__time_8cpp_ac0623a9834738f5c6747faef9119c7b1}{L\+E\+A\+P\+\_\+\+Y\+E\+A\+R}(Y)~( ((1970+Y)$>$0) \&\& !((1970+Y)\%4) \&\& ( ((1970+Y)\%100) $\vert$$\vert$ !((1970+Y)\%400) ) )
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{support__time_8cpp_a1f13327e0831cde49d525fe035d55fd8}{refresh\+Cache} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_a721ff0d06e8367ee5d2c5cf1a2c40ab5}{hour} ()
+\item 
+int \hyperlink{support__time_8cpp_ac4706d0cffc9e111a6c6a757b462e88e}{hour} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_a5a99d1c070206fef196539dec629443e}{hour\+Format12} ()
+\item 
+int \hyperlink{support__time_8cpp_a3cf3a2a5bc98d77739dd1c8c4c0909b9}{hour\+Format12} (time\+\_\+t t)
+\item 
+uint8\+\_\+t \hyperlink{support__time_8cpp_a93f95d54044b6bea7e53d820c2b3ac45}{is\+A\+M} ()
+\item 
+uint8\+\_\+t \hyperlink{support__time_8cpp_a4334ceb57e1ed381be82347e196aabc6}{is\+A\+M} (time\+\_\+t t)
+\item 
+uint8\+\_\+t \hyperlink{support__time_8cpp_a25dad3cd574983eff789b04781e57de8}{is\+P\+M} ()
+\item 
+uint8\+\_\+t \hyperlink{support__time_8cpp_af53f46c9c1e0ad141f99045e3f96d688}{is\+P\+M} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_adf618b3bac7dcfac69d4e1f5a68159b7}{minute} ()
+\item 
+int \hyperlink{support__time_8cpp_a88285e3771bcb970424122a6ee4b40fa}{minute} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_aed5657208944fe098e4e5f3380e0a1f9}{second} ()
+\item 
+int \hyperlink{support__time_8cpp_a10a4dd811353baa12dadadee7c7e5099}{second} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_a075786e0a525a2bba638889efcc42385}{day} ()
+\item 
+int \hyperlink{support__time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{day} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_a73117e8164575afa4e25dab22d4f3ff0}{weekday} ()
+\item 
+int \hyperlink{support__time_8cpp_a397d9b2a739891092b487211668b496f}{weekday} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_a3f3be7ce4301fc1896efac6f0952f772}{month} ()
+\item 
+int \hyperlink{support__time_8cpp_a726c707dded9d78cf076554eceb956ec}{month} (time\+\_\+t t)
+\item 
+int \hyperlink{support__time_8cpp_a98bf680dbfa28f79514ba50d33fee63f}{year} ()
+\item 
+int \hyperlink{support__time_8cpp_a8608865f8292c0505e02b67fd1cf39e8}{year} (time\+\_\+t t)
+\item 
+void \hyperlink{support__time_8cpp_af08cc091ce5590067f695e51bfdefd17}{break\+Time} (time\+\_\+t time\+Input, tm\+Elements\+\_\+t \&tm)
+\item 
+time\+\_\+t \hyperlink{support__time_8cpp_a0b205c43ee3c17d8d84a83b6f2f77bc8}{make\+Time} (tm\+Elements\+\_\+t \&tm)
+\item 
+time\+\_\+t \hyperlink{support__time_8cpp_adea6c108853185c1d856fa38ec74992c}{now} ()
+\item 
+void \hyperlink{support__time_8cpp_a1ce752bee962425a697f513db46964d4}{set\+Time} (time\+\_\+t t)
+\item 
+void \hyperlink{support__time_8cpp_a6b60a4747bafcd553c95a2110649c31d}{set\+Time} (int hr, int min, int sec, int dy, int mnth, int yr)
+\item 
+void \hyperlink{support__time_8cpp_acc6ec9a3678824ee0b252511300cf070}{adjust\+Time} (long adjustment)
+\item 
+time\+Status\+\_\+t \hyperlink{support__time_8cpp_a9d95a01859478796c4d60525bdaa9c59}{time\+Status} ()
+\item 
+void \hyperlink{support__time_8cpp_afb0bd098acb0d2ab18392313c38c636d}{set\+Sync\+Provider} (get\+External\+Time get\+Time\+Function)
+\item 
+void \hyperlink{support__time_8cpp_a1cc2f564b2cdcbfdea2d9d65378878ee}{set\+Sync\+Interval} (time\+\_\+t interval)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+get\+External\+Time \hyperlink{support__time_8cpp_adfb6edd80f1ed7139bc779b8aaada8b7}{get\+Time\+Ptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Support module for timekeeping. 
+
+See arduino time module for details\+: \href{http://playground.arduino.cc/code/time}{\tt http\+://playground.\+arduino.\+cc/code/time} 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{support__time_8cpp_ac0623a9834738f5c6747faef9119c7b1}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!L\+E\+A\+P\+\_\+\+Y\+E\+A\+R@{L\+E\+A\+P\+\_\+\+Y\+E\+A\+R}}
+\index{L\+E\+A\+P\+\_\+\+Y\+E\+A\+R@{L\+E\+A\+P\+\_\+\+Y\+E\+A\+R}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{L\+E\+A\+P\+\_\+\+Y\+E\+A\+R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+E\+A\+P\+\_\+\+Y\+E\+A\+R(
+\begin{DoxyParamCaption}
+\item[{}]{Y}
+\end{DoxyParamCaption}
+)~( ((1970+Y)$>$0) \&\& !((1970+Y)\%4) \&\& ( ((1970+Y)\%100) $\vert$$\vert$ !((1970+Y)\%400) ) )}\label{support__time_8cpp_ac0623a9834738f5c6747faef9119c7b1}
+
+
+\subsection{Function Documentation}
+\hypertarget{support__time_8cpp_acc6ec9a3678824ee0b252511300cf070}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!adjust\+Time@{adjust\+Time}}
+\index{adjust\+Time@{adjust\+Time}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{adjust\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void adjust\+Time (
+\begin{DoxyParamCaption}
+\item[{long}]{adjustment}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_acc6ec9a3678824ee0b252511300cf070}
+\hypertarget{support__time_8cpp_af08cc091ce5590067f695e51bfdefd17}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!break\+Time@{break\+Time}}
+\index{break\+Time@{break\+Time}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{break\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void break\+Time (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{time\+Input, }
+\item[{tm\+Elements\+\_\+t \&}]{tm}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_af08cc091ce5590067f695e51bfdefd17}
+\hypertarget{support__time_8cpp_a075786e0a525a2bba638889efcc42385}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!day@{day}}
+\index{day@{day}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{day}]{\setlength{\rightskip}{0pt plus 5cm}int day (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a075786e0a525a2bba638889efcc42385}
+\hypertarget{support__time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!day@{day}}
+\index{day@{day}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{day}]{\setlength{\rightskip}{0pt plus 5cm}int day (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a51dcd9f072551ba8f47449a4e7f78c29}
+\hypertarget{support__time_8cpp_a721ff0d06e8367ee5d2c5cf1a2c40ab5}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!hour@{hour}}
+\index{hour@{hour}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{hour}]{\setlength{\rightskip}{0pt plus 5cm}int hour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a721ff0d06e8367ee5d2c5cf1a2c40ab5}
+\hypertarget{support__time_8cpp_ac4706d0cffc9e111a6c6a757b462e88e}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!hour@{hour}}
+\index{hour@{hour}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{hour}]{\setlength{\rightskip}{0pt plus 5cm}int hour (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_ac4706d0cffc9e111a6c6a757b462e88e}
+\hypertarget{support__time_8cpp_a5a99d1c070206fef196539dec629443e}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!hour\+Format12@{hour\+Format12}}
+\index{hour\+Format12@{hour\+Format12}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{hour\+Format12}]{\setlength{\rightskip}{0pt plus 5cm}int hour\+Format12 (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a5a99d1c070206fef196539dec629443e}
+\hypertarget{support__time_8cpp_a3cf3a2a5bc98d77739dd1c8c4c0909b9}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!hour\+Format12@{hour\+Format12}}
+\index{hour\+Format12@{hour\+Format12}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{hour\+Format12}]{\setlength{\rightskip}{0pt plus 5cm}int hour\+Format12 (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a3cf3a2a5bc98d77739dd1c8c4c0909b9}
+\hypertarget{support__time_8cpp_a93f95d54044b6bea7e53d820c2b3ac45}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!is\+A\+M@{is\+A\+M}}
+\index{is\+A\+M@{is\+A\+M}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{is\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t is\+A\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a93f95d54044b6bea7e53d820c2b3ac45}
+\hypertarget{support__time_8cpp_a4334ceb57e1ed381be82347e196aabc6}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!is\+A\+M@{is\+A\+M}}
+\index{is\+A\+M@{is\+A\+M}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{is\+A\+M}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t is\+A\+M (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a4334ceb57e1ed381be82347e196aabc6}
+\hypertarget{support__time_8cpp_a25dad3cd574983eff789b04781e57de8}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!is\+P\+M@{is\+P\+M}}
+\index{is\+P\+M@{is\+P\+M}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{is\+P\+M}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t is\+P\+M (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a25dad3cd574983eff789b04781e57de8}
+\hypertarget{support__time_8cpp_af53f46c9c1e0ad141f99045e3f96d688}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!is\+P\+M@{is\+P\+M}}
+\index{is\+P\+M@{is\+P\+M}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{is\+P\+M}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t is\+P\+M (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_af53f46c9c1e0ad141f99045e3f96d688}
+\hypertarget{support__time_8cpp_a0b205c43ee3c17d8d84a83b6f2f77bc8}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!make\+Time@{make\+Time}}
+\index{make\+Time@{make\+Time}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{make\+Time}]{\setlength{\rightskip}{0pt plus 5cm}time\+\_\+t make\+Time (
+\begin{DoxyParamCaption}
+\item[{tm\+Elements\+\_\+t \&}]{tm}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a0b205c43ee3c17d8d84a83b6f2f77bc8}
+\hypertarget{support__time_8cpp_adf618b3bac7dcfac69d4e1f5a68159b7}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!minute@{minute}}
+\index{minute@{minute}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{minute}]{\setlength{\rightskip}{0pt plus 5cm}int minute (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_adf618b3bac7dcfac69d4e1f5a68159b7}
+\hypertarget{support__time_8cpp_a88285e3771bcb970424122a6ee4b40fa}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!minute@{minute}}
+\index{minute@{minute}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{minute}]{\setlength{\rightskip}{0pt plus 5cm}int minute (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a88285e3771bcb970424122a6ee4b40fa}
+\hypertarget{support__time_8cpp_a3f3be7ce4301fc1896efac6f0952f772}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!month@{month}}
+\index{month@{month}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{month}]{\setlength{\rightskip}{0pt plus 5cm}int month (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a3f3be7ce4301fc1896efac6f0952f772}
+\hypertarget{support__time_8cpp_a726c707dded9d78cf076554eceb956ec}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!month@{month}}
+\index{month@{month}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{month}]{\setlength{\rightskip}{0pt plus 5cm}int month (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a726c707dded9d78cf076554eceb956ec}
+\hypertarget{support__time_8cpp_adea6c108853185c1d856fa38ec74992c}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!now@{now}}
+\index{now@{now}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{now}]{\setlength{\rightskip}{0pt plus 5cm}time\+\_\+t now (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_adea6c108853185c1d856fa38ec74992c}
+\hypertarget{support__time_8cpp_a1f13327e0831cde49d525fe035d55fd8}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!refresh\+Cache@{refresh\+Cache}}
+\index{refresh\+Cache@{refresh\+Cache}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{refresh\+Cache}]{\setlength{\rightskip}{0pt plus 5cm}void refresh\+Cache (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a1f13327e0831cde49d525fe035d55fd8}
+\hypertarget{support__time_8cpp_aed5657208944fe098e4e5f3380e0a1f9}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!second@{second}}
+\index{second@{second}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{second}]{\setlength{\rightskip}{0pt plus 5cm}int second (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_aed5657208944fe098e4e5f3380e0a1f9}
+\hypertarget{support__time_8cpp_a10a4dd811353baa12dadadee7c7e5099}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!second@{second}}
+\index{second@{second}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{second}]{\setlength{\rightskip}{0pt plus 5cm}int second (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a10a4dd811353baa12dadadee7c7e5099}
+\hypertarget{support__time_8cpp_a1cc2f564b2cdcbfdea2d9d65378878ee}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!set\+Sync\+Interval@{set\+Sync\+Interval}}
+\index{set\+Sync\+Interval@{set\+Sync\+Interval}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{set\+Sync\+Interval}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Sync\+Interval (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{interval}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a1cc2f564b2cdcbfdea2d9d65378878ee}
+\hypertarget{support__time_8cpp_afb0bd098acb0d2ab18392313c38c636d}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!set\+Sync\+Provider@{set\+Sync\+Provider}}
+\index{set\+Sync\+Provider@{set\+Sync\+Provider}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{set\+Sync\+Provider}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Sync\+Provider (
+\begin{DoxyParamCaption}
+\item[{get\+External\+Time}]{get\+Time\+Function}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_afb0bd098acb0d2ab18392313c38c636d}
+\hypertarget{support__time_8cpp_a1ce752bee962425a697f513db46964d4}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{set\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Time (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a1ce752bee962425a697f513db46964d4}
+\hypertarget{support__time_8cpp_a6b60a4747bafcd553c95a2110649c31d}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!set\+Time@{set\+Time}}
+\index{set\+Time@{set\+Time}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{set\+Time}]{\setlength{\rightskip}{0pt plus 5cm}void set\+Time (
+\begin{DoxyParamCaption}
+\item[{int}]{hr, }
+\item[{int}]{min, }
+\item[{int}]{sec, }
+\item[{int}]{dy, }
+\item[{int}]{mnth, }
+\item[{int}]{yr}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a6b60a4747bafcd553c95a2110649c31d}
+\hypertarget{support__time_8cpp_a9d95a01859478796c4d60525bdaa9c59}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!time\+Status@{time\+Status}}
+\index{time\+Status@{time\+Status}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{time\+Status}]{\setlength{\rightskip}{0pt plus 5cm}time\+Status\+\_\+t time\+Status (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a9d95a01859478796c4d60525bdaa9c59}
+\hypertarget{support__time_8cpp_a73117e8164575afa4e25dab22d4f3ff0}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!weekday@{weekday}}
+\index{weekday@{weekday}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{weekday}]{\setlength{\rightskip}{0pt plus 5cm}int weekday (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a73117e8164575afa4e25dab22d4f3ff0}
+\hypertarget{support__time_8cpp_a397d9b2a739891092b487211668b496f}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!weekday@{weekday}}
+\index{weekday@{weekday}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{weekday}]{\setlength{\rightskip}{0pt plus 5cm}int weekday (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a397d9b2a739891092b487211668b496f}
+\hypertarget{support__time_8cpp_a98bf680dbfa28f79514ba50d33fee63f}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!year@{year}}
+\index{year@{year}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{year}]{\setlength{\rightskip}{0pt plus 5cm}int year (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a98bf680dbfa28f79514ba50d33fee63f}
+\hypertarget{support__time_8cpp_a8608865f8292c0505e02b67fd1cf39e8}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!year@{year}}
+\index{year@{year}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{year}]{\setlength{\rightskip}{0pt plus 5cm}int year (
+\begin{DoxyParamCaption}
+\item[{time\+\_\+t}]{t}
+\end{DoxyParamCaption}
+)}\label{support__time_8cpp_a8608865f8292c0505e02b67fd1cf39e8}
+
+
+\subsection{Variable Documentation}
+\hypertarget{support__time_8cpp_adfb6edd80f1ed7139bc779b8aaada8b7}{}\index{support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}!get\+Time\+Ptr@{get\+Time\+Ptr}}
+\index{get\+Time\+Ptr@{get\+Time\+Ptr}!support\+\_\+time.\+cpp@{support\+\_\+time.\+cpp}}
+\subsubsection[{get\+Time\+Ptr}]{\setlength{\rightskip}{0pt plus 5cm}get\+External\+Time get\+Time\+Ptr}\label{support__time_8cpp_adfb6edd80f1ed7139bc779b8aaada8b7}

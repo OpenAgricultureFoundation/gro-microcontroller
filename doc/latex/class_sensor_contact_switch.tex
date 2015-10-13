@@ -1,0 +1,110 @@
+\hypertarget{class_sensor_contact_switch}{}\section{Sensor\+Contact\+Switch Class Reference}
+\label{class_sensor_contact_switch}\index{Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}}
+
+
+Sensor module for all sensors that behave like a contact switch.  
+
+
+
+
+{\ttfamily \#include $<$sensor\+\_\+contact\+\_\+switch.\+h$>$}
+
+Inheritance diagram for Sensor\+Contact\+Switch\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sensor_contact_switch}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sensor_contact_switch_a821878d797ea7b94dd2870f98df8fdf5}{Sensor\+Contact\+Switch} (int pin, String instruction\+\_\+code, int instruction\+\_\+id)
+\item 
+void \hyperlink{class_sensor_contact_switch_a037d866b1e40776cc6fa00a46169b150}{begin} (void)
+\begin{DoxyCompactList}\small\item\em Called once at beginning of program to initialize modules. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_contact_switch_a99a5906b45ed441eea56fb2960d35191}{get} (void)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update and report module data to controller. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_contact_switch_ab49acd5d6132eed50d7342717649abc2}{set} (String instruction\+\_\+code, int instruction\+\_\+id, String instruction\+\_\+parameter)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_sensor_contact_switch_a38d5bad22015b2013e776dec61bc8622}{is\+\_\+connected\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor module for all sensors that behave like a contact switch. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sensor_contact_switch_a821878d797ea7b94dd2870f98df8fdf5}{}\index{Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}!Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}}
+\index{Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}!Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}}
+\subsubsection[{Sensor\+Contact\+Switch}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\+Contact\+Switch\+::\+Sensor\+Contact\+Switch (
+\begin{DoxyParamCaption}
+\item[{int}]{pin, }
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_sensor_contact_switch_a821878d797ea7b94dd2870f98df8fdf5}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sensor_contact_switch_a037d866b1e40776cc6fa00a46169b150}{}\index{Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}!begin@{begin}}
+\index{begin@{begin}!Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\+Contact\+Switch\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_contact_switch_a037d866b1e40776cc6fa00a46169b150}
+
+
+Called once at beginning of program to initialize modules. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_contact_switch_a99a5906b45ed441eea56fb2960d35191}{}\index{Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}!get@{get}}
+\index{get@{get}!Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Contact\+Switch\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_contact_switch_a99a5906b45ed441eea56fb2960d35191}
+
+
+Called once per loop iteration to update and report module data to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_contact_switch_ab49acd5d6132eed50d7342717649abc2}{}\index{Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}!set@{set}}
+\index{set@{set}!Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Contact\+Switch\+::set (
+\begin{DoxyParamCaption}
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id, }
+\item[{String}]{instruction\+\_\+parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_contact_switch_ab49acd5d6132eed50d7342717649abc2}
+
+
+Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{Sensor\+Actuator\+Module}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_sensor_contact_switch_a38d5bad22015b2013e776dec61bc8622}{}\index{Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}!is\+\_\+connected\+\_\+@{is\+\_\+connected\+\_\+}}
+\index{is\+\_\+connected\+\_\+@{is\+\_\+connected\+\_\+}!Sensor\+Contact\+Switch@{Sensor\+Contact\+Switch}}
+\subsubsection[{is\+\_\+connected\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}bool Sensor\+Contact\+Switch\+::is\+\_\+connected\+\_\+}\label{class_sensor_contact_switch_a38d5bad22015b2013e776dec61bc8622}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sensor__contact__switch_8h}{sensor\+\_\+contact\+\_\+switch.\+h}\item 
+src/\hyperlink{sensor__contact__switch_8cpp}{sensor\+\_\+contact\+\_\+switch.\+cpp}\end{DoxyCompactItemize}

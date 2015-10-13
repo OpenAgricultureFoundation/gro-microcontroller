@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>Groduino</title>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Jake Rye</para></simplesect>
+This is the microcontroller code. It is uploaded to the Arduino Mega. It&apos;s purpose is to be the firmware for applicable sensor/actuator modules. It has been written in such a way that each new type of sensor and actuator is its own module. Each sensor/actuator module must contain a class with the following methods: void begin(void), String get(void), String set(String instruction_code, int instruction_id, String instruction_parameter). The existance of these methods are enforced by using the <ref refid="class_sensor_actuator_module" kindref="compound">SensorActuatorModule</ref> interface. Each sensor/actuator must also be instantiated such that its modularity is prioritized. For example, passing in pins, instruction codes, and instruction ids (all parameters that are subject to change depending on the context the module is used in) would look something like: ModuleName(int pin, String instruction_code, int instruction_id). Clearly this example is not representative of all modules that will be created so it is up to the programmer to use their best judgement. Another important note is that this code documentation is generated with doxygen so all markdown should follow compliant formats. </para>    </detaileddescription>
+  </compounddef>
+</doxygen>

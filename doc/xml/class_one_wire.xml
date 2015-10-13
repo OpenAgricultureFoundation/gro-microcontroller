@@ -1,0 +1,446 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_one_wire" kind="class" language="C++" prot="public">
+    <compoundname>OneWire</compoundname>
+    <includes refid="support__one__wire_8h" local="no">support_one_wire.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_one_wire_1a14c061b2d688f2d906d97e4e159d487b" prot="private" static="no" mutable="no">
+        <type>IO_REG_TYPE</type>
+        <definition>IO_REG_TYPE OneWire::bitmask</definition>
+        <argsstring></argsstring>
+        <name>bitmask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="120" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_wire_1a8a1a2af339fac97d8c6b79503661562d" prot="private" static="no" mutable="no">
+        <type>IO_REG_TYPE *</type>
+        <definition>volatile IO_REG_TYPE* OneWire::baseReg</definition>
+        <argsstring></argsstring>
+        <name>baseReg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="121" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_wire_1acee8f144128bd9f9312c8e3926bb4411" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char OneWire::ROM_NO[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>ROM_NO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="125" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_wire_1a15c9c453a901cbf8419c073c52113b67" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::LastDiscrepancy</definition>
+        <argsstring></argsstring>
+        <name>LastDiscrepancy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="126" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_wire_1a34fec226ea2dc41e753aa37c259aaa80" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::LastFamilyDiscrepancy</definition>
+        <argsstring></argsstring>
+        <name>LastFamilyDiscrepancy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="127" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_one_wire_1a3bdf0efa79ea0ab39a8c0f571e621f8f" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::LastDeviceFlag</definition>
+        <argsstring></argsstring>
+        <name>LastDeviceFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="128" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_one_wire_1aa3f23dc51d861a8d257648c507b14e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OneWire::OneWire</definition>
+        <argsstring>(uint8_t pin)</argsstring>
+        <name>OneWire</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="132" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="125" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a6a742a9112392567eae3d06dde067c07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::reset</definition>
+        <argsstring>(void)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="137" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="142" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1accf808390abd63d3c7bce35677784384" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::select</definition>
+        <argsstring>(const uint8_t rom[8])</argsstring>
+        <name>select</name>
+        <param>
+          <type>const uint8_t</type>
+          <declname>rom</declname>
+          <array>[8]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="140" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="275" bodyend="282"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1ae3780e2b0ea2ebf6be88298412ac7798" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::skip</definition>
+        <argsstring>(void)</argsstring>
+        <name>skip</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="143" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="287" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a843e9e7e57ed615b4880be0b76b40b7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::write</definition>
+        <argsstring>(uint8_t v, uint8_t power=0)</argsstring>
+        <name>write</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>power</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="149" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="229" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a0fc1e0bdc2ab1f062c98567fa60a69ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::write_bytes</definition>
+        <argsstring>(const uint8_t *buf, uint16_t count, bool power=0)</argsstring>
+        <name>write_bytes</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>power</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="151" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="243" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1afd9bdb8b5a5b69b394dfc76352e00e21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="154" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="257" bodyend="265"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a2407440e8e25b624617593f8ad6447d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::read_bytes</definition>
+        <argsstring>(uint8_t *buf, uint16_t count)</argsstring>
+        <name>read_bytes</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>count</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="156" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a6bbc58276d1cb08653dab3ea35378f94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::write_bit</definition>
+        <argsstring>(uint8_t v)</argsstring>
+        <name>write_bit</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="160" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="176" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1aeae4c2798b70d9d0ba3091c03ee2d056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::read_bit</definition>
+        <argsstring>(void)</argsstring>
+        <name>read_bit</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="163" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="204" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1aa8e0f62e830ad05d8035e55c7a309256" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::depower</definition>
+        <argsstring>(void)</argsstring>
+        <name>depower</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="170" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="292" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1aae5efdf67928b5ee312ab7d7906416fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::reset_search</definition>
+        <argsstring>()</argsstring>
+        <name>reset_search</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="174" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="305" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a0a1b8457adb609a693b865dd474e5116" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OneWire::target_search</definition>
+        <argsstring>(uint8_t family_code)</argsstring>
+        <name>target_search</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>family_code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="178" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="320" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a383dc74fc9f8a27b76366a2859c3820a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::search</definition>
+        <argsstring>(uint8_t *newAddr)</argsstring>
+        <name>search</name>
+        <param>
+          <type>uint8_t *</type>
+          <declname>newAddr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="186" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="347" bodyend="463"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_one_wire_1ae3486a669581b750e4fdf3f3a12b05f1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t OneWire::crc8</definition>
+        <argsstring>(const uint8_t *addr, uint8_t len)</argsstring>
+        <name>crc8</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>addr</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="192" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="500" bodyend="508"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a089c502d26caca5214264261db82d011" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool OneWire::check_crc16</definition>
+        <argsstring>(const uint8_t *input, uint16_t len, const uint8_t *inverted_crc, uint16_t crc=0)</argsstring>
+        <name>check_crc16</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>inverted_crc</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>crc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="215" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="532" bodyend="536"/>
+      </memberdef>
+      <memberdef kind="function" id="class_one_wire_1a685131803ff9bd250926de68fb477998" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t OneWire::crc16</definition>
+        <argsstring>(const uint8_t *input, uint16_t len, uint16_t crc=0)</argsstring>
+        <name>crc16</name>
+        <param>
+          <type>const uint8_t *</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>crc</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="229" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.cpp" bodystart="538" bodyend="559"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" line="118" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_one_wire.h" bodystart="117" bodyend="232"/>
+    <listofallmembers>
+      <member refid="class_one_wire_1a8a1a2af339fac97d8c6b79503661562d" prot="private" virt="non-virtual"><scope>OneWire</scope><name>baseReg</name></member>
+      <member refid="class_one_wire_1a14c061b2d688f2d906d97e4e159d487b" prot="private" virt="non-virtual"><scope>OneWire</scope><name>bitmask</name></member>
+      <member refid="class_one_wire_1a089c502d26caca5214264261db82d011" prot="public" virt="non-virtual"><scope>OneWire</scope><name>check_crc16</name></member>
+      <member refid="class_one_wire_1a685131803ff9bd250926de68fb477998" prot="public" virt="non-virtual"><scope>OneWire</scope><name>crc16</name></member>
+      <member refid="class_one_wire_1ae3486a669581b750e4fdf3f3a12b05f1" prot="public" virt="non-virtual"><scope>OneWire</scope><name>crc8</name></member>
+      <member refid="class_one_wire_1aa8e0f62e830ad05d8035e55c7a309256" prot="public" virt="non-virtual"><scope>OneWire</scope><name>depower</name></member>
+      <member refid="class_one_wire_1a3bdf0efa79ea0ab39a8c0f571e621f8f" prot="private" virt="non-virtual"><scope>OneWire</scope><name>LastDeviceFlag</name></member>
+      <member refid="class_one_wire_1a15c9c453a901cbf8419c073c52113b67" prot="private" virt="non-virtual"><scope>OneWire</scope><name>LastDiscrepancy</name></member>
+      <member refid="class_one_wire_1a34fec226ea2dc41e753aa37c259aaa80" prot="private" virt="non-virtual"><scope>OneWire</scope><name>LastFamilyDiscrepancy</name></member>
+      <member refid="class_one_wire_1aa3f23dc51d861a8d257648c507b14e8d" prot="public" virt="non-virtual"><scope>OneWire</scope><name>OneWire</name></member>
+      <member refid="class_one_wire_1afd9bdb8b5a5b69b394dfc76352e00e21" prot="public" virt="non-virtual"><scope>OneWire</scope><name>read</name></member>
+      <member refid="class_one_wire_1aeae4c2798b70d9d0ba3091c03ee2d056" prot="public" virt="non-virtual"><scope>OneWire</scope><name>read_bit</name></member>
+      <member refid="class_one_wire_1a2407440e8e25b624617593f8ad6447d4" prot="public" virt="non-virtual"><scope>OneWire</scope><name>read_bytes</name></member>
+      <member refid="class_one_wire_1a6a742a9112392567eae3d06dde067c07" prot="public" virt="non-virtual"><scope>OneWire</scope><name>reset</name></member>
+      <member refid="class_one_wire_1aae5efdf67928b5ee312ab7d7906416fa" prot="public" virt="non-virtual"><scope>OneWire</scope><name>reset_search</name></member>
+      <member refid="class_one_wire_1acee8f144128bd9f9312c8e3926bb4411" prot="private" virt="non-virtual"><scope>OneWire</scope><name>ROM_NO</name></member>
+      <member refid="class_one_wire_1a383dc74fc9f8a27b76366a2859c3820a" prot="public" virt="non-virtual"><scope>OneWire</scope><name>search</name></member>
+      <member refid="class_one_wire_1accf808390abd63d3c7bce35677784384" prot="public" virt="non-virtual"><scope>OneWire</scope><name>select</name></member>
+      <member refid="class_one_wire_1ae3780e2b0ea2ebf6be88298412ac7798" prot="public" virt="non-virtual"><scope>OneWire</scope><name>skip</name></member>
+      <member refid="class_one_wire_1a0a1b8457adb609a693b865dd474e5116" prot="public" virt="non-virtual"><scope>OneWire</scope><name>target_search</name></member>
+      <member refid="class_one_wire_1a843e9e7e57ed615b4880be0b76b40b7d" prot="public" virt="non-virtual"><scope>OneWire</scope><name>write</name></member>
+      <member refid="class_one_wire_1a6bbc58276d1cb08653dab3ea35378f94" prot="public" virt="non-virtual"><scope>OneWire</scope><name>write_bit</name></member>
+      <member refid="class_one_wire_1a0fc1e0bdc2ab1f062c98567fa60a69ae" prot="public" virt="non-virtual"><scope>OneWire</scope><name>write_bytes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

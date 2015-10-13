@@ -1,0 +1,710 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_sensor_dfr01610300" kind="class" language="C++" prot="public">
+    <compoundname>SensorDfr01610300</compoundname>
+    <basecompoundref refid="class_sensor_actuator_module" prot="private" virt="non-virtual">SensorActuatorModule</basecompoundref>
+    <includes refid="sensor__dfr0161__0300_8h" local="no">sensor_dfr0161_0300.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1aa0ab70c745bde253adaa343afba56473" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ph_raw</definition>
+        <argsstring></argsstring>
+        <name>ph_raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="70" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a09ae20cb63d44609c717dda168b8e454" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ph_filtered</definition>
+        <argsstring></argsstring>
+        <name>ph_filtered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="71" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a483485c4c8a91569e8f45819e641e38c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::temperature_raw</definition>
+        <argsstring></argsstring>
+        <name>temperature_raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="72" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a598f2f18f66d626a3ce392478fcadcc8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::temperature_filtered</definition>
+        <argsstring></argsstring>
+        <name>temperature_filtered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="73" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1af0fc005c44506d277f792acd29f64c3e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ec_raw</definition>
+        <argsstring></argsstring>
+        <name>ec_raw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="74" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a3183d77d8012266006113a3d8647a2a9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ec_filtered</definition>
+        <argsstring></argsstring>
+        <name>ec_filtered</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="75" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a20761369a89e8c7508df9e4ac91f5cdf" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::ph_pin_</definition>
+        <argsstring></argsstring>
+        <name>ph_pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="88" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1ac4454ddb29a52386e3c91744dfa9c104" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorDfr01610300::ph_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>ph_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="89" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a61b30abef1db0f99e70a8996f88316ef" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::ph_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>ph_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="90" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1ad400653c4c630daa2092a78d71d9a2ae" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::temperature_pin_</definition>
+        <argsstring></argsstring>
+        <name>temperature_pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="91" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a19fd2791b7dcccd06d6ce97d1ff036a5" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorDfr01610300::temperature_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>temperature_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="92" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a6da209d5f4bec9f11e866fc598b960a8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::temperature_id_</definition>
+        <argsstring></argsstring>
+        <name>temperature_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="93" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1ac9655b15f77e862d3b6767a0e1a3d18b" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::ec_pin_</definition>
+        <argsstring></argsstring>
+        <name>ec_pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="94" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1aca15f5458efd4af323d43fd73f0a4fdb" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorDfr01610300::ec_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>ec_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="95" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1aaf65e48308c42ae16f64e20b9e84a63f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::ec_id_</definition>
+        <argsstring></argsstring>
+        <name>ec_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="96" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1adf4b1664c273eeb35fdbb270ddec1bbd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::ec_enable_pin_</definition>
+        <argsstring></argsstring>
+        <name>ec_enable_pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="97" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1ac13f8f9b64e19c08606a8888a009ef66" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ph_calibration_coefficient_</definition>
+        <argsstring></argsstring>
+        <name>ph_calibration_coefficient_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="98" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a3a0de74e5a94edd6930ee35f76abc248" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ph_calibration_offset_</definition>
+        <argsstring></argsstring>
+        <name>ph_calibration_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="99" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a3548a15ae28ceef48b95140417496a24" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ec_calibration_coefficient_</definition>
+        <argsstring></argsstring>
+        <name>ec_calibration_coefficient_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="100" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1afd56beeab0efc9250d8151f77b94221f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDfr01610300::ec_calibration_offset_</definition>
+        <argsstring></argsstring>
+        <name>ec_calibration_offset_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="101" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1ac7535bb3b2a77f1f5f4fda1f178c727a" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::ec_on_delay_</definition>
+        <argsstring></argsstring>
+        <name>ec_on_delay_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="102" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1af08bd24be32a8b533350d60d30cea179" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::ec_off_delay_</definition>
+        <argsstring></argsstring>
+        <name>ec_off_delay_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="103" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a6b4a0af36d5e534714c405e817253d49" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDfr01610300::prev_update_time_</definition>
+        <argsstring></argsstring>
+        <name>prev_update_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="104" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a930980e3a5c733b22bb67bcfcb1e90e5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool SensorDfr01610300::last_update_was_ec_</definition>
+        <argsstring></argsstring>
+        <name>last_update_was_ec_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="105" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a85c6e55c074b82df6e690cb206177408" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte SensorDfr01610300::temperature_data_[12]</definition>
+        <argsstring>[12]</argsstring>
+        <name>temperature_data_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="106" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1ab09e08e428a011a1e1d098370021f013" prot="private" static="no" mutable="no">
+        <type>byte</type>
+        <definition>byte SensorDfr01610300::temperature_address_[8]</definition>
+        <argsstring>[8]</argsstring>
+        <name>temperature_address_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="107" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a872df1f5519e42aaf871b642ab862f33" prot="private" static="no" mutable="no">
+        <type><ref refid="class_one_wire" kindref="compound">OneWire</ref> *</type>
+        <definition>OneWire* SensorDfr01610300::ds_</definition>
+        <argsstring></argsstring>
+        <name>ds_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="108" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1af760604a640ecbb00dbcf2ee1c5c10c6" prot="private" static="no" mutable="no">
+        <type><ref refid="class_moving_average_filter" kindref="compound">MovingAverageFilter</ref> *</type>
+        <definition>MovingAverageFilter* SensorDfr01610300::ph_filter_</definition>
+        <argsstring></argsstring>
+        <name>ph_filter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="109" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a659d84880d1550771f07463f2c0017cd" prot="private" static="no" mutable="no">
+        <type><ref refid="class_moving_average_filter" kindref="compound">MovingAverageFilter</ref> *</type>
+        <definition>MovingAverageFilter* SensorDfr01610300::ec_filter_</definition>
+        <argsstring></argsstring>
+        <name>ec_filter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="110" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dfr01610300_1a61fc47fabe4252dffd0f480289b00ed3" prot="private" static="no" mutable="no">
+        <type><ref refid="class_moving_average_filter" kindref="compound">MovingAverageFilter</ref> *</type>
+        <definition>MovingAverageFilter* SensorDfr01610300::temperature_filter_</definition>
+        <argsstring></argsstring>
+        <name>temperature_filter_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="111" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensor_dfr01610300_1aeb40fef336ad2b2d82f7c5eddf9d318e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SensorDfr01610300::SensorDfr01610300</definition>
+        <argsstring>(int ph_pin, String ph_instruction_code, int ph_instruction_id, int temperature_pin, String temperature_instruction_code, int temperature_id, int ec_pin, String ec_instruction_code, int ec_id, int ec_enable_pin)</argsstring>
+        <name>SensorDfr01610300</name>
+        <param>
+          <type>int</type>
+          <declname>ph_pin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>ph_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ph_instruction_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>temperature_pin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>temperature_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>temperature_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ec_pin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>ec_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ec_id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ec_enable_pin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="47" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="10" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1a456221ff4728d8985c8e980d4f22b692" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SensorDfr01610300::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9">begin</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once to setup module. Declares objects, configures initial state, sets configuration &amp; calibration parameters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="53" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="23" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1a21bbd0f8ee7e6576eabd9acf0e1e4d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorDfr01610300::get</definition>
+        <argsstring>(void)</argsstring>
+        <name>get</name>
+        <reimplements refid="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af">get</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Returns JSON string with module data. Module data: ph, temperature, ec. Data: &quot;&lt;instruction_code&gt; &lt;instruction_id&gt; &lt;value&gt;&quot;. Example: &quot;SWPH 1 1&quot;, &quot;SWTM 1 1&quot;, &quot;SWEC 1 1&quot;,. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="61" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="46" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1ab675c2708ff9d5d0d9bbe10bab3d97e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorDfr01610300::set</definition>
+        <argsstring>(String instruction_code, int instruction_id, String instruction_parameter)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc">set</reimplements>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Reserved to passing data string to object Currently unused. Exists to comply with SAModule interface. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="67" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sensor_dfr01610300_1aed6c34781e5b136f270a3d71f63eb212" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorDfr01610300::getSensorData</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSensorData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="79" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="89" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1a638737e39cdfcea4ac6f375dd78b15b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensorDfr01610300::getPh</definition>
+        <argsstring>(void)</argsstring>
+        <name>getPh</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="80" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="116" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1a66a2235eec478ef93257f7742fab23fb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensorDfr01610300::getTemperature</definition>
+        <argsstring>(void)</argsstring>
+        <name>getTemperature</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="81" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="134" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1a6b3d35487c3aa399e270fb9ee632e1bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensorDfr01610300::getEc</definition>
+        <argsstring>(float temperature)</argsstring>
+        <name>getEc</name>
+        <param>
+          <type>float</type>
+          <declname>temperature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="82" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="168" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1a2ad643eaa4d7dc4b4c4899403a43a26f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensorDfr01610300::avergeArray</definition>
+        <argsstring>(int *arr, int number)</argsstring>
+        <name>avergeArray</name>
+        <param>
+          <type>int *</type>
+          <declname>arr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>number</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="83" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.cpp" bodystart="201" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1a1fd69246c7164cd4f828be769fd5d133" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorDfr01610300::startTempertureConversion</definition>
+        <argsstring>(void)</argsstring>
+        <name>startTempertureConversion</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dfr01610300_1aae60840a2bfc5db28c3e7f04e163597f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float SensorDfr01610300::TempProcess</definition>
+        <argsstring>(bool ch)</argsstring>
+        <name>TempProcess</name>
+        <param>
+          <type>bool</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="85" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sensor module for water ph, ec, and temperature. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="25">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="24">
+        <label>SensorDfr01610300</label>
+        <link refid="class_sensor_dfr01610300"/>
+        <childnode refid="25" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="27">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="26">
+        <label>SensorDfr01610300</label>
+        <link refid="class_sensor_dfr01610300"/>
+        <childnode refid="27" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" line="41" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dfr0161_0300.h" bodystart="41" bodyend="112"/>
+    <listofallmembers>
+      <member refid="class_sensor_dfr01610300_1a2ad643eaa4d7dc4b4c4899403a43a26f" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>avergeArray</name></member>
+      <member refid="class_sensor_dfr01610300_1a456221ff4728d8985c8e980d4f22b692" prot="public" virt="virtual"><scope>SensorDfr01610300</scope><name>begin</name></member>
+      <member refid="class_sensor_dfr01610300_1a872df1f5519e42aaf871b642ab862f33" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ds_</name></member>
+      <member refid="class_sensor_dfr01610300_1a3548a15ae28ceef48b95140417496a24" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_calibration_coefficient_</name></member>
+      <member refid="class_sensor_dfr01610300_1afd56beeab0efc9250d8151f77b94221f" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_calibration_offset_</name></member>
+      <member refid="class_sensor_dfr01610300_1adf4b1664c273eeb35fdbb270ddec1bbd" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_enable_pin_</name></member>
+      <member refid="class_sensor_dfr01610300_1a659d84880d1550771f07463f2c0017cd" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_filter_</name></member>
+      <member refid="class_sensor_dfr01610300_1a3183d77d8012266006113a3d8647a2a9" prot="public" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_filtered</name></member>
+      <member refid="class_sensor_dfr01610300_1aaf65e48308c42ae16f64e20b9e84a63f" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_id_</name></member>
+      <member refid="class_sensor_dfr01610300_1aca15f5458efd4af323d43fd73f0a4fdb" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_instruction_code_</name></member>
+      <member refid="class_sensor_dfr01610300_1af08bd24be32a8b533350d60d30cea179" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_off_delay_</name></member>
+      <member refid="class_sensor_dfr01610300_1ac7535bb3b2a77f1f5f4fda1f178c727a" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_on_delay_</name></member>
+      <member refid="class_sensor_dfr01610300_1ac9655b15f77e862d3b6767a0e1a3d18b" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_pin_</name></member>
+      <member refid="class_sensor_dfr01610300_1af0fc005c44506d277f792acd29f64c3e" prot="public" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ec_raw</name></member>
+      <member refid="class_sensor_dfr01610300_1a21bbd0f8ee7e6576eabd9acf0e1e4d89" prot="public" virt="virtual"><scope>SensorDfr01610300</scope><name>get</name></member>
+      <member refid="class_sensor_dfr01610300_1a6b3d35487c3aa399e270fb9ee632e1bc" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>getEc</name></member>
+      <member refid="class_sensor_dfr01610300_1a638737e39cdfcea4ac6f375dd78b15b4" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>getPh</name></member>
+      <member refid="class_sensor_dfr01610300_1aed6c34781e5b136f270a3d71f63eb212" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>getSensorData</name></member>
+      <member refid="class_sensor_dfr01610300_1a66a2235eec478ef93257f7742fab23fb" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>getTemperature</name></member>
+      <member refid="class_sensor_dfr01610300_1a930980e3a5c733b22bb67bcfcb1e90e5" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>last_update_was_ec_</name></member>
+      <member refid="class_sensor_dfr01610300_1ac13f8f9b64e19c08606a8888a009ef66" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_calibration_coefficient_</name></member>
+      <member refid="class_sensor_dfr01610300_1a3a0de74e5a94edd6930ee35f76abc248" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_calibration_offset_</name></member>
+      <member refid="class_sensor_dfr01610300_1af760604a640ecbb00dbcf2ee1c5c10c6" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_filter_</name></member>
+      <member refid="class_sensor_dfr01610300_1a09ae20cb63d44609c717dda168b8e454" prot="public" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_filtered</name></member>
+      <member refid="class_sensor_dfr01610300_1ac4454ddb29a52386e3c91744dfa9c104" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_instruction_code_</name></member>
+      <member refid="class_sensor_dfr01610300_1a61b30abef1db0f99e70a8996f88316ef" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_instruction_id_</name></member>
+      <member refid="class_sensor_dfr01610300_1a20761369a89e8c7508df9e4ac91f5cdf" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_pin_</name></member>
+      <member refid="class_sensor_dfr01610300_1aa0ab70c745bde253adaa343afba56473" prot="public" virt="non-virtual"><scope>SensorDfr01610300</scope><name>ph_raw</name></member>
+      <member refid="class_sensor_dfr01610300_1a6b4a0af36d5e534714c405e817253d49" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>prev_update_time_</name></member>
+      <member refid="class_sensor_dfr01610300_1aeb40fef336ad2b2d82f7c5eddf9d318e" prot="public" virt="non-virtual"><scope>SensorDfr01610300</scope><name>SensorDfr01610300</name></member>
+      <member refid="class_sensor_dfr01610300_1ab675c2708ff9d5d0d9bbe10bab3d97e8" prot="public" virt="virtual"><scope>SensorDfr01610300</scope><name>set</name></member>
+      <member refid="class_sensor_dfr01610300_1a1fd69246c7164cd4f828be769fd5d133" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>startTempertureConversion</name></member>
+      <member refid="class_sensor_dfr01610300_1ab09e08e428a011a1e1d098370021f013" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_address_</name></member>
+      <member refid="class_sensor_dfr01610300_1a85c6e55c074b82df6e690cb206177408" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_data_</name></member>
+      <member refid="class_sensor_dfr01610300_1a61fc47fabe4252dffd0f480289b00ed3" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_filter_</name></member>
+      <member refid="class_sensor_dfr01610300_1a598f2f18f66d626a3ce392478fcadcc8" prot="public" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_filtered</name></member>
+      <member refid="class_sensor_dfr01610300_1a6da209d5f4bec9f11e866fc598b960a8" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_id_</name></member>
+      <member refid="class_sensor_dfr01610300_1a19fd2791b7dcccd06d6ce97d1ff036a5" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_instruction_code_</name></member>
+      <member refid="class_sensor_dfr01610300_1ad400653c4c630daa2092a78d71d9a2ae" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_pin_</name></member>
+      <member refid="class_sensor_dfr01610300_1a483485c4c8a91569e8f45819e641e38c" prot="public" virt="non-virtual"><scope>SensorDfr01610300</scope><name>temperature_raw</name></member>
+      <member refid="class_sensor_dfr01610300_1aae60840a2bfc5db28c3e7f04e163597f" prot="private" virt="non-virtual"><scope>SensorDfr01610300</scope><name>TempProcess</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

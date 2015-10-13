@@ -1,0 +1,877 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="sensor__tsl2561_8h" kind="file" language="C++">
+    <compoundname>sensor_tsl2561.h</compoundname>
+    <includes local="no">Arduino.h</includes>
+    <includes refid="support__wire_8h" local="yes">support_wire.h</includes>
+    <includes refid="module__handler_8h" local="yes">module_handler.h</includes>
+    <includedby refid="module__handler_8cpp" local="yes">src/module_handler.cpp</includedby>
+    <includedby refid="sensor__tsl2561_8cpp" local="yes">src/sensor_tsl2561.cpp</includedby>
+    <incdepgraph>
+      <node id="122">
+        <label>src/sensor_tsl2561.h</label>
+        <link refid="sensor_tsl2561.h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>module_handler.h</label>
+        <link refid="module__handler_8h"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>support_wire.h</label>
+        <link refid="support__wire_8h"/>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="128">
+        <label>WProgram.h</label>
+      </node>
+      <node id="123">
+        <label>Arduino.h</label>
+      </node>
+      <node id="126">
+        <label>Stream.h</label>
+      </node>
+      <node id="125">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="129">
+        <label>src/sensor_tsl2561.h</label>
+        <link refid="sensor_tsl2561.h"/>
+        <childnode refid="130" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>src/module_handler.cpp</label>
+        <link refid="module__handler_8cpp"/>
+      </node>
+      <node id="131">
+        <label>src/sensor_tsl2561.cpp</label>
+        <link refid="sensor__tsl2561_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_sensor_tsl2561" prot="public">SensorTsl2561</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="sensor__tsl2561_8h_1aab8e4882f253d35cd521c2f4abc45149" prot="public" static="no">
+        <name>TSL2561_Control</name>
+        <initializer>0x80</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="20" column="10" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a0372d3100b18a1258eafec1925b214fc" prot="public" static="no">
+        <name>TSL2561_Timing</name>
+        <initializer>0x81</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="21" column="10" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1aed0e05fa7dea08bdcbf5828d4622724c" prot="public" static="no">
+        <name>TSL2561_Interrupt</name>
+        <initializer>0x86</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="22" column="10" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a8a25922147204b8fadfac78ae06a3eeb" prot="public" static="no">
+        <name>TSL2561_Channal0L</name>
+        <initializer>0x8C</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="23" column="10" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a25c20b0a9db2eb2120056ba3c927b7d7" prot="public" static="no">
+        <name>TSL2561_Channal0H</name>
+        <initializer>0x8D</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="24" column="10" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a36de2c81ed9acc5d08ea68a49b898c8d" prot="public" static="no">
+        <name>TSL2561_Channal1L</name>
+        <initializer>0x8E</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="25" column="10" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a3d6221afdaefda8d471cbb33c6066240" prot="public" static="no">
+        <name>TSL2561_Channal1H</name>
+        <initializer>0x8F</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="26" column="10" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" prot="public" static="no">
+        <name>TSL2561_Address</name>
+        <initializer>0x29</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="28" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1abe3540b1f05e5974dfa40491719b322a" prot="public" static="no">
+        <name>LUX_SCALE</name>
+        <initializer>14</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="30" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a2d36ccf8157f890c015eddd64276d77c" prot="public" static="no">
+        <name>RATIO_SCALE</name>
+        <initializer>9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="31" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ae77b11d54490369c690da18aef1e76e5" prot="public" static="no">
+        <name>CH_SCALE</name>
+        <initializer>10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="32" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1af740a064eaa0da3339e7eba683a671ed" prot="public" static="no">
+        <name>CHSCALE_TINT0</name>
+        <initializer>0x7517</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="33" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a1f741d16494e81486136c73489097cdd" prot="public" static="no">
+        <name>CHSCALE_TINT1</name>
+        <initializer>0x0fe7</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="34" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a8d1758888413b06317d05260d023c6f1" prot="public" static="no">
+        <name>K1T</name>
+        <initializer>0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="36" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a77a115660299dfe589547bd1c9313e18" prot="public" static="no">
+        <name>B1T</name>
+        <initializer>0x01f2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="37" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a9cee464de95fd9f1cc41e4737cdfcf56" prot="public" static="no">
+        <name>M1T</name>
+        <initializer>0x01be</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="38" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1af3f76dac869af6d4fb8834ba8e5baa72" prot="public" static="no">
+        <name>K2T</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="39" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a0a24c8d38c744a6706fbef06cc0d045e" prot="public" static="no">
+        <name>B2T</name>
+        <initializer>0x0214</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="40" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1af13d82736a980dd7f78a0c8633c656c0" prot="public" static="no">
+        <name>M2T</name>
+        <initializer>0x02d1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="41" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a96898795c866703216e3035ecc1c29aa" prot="public" static="no">
+        <name>K3T</name>
+        <initializer>0x00c0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="42" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1aa58a8a3b4010f1d8ab947e2351b6cf1d" prot="public" static="no">
+        <name>B3T</name>
+        <initializer>0x023f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="43" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a6d02cd58020bf44d98927446668a2f7b" prot="public" static="no">
+        <name>M3T</name>
+        <initializer>0x037b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="44" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1aa3489bee2d8a1e25002669517f4b6f7d" prot="public" static="no">
+        <name>K4T</name>
+        <initializer>0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="45" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a836fd96912939cd386f83e20ed1061ee" prot="public" static="no">
+        <name>B4T</name>
+        <initializer>0x0270</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="46" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ac5983b281c3a2f1d4ea1f87236cfcb44" prot="public" static="no">
+        <name>M4T</name>
+        <initializer>0x03fe</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="47" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a7df915d6ba425afa9a463f249168d6bd" prot="public" static="no">
+        <name>K5T</name>
+        <initializer>0x0138</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="48" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a8a3732432706e9a5a5ae3d3485d47043" prot="public" static="no">
+        <name>B5T</name>
+        <initializer>0x016f</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="49" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a2d9fce4a16f258b5ab02b09a954648f6" prot="public" static="no">
+        <name>M5T</name>
+        <initializer>0x01fc</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="50" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a677e2edf3cf15bef63405c35a7be1310" prot="public" static="no">
+        <name>K6T</name>
+        <initializer>0x019a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="51" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ab01465ad82a39e8d02c2dd79279bfe38" prot="public" static="no">
+        <name>B6T</name>
+        <initializer>0x00d2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="52" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a48074a633649636c0748b851a23776df" prot="public" static="no">
+        <name>M6T</name>
+        <initializer>0x00fb</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="53" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a7e788fd48d058b89ffcc0438bc3d558e" prot="public" static="no">
+        <name>K7T</name>
+        <initializer>0x029a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="54" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ad61180572632999584ac8b582a00e2c8" prot="public" static="no">
+        <name>B7T</name>
+        <initializer>0x0018</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="55" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1aa3094566ff7a1a2bcd210e256c7b50cc" prot="public" static="no">
+        <name>M7T</name>
+        <initializer>0x0012</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="56" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1aa0dc3961e2039ad7d91faf6829ec1404" prot="public" static="no">
+        <name>K8T</name>
+        <initializer>0x029a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="57" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ab5d069e613c69aaf71ea97b129cc5ec1" prot="public" static="no">
+        <name>B8T</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="58" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1acb54eadab753bfe327548d7216edd9a2" prot="public" static="no">
+        <name>M8T</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="59" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a5d91e3222633d82540d7ce0e8d2e1bb2" prot="public" static="no">
+        <name>K1C</name>
+        <initializer>0x0043</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="60" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a93aa8f0bb51f43d51e78656a352c6d16" prot="public" static="no">
+        <name>B1C</name>
+        <initializer>0x0204</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="61" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a4ec6175326ca3eb8b731a162b6fcd866" prot="public" static="no">
+        <name>M1C</name>
+        <initializer>0x01ad</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="62" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ac91e954471045fdbd9b3d01933373c1e" prot="public" static="no">
+        <name>K2C</name>
+        <initializer>0x0085</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="63" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a95f02da704fdc6c1cabd0c29713cee66" prot="public" static="no">
+        <name>B2C</name>
+        <initializer>0x0228</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="64" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ab70590fa6ebed50a3ab8ff17c22b55b2" prot="public" static="no">
+        <name>M2C</name>
+        <initializer>0x02c1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="65" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1acbc83f137380f27faf46af997f35f882" prot="public" static="no">
+        <name>K3C</name>
+        <initializer>0x00c8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="66" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ac03c4526fc8c17d71c8ee2171537facd" prot="public" static="no">
+        <name>B3C</name>
+        <initializer>0x0253</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="67" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a172d826f878378caa7889305ad29011f" prot="public" static="no">
+        <name>M3C</name>
+        <initializer>0x0363</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="68" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a2fccbc87358653185282ba16b03a64ee" prot="public" static="no">
+        <name>K4C</name>
+        <initializer>0x010a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="69" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a6bd8165e32f19978994245c552b8ee2d" prot="public" static="no">
+        <name>B4C</name>
+        <initializer>0x0282</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="70" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1abca79308fb0392b1f8c9d5cfeb5310a0" prot="public" static="no">
+        <name>M4C</name>
+        <initializer>0x03df</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="71" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1aa39a8eec5ffe9f84c4ac098724c70c91" prot="public" static="no">
+        <name>K5C</name>
+        <initializer>0x014d</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="72" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1af4a1b651ec51bb418ce1bffb87fa79e4" prot="public" static="no">
+        <name>B5C</name>
+        <initializer>0x0177</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="73" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a7c5adce134d8d2be44024c075f55c5c1" prot="public" static="no">
+        <name>M5C</name>
+        <initializer>0x01dd</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="74" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a9dccc63bcf43c1b4714e913053a906c1" prot="public" static="no">
+        <name>K6C</name>
+        <initializer>0x019a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="75" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1abe71d8a87f6d974ee3d26693d1a2ea51" prot="public" static="no">
+        <name>B6C</name>
+        <initializer>0x0101</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="76" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a2140b89133d826e76d2a717a3d863551" prot="public" static="no">
+        <name>M6C</name>
+        <initializer>0x0127</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="77" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ac104bf3b33df4e42b14dc31078283565" prot="public" static="no">
+        <name>K7C</name>
+        <initializer>0x029a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="78" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a5750be8469107d68ea4bdd4e4947316b" prot="public" static="no">
+        <name>B7C</name>
+        <initializer>0x0037</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="79" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1acc5b1974656133787900e9bd5219c5ce" prot="public" static="no">
+        <name>M7C</name>
+        <initializer>0x002b</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="80" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ac47a903b8bc65dc56915024f00201213" prot="public" static="no">
+        <name>K8C</name>
+        <initializer>0x029a</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="81" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1a6d9dfce0cef08b9ef488e582ac4f92e9" prot="public" static="no">
+        <name>B8C</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="82" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="sensor__tsl2561_8h_1ac15c8f99823ed2ff447fb568ce4d3957" prot="public" static="no">
+        <name>M8C</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" line="83" column="9" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sensor module for light intensity and par. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="comment">//<sp/>Library<sp/>based<sp/>off:<sp/>Digital_Light_TSL2561<sp/>library<sp/>from<sp/>Seeed<sp/>Studio</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Library<sp/>found<sp/>at:<sp/>http://www.seeedstudio.com/wiki/Grove_-_Digital_Light_Sensor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Component<sp/>found<sp/>at:<sp/>http://www.seeedstudio.com/depot/Grove-Digital-Light-Sensor-p-1281.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Modified<sp/>by:<sp/>Jake<sp/>Rye</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Date:<sp/>July<sp/>2,<sp/>2015</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SENSOR_TSL2561_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SENSOR_TSL2561_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;Arduino.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="support__wire_8h" kindref="compound">support_wire.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="module__handler_8h" kindref="compound">module_handler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="sensor__tsl2561_8h_1aab8e4882f253d35cd521c2f4abc45149" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>TSL2561_Control<sp/><sp/>0x80</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="sensor__tsl2561_8h_1a0372d3100b18a1258eafec1925b214fc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>TSL2561_Timing<sp/><sp/><sp/>0x81</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="sensor__tsl2561_8h_1aed0e05fa7dea08bdcbf5828d4622724c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>TSL2561_Interrupt<sp/>0x86</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="sensor__tsl2561_8h_1a8a25922147204b8fadfac78ae06a3eeb" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>TSL2561_Channal0L<sp/>0x8C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="sensor__tsl2561_8h_1a25c20b0a9db2eb2120056ba3c927b7d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>TSL2561_Channal0H<sp/>0x8D</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="sensor__tsl2561_8h_1a36de2c81ed9acc5d08ea68a49b898c8d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>TSL2561_Channal1L<sp/>0x8E</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="sensor__tsl2561_8h_1a3d6221afdaefda8d471cbb33c6066240" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/>TSL2561_Channal1H<sp/>0x8F</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="sensor__tsl2561_8h_1a59333700af73c80bc1d7c6f8dc351c82" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TSL2561_Address<sp/><sp/>0x29<sp/><sp/><sp/><sp/><sp/><sp/><sp/>//device<sp/>address</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="sensor__tsl2561_8h_1abe3540b1f05e5974dfa40491719b322a" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LUX_SCALE<sp/>14<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>scale<sp/>by<sp/>2^14</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="sensor__tsl2561_8h_1a2d36ccf8157f890c015eddd64276d77c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RATIO_SCALE<sp/>9<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>scale<sp/>ratio<sp/>by<sp/>2^9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="sensor__tsl2561_8h_1ae77b11d54490369c690da18aef1e76e5" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CH_SCALE<sp/>10<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>scale<sp/>channel<sp/>values<sp/>by<sp/>2^10</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="sensor__tsl2561_8h_1af740a064eaa0da3339e7eba683a671ed" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHSCALE_TINT0<sp/>0x7517<sp/><sp/><sp/>//<sp/>322/11<sp/>*<sp/>2^CH_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="sensor__tsl2561_8h_1a1f741d16494e81486136c73489097cdd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHSCALE_TINT1<sp/>0x0fe7<sp/><sp/><sp/>//<sp/>322/81<sp/>*<sp/>2^CH_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36" refid="sensor__tsl2561_8h_1a8d1758888413b06317d05260d023c6f1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K1T<sp/>0x0040<sp/><sp/><sp/>//<sp/>0.125<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="sensor__tsl2561_8h_1a77a115660299dfe589547bd1c9313e18" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B1T<sp/>0x01f2<sp/><sp/><sp/>//<sp/>0.0304<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="sensor__tsl2561_8h_1a9cee464de95fd9f1cc41e4737cdfcf56" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M1T<sp/>0x01be<sp/><sp/><sp/>//<sp/>0.0272<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="sensor__tsl2561_8h_1af3f76dac869af6d4fb8834ba8e5baa72" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K2T<sp/>0x0080<sp/><sp/><sp/>//<sp/>0.250<sp/>*<sp/>2^RATIO_SCA</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="sensor__tsl2561_8h_1a0a24c8d38c744a6706fbef06cc0d045e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B2T<sp/>0x0214<sp/><sp/><sp/>//<sp/>0.0325<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="sensor__tsl2561_8h_1af13d82736a980dd7f78a0c8633c656c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M2T<sp/>0x02d1<sp/><sp/><sp/>//<sp/>0.0440<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="sensor__tsl2561_8h_1a96898795c866703216e3035ecc1c29aa" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K3T<sp/>0x00c0<sp/><sp/><sp/>//<sp/>0.375<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="sensor__tsl2561_8h_1aa58a8a3b4010f1d8ab947e2351b6cf1d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B3T<sp/>0x023f<sp/><sp/><sp/>//<sp/>0.0351<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="sensor__tsl2561_8h_1a6d02cd58020bf44d98927446668a2f7b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M3T<sp/>0x037b<sp/><sp/><sp/>//<sp/>0.0544<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="sensor__tsl2561_8h_1aa3489bee2d8a1e25002669517f4b6f7d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K4T<sp/>0x0100<sp/><sp/><sp/>//<sp/>0.50<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="sensor__tsl2561_8h_1a836fd96912939cd386f83e20ed1061ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B4T<sp/>0x0270<sp/><sp/><sp/>//<sp/>0.0381<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="sensor__tsl2561_8h_1ac5983b281c3a2f1d4ea1f87236cfcb44" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M4T<sp/>0x03fe<sp/><sp/><sp/>//<sp/>0.0624<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="sensor__tsl2561_8h_1a7df915d6ba425afa9a463f249168d6bd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K5T<sp/>0x0138<sp/><sp/><sp/>//<sp/>0.61<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="sensor__tsl2561_8h_1a8a3732432706e9a5a5ae3d3485d47043" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B5T<sp/>0x016f<sp/><sp/><sp/>//<sp/>0.0224<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50" refid="sensor__tsl2561_8h_1a2d9fce4a16f258b5ab02b09a954648f6" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M5T<sp/>0x01fc<sp/><sp/><sp/>//<sp/>0.0310<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="sensor__tsl2561_8h_1a677e2edf3cf15bef63405c35a7be1310" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K6T<sp/>0x019a<sp/><sp/><sp/>//<sp/>0.80<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="sensor__tsl2561_8h_1ab01465ad82a39e8d02c2dd79279bfe38" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B6T<sp/>0x00d2<sp/><sp/><sp/>//<sp/>0.0128<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="sensor__tsl2561_8h_1a48074a633649636c0748b851a23776df" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M6T<sp/>0x00fb<sp/><sp/><sp/>//<sp/>0.0153<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="sensor__tsl2561_8h_1a7e788fd48d058b89ffcc0438bc3d558e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K7T<sp/>0x029a<sp/><sp/><sp/>//<sp/>1.3<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="sensor__tsl2561_8h_1ad61180572632999584ac8b582a00e2c8" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B7T<sp/>0x0018<sp/><sp/><sp/>//<sp/>0.00146<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="sensor__tsl2561_8h_1aa3094566ff7a1a2bcd210e256c7b50cc" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M7T<sp/>0x0012<sp/><sp/><sp/>//<sp/>0.00112<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="sensor__tsl2561_8h_1aa0dc3961e2039ad7d91faf6829ec1404" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K8T<sp/>0x029a<sp/><sp/><sp/>//<sp/>1.3<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="sensor__tsl2561_8h_1ab5d069e613c69aaf71ea97b129cc5ec1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B8T<sp/>0x0000<sp/><sp/><sp/>//<sp/>0.000<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="sensor__tsl2561_8h_1acb54eadab753bfe327548d7216edd9a2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M8T<sp/>0x0000<sp/><sp/><sp/>//<sp/>0.000<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="sensor__tsl2561_8h_1a5d91e3222633d82540d7ce0e8d2e1bb2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K1C<sp/>0x0043<sp/><sp/><sp/>//<sp/>0.130<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="sensor__tsl2561_8h_1a93aa8f0bb51f43d51e78656a352c6d16" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B1C<sp/>0x0204<sp/><sp/><sp/>//<sp/>0.0315<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="sensor__tsl2561_8h_1a4ec6175326ca3eb8b731a162b6fcd866" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M1C<sp/>0x01ad<sp/><sp/><sp/>//<sp/>0.0262<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="sensor__tsl2561_8h_1ac91e954471045fdbd9b3d01933373c1e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K2C<sp/>0x0085<sp/><sp/><sp/>//<sp/>0.260<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64" refid="sensor__tsl2561_8h_1a95f02da704fdc6c1cabd0c29713cee66" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B2C<sp/>0x0228<sp/><sp/><sp/>//<sp/>0.0337<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="sensor__tsl2561_8h_1ab70590fa6ebed50a3ab8ff17c22b55b2" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M2C<sp/>0x02c1<sp/><sp/><sp/>//<sp/>0.0430<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="sensor__tsl2561_8h_1acbc83f137380f27faf46af997f35f882" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K3C<sp/>0x00c8<sp/><sp/><sp/>//<sp/>0.390<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="sensor__tsl2561_8h_1ac03c4526fc8c17d71c8ee2171537facd" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B3C<sp/>0x0253<sp/><sp/><sp/>//<sp/>0.0363<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="sensor__tsl2561_8h_1a172d826f878378caa7889305ad29011f" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M3C<sp/>0x0363<sp/><sp/><sp/>//<sp/>0.0529<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="sensor__tsl2561_8h_1a2fccbc87358653185282ba16b03a64ee" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K4C<sp/>0x010a<sp/><sp/><sp/>//<sp/>0.520<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="sensor__tsl2561_8h_1a6bd8165e32f19978994245c552b8ee2d" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B4C<sp/>0x0282<sp/><sp/><sp/>//<sp/>0.0392<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71" refid="sensor__tsl2561_8h_1abca79308fb0392b1f8c9d5cfeb5310a0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M4C<sp/>0x03df<sp/><sp/><sp/>//<sp/>0.0605<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="sensor__tsl2561_8h_1aa39a8eec5ffe9f84c4ac098724c70c91" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K5C<sp/>0x014d<sp/><sp/><sp/>//<sp/>0.65<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="sensor__tsl2561_8h_1af4a1b651ec51bb418ce1bffb87fa79e4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B5C<sp/>0x0177<sp/><sp/><sp/>//<sp/>0.0229<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74" refid="sensor__tsl2561_8h_1a7c5adce134d8d2be44024c075f55c5c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M5C<sp/>0x01dd<sp/><sp/><sp/>//<sp/>0.0291<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="sensor__tsl2561_8h_1a9dccc63bcf43c1b4714e913053a906c1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K6C<sp/>0x019a<sp/><sp/><sp/>//<sp/>0.80<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="sensor__tsl2561_8h_1abe71d8a87f6d974ee3d26693d1a2ea51" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B6C<sp/>0x0101<sp/><sp/><sp/>//<sp/>0.0157<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="sensor__tsl2561_8h_1a2140b89133d826e76d2a717a3d863551" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M6C<sp/>0x0127<sp/><sp/><sp/>//<sp/>0.0180<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="sensor__tsl2561_8h_1ac104bf3b33df4e42b14dc31078283565" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K7C<sp/>0x029a<sp/><sp/><sp/>//<sp/>1.3<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79" refid="sensor__tsl2561_8h_1a5750be8469107d68ea4bdd4e4947316b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B7C<sp/>0x0037<sp/><sp/><sp/>//<sp/>0.00338<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="sensor__tsl2561_8h_1acc5b1974656133787900e9bd5219c5ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M7C<sp/>0x002b<sp/><sp/><sp/>//<sp/>0.00260<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="sensor__tsl2561_8h_1ac47a903b8bc65dc56915024f00201213" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>K8C<sp/>0x029a<sp/><sp/><sp/>//<sp/>1.3<sp/>*<sp/>2^RATIO_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="sensor__tsl2561_8h_1a6d9dfce0cef08b9ef488e582ac4f92e9" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>B8C<sp/>0x0000<sp/><sp/><sp/>//<sp/>0.000<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83" refid="sensor__tsl2561_8h_1ac15c8f99823ed2ff447fb568ce4d3957" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>M8C<sp/>0x0000<sp/><sp/><sp/>//<sp/>0.000<sp/>*<sp/>2^LUX_SCALE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="class_sensor_tsl2561" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_sensor_tsl2561" kindref="compound">SensorTsl2561</ref><sp/>:<sp/><ref refid="class_sensor_actuator_module" kindref="compound">SensorActuatorModule</ref><sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_tsl2561_1acb66b0b6127d1d889ff31085dbb9d8c2" kindref="member">SensorTsl2561</ref>(String<sp/>lux_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lux_instruction_id,<sp/>String<sp/>par_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>par_instruction_id);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_tsl2561_1ace17c892222366185df021bda708cc10" kindref="member">begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">(void);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/><ref refid="class_sensor_tsl2561_1ab4eb3d8197c96867f43857876df46b33" kindref="member">set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>instruction_parameter);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Public<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_sensor_tsl2561_1ae12c0a6210834b63eb786e81043c38c4" kindref="member">lux_</ref>;<sp/></highlight><highlight class="comment">//<sp/>lux</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="class_sensor_tsl2561_1a1159f0229bf7cfc07da35366f81661f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_sensor_tsl2561_1a1159f0229bf7cfc07da35366f81661f7" kindref="member">par_</ref>;<sp/></highlight><highlight class="comment">//<sp/>(umol)*(m^-2)*(s^-1)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>note:<sp/>PAR<sp/>is<sp/>likely<sp/>only<sp/>valid<sp/>for<sp/>Erligpowht<sp/>45W<sp/>LED<sp/>Red<sp/>Blue<sp/>Indoor<sp/>Garden<sp/>Plant<sp/>Grow<sp/>Light<sp/>Hanging<sp/>Lightpanel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>found<sp/>@<sp/>http://www.amazon.com/gp/product/B00S2DPYQM?psc=1&amp;redirect=true&amp;ref_=oh_aui_detailpage_o08_s03</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>getLux(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>calculateLux(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iGain,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tInt,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>iType);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>readRegister(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deviceAddress,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>writeRegister(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>deviceAddress,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address,<sp/>uint8_t<sp/>val);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>floatToString(<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>val,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>precision);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Private<sp/>Variables</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>lux_instruction_code_;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lux_instruction_id_;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>par_instruction_code_;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>par_instruction_id_;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calibrtion_to_vernier_lux_;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>calibration_to_vernier_par_;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>measuring_indoor_par_correction_;<sp/></highlight><highlight class="comment">//reduction<sp/>by<sp/>14%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>read_register_timeout_;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>read_register_error_;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>uint8_t<sp/>CH0_LOW,CH0_HIGH,CH1_LOW,CH1_HIGH;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>uint16_t<sp/>ch0,ch1;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>chScale;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>channel1;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>channel0;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><sp/>ratio1;</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>m;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>temp;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>lux;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/>};</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SENSOR_TSL2561_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_tsl2561.h"/>
+  </compounddef>
+</doxygen>

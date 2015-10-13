@@ -1,0 +1,123 @@
+\hypertarget{class_actuator_relay}{}\section{Actuator\+Relay Class Reference}
+\label{class_actuator_relay}\index{Actuator\+Relay@{Actuator\+Relay}}
+
+
+Actuator module for an active low S\+P\+S\+T-\/\+N\+O relay.  
+
+
+
+
+{\ttfamily \#include $<$actuator\+\_\+relay.\+h$>$}
+
+Inheritance diagram for Actuator\+Relay\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_actuator_relay}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_actuator_relay_a0a19fabbd9a3ee500d906a55579ae4f3}{Actuator\+Relay} (int pin, String instruction\+\_\+code, int instruction\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Used to construct an instance of the \hyperlink{class_actuator_relay}{Actuator\+Relay} class. \end{DoxyCompactList}\item 
+void \hyperlink{class_actuator_relay_abd921e88bb8fcecfbd5e1213e1faad56}{begin} (void)
+\begin{DoxyCompactList}\small\item\em Called once to setup module. Sets specified control pin to be in O\+U\+T\+P\+U\+T mode. \end{DoxyCompactList}\item 
+String \hyperlink{class_actuator_relay_affbcfa491c42a0aae3d69450cf7295b1}{get} (void)
+\begin{DoxyCompactList}\small\item\em Returns J\+S\+O\+N string with module data. Data\+: \char`\"{}$<$instruction\+\_\+code$>$ $<$instruction\+\_\+id$>$ $<$value$>$\char`\"{}, Example\+: \char`\"{}\+A\+A\+H\+U 1 1\char`\"{},. \end{DoxyCompactList}\item 
+String \hyperlink{class_actuator_relay_a29995263e5a05a3fdff0761cb4730306}{set} (String instruction\+\_\+code, int instruction\+\_\+id, String instruction\+\_\+parameter)
+\begin{DoxyCompactList}\small\item\em Sets relay to be on / off. If instruction\+\_\+code \& instruction\+\_\+id match the code and id module was instantiated with, the relay will enter the state passed in through instruction\+\_\+parameter. If instruction\+\_\+parameter = \char`\"{}1\char`\"{}, relay is O\+N (switch closed). If instruction\+\_\+paremerter = \char`\"{}0\char`\"{}, relay is O\+F\+F (switch open). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_actuator_relay_a8f63c9df6e8dfc90425838f6c1c8fb0e}{value\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Actuator module for an active low S\+P\+S\+T-\/\+N\+O relay. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_actuator_relay_a0a19fabbd9a3ee500d906a55579ae4f3}{}\index{Actuator\+Relay@{Actuator\+Relay}!Actuator\+Relay@{Actuator\+Relay}}
+\index{Actuator\+Relay@{Actuator\+Relay}!Actuator\+Relay@{Actuator\+Relay}}
+\subsubsection[{Actuator\+Relay}]{\setlength{\rightskip}{0pt plus 5cm}Actuator\+Relay\+::\+Actuator\+Relay (
+\begin{DoxyParamCaption}
+\item[{int}]{pin, }
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_actuator_relay_a0a19fabbd9a3ee500d906a55579ae4f3}
+
+
+Used to construct an instance of the \hyperlink{class_actuator_relay}{Actuator\+Relay} class. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pin} & is the control line for the relay \\
+\hline
+\mbox{\tt in}  & {\em instruction\+\_\+code} & is the 4-\/letter instruction code associated with the actuation the relay is switching. \hyperlink{struct_instruction}{Instruction} codes are not necessarily unique. \\
+\hline
+\mbox{\tt in}  & {\em instruction\+\_\+id} & is the I\+D associated with the specific actuator that is being switched. Each I\+D is unique.\\
+\hline
+\end{DoxyParams}
+To clarify how parameters are used, consider the following case. Imagine there are two air heaters each connected to their own relay. They would have the same instruction code\+: A\+A\+H\+E (Actuator Air Heater) but would both need to be addressable. Thus the instruction\+\_\+ids of the heaters would be 1 and 2. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_actuator_relay_abd921e88bb8fcecfbd5e1213e1faad56}{}\index{Actuator\+Relay@{Actuator\+Relay}!begin@{begin}}
+\index{begin@{begin}!Actuator\+Relay@{Actuator\+Relay}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Actuator\+Relay\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_actuator_relay_abd921e88bb8fcecfbd5e1213e1faad56}
+
+
+Called once to setup module. Sets specified control pin to be in O\+U\+T\+P\+U\+T mode. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_actuator_relay_affbcfa491c42a0aae3d69450cf7295b1}{}\index{Actuator\+Relay@{Actuator\+Relay}!get@{get}}
+\index{get@{get}!Actuator\+Relay@{Actuator\+Relay}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}String Actuator\+Relay\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_actuator_relay_affbcfa491c42a0aae3d69450cf7295b1}
+
+
+Returns J\+S\+O\+N string with module data. Data\+: \char`\"{}$<$instruction\+\_\+code$>$ $<$instruction\+\_\+id$>$ $<$value$>$\char`\"{}, Example\+: \char`\"{}\+A\+A\+H\+U 1 1\char`\"{},. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_actuator_relay_a29995263e5a05a3fdff0761cb4730306}{}\index{Actuator\+Relay@{Actuator\+Relay}!set@{set}}
+\index{set@{set}!Actuator\+Relay@{Actuator\+Relay}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}String Actuator\+Relay\+::set (
+\begin{DoxyParamCaption}
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id, }
+\item[{String}]{instruction\+\_\+parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_actuator_relay_a29995263e5a05a3fdff0761cb4730306}
+
+
+Sets relay to be on / off. If instruction\+\_\+code \& instruction\+\_\+id match the code and id module was instantiated with, the relay will enter the state passed in through instruction\+\_\+parameter. If instruction\+\_\+parameter = \char`\"{}1\char`\"{}, relay is O\+N (switch closed). If instruction\+\_\+paremerter = \char`\"{}0\char`\"{}, relay is O\+F\+F (switch open). 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{Sensor\+Actuator\+Module}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_actuator_relay_a8f63c9df6e8dfc90425838f6c1c8fb0e}{}\index{Actuator\+Relay@{Actuator\+Relay}!value\+\_\+@{value\+\_\+}}
+\index{value\+\_\+@{value\+\_\+}!Actuator\+Relay@{Actuator\+Relay}}
+\subsubsection[{value\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int Actuator\+Relay\+::value\+\_\+}\label{class_actuator_relay_a8f63c9df6e8dfc90425838f6c1c8fb0e}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{actuator__relay_8h}{actuator\+\_\+relay.\+h}\item 
+src/\hyperlink{actuator__relay_8cpp}{actuator\+\_\+relay.\+cpp}\end{DoxyCompactItemize}

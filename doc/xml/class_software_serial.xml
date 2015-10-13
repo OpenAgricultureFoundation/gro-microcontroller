@@ -1,0 +1,663 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_software_serial" kind="class" language="C++" prot="public">
+    <compoundname>SoftwareSerial</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Stream</basecompoundref>
+    <includes refid="support__software__serial_8h" local="no">support_software_serial.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_software_serial_1a80491171dfac68c8bbba30eb5aff5bf2" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SoftwareSerial::_receivePin</definition>
+        <argsstring></argsstring>
+        <name>_receivePin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="56" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a5b95bcd366cc87aa533f12eb9b1efcbc" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SoftwareSerial::_receiveBitMask</definition>
+        <argsstring></argsstring>
+        <name>_receiveBitMask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="57" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1ac62ea9a1611aefa341e5beba368d727c" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* SoftwareSerial::_receivePortRegister</definition>
+        <argsstring></argsstring>
+        <name>_receivePortRegister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="58" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a640ef910de12024ea8ce2d2f456e518b" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SoftwareSerial::_transmitBitMask</definition>
+        <argsstring></argsstring>
+        <name>_transmitBitMask</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="59" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a2d06fe00de08d112317f2cff8b1e2fd7" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* SoftwareSerial::_transmitPortRegister</definition>
+        <argsstring></argsstring>
+        <name>_transmitPortRegister</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="60" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a581f4846212d6332dd6cada138f3f040" prot="private" static="no" mutable="no">
+        <type>uint8_t *</type>
+        <definition>volatile uint8_t* SoftwareSerial::_pcint_maskreg</definition>
+        <argsstring></argsstring>
+        <name>_pcint_maskreg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="61" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a938fd154d9967456d6d0aed177be9e59" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SoftwareSerial::_pcint_maskvalue</definition>
+        <argsstring></argsstring>
+        <name>_pcint_maskvalue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="62" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a45a74e5910e92c0fa1ce2dc5160fd2da" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SoftwareSerial::_rx_delay_centering</definition>
+        <argsstring></argsstring>
+        <name>_rx_delay_centering</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="65" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a34c7afa7c783456b32be9e0c4172d5d4" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SoftwareSerial::_rx_delay_intrabit</definition>
+        <argsstring></argsstring>
+        <name>_rx_delay_intrabit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="66" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1ac8591034f5f79a7eac51e2014cd7da86" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SoftwareSerial::_rx_delay_stopbit</definition>
+        <argsstring></argsstring>
+        <name>_rx_delay_stopbit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="67" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a2d499c71e11c5f8e18a9431104d19d59" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SoftwareSerial::_tx_delay</definition>
+        <argsstring></argsstring>
+        <name>_tx_delay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="68" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1adbe2d4a18178adcbabd3355506348c60" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SoftwareSerial::_buffer_overflow</definition>
+        <argsstring></argsstring>
+        <name>_buffer_overflow</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="70" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1aa855fc8ebebecdb5505eff2bce39ac13" prot="private" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t SoftwareSerial::_inverse_logic</definition>
+        <argsstring></argsstring>
+        <name>_inverse_logic</name>
+        <bitfield>1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="71" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_software_serial_1ab539854f1bed69847e877f00f4a31934" prot="private" static="yes" mutable="no">
+        <type>char</type>
+        <definition>char SoftwareSerial::_receive_buffer</definition>
+        <argsstring>[_SS_MAX_RX_BUFF]</argsstring>
+        <name>_receive_buffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="74" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a00619c316f20c7bd805affb077e2f265" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>volatile uint8_t SoftwareSerial::_receive_buffer_tail</definition>
+        <argsstring></argsstring>
+        <name>_receive_buffer_tail</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="75" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1adecd2a5052e8ae64e2a7a10215e03fce" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>volatile uint8_t SoftwareSerial::_receive_buffer_head</definition>
+        <argsstring></argsstring>
+        <name>_receive_buffer_head</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="76" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_software_serial_1a14f0fc93aebe5499a3a09bcd5445617f" prot="private" static="yes" mutable="no">
+        <type><ref refid="class_software_serial" kindref="compound">SoftwareSerial</ref> *</type>
+        <definition>SoftwareSerial * SoftwareSerial::active_object</definition>
+        <argsstring></argsstring>
+        <name>active_object</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="77" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_software_serial_1a786f4dddf233908a5471081518a8b6ea" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::recv</definition>
+        <argsstring>() __attribute__((__always_inline__))</argsstring>
+        <name>recv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="80" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="126" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a2dddb75a3a268984ac5e96265825a305" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t SoftwareSerial::rx_pin_read</definition>
+        <argsstring>()</argsstring>
+        <name>rx_pin_read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="81" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="212" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a52714e7d54da2bd6f57b309e8dfa1d4f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::tx_pin_write</definition>
+        <argsstring>(uint8_t pin_state) __attribute__((__always_inline__))</argsstring>
+        <name>tx_pin_write</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>pin_state</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1ae49f6d145127ca3e647e7297d218553c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::setTX</definition>
+        <argsstring>(uint8_t transmitPin)</argsstring>
+        <name>setTX</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>transmitPin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="83" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="272" bodyend="283"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a6769e1058c108c24853c66e66bba1529" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::setRX</definition>
+        <argsstring>(uint8_t receivePin)</argsstring>
+        <name>setRX</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>receivePin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="84" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="285" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a5348aad4512d4e3870d5f82024300e54" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::setRxIntMsk</definition>
+        <argsstring>(bool enable) __attribute__((__always_inline__))</argsstring>
+        <name>setRxIntMsk</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="85" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="380" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_software_serial_1a979ed28d47e8d09f4f722455961ccedb" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t SoftwareSerial::subtract_cap</definition>
+        <argsstring>(uint16_t num, uint16_t sub)</argsstring>
+        <name>subtract_cap</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>num</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>sub</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="88" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="296" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a1dc4448e5fdf2516f47439fb4f62f4be" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::tunedDelay</definition>
+        <argsstring>(uint16_t delay)</argsstring>
+        <name>tunedDelay</name>
+        <param>
+          <type>uint16_t</type>
+          <declname>delay</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="91" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="84" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_software_serial_1aab36336db4a1ca5073071c07d910cb87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SoftwareSerial::SoftwareSerial</definition>
+        <argsstring>(uint8_t receivePin, uint8_t transmitPin, bool inverse_logic=false)</argsstring>
+        <name>SoftwareSerial</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>receivePin</declname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <declname>transmitPin</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>inverse_logic</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="95" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="252" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1af6b8fff282e09a6cecc5df669ae71ee7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SoftwareSerial::~SoftwareSerial</definition>
+        <argsstring>()</argsstring>
+        <name>~SoftwareSerial</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="96" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1af1b194359d70894b3a2f38236a68480e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::begin</definition>
+        <argsstring>(long speed)</argsstring>
+        <name>begin</name>
+        <param>
+          <type>long</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="97" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="307" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1ad235539ef28939836bd0bde9387eb8fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SoftwareSerial::listen</definition>
+        <argsstring>()</argsstring>
+        <name>listen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="98" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="90" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a9034270f7de617b3cc7d3f38f3a8e0df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="99" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="388" bodyend="391"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a7b3fb4a8f57d2b5f2233f841d71ef80f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SoftwareSerial::isListening</definition>
+        <argsstring>()</argsstring>
+        <name>isListening</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="100" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="100" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a1c87a6b43c176c104f28e2c2eec2841e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SoftwareSerial::stopListening</definition>
+        <argsstring>()</argsstring>
+        <name>stopListening</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="101" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="112" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1ac6d4d5dfbe05515bf23766e2c8abfd46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool SoftwareSerial::overflow</definition>
+        <argsstring>()</argsstring>
+        <name>overflow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="102" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="102" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a51c2d2e79f0d982b1ef9cc9ac4453648" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SoftwareSerial::peek</definition>
+        <argsstring>()</argsstring>
+        <name>peek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="103" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="484" bodyend="495"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1ac24e5c6af203ec636c0a200b0cb3caf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t SoftwareSerial::write</definition>
+        <argsstring>(uint8_t byte)</argsstring>
+        <name>write</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>byte</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="105" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="418" bodyend="471"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a2d0b2f2868d519c716114777f482705b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int SoftwareSerial::read</definition>
+        <argsstring>()</argsstring>
+        <name>read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="106" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="395" bodyend="408"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a4cbf77a4e90e15ca576972d7952659c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int SoftwareSerial::available</definition>
+        <argsstring>()</argsstring>
+        <name>available</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="107" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="410" bodyend="416"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1a9a46db376a19fc958e011e38799b902c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::flush</definition>
+        <argsstring>()</argsstring>
+        <name>flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="108" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="473" bodyend="482"/>
+      </memberdef>
+      <memberdef kind="function" id="class_software_serial_1ab0cba63b2a27fcfa4760a2f3f7389de0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>SoftwareSerial::operator bool</definition>
+        <argsstring>()</argsstring>
+        <name>operator bool</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="109" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="109" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_software_serial_1a8700c768d3c5d681362253324852ceee" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void SoftwareSerial::handle_interrupt</definition>
+        <argsstring>() __attribute__((__always_inline__))</argsstring>
+        <name>handle_interrupt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="114" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.cpp" bodystart="222" bodyend="228"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="41">
+        <label>Stream</label>
+      </node>
+      <node id="40">
+        <label>SoftwareSerial</label>
+        <link refid="class_software_serial"/>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>Stream</label>
+      </node>
+      <node id="42">
+        <label>SoftwareSerial</label>
+        <link refid="class_software_serial"/>
+        <childnode refid="43" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" line="53" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_software_serial.h" bodystart="52" bodyend="115"/>
+    <listofallmembers>
+      <member refid="class_software_serial_1adbe2d4a18178adcbabd3355506348c60" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_buffer_overflow</name></member>
+      <member refid="class_software_serial_1aa855fc8ebebecdb5505eff2bce39ac13" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_inverse_logic</name></member>
+      <member refid="class_software_serial_1a581f4846212d6332dd6cada138f3f040" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_pcint_maskreg</name></member>
+      <member refid="class_software_serial_1a938fd154d9967456d6d0aed177be9e59" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_pcint_maskvalue</name></member>
+      <member refid="class_software_serial_1ab539854f1bed69847e877f00f4a31934" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_receive_buffer</name></member>
+      <member refid="class_software_serial_1adecd2a5052e8ae64e2a7a10215e03fce" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_receive_buffer_head</name></member>
+      <member refid="class_software_serial_1a00619c316f20c7bd805affb077e2f265" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_receive_buffer_tail</name></member>
+      <member refid="class_software_serial_1a5b95bcd366cc87aa533f12eb9b1efcbc" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_receiveBitMask</name></member>
+      <member refid="class_software_serial_1a80491171dfac68c8bbba30eb5aff5bf2" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_receivePin</name></member>
+      <member refid="class_software_serial_1ac62ea9a1611aefa341e5beba368d727c" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_receivePortRegister</name></member>
+      <member refid="class_software_serial_1a45a74e5910e92c0fa1ce2dc5160fd2da" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_rx_delay_centering</name></member>
+      <member refid="class_software_serial_1a34c7afa7c783456b32be9e0c4172d5d4" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_rx_delay_intrabit</name></member>
+      <member refid="class_software_serial_1ac8591034f5f79a7eac51e2014cd7da86" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_rx_delay_stopbit</name></member>
+      <member refid="class_software_serial_1a640ef910de12024ea8ce2d2f456e518b" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_transmitBitMask</name></member>
+      <member refid="class_software_serial_1a2d06fe00de08d112317f2cff8b1e2fd7" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_transmitPortRegister</name></member>
+      <member refid="class_software_serial_1a2d499c71e11c5f8e18a9431104d19d59" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>_tx_delay</name></member>
+      <member refid="class_software_serial_1a14f0fc93aebe5499a3a09bcd5445617f" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>active_object</name></member>
+      <member refid="class_software_serial_1a4cbf77a4e90e15ca576972d7952659c5" prot="public" virt="virtual"><scope>SoftwareSerial</scope><name>available</name></member>
+      <member refid="class_software_serial_1af1b194359d70894b3a2f38236a68480e" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>begin</name></member>
+      <member refid="class_software_serial_1a9034270f7de617b3cc7d3f38f3a8e0df" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>end</name></member>
+      <member refid="class_software_serial_1a9a46db376a19fc958e011e38799b902c" prot="public" virt="virtual"><scope>SoftwareSerial</scope><name>flush</name></member>
+      <member refid="class_software_serial_1a8700c768d3c5d681362253324852ceee" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>handle_interrupt</name></member>
+      <member refid="class_software_serial_1a7b3fb4a8f57d2b5f2233f841d71ef80f" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>isListening</name></member>
+      <member refid="class_software_serial_1ad235539ef28939836bd0bde9387eb8fc" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>listen</name></member>
+      <member refid="class_software_serial_1ab0cba63b2a27fcfa4760a2f3f7389de0" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>operator bool</name></member>
+      <member refid="class_software_serial_1ac6d4d5dfbe05515bf23766e2c8abfd46" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>overflow</name></member>
+      <member refid="class_software_serial_1a51c2d2e79f0d982b1ef9cc9ac4453648" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>peek</name></member>
+      <member refid="class_software_serial_1a2d0b2f2868d519c716114777f482705b" prot="public" virt="virtual"><scope>SoftwareSerial</scope><name>read</name></member>
+      <member refid="class_software_serial_1a786f4dddf233908a5471081518a8b6ea" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>recv</name></member>
+      <member refid="class_software_serial_1a2dddb75a3a268984ac5e96265825a305" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>rx_pin_read</name></member>
+      <member refid="class_software_serial_1a6769e1058c108c24853c66e66bba1529" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>setRX</name></member>
+      <member refid="class_software_serial_1a5348aad4512d4e3870d5f82024300e54" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>setRxIntMsk</name></member>
+      <member refid="class_software_serial_1ae49f6d145127ca3e647e7297d218553c" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>setTX</name></member>
+      <member refid="class_software_serial_1aab36336db4a1ca5073071c07d910cb87" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>SoftwareSerial</name></member>
+      <member refid="class_software_serial_1a1c87a6b43c176c104f28e2c2eec2841e" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>stopListening</name></member>
+      <member refid="class_software_serial_1a979ed28d47e8d09f4f722455961ccedb" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>subtract_cap</name></member>
+      <member refid="class_software_serial_1a1dc4448e5fdf2516f47439fb4f62f4be" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>tunedDelay</name></member>
+      <member refid="class_software_serial_1a52714e7d54da2bd6f57b309e8dfa1d4f" prot="private" virt="non-virtual"><scope>SoftwareSerial</scope><name>tx_pin_write</name></member>
+      <member refid="class_software_serial_1ac24e5c6af203ec636c0a200b0cb3caf0" prot="public" virt="virtual"><scope>SoftwareSerial</scope><name>write</name></member>
+      <member refid="class_software_serial_1af6b8fff282e09a6cecc5df669ae71ee7" prot="public" virt="non-virtual"><scope>SoftwareSerial</scope><name>~SoftwareSerial</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

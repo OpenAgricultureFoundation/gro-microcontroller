@@ -1,0 +1,167 @@
+\hypertarget{class_software_serial}{}\section{Software\+Serial Class Reference}
+\label{class_software_serial}\index{Software\+Serial@{Software\+Serial}}
+
+
+{\ttfamily \#include $<$support\+\_\+software\+\_\+serial.\+h$>$}
+
+Inheritance diagram for Software\+Serial\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_software_serial}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_software_serial_aab36336db4a1ca5073071c07d910cb87}{Software\+Serial} (uint8\+\_\+t receive\+Pin, uint8\+\_\+t transmit\+Pin, bool inverse\+\_\+logic=false)
+\item 
+\hyperlink{class_software_serial_af6b8fff282e09a6cecc5df669ae71ee7}{$\sim$\+Software\+Serial} ()
+\item 
+void \hyperlink{class_software_serial_af1b194359d70894b3a2f38236a68480e}{begin} (long speed)
+\item 
+bool \hyperlink{class_software_serial_ad235539ef28939836bd0bde9387eb8fc}{listen} ()
+\item 
+void \hyperlink{class_software_serial_a9034270f7de617b3cc7d3f38f3a8e0df}{end} ()
+\item 
+bool \hyperlink{class_software_serial_a7b3fb4a8f57d2b5f2233f841d71ef80f}{is\+Listening} ()
+\item 
+bool \hyperlink{class_software_serial_a1c87a6b43c176c104f28e2c2eec2841e}{stop\+Listening} ()
+\item 
+bool \hyperlink{class_software_serial_ac6d4d5dfbe05515bf23766e2c8abfd46}{overflow} ()
+\item 
+int \hyperlink{class_software_serial_a51c2d2e79f0d982b1ef9cc9ac4453648}{peek} ()
+\item 
+virtual size\+\_\+t \hyperlink{class_software_serial_ac24e5c6af203ec636c0a200b0cb3caf0}{write} (uint8\+\_\+t byte)
+\item 
+virtual int \hyperlink{class_software_serial_a2d0b2f2868d519c716114777f482705b}{read} ()
+\item 
+virtual int \hyperlink{class_software_serial_a4cbf77a4e90e15ca576972d7952659c5}{available} ()
+\item 
+virtual void \hyperlink{class_software_serial_a9a46db376a19fc958e011e38799b902c}{flush} ()
+\item 
+\hyperlink{class_software_serial_ab0cba63b2a27fcfa4760a2f3f7389de0}{operator bool} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_software_serial_a8700c768d3c5d681362253324852ceee}{handle\+\_\+interrupt} () \+\_\+\+\_\+attribute\+\_\+\+\_\+((\+\_\+\+\_\+always\+\_\+inline\+\_\+\+\_\+))
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_software_serial_aab36336db4a1ca5073071c07d910cb87}{}\index{Software\+Serial@{Software\+Serial}!Software\+Serial@{Software\+Serial}}
+\index{Software\+Serial@{Software\+Serial}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{Software\+Serial}]{\setlength{\rightskip}{0pt plus 5cm}Software\+Serial\+::\+Software\+Serial (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{receive\+Pin, }
+\item[{uint8\+\_\+t}]{transmit\+Pin, }
+\item[{bool}]{inverse\+\_\+logic = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\label{class_software_serial_aab36336db4a1ca5073071c07d910cb87}
+\hypertarget{class_software_serial_af6b8fff282e09a6cecc5df669ae71ee7}{}\index{Software\+Serial@{Software\+Serial}!````~Software\+Serial@{$\sim$\+Software\+Serial}}
+\index{````~Software\+Serial@{$\sim$\+Software\+Serial}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{$\sim$\+Software\+Serial}]{\setlength{\rightskip}{0pt plus 5cm}Software\+Serial\+::$\sim$\+Software\+Serial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_software_serial_af6b8fff282e09a6cecc5df669ae71ee7}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_software_serial_a4cbf77a4e90e15ca576972d7952659c5}{}\index{Software\+Serial@{Software\+Serial}!available@{available}}
+\index{available@{available}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{available}]{\setlength{\rightskip}{0pt plus 5cm}int Software\+Serial\+::available (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_software_serial_a4cbf77a4e90e15ca576972d7952659c5}
+\hypertarget{class_software_serial_af1b194359d70894b3a2f38236a68480e}{}\index{Software\+Serial@{Software\+Serial}!begin@{begin}}
+\index{begin@{begin}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Software\+Serial\+::begin (
+\begin{DoxyParamCaption}
+\item[{long}]{speed}
+\end{DoxyParamCaption}
+)}\label{class_software_serial_af1b194359d70894b3a2f38236a68480e}
+\hypertarget{class_software_serial_a9034270f7de617b3cc7d3f38f3a8e0df}{}\index{Software\+Serial@{Software\+Serial}!end@{end}}
+\index{end@{end}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}void Software\+Serial\+::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_software_serial_a9034270f7de617b3cc7d3f38f3a8e0df}
+\hypertarget{class_software_serial_a9a46db376a19fc958e011e38799b902c}{}\index{Software\+Serial@{Software\+Serial}!flush@{flush}}
+\index{flush@{flush}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{flush}]{\setlength{\rightskip}{0pt plus 5cm}void Software\+Serial\+::flush (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_software_serial_a9a46db376a19fc958e011e38799b902c}
+\hypertarget{class_software_serial_a8700c768d3c5d681362253324852ceee}{}\index{Software\+Serial@{Software\+Serial}!handle\+\_\+interrupt@{handle\+\_\+interrupt}}
+\index{handle\+\_\+interrupt@{handle\+\_\+interrupt}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{handle\+\_\+interrupt}]{\setlength{\rightskip}{0pt plus 5cm}void Software\+Serial\+::handle\+\_\+interrupt (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}\label{class_software_serial_a8700c768d3c5d681362253324852ceee}
+\hypertarget{class_software_serial_a7b3fb4a8f57d2b5f2233f841d71ef80f}{}\index{Software\+Serial@{Software\+Serial}!is\+Listening@{is\+Listening}}
+\index{is\+Listening@{is\+Listening}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{is\+Listening}]{\setlength{\rightskip}{0pt plus 5cm}bool Software\+Serial\+::is\+Listening (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_software_serial_a7b3fb4a8f57d2b5f2233f841d71ef80f}
+\hypertarget{class_software_serial_ad235539ef28939836bd0bde9387eb8fc}{}\index{Software\+Serial@{Software\+Serial}!listen@{listen}}
+\index{listen@{listen}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{listen}]{\setlength{\rightskip}{0pt plus 5cm}bool Software\+Serial\+::listen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_software_serial_ad235539ef28939836bd0bde9387eb8fc}
+\hypertarget{class_software_serial_ab0cba63b2a27fcfa4760a2f3f7389de0}{}\index{Software\+Serial@{Software\+Serial}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{operator bool}]{\setlength{\rightskip}{0pt plus 5cm}Software\+Serial\+::operator bool (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_software_serial_ab0cba63b2a27fcfa4760a2f3f7389de0}
+\hypertarget{class_software_serial_ac6d4d5dfbe05515bf23766e2c8abfd46}{}\index{Software\+Serial@{Software\+Serial}!overflow@{overflow}}
+\index{overflow@{overflow}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{overflow}]{\setlength{\rightskip}{0pt plus 5cm}bool Software\+Serial\+::overflow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{class_software_serial_ac6d4d5dfbe05515bf23766e2c8abfd46}
+\hypertarget{class_software_serial_a51c2d2e79f0d982b1ef9cc9ac4453648}{}\index{Software\+Serial@{Software\+Serial}!peek@{peek}}
+\index{peek@{peek}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{peek}]{\setlength{\rightskip}{0pt plus 5cm}int Software\+Serial\+::peek (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_software_serial_a51c2d2e79f0d982b1ef9cc9ac4453648}
+\hypertarget{class_software_serial_a2d0b2f2868d519c716114777f482705b}{}\index{Software\+Serial@{Software\+Serial}!read@{read}}
+\index{read@{read}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}int Software\+Serial\+::read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_software_serial_a2d0b2f2868d519c716114777f482705b}
+\hypertarget{class_software_serial_a1c87a6b43c176c104f28e2c2eec2841e}{}\index{Software\+Serial@{Software\+Serial}!stop\+Listening@{stop\+Listening}}
+\index{stop\+Listening@{stop\+Listening}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{stop\+Listening}]{\setlength{\rightskip}{0pt plus 5cm}bool Software\+Serial\+::stop\+Listening (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_software_serial_a1c87a6b43c176c104f28e2c2eec2841e}
+\hypertarget{class_software_serial_ac24e5c6af203ec636c0a200b0cb3caf0}{}\index{Software\+Serial@{Software\+Serial}!write@{write}}
+\index{write@{write}!Software\+Serial@{Software\+Serial}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}size\+\_\+t Software\+Serial\+::write (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{byte}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_software_serial_ac24e5c6af203ec636c0a200b0cb3caf0}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{support__software__serial_8h}{support\+\_\+software\+\_\+serial.\+h}\item 
+src/\hyperlink{support__software__serial_8cpp}{support\+\_\+software\+\_\+serial.\+cpp}\end{DoxyCompactItemize}

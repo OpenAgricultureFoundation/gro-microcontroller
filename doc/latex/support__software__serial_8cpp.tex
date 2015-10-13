@@ -1,0 +1,54 @@
+\hypertarget{support__software__serial_8cpp}{}\section{src/support\+\_\+software\+\_\+serial.cpp File Reference}
+\label{support__software__serial_8cpp}\index{src/support\+\_\+software\+\_\+serial.\+cpp@{src/support\+\_\+software\+\_\+serial.\+cpp}}
+
+
+Support module for serial communication.  
+
+
+{\ttfamily \#include $<$avr/interrupt.\+h$>$}\\*
+{\ttfamily \#include $<$avr/pgmspace.\+h$>$}\\*
+{\ttfamily \#include $<$Arduino.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}support\+\_\+software\+\_\+serial.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$util/delay\+\_\+basic.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{support__software__serial_8cpp_a152fc5203b90b1cff03b7b78579b8f52}{\+\_\+\+D\+E\+B\+U\+G}~0
+\item 
+\#define \hyperlink{support__software__serial_8cpp_a43461cbce55a8b1f98dae56d963c941d}{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N1}~11
+\item 
+\#define \hyperlink{support__software__serial_8cpp_af51dd94e466b8a6a5fb199736b78e531}{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N2}~13
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{support__software__serial_8cpp_a7ba959374e79d3320d69af12f7307f44}{Debug\+Pulse} (uint8\+\_\+t pin, uint8\+\_\+t count)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Support module for serial communication. 
+
+See arduino software serial module for details\+: \href{https://www.arduino.cc/en/Reference/SoftwareSerial}{\tt https\+://www.\+arduino.\+cc/en/\+Reference/\+Software\+Serial} 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{support__software__serial_8cpp_a152fc5203b90b1cff03b7b78579b8f52}{}\index{support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}!\+\_\+\+D\+E\+B\+U\+G@{\+\_\+\+D\+E\+B\+U\+G}}
+\index{\+\_\+\+D\+E\+B\+U\+G@{\+\_\+\+D\+E\+B\+U\+G}!support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}}
+\subsubsection[{\+\_\+\+D\+E\+B\+U\+G}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+E\+B\+U\+G~0}\label{support__software__serial_8cpp_a152fc5203b90b1cff03b7b78579b8f52}
+\hypertarget{support__software__serial_8cpp_a43461cbce55a8b1f98dae56d963c941d}{}\index{support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}!\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N1@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N1}}
+\index{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N1@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N1}!support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}}
+\subsubsection[{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N1}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N1~11}\label{support__software__serial_8cpp_a43461cbce55a8b1f98dae56d963c941d}
+\hypertarget{support__software__serial_8cpp_af51dd94e466b8a6a5fb199736b78e531}{}\index{support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}!\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N2@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N2}}
+\index{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N2@{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N2}!support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}}
+\subsubsection[{\+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N2}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+D\+E\+B\+U\+G\+\_\+\+P\+I\+N2~13}\label{support__software__serial_8cpp_af51dd94e466b8a6a5fb199736b78e531}
+
+
+\subsection{Function Documentation}
+\hypertarget{support__software__serial_8cpp_a7ba959374e79d3320d69af12f7307f44}{}\index{support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}!Debug\+Pulse@{Debug\+Pulse}}
+\index{Debug\+Pulse@{Debug\+Pulse}!support\+\_\+software\+\_\+serial.\+cpp@{support\+\_\+software\+\_\+serial.\+cpp}}
+\subsubsection[{Debug\+Pulse}]{\setlength{\rightskip}{0pt plus 5cm}void Debug\+Pulse (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{pin, }
+\item[{uint8\+\_\+t}]{count}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{support__software__serial_8cpp_a7ba959374e79d3320d69af12f7307f44}

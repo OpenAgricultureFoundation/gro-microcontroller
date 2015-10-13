@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['k1c',['K1C',['../sensor__tsl2561_8h.html#a5d91e3222633d82540d7ce0e8d2e1bb2',1,'sensor_tsl2561.h']]],
+  ['k1t',['K1T',['../sensor__tsl2561_8h.html#a8d1758888413b06317d05260d023c6f1',1,'sensor_tsl2561.h']]],
+  ['k2c',['K2C',['../sensor__tsl2561_8h.html#ac91e954471045fdbd9b3d01933373c1e',1,'sensor_tsl2561.h']]],
+  ['k2t',['K2T',['../sensor__tsl2561_8h.html#af3f76dac869af6d4fb8834ba8e5baa72',1,'sensor_tsl2561.h']]],
+  ['k3c',['K3C',['../sensor__tsl2561_8h.html#acbc83f137380f27faf46af997f35f882',1,'sensor_tsl2561.h']]],
+  ['k3t',['K3T',['../sensor__tsl2561_8h.html#a96898795c866703216e3035ecc1c29aa',1,'sensor_tsl2561.h']]],
+  ['k4c',['K4C',['../sensor__tsl2561_8h.html#a2fccbc87358653185282ba16b03a64ee',1,'sensor_tsl2561.h']]],
+  ['k4t',['K4T',['../sensor__tsl2561_8h.html#aa3489bee2d8a1e25002669517f4b6f7d',1,'sensor_tsl2561.h']]],
+  ['k5c',['K5C',['../sensor__tsl2561_8h.html#aa39a8eec5ffe9f84c4ac098724c70c91',1,'sensor_tsl2561.h']]],
+  ['k5t',['K5T',['../sensor__tsl2561_8h.html#a7df915d6ba425afa9a463f249168d6bd',1,'sensor_tsl2561.h']]],
+  ['k6c',['K6C',['../sensor__tsl2561_8h.html#a9dccc63bcf43c1b4714e913053a906c1',1,'sensor_tsl2561.h']]],
+  ['k6t',['K6T',['../sensor__tsl2561_8h.html#a677e2edf3cf15bef63405c35a7be1310',1,'sensor_tsl2561.h']]],
+  ['k7c',['K7C',['../sensor__tsl2561_8h.html#ac104bf3b33df4e42b14dc31078283565',1,'sensor_tsl2561.h']]],
+  ['k7t',['K7T',['../sensor__tsl2561_8h.html#a7e788fd48d058b89ffcc0438bc3d558e',1,'sensor_tsl2561.h']]],
+  ['k8c',['K8C',['../sensor__tsl2561_8h.html#ac47a903b8bc65dc56915024f00201213',1,'sensor_tsl2561.h']]],
+  ['k8t',['K8T',['../sensor__tsl2561_8h.html#aa0dc3961e2039ad7d91faf6829ec1404',1,'sensor_tsl2561.h']]]
+];

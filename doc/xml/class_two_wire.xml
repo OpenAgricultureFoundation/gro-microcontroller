@@ -1,0 +1,693 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_two_wire" kind="class" language="C++" prot="public">
+    <compoundname>TwoWire</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Stream</basecompoundref>
+    <includes refid="support__wire_8h" local="no">support_wire.h</includes>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_two_wire_1a3033512e6cc6e6cb306f8066fd087f45" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::rxBuffer</definition>
+        <argsstring>[]</argsstring>
+        <name>rxBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="38" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1ab5ca5594a3cb26e81a649a56ea5a65b9" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::rxBufferIndex</definition>
+        <argsstring></argsstring>
+        <name>rxBufferIndex</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="39" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1a291bae1628b603ea81815518b403340b" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::rxBufferLength</definition>
+        <argsstring></argsstring>
+        <name>rxBufferLength</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="40" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1ab981ac17dcbadaddb078718673f3f97c" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::txAddress</definition>
+        <argsstring></argsstring>
+        <name>txAddress</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="42" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1a2e48e330790c1bf10ca3570f93b08124" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::txBuffer</definition>
+        <argsstring>[]</argsstring>
+        <name>txBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="43" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1a2a367709929e409b5e7236aec4c6088c" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::txBufferIndex</definition>
+        <argsstring></argsstring>
+        <name>txBufferIndex</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="44" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1aec1ae2e64d9d4efb1d34dc34b071b09d" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::txBufferLength</definition>
+        <argsstring></argsstring>
+        <name>txBufferLength</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="45" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1a0b047026ca5b21287a57cba18bf9df9e" prot="private" static="yes" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::transmitting</definition>
+        <argsstring></argsstring>
+        <name>transmitting</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="47" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1afb915d59041e031dc1cc0b37406483de" prot="private" static="yes" mutable="no">
+        <type>void(*</type>
+        <definition>void(* TwoWire::user_onRequest)(void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>user_onRequest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="48" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_two_wire_1a473e4b5851ab4a1dbb6969467f645c1d" prot="private" static="yes" mutable="no">
+        <type>void(*</type>
+        <definition>void(* TwoWire::user_onReceive)(int)</definition>
+        <argsstring>)(int)</argsstring>
+        <name>user_onReceive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="49" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_two_wire_1a56e5b17e8a2c0e9d4017febe083da391" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::onRequestService</definition>
+        <argsstring>(void)</argsstring>
+        <name>onRequestService</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="50" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="280" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1af248111c3452edfffdfe3e8c06ccfb40" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::onReceiveService</definition>
+        <argsstring>(uint8_t *, int)</argsstring>
+        <name>onReceiveService</name>
+        <param>
+          <type>uint8_t *</type>
+          <defname>inBytes</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>numBytes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="51" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="255" bodyend="277"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_two_wire_1a4c7daf378c06e5e72762e1bd3d5937b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TwoWire::TwoWire</definition>
+        <argsstring>()</argsstring>
+        <name>TwoWire</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="53" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="54" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="60" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a28bca087ed188781ef15e72622d3b1fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::begin</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>begin</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="55" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="71" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a2806aa5684d36d7d20bf7c51cab3e602" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::begin</definition>
+        <argsstring>(int)</argsstring>
+        <name>begin</name>
+        <param>
+          <type>int</type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="56" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="79" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a3c4aaae8779a8c34d8a1a90ff317d982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::setClock</definition>
+        <argsstring>(uint32_t)</argsstring>
+        <name>setClock</name>
+        <param>
+          <type>uint32_t</type>
+          <defname>frequency</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="57" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="84" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a8d55f00ea8ac3d7427d62e0c71e95ec2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::beginTransmission</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>beginTransmission</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="58" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="119" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a4da95eb4adced5dad152344243e57aad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::beginTransmission</definition>
+        <argsstring>(int)</argsstring>
+        <name>beginTransmission</name>
+        <param>
+          <type>int</type>
+          <defname>address</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="59" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1af80f9a7b85a3a81a035ca94c95bcdc1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::endTransmission</definition>
+        <argsstring>(void)</argsstring>
+        <name>endTransmission</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="60" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="163" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a289f5ef9bb0f79b31095fd72402ed54a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::endTransmission</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>endTransmission</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>sendStop</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="61" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="148" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1ae27d0936487551a05a1e9901bc456599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::requestFrom</definition>
+        <argsstring>(uint8_t, uint8_t)</argsstring>
+        <name>requestFrom</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <defname>quantity</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="62" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="104" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a4b4b618531a04d5488a52583a3dfb173" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::requestFrom</definition>
+        <argsstring>(uint8_t, uint8_t, uint8_t)</argsstring>
+        <name>requestFrom</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <defname>quantity</defname>
+        </param>
+        <param>
+          <type>uint8_t</type>
+          <defname>sendStop</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="63" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="89" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1ad40a27213d0bb32f7b819aa8962fccd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::requestFrom</definition>
+        <argsstring>(int, int)</argsstring>
+        <name>requestFrom</name>
+        <param>
+          <type>int</type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>quantity</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="64" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a3d76da36fb8571e0b5e8310e9f86f6fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint8_t</type>
+        <definition>uint8_t TwoWire::requestFrom</definition>
+        <argsstring>(int, int, int)</argsstring>
+        <name>requestFrom</name>
+        <param>
+          <type>int</type>
+          <defname>address</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>quantity</defname>
+        </param>
+        <param>
+          <type>int</type>
+          <defname>sendStop</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="65" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="114" bodyend="117"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t TwoWire::write</definition>
+        <argsstring>(uint8_t)</argsstring>
+        <name>write</name>
+        <param>
+          <type>uint8_t</type>
+          <defname>data</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="66" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="171" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a1957b4d5a6a997bdde436e9e40d131a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>size_t</type>
+        <definition>size_t TwoWire::write</definition>
+        <argsstring>(const uint8_t *, size_t)</argsstring>
+        <name>write</name>
+        <param>
+          <type>const uint8_t *</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <defname>quantity</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="67" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="196" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1aee57bc52bee06508e231c5fc6bc35ada" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int TwoWire::available</definition>
+        <argsstring>(void)</argsstring>
+        <name>available</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="68" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1aa361b83500d00dfb93bb25b6473b33e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int TwoWire::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="69" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="222" bodyend="233"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a5bd64cb7bd609e9470a15d96a0991ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>int</type>
+        <definition>int TwoWire::peek</definition>
+        <argsstring>(void)</argsstring>
+        <name>peek</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="70" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="238" bodyend="247"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a4d92ddf6ca349c815de1de15fca06b5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void TwoWire::flush</definition>
+        <argsstring>(void)</argsstring>
+        <name>flush</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="71" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="249" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a860d97eb825c6fdca388f2f0577cc34a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::onReceive</definition>
+        <argsstring>(void(*)(int))</argsstring>
+        <name>onReceive</name>
+        <param>
+          <type>void(*)(int)</type>
+          <defname>function</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="72" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="295" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a224bf8799dda398fc0db223801852ca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TwoWire::onRequest</definition>
+        <argsstring>(void(*)(void))</argsstring>
+        <name>onRequest</name>
+        <param>
+          <type>void(*)(void)</type>
+          <defname>function</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="73" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="301" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a0c9d09ead8fcddf2a84781fe77d3c975" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TwoWire::write</definition>
+        <argsstring>(unsigned long n)</argsstring>
+        <name>write</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="75" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a55a9894186458e43852f6fb7c59bb066" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TwoWire::write</definition>
+        <argsstring>(long n)</argsstring>
+        <name>write</name>
+        <param>
+          <type>long</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="76" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1afdb917746ee37f72e7452b4782e9527b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TwoWire::write</definition>
+        <argsstring>(unsigned int n)</argsstring>
+        <name>write</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="77" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="77" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_two_wire_1a8ec34b0d2a75e8b2751eb9f4332bd7c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t TwoWire::write</definition>
+        <argsstring>(int n)</argsstring>
+        <name>write</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="78" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="78" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="44">
+        <label>TwoWire</label>
+        <link refid="class_two_wire"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>Stream</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="46">
+        <label>TwoWire</label>
+        <link refid="class_two_wire"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>Stream</label>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" line="36" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.h" bodystart="35" bodyend="80"/>
+    <listofallmembers>
+      <member refid="class_two_wire_1aee57bc52bee06508e231c5fc6bc35ada" prot="public" virt="virtual"><scope>TwoWire</scope><name>available</name></member>
+      <member refid="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>begin</name></member>
+      <member refid="class_two_wire_1a28bca087ed188781ef15e72622d3b1fb" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>begin</name></member>
+      <member refid="class_two_wire_1a2806aa5684d36d7d20bf7c51cab3e602" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>begin</name></member>
+      <member refid="class_two_wire_1a8d55f00ea8ac3d7427d62e0c71e95ec2" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>beginTransmission</name></member>
+      <member refid="class_two_wire_1a4da95eb4adced5dad152344243e57aad" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>beginTransmission</name></member>
+      <member refid="class_two_wire_1af80f9a7b85a3a81a035ca94c95bcdc1d" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>endTransmission</name></member>
+      <member refid="class_two_wire_1a289f5ef9bb0f79b31095fd72402ed54a" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>endTransmission</name></member>
+      <member refid="class_two_wire_1a4d92ddf6ca349c815de1de15fca06b5e" prot="public" virt="virtual"><scope>TwoWire</scope><name>flush</name></member>
+      <member refid="class_two_wire_1a860d97eb825c6fdca388f2f0577cc34a" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>onReceive</name></member>
+      <member refid="class_two_wire_1af248111c3452edfffdfe3e8c06ccfb40" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>onReceiveService</name></member>
+      <member refid="class_two_wire_1a224bf8799dda398fc0db223801852ca5" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>onRequest</name></member>
+      <member refid="class_two_wire_1a56e5b17e8a2c0e9d4017febe083da391" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>onRequestService</name></member>
+      <member refid="class_two_wire_1a5bd64cb7bd609e9470a15d96a0991ec8" prot="public" virt="virtual"><scope>TwoWire</scope><name>peek</name></member>
+      <member refid="class_two_wire_1aa361b83500d00dfb93bb25b6473b33e9" prot="public" virt="virtual"><scope>TwoWire</scope><name>read</name></member>
+      <member refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>requestFrom</name></member>
+      <member refid="class_two_wire_1a4b4b618531a04d5488a52583a3dfb173" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>requestFrom</name></member>
+      <member refid="class_two_wire_1ad40a27213d0bb32f7b819aa8962fccd3" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>requestFrom</name></member>
+      <member refid="class_two_wire_1a3d76da36fb8571e0b5e8310e9f86f6fe" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>requestFrom</name></member>
+      <member refid="class_two_wire_1a3033512e6cc6e6cb306f8066fd087f45" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>rxBuffer</name></member>
+      <member refid="class_two_wire_1ab5ca5594a3cb26e81a649a56ea5a65b9" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>rxBufferIndex</name></member>
+      <member refid="class_two_wire_1a291bae1628b603ea81815518b403340b" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>rxBufferLength</name></member>
+      <member refid="class_two_wire_1a3c4aaae8779a8c34d8a1a90ff317d982" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>setClock</name></member>
+      <member refid="class_two_wire_1a0b047026ca5b21287a57cba18bf9df9e" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>transmitting</name></member>
+      <member refid="class_two_wire_1a4c7daf378c06e5e72762e1bd3d5937b6" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>TwoWire</name></member>
+      <member refid="class_two_wire_1ab981ac17dcbadaddb078718673f3f97c" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>txAddress</name></member>
+      <member refid="class_two_wire_1a2e48e330790c1bf10ca3570f93b08124" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>txBuffer</name></member>
+      <member refid="class_two_wire_1a2a367709929e409b5e7236aec4c6088c" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>txBufferIndex</name></member>
+      <member refid="class_two_wire_1aec1ae2e64d9d4efb1d34dc34b071b09d" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>txBufferLength</name></member>
+      <member refid="class_two_wire_1a473e4b5851ab4a1dbb6969467f645c1d" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>user_onReceive</name></member>
+      <member refid="class_two_wire_1afb915d59041e031dc1cc0b37406483de" prot="private" virt="non-virtual"><scope>TwoWire</scope><name>user_onRequest</name></member>
+      <member refid="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" prot="public" virt="virtual"><scope>TwoWire</scope><name>write</name></member>
+      <member refid="class_two_wire_1a1957b4d5a6a997bdde436e9e40d131a7" prot="public" virt="virtual"><scope>TwoWire</scope><name>write</name></member>
+      <member refid="class_two_wire_1a0c9d09ead8fcddf2a84781fe77d3c975" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>write</name></member>
+      <member refid="class_two_wire_1a55a9894186458e43852f6fb7c59bb066" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>write</name></member>
+      <member refid="class_two_wire_1afdb917746ee37f72e7452b4782e9527b" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>write</name></member>
+      <member refid="class_two_wire_1a8ec34b0d2a75e8b2751eb9f4332bd7c3" prot="public" virt="non-virtual"><scope>TwoWire</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

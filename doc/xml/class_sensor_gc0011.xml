@@ -1,0 +1,387 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_sensor_gc0011" kind="class" language="C++" prot="public">
+    <compoundname>SensorGc0011</compoundname>
+    <basecompoundref refid="class_sensor_actuator_module" prot="private" virt="non-virtual">SensorActuatorModule</basecompoundref>
+    <includes refid="sensor__gc0011_8h" local="no">sensor_gc0011.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_sensor_gc0011_1a6da77eb384ff77e28c2fa092a03a4cbb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorGc0011::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="36" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1af5964ea62f030dd4ea2f219224afa4e6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorGc0011::humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="37" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorGc0011::co2</definition>
+        <argsstring></argsstring>
+        <name>co2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="38" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sensor_gc0011_1a200e86bcb38908383a23d121412c01f5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorGc0011::rx_pin_</definition>
+        <argsstring></argsstring>
+        <name>rx_pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="47" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1a3c0dfd8fb2a9029e91e27ee7a1864392" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorGc0011::tx_pin_</definition>
+        <argsstring></argsstring>
+        <name>tx_pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="48" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1ad510662970255db3da276a72a94ebe5b" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorGc0011::co2_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>co2_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="49" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1a17b9b52655a6c6eb348f5eb16f0e91cd" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorGc0011::co2_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>co2_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="50" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1a3a3c06626ae3fe0ac608e3af31c37646" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorGc0011::temperature_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>temperature_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="51" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1a8e85285f621de6a9be0a77429f8b2ad1" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorGc0011::temperature_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>temperature_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="52" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1a43bd19e0aace5c3ad9017d186ad4dc50" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorGc0011::humidity_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>humidity_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="53" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1a9697e0c5861cc7bf53612f81c30dd65f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorGc0011::humidity_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>humidity_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="54" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1ae957b2523aae645b08697bc7884a4368" prot="private" static="no" mutable="no">
+        <type><ref refid="class_software_serial" kindref="compound">SoftwareSerial</ref> *</type>
+        <definition>SoftwareSerial* SensorGc0011::ss_</definition>
+        <argsstring></argsstring>
+        <name>ss_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="55" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_gc0011_1aae54e8d582586d68c2bc923fd2dc4f0c" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SensorGc0011::timeout_</definition>
+        <argsstring></argsstring>
+        <name>timeout_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="56" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensor_gc0011_1ac8b12368b4b524198210048fbd1d0c81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SensorGc0011::SensorGc0011</definition>
+        <argsstring>(int rx_pin, int tx_pin, String co2_instruction_code, int co2_instruction_id, String temperature_instruction_code, int temperature_instruction_id, String humidity_instruction_code, int humidity_instruction_id)</argsstring>
+        <name>SensorGc0011</name>
+        <param>
+          <type>int</type>
+          <declname>rx_pin</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tx_pin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>co2_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>co2_instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>temperature_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>temperature_instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>humidity_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>humidity_instruction_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="30" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp" bodystart="9" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_gc0011_1a661743d47448c6b9c965fd8e1f123fbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SensorGc0011::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9">begin</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once at beginning of program to initialize modules. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="31" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp" bodystart="21" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_gc0011_1a2920401f54e121bba1398d52e9b2c90a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorGc0011::get</definition>
+        <argsstring>(void)</argsstring>
+        <name>get</name>
+        <reimplements refid="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af">get</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update and report module data to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="32" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp" bodystart="36" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_gc0011_1a658b7856221577342b54e4dc7fe06d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorGc0011::set</definition>
+        <argsstring>(String instruction_code, int instruction_id, String instruction_parameter)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc">set</reimplements>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="33" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp" bodystart="73" bodyend="99"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sensor_gc0011_1a084b39250082700764f8be9de115d9d2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorGc0011::getSensorData</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSensorData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="42" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp" bodystart="102" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_gc0011_1a0d2e66ba5e4b17ed351f614d5d0cf581" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorGc0011::sendMessage</definition>
+        <argsstring>(String message)</argsstring>
+        <name>sendMessage</name>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="43" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp" bodystart="138" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_gc0011_1aa79ef1d496f763634e89ffb891afcc8b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String SensorGc0011::receiveMessage</definition>
+        <argsstring>()</argsstring>
+        <name>receiveMessage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="44" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp" bodystart="143" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sensor module for air co2, temperature, and humidity. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="33">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="32">
+        <label>SensorGc0011</label>
+        <link refid="class_sensor_gc0011"/>
+        <childnode refid="33" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="35">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="34">
+        <label>SensorGc0011</label>
+        <link refid="class_sensor_gc0011"/>
+        <childnode refid="35" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" line="27" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.h" bodystart="27" bodyend="57"/>
+    <listofallmembers>
+      <member refid="class_sensor_gc0011_1a661743d47448c6b9c965fd8e1f123fbc" prot="public" virt="virtual"><scope>SensorGc0011</scope><name>begin</name></member>
+      <member refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" prot="public" virt="non-virtual"><scope>SensorGc0011</scope><name>co2</name></member>
+      <member refid="class_sensor_gc0011_1ad510662970255db3da276a72a94ebe5b" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>co2_instruction_code_</name></member>
+      <member refid="class_sensor_gc0011_1a17b9b52655a6c6eb348f5eb16f0e91cd" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>co2_instruction_id_</name></member>
+      <member refid="class_sensor_gc0011_1a2920401f54e121bba1398d52e9b2c90a" prot="public" virt="virtual"><scope>SensorGc0011</scope><name>get</name></member>
+      <member refid="class_sensor_gc0011_1a084b39250082700764f8be9de115d9d2" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>getSensorData</name></member>
+      <member refid="class_sensor_gc0011_1af5964ea62f030dd4ea2f219224afa4e6" prot="public" virt="non-virtual"><scope>SensorGc0011</scope><name>humidity</name></member>
+      <member refid="class_sensor_gc0011_1a43bd19e0aace5c3ad9017d186ad4dc50" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>humidity_instruction_code_</name></member>
+      <member refid="class_sensor_gc0011_1a9697e0c5861cc7bf53612f81c30dd65f" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>humidity_instruction_id_</name></member>
+      <member refid="class_sensor_gc0011_1aa79ef1d496f763634e89ffb891afcc8b" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>receiveMessage</name></member>
+      <member refid="class_sensor_gc0011_1a200e86bcb38908383a23d121412c01f5" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>rx_pin_</name></member>
+      <member refid="class_sensor_gc0011_1a0d2e66ba5e4b17ed351f614d5d0cf581" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>sendMessage</name></member>
+      <member refid="class_sensor_gc0011_1ac8b12368b4b524198210048fbd1d0c81" prot="public" virt="non-virtual"><scope>SensorGc0011</scope><name>SensorGc0011</name></member>
+      <member refid="class_sensor_gc0011_1a658b7856221577342b54e4dc7fe06d2a" prot="public" virt="virtual"><scope>SensorGc0011</scope><name>set</name></member>
+      <member refid="class_sensor_gc0011_1ae957b2523aae645b08697bc7884a4368" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>ss_</name></member>
+      <member refid="class_sensor_gc0011_1a6da77eb384ff77e28c2fa092a03a4cbb" prot="public" virt="non-virtual"><scope>SensorGc0011</scope><name>temperature</name></member>
+      <member refid="class_sensor_gc0011_1a3a3c06626ae3fe0ac608e3af31c37646" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>temperature_instruction_code_</name></member>
+      <member refid="class_sensor_gc0011_1a8e85285f621de6a9be0a77429f8b2ad1" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>temperature_instruction_id_</name></member>
+      <member refid="class_sensor_gc0011_1aae54e8d582586d68c2bc923fd2dc4f0c" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>timeout_</name></member>
+      <member refid="class_sensor_gc0011_1a3c0dfd8fb2a9029e91e27ee7a1864392" prot="private" virt="non-virtual"><scope>SensorGc0011</scope><name>tx_pin_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

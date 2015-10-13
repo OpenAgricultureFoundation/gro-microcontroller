@@ -1,0 +1,94 @@
+\hypertarget{module__handler_8h}{}\section{src/module\+\_\+handler.h File Reference}
+\label{module__handler_8h}\index{src/module\+\_\+handler.\+h@{src/module\+\_\+handler.\+h}}
+
+
+Handles all module integration.  
+
+
+{\ttfamily \#include \char`\"{}W\+Program.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_sensor_actuator_module}{Sensor\+Actuator\+Module}
+\begin{DoxyCompactList}\small\item\em Abstract class used as the interface for all Sensor Actuator Modules. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_instruction}{Instruction}
+\begin{DoxyCompactList}\small\item\em A structure to represent instruction parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{module__handler_8h_aea7eb84b3bdf67ce76b8b3d1a7c1b64d}{initialize\+Modules} (void)
+\begin{DoxyCompactList}\small\item\em Called once to initialize all modules. Runs once at the beginning of the program. Calls all module $\ast$.begin() functions. \end{DoxyCompactList}\item 
+void \hyperlink{module__handler_8h_a691a0d8c2404cb4ce0c088e9857560ee}{update\+Incoming\+Message} (void)
+\begin{DoxyCompactList}\small\item\em Handles all incoming messages from the controller. If new message is available, receive message and pass to handler function. If handler function returns response message, send out. \end{DoxyCompactList}\item 
+void \hyperlink{module__handler_8h_a5897de55f349106cd3e341df9bc6ddcd}{update\+Stream\+Message} (void)
+\begin{DoxyCompactList}\small\item\em Handles all outgoing messages to the controller. Polls all objects using their $\ast$.get() function and appends to message stream Sends message stream to controller. \end{DoxyCompactList}\item 
+String \hyperlink{module__handler_8h_a84d5c9e2f57b3fcb377800f72edea419}{handle\+Incoming\+Message} (void)
+\begin{DoxyCompactList}\small\item\em Messages from controller are handled by this function. Each message is a single instruction string. \hyperlink{struct_instruction}{Instruction} string gets broken into instruction code, id, and parameter. Passed in piecewise to $<$module$>$.set function. If a return message is generated from the $<$module$>$.set function, this function returns that message. \end{DoxyCompactList}\item 
+\hyperlink{struct_instruction}{Instruction} \hyperlink{module__handler_8h_afcbd04d77356acd5e3dcf91fefb8bd11}{parse\+Incoming\+Message} (String message)
+\begin{DoxyCompactList}\small\item\em Formats an instruction string into an instruction struct. Message is broken into 3 parts\+: \hyperlink{struct_instruction}{Instruction} Code, \hyperlink{struct_instruction}{Instruction} I\+D, \hyperlink{struct_instruction}{Instruction} Parameter then returns the parts as an \hyperlink{struct_instruction}{Instruction} Object Also, the \hyperlink{struct_instruction}{Instruction} Valid parameter is set accordingly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles all module integration. 
+
+\begin{DoxyAuthor}{Author}
+Jake Rye 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{module__handler_8h_a84d5c9e2f57b3fcb377800f72edea419}{}\index{module\+\_\+handler.\+h@{module\+\_\+handler.\+h}!handle\+Incoming\+Message@{handle\+Incoming\+Message}}
+\index{handle\+Incoming\+Message@{handle\+Incoming\+Message}!module\+\_\+handler.\+h@{module\+\_\+handler.\+h}}
+\subsubsection[{handle\+Incoming\+Message}]{\setlength{\rightskip}{0pt plus 5cm}String handle\+Incoming\+Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8h_a84d5c9e2f57b3fcb377800f72edea419}
+
+
+Messages from controller are handled by this function. Each message is a single instruction string. \hyperlink{struct_instruction}{Instruction} string gets broken into instruction code, id, and parameter. Passed in piecewise to $<$module$>$.set function. If a return message is generated from the $<$module$>$.set function, this function returns that message. 
+
+\hypertarget{module__handler_8h_aea7eb84b3bdf67ce76b8b3d1a7c1b64d}{}\index{module\+\_\+handler.\+h@{module\+\_\+handler.\+h}!initialize\+Modules@{initialize\+Modules}}
+\index{initialize\+Modules@{initialize\+Modules}!module\+\_\+handler.\+h@{module\+\_\+handler.\+h}}
+\subsubsection[{initialize\+Modules}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\+Modules (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8h_aea7eb84b3bdf67ce76b8b3d1a7c1b64d}
+
+
+Called once to initialize all modules. Runs once at the beginning of the program. Calls all module $\ast$.begin() functions. 
+
+\hypertarget{module__handler_8h_afcbd04d77356acd5e3dcf91fefb8bd11}{}\index{module\+\_\+handler.\+h@{module\+\_\+handler.\+h}!parse\+Incoming\+Message@{parse\+Incoming\+Message}}
+\index{parse\+Incoming\+Message@{parse\+Incoming\+Message}!module\+\_\+handler.\+h@{module\+\_\+handler.\+h}}
+\subsubsection[{parse\+Incoming\+Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Instruction} parse\+Incoming\+Message (
+\begin{DoxyParamCaption}
+\item[{String}]{message}
+\end{DoxyParamCaption}
+)}\label{module__handler_8h_afcbd04d77356acd5e3dcf91fefb8bd11}
+
+
+Formats an instruction string into an instruction struct. Message is broken into 3 parts\+: \hyperlink{struct_instruction}{Instruction} Code, \hyperlink{struct_instruction}{Instruction} I\+D, \hyperlink{struct_instruction}{Instruction} Parameter then returns the parts as an \hyperlink{struct_instruction}{Instruction} Object Also, the \hyperlink{struct_instruction}{Instruction} Valid parameter is set accordingly. 
+
+\hypertarget{module__handler_8h_a691a0d8c2404cb4ce0c088e9857560ee}{}\index{module\+\_\+handler.\+h@{module\+\_\+handler.\+h}!update\+Incoming\+Message@{update\+Incoming\+Message}}
+\index{update\+Incoming\+Message@{update\+Incoming\+Message}!module\+\_\+handler.\+h@{module\+\_\+handler.\+h}}
+\subsubsection[{update\+Incoming\+Message}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Incoming\+Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8h_a691a0d8c2404cb4ce0c088e9857560ee}
+
+
+Handles all incoming messages from the controller. If new message is available, receive message and pass to handler function. If handler function returns response message, send out. 
+
+\hypertarget{module__handler_8h_a5897de55f349106cd3e341df9bc6ddcd}{}\index{module\+\_\+handler.\+h@{module\+\_\+handler.\+h}!update\+Stream\+Message@{update\+Stream\+Message}}
+\index{update\+Stream\+Message@{update\+Stream\+Message}!module\+\_\+handler.\+h@{module\+\_\+handler.\+h}}
+\subsubsection[{update\+Stream\+Message}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Stream\+Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8h_a5897de55f349106cd3e341df9bc6ddcd}
+
+
+Handles all outgoing messages to the controller. Polls all objects using their $\ast$.get() function and appends to message stream Sends message stream to controller. 
+

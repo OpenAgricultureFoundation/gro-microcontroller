@@ -1,0 +1,380 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="support__wire_8cpp" kind="file" language="C++">
+    <compoundname>support_wire.cpp</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">string.h</includes>
+    <includes local="no">inttypes.h</includes>
+    <includes refid="support__twi_8h" local="yes">support_twi.h</includes>
+    <includes refid="support__wire_8h" local="yes">support_wire.h</includes>
+    <incdepgraph>
+      <node id="190">
+        <label>support_wire.h</label>
+        <link refid="support__wire_8h"/>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="191" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>stdlib.h</label>
+      </node>
+      <node id="185">
+        <label>src/support_wire.cpp</label>
+        <link refid="support_wire.cpp"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+      </node>
+      <node id="187">
+        <label>string.h</label>
+      </node>
+      <node id="191">
+        <label>Stream.h</label>
+      </node>
+      <node id="189">
+        <label>support_twi.h</label>
+        <link refid="support__twi_8h"/>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+      <node id="188">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" prot="public" static="no" mutable="no">
+        <type><ref refid="class_two_wire" kindref="compound">TwoWire</ref></type>
+        <definition>TwoWire Wire</definition>
+        <argsstring></argsstring>
+        <name>Wire</name>
+        <initializer>= <ref refid="class_two_wire" kindref="compound">TwoWire</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" line="308" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Support module for TWI/I2C decives. </para>    </briefdescription>
+    <detaileddescription>
+<para>See arduino wire module for details: <ulink url="https://www.arduino.cc/en/Reference/Wire">https://www.arduino.cc/en/Reference/Wire</ulink> </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/><sp/>TwoWire.cpp<sp/>-<sp/>TWI/I2C<sp/>library<sp/>for<sp/>Wiring<sp/>&amp;<sp/>Arduino</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/><sp/>Copyright<sp/>(c)<sp/>2006<sp/>Nicholas<sp/>Zambetti.<sp/><sp/>All<sp/>right<sp/>reserved.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"></highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/><sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/><sp/>version<sp/>2.1<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/><sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the<sp/>Free<sp/>Software</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>St,<sp/>Fifth<sp/>Floor,<sp/>Boston,<sp/>MA<sp/><sp/>02110-1301<sp/><sp/>USA</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/>Modified<sp/>2012<sp/>by<sp/>Todd<sp/>Krein<sp/>(todd@krein.org)<sp/>to<sp/>implement<sp/>repeated<sp/>starts</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">extern</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;C&quot;</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;string.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&lt;inttypes.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/>#include<sp/>&quot;<ref refid="support__twi_8h" kindref="compound">support_twi.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="support__wire_8h" kindref="compound">support_wire.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Initialize<sp/>Class<sp/>Variables<sp/>//////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">uint8_t<sp/>TwoWire::rxBuffer[<ref refid="support__wire_8h_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">uint8_t<sp/>TwoWire::rxBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">uint8_t<sp/>TwoWire::rxBufferLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">uint8_t<sp/>TwoWire::txAddress<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">uint8_t<sp/>TwoWire::txBuffer[<ref refid="support__wire_8h_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>];</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">uint8_t<sp/>TwoWire::txBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">uint8_t<sp/>TwoWire::txBufferLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">uint8_t<sp/>TwoWire::transmitting<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">void<sp/>(*TwoWire::user_onRequest)(void);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">void<sp/>(*TwoWire::user_onReceive)(int);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constructors<sp/>////////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><ref refid="class_two_wire_1a4c7daf378c06e5e72762e1bd3d5937b6" kindref="member">TwoWire::TwoWire</ref>()</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Public<sp/>Methods<sp/>//////////////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" kindref="member">TwoWire::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>rxBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>rxBufferLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>txBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>txBufferLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><ref refid="support__twi_8h_1a16f0e6b2fa5a26eadbf4086ab6d54467" kindref="member">twi_init</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" kindref="member">TwoWire::begin</ref>(uint8_t<sp/>address)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><ref refid="support__twi_8h_1a77c13a875e935f91b58c3b8596aae88d" kindref="member">twi_setAddress</ref>(address);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><ref refid="support__twi_8h_1a73cd75244e3fa0d7e288adb7bc7430e8" kindref="member">twi_attachSlaveTxEvent</ref>(onRequestService);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><ref refid="support__twi_8h_1ac8e9aa6430dccea8d986ca33f76fe487" kindref="member">twi_attachSlaveRxEvent</ref>(onReceiveService);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" kindref="member">begin</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" kindref="member">TwoWire::begin</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><ref refid="class_two_wire_1ada85a7a8663ec8af0a1248b659be2f18" kindref="member">begin</ref>((uint8_t)address);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a3c4aaae8779a8c34d8a1a90ff317d982" kindref="member">TwoWire::setClock</ref>(uint32_t<sp/>frequency)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/>TWBR<sp/>=<sp/>((F_CPU<sp/>/<sp/>frequency)<sp/>-<sp/>16)<sp/>/<sp/>2;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">uint8_t<sp/><ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">TwoWire::requestFrom</ref>(uint8_t<sp/>address,<sp/>uint8_t<sp/>quantity,<sp/>uint8_t<sp/>sendStop)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>clamp<sp/>to<sp/>buffer<sp/>length</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(quantity<sp/>&gt;<sp/><ref refid="support__wire_8h_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>){</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>quantity<sp/>=<sp/><ref refid="support__wire_8h_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>perform<sp/>blocking<sp/>read<sp/>into<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/>uint8_t<sp/><ref refid="class_two_wire_1aa361b83500d00dfb93bb25b6473b33e9" kindref="member">read</ref><sp/>=<sp/><ref refid="support__twi_8h_1a8f8b3d441d9dd1bd867b83729211b183" kindref="member">twi_readFrom</ref>(address,<sp/>rxBuffer,<sp/>quantity,<sp/>sendStop);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>rx<sp/>buffer<sp/>iterator<sp/>vars</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/>rxBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/>rxBufferLength<sp/>=<sp/><ref refid="class_two_wire_1aa361b83500d00dfb93bb25b6473b33e9" kindref="member">read</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1aa361b83500d00dfb93bb25b6473b33e9" kindref="member">read</ref>;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal">uint8_t<sp/><ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">TwoWire::requestFrom</ref>(uint8_t<sp/>address,<sp/>uint8_t<sp/>quantity)</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">requestFrom</ref>((uint8_t)address,<sp/>(uint8_t)quantity,<sp/>(uint8_t)</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">uint8_t<sp/><ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">TwoWire::requestFrom</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity)</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">requestFrom</ref>((uint8_t)address,<sp/>(uint8_t)quantity,<sp/>(uint8_t)</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal">uint8_t<sp/><ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">TwoWire::requestFrom</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantity,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sendStop)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1ae27d0936487551a05a1e9901bc456599" kindref="member">requestFrom</ref>((uint8_t)address,<sp/>(uint8_t)quantity,<sp/>(uint8_t)sendStop);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a8d55f00ea8ac3d7427d62e0c71e95ec2" kindref="member">TwoWire::beginTransmission</ref>(uint8_t<sp/>address)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>indicate<sp/>that<sp/>we<sp/>are<sp/>transmitting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>transmitting<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>address<sp/>of<sp/>targeted<sp/>slave</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/>txAddress<sp/>=<sp/>address;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>tx<sp/>buffer<sp/>iterator<sp/>vars</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/>txBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>txBufferLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="128"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a8d55f00ea8ac3d7427d62e0c71e95ec2" kindref="member">TwoWire::beginTransmission</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>address)</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><ref refid="class_two_wire_1a8d55f00ea8ac3d7427d62e0c71e95ec2" kindref="member">beginTransmission</ref>((uint8_t)address);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Originally,<sp/>&apos;endTransmission&apos;<sp/>was<sp/>an<sp/>f(void)<sp/>function.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>It<sp/>has<sp/>been<sp/>modified<sp/>to<sp/>take<sp/>one<sp/>parameter<sp/>indicating</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>whether<sp/>or<sp/>not<sp/>a<sp/>STOP<sp/>should<sp/>be<sp/>performed<sp/>on<sp/>the<sp/>bus.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Calling<sp/>endTransmission(false)<sp/>allows<sp/>a<sp/>sketch<sp/>to<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>perform<sp/>a<sp/>repeated<sp/>start.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>WARNING:<sp/>Nothing<sp/>in<sp/>the<sp/>library<sp/>keeps<sp/>track<sp/>of<sp/>whether</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>the<sp/>bus<sp/>tenure<sp/>has<sp/>been<sp/>properly<sp/>ended<sp/>with<sp/>a<sp/>STOP.<sp/>It</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>is<sp/>very<sp/>possible<sp/>to<sp/>leave<sp/>the<sp/>bus<sp/>in<sp/>a<sp/>hung<sp/>state<sp/>if</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>no<sp/>call<sp/>to<sp/>endTransmission(true)<sp/>is<sp/>made.<sp/>Some<sp/>I2C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>devices<sp/>will<sp/>behave<sp/>oddly<sp/>if<sp/>they<sp/>do<sp/>not<sp/>see<sp/>a<sp/>STOP.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal">uint8_t<sp/><ref refid="class_two_wire_1af80f9a7b85a3a81a035ca94c95bcdc1d" kindref="member">TwoWire::endTransmission</ref>(uint8_t<sp/>sendStop)</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>transmit<sp/>buffer<sp/>(blocking)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>int8_t<sp/>ret<sp/>=<sp/><ref refid="support__twi_8h_1a090e0c5c98f5f7255d43a349c4bb1b72" kindref="member">twi_writeTo</ref>(txAddress,<sp/>txBuffer,<sp/>txBufferLength,<sp/>1,<sp/>sendStop);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>tx<sp/>buffer<sp/>iterator<sp/>vars</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>txBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>txBufferLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>indicate<sp/>that<sp/>we<sp/>are<sp/>done<sp/>transmitting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/>transmitting<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ret;</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>provides<sp/>backwards<sp/>compatibility<sp/>with<sp/>the<sp/>original</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>definition,<sp/>and<sp/>expected<sp/>behaviour,<sp/>of<sp/>endTransmission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">uint8_t<sp/><ref refid="class_two_wire_1af80f9a7b85a3a81a035ca94c95bcdc1d" kindref="member">TwoWire::endTransmission</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1af80f9a7b85a3a81a035ca94c95bcdc1d" kindref="member">endTransmission</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="comment">//<sp/>must<sp/>be<sp/>called<sp/>in:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight><highlight class="comment">//<sp/>slave<sp/>tx<sp/>event<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>after<sp/>beginTransmission(address)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" kindref="member">TwoWire::write</ref>(uint8_t<sp/>data)</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(transmitting){</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>master<sp/>transmitter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>bother<sp/>if<sp/>buffer<sp/>is<sp/>full</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(txBufferLength<sp/>&gt;=<sp/><ref refid="support__wire_8h_1af7b7dc9a200cb1404c280bd500fd1551" kindref="member">BUFFER_LENGTH</ref>){</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>setWriteError();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>put<sp/>byte<sp/>in<sp/>tx<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>txBuffer[txBufferIndex]<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>++txBufferIndex;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>amount<sp/>in<sp/>buffer<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>txBufferLength<sp/>=<sp/>txBufferIndex;</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>slave<sp/>send<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reply<sp/>to<sp/>master</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="support__twi_8h_1a4fbb74866c71979506ac52d758cfdeac" kindref="member">twi_transmit</ref>(&amp;data,<sp/>1);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"></highlight><highlight class="comment">//<sp/>must<sp/>be<sp/>called<sp/>in:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="comment">//<sp/>slave<sp/>tx<sp/>event<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>after<sp/>beginTransmission(address)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" kindref="member">TwoWire::write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint8_t<sp/>*data,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>quantity)</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(transmitting){</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>master<sp/>transmitter<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>quantity;<sp/>++i){</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_two_wire_1a318b7bec156c1f1075a818c0ad3427d7" kindref="member">write</ref>(data[i]);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>in<sp/>slave<sp/>send<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>reply<sp/>to<sp/>master</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="support__twi_8h_1a4fbb74866c71979506ac52d758cfdeac" kindref="member">twi_transmit</ref>(data,<sp/>quantity);</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>quantity;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight><highlight class="comment">//<sp/>must<sp/>be<sp/>called<sp/>in:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight><highlight class="comment">//<sp/>slave<sp/>rx<sp/>event<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>after<sp/>requestFrom(address,<sp/>numBytes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1aee57bc52bee06508e231c5fc6bc35ada" kindref="member">TwoWire::available</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rxBufferLength<sp/>-<sp/>rxBufferIndex;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="comment">//<sp/>must<sp/>be<sp/>called<sp/>in:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">//<sp/>slave<sp/>rx<sp/>event<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>after<sp/>requestFrom(address,<sp/>numBytes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1aa361b83500d00dfb93bb25b6473b33e9" kindref="member">TwoWire::read</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>each<sp/>successive<sp/>byte<sp/>on<sp/>each<sp/>call</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rxBufferIndex<sp/>&lt;<sp/>rxBufferLength){</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>rxBuffer[rxBufferIndex];</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>++rxBufferIndex;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">//<sp/>must<sp/>be<sp/>called<sp/>in:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">//<sp/>slave<sp/>rx<sp/>event<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>after<sp/>requestFrom(address,<sp/>numBytes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a5bd64cb7bd609e9470a15d96a0991ec8" kindref="member">TwoWire::peek</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="239"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rxBufferIndex<sp/>&lt;<sp/>rxBufferLength){</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/>value<sp/>=<sp/>rxBuffer[rxBufferIndex];</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a4d92ddf6ca349c815de1de15fca06b5e" kindref="member">TwoWire::flush</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="250"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>XXX:<sp/>to<sp/>be<sp/>implemented.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="comment">//<sp/>behind<sp/>the<sp/>scenes<sp/>function<sp/>that<sp/>is<sp/>called<sp/>when<sp/>data<sp/>is<sp/>received</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TwoWire::onReceiveService(uint8_t*<sp/>inBytes,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>numBytes)</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>bother<sp/>if<sp/>user<sp/>hasn&apos;t<sp/>registered<sp/>a<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!user_onReceive){</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>bother<sp/>if<sp/>rx<sp/>buffer<sp/>is<sp/>in<sp/>use<sp/>by<sp/>a<sp/>master<sp/>requestFrom()<sp/>op</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>i<sp/>know<sp/>this<sp/>drops<sp/>data,<sp/>but<sp/>it<sp/>allows<sp/>for<sp/>slight<sp/>stupidity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>meaning,<sp/>they<sp/>may<sp/>not<sp/>have<sp/>read<sp/>all<sp/>the<sp/>master<sp/>requestFrom()<sp/>data<sp/>yet</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(rxBufferIndex<sp/>&lt;<sp/>rxBufferLength){</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>twi<sp/>rx<sp/>buffer<sp/>into<sp/>local<sp/>read<sp/>buffer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>enables<sp/>new<sp/>reads<sp/>to<sp/>happen<sp/>in<sp/>parallel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint8_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>numBytes;<sp/>++i){</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/>rxBuffer[i]<sp/>=<sp/>inBytes[i];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>rx<sp/>iterator<sp/>vars</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/>rxBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/>rxBufferLength<sp/>=<sp/>numBytes;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>alert<sp/>user<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/>user_onReceive(numBytes);</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight><highlight class="comment">//<sp/>behind<sp/>the<sp/>scenes<sp/>function<sp/>that<sp/>is<sp/>called<sp/>when<sp/>data<sp/>is<sp/>requested</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TwoWire::onRequestService(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="281"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>don&apos;t<sp/>bother<sp/>if<sp/>user<sp/>hasn&apos;t<sp/>registered<sp/>a<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!user_onRequest){</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>reset<sp/>tx<sp/>buffer<sp/>iterator<sp/>vars</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>!!!<sp/>this<sp/>will<sp/>kill<sp/>any<sp/>pending<sp/>pre-master<sp/>sendTo()<sp/>activity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/>txBufferIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/>txBufferLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>alert<sp/>user<sp/>program</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/>user_onRequest();</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sets<sp/>function<sp/>called<sp/>on<sp/>slave<sp/>write</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a860d97eb825c6fdca388f2f0577cc34a" kindref="member">TwoWire::onReceive</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">function</highlight><highlight class="normal">)(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/>user_onReceive<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">//<sp/>sets<sp/>function<sp/>called<sp/>on<sp/>slave<sp/>read</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_two_wire_1a224bf8799dda398fc0db223801852ca5" kindref="member">TwoWire::onRequest</ref>(<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>(*</highlight><highlight class="keyword">function</highlight><highlight class="normal">)(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/>user_onRequest<sp/>=<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Preinstantiate<sp/>Objects<sp/>//////////////////////////////////////////////////////</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><ref refid="class_two_wire" kindref="compound">TwoWire</ref><sp/><ref refid="support__wire_8cpp_1a35bd3de386d23ba02c35f820303db472" kindref="member">Wire</ref><sp/>=<sp/><ref refid="class_two_wire" kindref="compound">TwoWire</ref>();</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/support_wire.cpp"/>
+  </compounddef>
+</doxygen>

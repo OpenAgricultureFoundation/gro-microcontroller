@@ -1,0 +1,331 @@
+\hypertarget{sensor__tsl2561_8h}{}\section{src/sensor\+\_\+tsl2561.h File Reference}
+\label{sensor__tsl2561_8h}\index{src/sensor\+\_\+tsl2561.\+h@{src/sensor\+\_\+tsl2561.\+h}}
+
+
+Sensor module for light intensity and par.  
+
+
+{\ttfamily \#include $<$Arduino.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}support\+\_\+wire.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}module\+\_\+handler.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_sensor_tsl2561}{Sensor\+Tsl2561}
+\begin{DoxyCompactList}\small\item\em Sensor module for light intensity and par. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_aab8e4882f253d35cd521c2f4abc45149}{T\+S\+L2561\+\_\+\+Control}~0x80
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a0372d3100b18a1258eafec1925b214fc}{T\+S\+L2561\+\_\+\+Timing}~0x81
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_aed0e05fa7dea08bdcbf5828d4622724c}{T\+S\+L2561\+\_\+\+Interrupt}~0x86
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a8a25922147204b8fadfac78ae06a3eeb}{T\+S\+L2561\+\_\+\+Channal0\+L}~0x8\+C
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a25c20b0a9db2eb2120056ba3c927b7d7}{T\+S\+L2561\+\_\+\+Channal0\+H}~0x8\+D
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a36de2c81ed9acc5d08ea68a49b898c8d}{T\+S\+L2561\+\_\+\+Channal1\+L}~0x8\+E
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a3d6221afdaefda8d471cbb33c6066240}{T\+S\+L2561\+\_\+\+Channal1\+H}~0x8\+F
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a59333700af73c80bc1d7c6f8dc351c82}{T\+S\+L2561\+\_\+\+Address}~0x29
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_abe3540b1f05e5974dfa40491719b322a}{L\+U\+X\+\_\+\+S\+C\+A\+L\+E}~14
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a2d36ccf8157f890c015eddd64276d77c}{R\+A\+T\+I\+O\+\_\+\+S\+C\+A\+L\+E}~9
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ae77b11d54490369c690da18aef1e76e5}{C\+H\+\_\+\+S\+C\+A\+L\+E}~10
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_af740a064eaa0da3339e7eba683a671ed}{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T0}~0x7517
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a1f741d16494e81486136c73489097cdd}{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T1}~0x0fe7
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a8d1758888413b06317d05260d023c6f1}{K1\+T}~0x0040
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a77a115660299dfe589547bd1c9313e18}{B1\+T}~0x01f2
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a9cee464de95fd9f1cc41e4737cdfcf56}{M1\+T}~0x01be
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_af3f76dac869af6d4fb8834ba8e5baa72}{K2\+T}~0x0080
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a0a24c8d38c744a6706fbef06cc0d045e}{B2\+T}~0x0214
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_af13d82736a980dd7f78a0c8633c656c0}{M2\+T}~0x02d1
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a96898795c866703216e3035ecc1c29aa}{K3\+T}~0x00c0
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_aa58a8a3b4010f1d8ab947e2351b6cf1d}{B3\+T}~0x023f
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a6d02cd58020bf44d98927446668a2f7b}{M3\+T}~0x037b
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_aa3489bee2d8a1e25002669517f4b6f7d}{K4\+T}~0x0100
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a836fd96912939cd386f83e20ed1061ee}{B4\+T}~0x0270
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ac5983b281c3a2f1d4ea1f87236cfcb44}{M4\+T}~0x03fe
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a7df915d6ba425afa9a463f249168d6bd}{K5\+T}~0x0138
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a8a3732432706e9a5a5ae3d3485d47043}{B5\+T}~0x016f
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a2d9fce4a16f258b5ab02b09a954648f6}{M5\+T}~0x01fc
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a677e2edf3cf15bef63405c35a7be1310}{K6\+T}~0x019a
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ab01465ad82a39e8d02c2dd79279bfe38}{B6\+T}~0x00d2
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a48074a633649636c0748b851a23776df}{M6\+T}~0x00fb
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a7e788fd48d058b89ffcc0438bc3d558e}{K7\+T}~0x029a
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ad61180572632999584ac8b582a00e2c8}{B7\+T}~0x0018
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_aa3094566ff7a1a2bcd210e256c7b50cc}{M7\+T}~0x0012
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_aa0dc3961e2039ad7d91faf6829ec1404}{K8\+T}~0x029a
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ab5d069e613c69aaf71ea97b129cc5ec1}{B8\+T}~0x0000
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_acb54eadab753bfe327548d7216edd9a2}{M8\+T}~0x0000
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a5d91e3222633d82540d7ce0e8d2e1bb2}{K1\+C}~0x0043
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a93aa8f0bb51f43d51e78656a352c6d16}{B1\+C}~0x0204
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a4ec6175326ca3eb8b731a162b6fcd866}{M1\+C}~0x01ad
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ac91e954471045fdbd9b3d01933373c1e}{K2\+C}~0x0085
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a95f02da704fdc6c1cabd0c29713cee66}{B2\+C}~0x0228
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ab70590fa6ebed50a3ab8ff17c22b55b2}{M2\+C}~0x02c1
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_acbc83f137380f27faf46af997f35f882}{K3\+C}~0x00c8
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ac03c4526fc8c17d71c8ee2171537facd}{B3\+C}~0x0253
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a172d826f878378caa7889305ad29011f}{M3\+C}~0x0363
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a2fccbc87358653185282ba16b03a64ee}{K4\+C}~0x010a
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a6bd8165e32f19978994245c552b8ee2d}{B4\+C}~0x0282
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_abca79308fb0392b1f8c9d5cfeb5310a0}{M4\+C}~0x03df
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_aa39a8eec5ffe9f84c4ac098724c70c91}{K5\+C}~0x014d
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_af4a1b651ec51bb418ce1bffb87fa79e4}{B5\+C}~0x0177
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a7c5adce134d8d2be44024c075f55c5c1}{M5\+C}~0x01dd
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a9dccc63bcf43c1b4714e913053a906c1}{K6\+C}~0x019a
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_abe71d8a87f6d974ee3d26693d1a2ea51}{B6\+C}~0x0101
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a2140b89133d826e76d2a717a3d863551}{M6\+C}~0x0127
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ac104bf3b33df4e42b14dc31078283565}{K7\+C}~0x029a
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a5750be8469107d68ea4bdd4e4947316b}{B7\+C}~0x0037
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_acc5b1974656133787900e9bd5219c5ce}{M7\+C}~0x002b
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ac47a903b8bc65dc56915024f00201213}{K8\+C}~0x029a
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_a6d9dfce0cef08b9ef488e582ac4f92e9}{B8\+C}~0x0000
+\item 
+\#define \hyperlink{sensor__tsl2561_8h_ac15c8f99823ed2ff447fb568ce4d3957}{M8\+C}~0x0000
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor module for light intensity and par. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{sensor__tsl2561_8h_a93aa8f0bb51f43d51e78656a352c6d16}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B1\+C@{B1\+C}}
+\index{B1\+C@{B1\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B1\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B1\+C~0x0204}\label{sensor__tsl2561_8h_a93aa8f0bb51f43d51e78656a352c6d16}
+\hypertarget{sensor__tsl2561_8h_a77a115660299dfe589547bd1c9313e18}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B1\+T@{B1\+T}}
+\index{B1\+T@{B1\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B1\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B1\+T~0x01f2}\label{sensor__tsl2561_8h_a77a115660299dfe589547bd1c9313e18}
+\hypertarget{sensor__tsl2561_8h_a95f02da704fdc6c1cabd0c29713cee66}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B2\+C@{B2\+C}}
+\index{B2\+C@{B2\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B2\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B2\+C~0x0228}\label{sensor__tsl2561_8h_a95f02da704fdc6c1cabd0c29713cee66}
+\hypertarget{sensor__tsl2561_8h_a0a24c8d38c744a6706fbef06cc0d045e}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B2\+T@{B2\+T}}
+\index{B2\+T@{B2\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B2\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B2\+T~0x0214}\label{sensor__tsl2561_8h_a0a24c8d38c744a6706fbef06cc0d045e}
+\hypertarget{sensor__tsl2561_8h_ac03c4526fc8c17d71c8ee2171537facd}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B3\+C@{B3\+C}}
+\index{B3\+C@{B3\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B3\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B3\+C~0x0253}\label{sensor__tsl2561_8h_ac03c4526fc8c17d71c8ee2171537facd}
+\hypertarget{sensor__tsl2561_8h_aa58a8a3b4010f1d8ab947e2351b6cf1d}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B3\+T@{B3\+T}}
+\index{B3\+T@{B3\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B3\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B3\+T~0x023f}\label{sensor__tsl2561_8h_aa58a8a3b4010f1d8ab947e2351b6cf1d}
+\hypertarget{sensor__tsl2561_8h_a6bd8165e32f19978994245c552b8ee2d}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B4\+C@{B4\+C}}
+\index{B4\+C@{B4\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B4\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B4\+C~0x0282}\label{sensor__tsl2561_8h_a6bd8165e32f19978994245c552b8ee2d}
+\hypertarget{sensor__tsl2561_8h_a836fd96912939cd386f83e20ed1061ee}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B4\+T@{B4\+T}}
+\index{B4\+T@{B4\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B4\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B4\+T~0x0270}\label{sensor__tsl2561_8h_a836fd96912939cd386f83e20ed1061ee}
+\hypertarget{sensor__tsl2561_8h_af4a1b651ec51bb418ce1bffb87fa79e4}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B5\+C@{B5\+C}}
+\index{B5\+C@{B5\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B5\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B5\+C~0x0177}\label{sensor__tsl2561_8h_af4a1b651ec51bb418ce1bffb87fa79e4}
+\hypertarget{sensor__tsl2561_8h_a8a3732432706e9a5a5ae3d3485d47043}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B5\+T@{B5\+T}}
+\index{B5\+T@{B5\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B5\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B5\+T~0x016f}\label{sensor__tsl2561_8h_a8a3732432706e9a5a5ae3d3485d47043}
+\hypertarget{sensor__tsl2561_8h_abe71d8a87f6d974ee3d26693d1a2ea51}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B6\+C@{B6\+C}}
+\index{B6\+C@{B6\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B6\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B6\+C~0x0101}\label{sensor__tsl2561_8h_abe71d8a87f6d974ee3d26693d1a2ea51}
+\hypertarget{sensor__tsl2561_8h_ab01465ad82a39e8d02c2dd79279bfe38}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B6\+T@{B6\+T}}
+\index{B6\+T@{B6\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B6\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B6\+T~0x00d2}\label{sensor__tsl2561_8h_ab01465ad82a39e8d02c2dd79279bfe38}
+\hypertarget{sensor__tsl2561_8h_a5750be8469107d68ea4bdd4e4947316b}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B7\+C@{B7\+C}}
+\index{B7\+C@{B7\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B7\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B7\+C~0x0037}\label{sensor__tsl2561_8h_a5750be8469107d68ea4bdd4e4947316b}
+\hypertarget{sensor__tsl2561_8h_ad61180572632999584ac8b582a00e2c8}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B7\+T@{B7\+T}}
+\index{B7\+T@{B7\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B7\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B7\+T~0x0018}\label{sensor__tsl2561_8h_ad61180572632999584ac8b582a00e2c8}
+\hypertarget{sensor__tsl2561_8h_a6d9dfce0cef08b9ef488e582ac4f92e9}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B8\+C@{B8\+C}}
+\index{B8\+C@{B8\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B8\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define B8\+C~0x0000}\label{sensor__tsl2561_8h_a6d9dfce0cef08b9ef488e582ac4f92e9}
+\hypertarget{sensor__tsl2561_8h_ab5d069e613c69aaf71ea97b129cc5ec1}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!B8\+T@{B8\+T}}
+\index{B8\+T@{B8\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{B8\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define B8\+T~0x0000}\label{sensor__tsl2561_8h_ab5d069e613c69aaf71ea97b129cc5ec1}
+\hypertarget{sensor__tsl2561_8h_ae77b11d54490369c690da18aef1e76e5}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!C\+H\+\_\+\+S\+C\+A\+L\+E@{C\+H\+\_\+\+S\+C\+A\+L\+E}}
+\index{C\+H\+\_\+\+S\+C\+A\+L\+E@{C\+H\+\_\+\+S\+C\+A\+L\+E}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{C\+H\+\_\+\+S\+C\+A\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+\_\+\+S\+C\+A\+L\+E~10}\label{sensor__tsl2561_8h_ae77b11d54490369c690da18aef1e76e5}
+\hypertarget{sensor__tsl2561_8h_af740a064eaa0da3339e7eba683a671ed}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T0@{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T0}}
+\index{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T0@{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T0}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T0}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T0~0x7517}\label{sensor__tsl2561_8h_af740a064eaa0da3339e7eba683a671ed}
+\hypertarget{sensor__tsl2561_8h_a1f741d16494e81486136c73489097cdd}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T1@{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T1}}
+\index{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T1@{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T1}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T1}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+H\+S\+C\+A\+L\+E\+\_\+\+T\+I\+N\+T1~0x0fe7}\label{sensor__tsl2561_8h_a1f741d16494e81486136c73489097cdd}
+\hypertarget{sensor__tsl2561_8h_a5d91e3222633d82540d7ce0e8d2e1bb2}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K1\+C@{K1\+C}}
+\index{K1\+C@{K1\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K1\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K1\+C~0x0043}\label{sensor__tsl2561_8h_a5d91e3222633d82540d7ce0e8d2e1bb2}
+\hypertarget{sensor__tsl2561_8h_a8d1758888413b06317d05260d023c6f1}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K1\+T@{K1\+T}}
+\index{K1\+T@{K1\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K1\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K1\+T~0x0040}\label{sensor__tsl2561_8h_a8d1758888413b06317d05260d023c6f1}
+\hypertarget{sensor__tsl2561_8h_ac91e954471045fdbd9b3d01933373c1e}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K2\+C@{K2\+C}}
+\index{K2\+C@{K2\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K2\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K2\+C~0x0085}\label{sensor__tsl2561_8h_ac91e954471045fdbd9b3d01933373c1e}
+\hypertarget{sensor__tsl2561_8h_af3f76dac869af6d4fb8834ba8e5baa72}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K2\+T@{K2\+T}}
+\index{K2\+T@{K2\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K2\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K2\+T~0x0080}\label{sensor__tsl2561_8h_af3f76dac869af6d4fb8834ba8e5baa72}
+\hypertarget{sensor__tsl2561_8h_acbc83f137380f27faf46af997f35f882}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K3\+C@{K3\+C}}
+\index{K3\+C@{K3\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K3\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K3\+C~0x00c8}\label{sensor__tsl2561_8h_acbc83f137380f27faf46af997f35f882}
+\hypertarget{sensor__tsl2561_8h_a96898795c866703216e3035ecc1c29aa}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K3\+T@{K3\+T}}
+\index{K3\+T@{K3\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K3\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K3\+T~0x00c0}\label{sensor__tsl2561_8h_a96898795c866703216e3035ecc1c29aa}
+\hypertarget{sensor__tsl2561_8h_a2fccbc87358653185282ba16b03a64ee}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K4\+C@{K4\+C}}
+\index{K4\+C@{K4\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K4\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K4\+C~0x010a}\label{sensor__tsl2561_8h_a2fccbc87358653185282ba16b03a64ee}
+\hypertarget{sensor__tsl2561_8h_aa3489bee2d8a1e25002669517f4b6f7d}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K4\+T@{K4\+T}}
+\index{K4\+T@{K4\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K4\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K4\+T~0x0100}\label{sensor__tsl2561_8h_aa3489bee2d8a1e25002669517f4b6f7d}
+\hypertarget{sensor__tsl2561_8h_aa39a8eec5ffe9f84c4ac098724c70c91}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K5\+C@{K5\+C}}
+\index{K5\+C@{K5\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K5\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K5\+C~0x014d}\label{sensor__tsl2561_8h_aa39a8eec5ffe9f84c4ac098724c70c91}
+\hypertarget{sensor__tsl2561_8h_a7df915d6ba425afa9a463f249168d6bd}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K5\+T@{K5\+T}}
+\index{K5\+T@{K5\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K5\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K5\+T~0x0138}\label{sensor__tsl2561_8h_a7df915d6ba425afa9a463f249168d6bd}
+\hypertarget{sensor__tsl2561_8h_a9dccc63bcf43c1b4714e913053a906c1}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K6\+C@{K6\+C}}
+\index{K6\+C@{K6\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K6\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K6\+C~0x019a}\label{sensor__tsl2561_8h_a9dccc63bcf43c1b4714e913053a906c1}
+\hypertarget{sensor__tsl2561_8h_a677e2edf3cf15bef63405c35a7be1310}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K6\+T@{K6\+T}}
+\index{K6\+T@{K6\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K6\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K6\+T~0x019a}\label{sensor__tsl2561_8h_a677e2edf3cf15bef63405c35a7be1310}
+\hypertarget{sensor__tsl2561_8h_ac104bf3b33df4e42b14dc31078283565}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K7\+C@{K7\+C}}
+\index{K7\+C@{K7\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K7\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K7\+C~0x029a}\label{sensor__tsl2561_8h_ac104bf3b33df4e42b14dc31078283565}
+\hypertarget{sensor__tsl2561_8h_a7e788fd48d058b89ffcc0438bc3d558e}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K7\+T@{K7\+T}}
+\index{K7\+T@{K7\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K7\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K7\+T~0x029a}\label{sensor__tsl2561_8h_a7e788fd48d058b89ffcc0438bc3d558e}
+\hypertarget{sensor__tsl2561_8h_ac47a903b8bc65dc56915024f00201213}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K8\+C@{K8\+C}}
+\index{K8\+C@{K8\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K8\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define K8\+C~0x029a}\label{sensor__tsl2561_8h_ac47a903b8bc65dc56915024f00201213}
+\hypertarget{sensor__tsl2561_8h_aa0dc3961e2039ad7d91faf6829ec1404}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!K8\+T@{K8\+T}}
+\index{K8\+T@{K8\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{K8\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define K8\+T~0x029a}\label{sensor__tsl2561_8h_aa0dc3961e2039ad7d91faf6829ec1404}
+\hypertarget{sensor__tsl2561_8h_abe3540b1f05e5974dfa40491719b322a}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!L\+U\+X\+\_\+\+S\+C\+A\+L\+E@{L\+U\+X\+\_\+\+S\+C\+A\+L\+E}}
+\index{L\+U\+X\+\_\+\+S\+C\+A\+L\+E@{L\+U\+X\+\_\+\+S\+C\+A\+L\+E}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{L\+U\+X\+\_\+\+S\+C\+A\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+U\+X\+\_\+\+S\+C\+A\+L\+E~14}\label{sensor__tsl2561_8h_abe3540b1f05e5974dfa40491719b322a}
+\hypertarget{sensor__tsl2561_8h_a4ec6175326ca3eb8b731a162b6fcd866}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M1\+C@{M1\+C}}
+\index{M1\+C@{M1\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M1\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M1\+C~0x01ad}\label{sensor__tsl2561_8h_a4ec6175326ca3eb8b731a162b6fcd866}
+\hypertarget{sensor__tsl2561_8h_a9cee464de95fd9f1cc41e4737cdfcf56}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M1\+T@{M1\+T}}
+\index{M1\+T@{M1\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M1\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M1\+T~0x01be}\label{sensor__tsl2561_8h_a9cee464de95fd9f1cc41e4737cdfcf56}
+\hypertarget{sensor__tsl2561_8h_ab70590fa6ebed50a3ab8ff17c22b55b2}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M2\+C@{M2\+C}}
+\index{M2\+C@{M2\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M2\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M2\+C~0x02c1}\label{sensor__tsl2561_8h_ab70590fa6ebed50a3ab8ff17c22b55b2}
+\hypertarget{sensor__tsl2561_8h_af13d82736a980dd7f78a0c8633c656c0}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M2\+T@{M2\+T}}
+\index{M2\+T@{M2\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M2\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M2\+T~0x02d1}\label{sensor__tsl2561_8h_af13d82736a980dd7f78a0c8633c656c0}
+\hypertarget{sensor__tsl2561_8h_a172d826f878378caa7889305ad29011f}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M3\+C@{M3\+C}}
+\index{M3\+C@{M3\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M3\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M3\+C~0x0363}\label{sensor__tsl2561_8h_a172d826f878378caa7889305ad29011f}
+\hypertarget{sensor__tsl2561_8h_a6d02cd58020bf44d98927446668a2f7b}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M3\+T@{M3\+T}}
+\index{M3\+T@{M3\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M3\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M3\+T~0x037b}\label{sensor__tsl2561_8h_a6d02cd58020bf44d98927446668a2f7b}
+\hypertarget{sensor__tsl2561_8h_abca79308fb0392b1f8c9d5cfeb5310a0}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M4\+C@{M4\+C}}
+\index{M4\+C@{M4\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M4\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M4\+C~0x03df}\label{sensor__tsl2561_8h_abca79308fb0392b1f8c9d5cfeb5310a0}
+\hypertarget{sensor__tsl2561_8h_ac5983b281c3a2f1d4ea1f87236cfcb44}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M4\+T@{M4\+T}}
+\index{M4\+T@{M4\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M4\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M4\+T~0x03fe}\label{sensor__tsl2561_8h_ac5983b281c3a2f1d4ea1f87236cfcb44}
+\hypertarget{sensor__tsl2561_8h_a7c5adce134d8d2be44024c075f55c5c1}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M5\+C@{M5\+C}}
+\index{M5\+C@{M5\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M5\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M5\+C~0x01dd}\label{sensor__tsl2561_8h_a7c5adce134d8d2be44024c075f55c5c1}
+\hypertarget{sensor__tsl2561_8h_a2d9fce4a16f258b5ab02b09a954648f6}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M5\+T@{M5\+T}}
+\index{M5\+T@{M5\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M5\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M5\+T~0x01fc}\label{sensor__tsl2561_8h_a2d9fce4a16f258b5ab02b09a954648f6}
+\hypertarget{sensor__tsl2561_8h_a2140b89133d826e76d2a717a3d863551}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M6\+C@{M6\+C}}
+\index{M6\+C@{M6\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M6\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M6\+C~0x0127}\label{sensor__tsl2561_8h_a2140b89133d826e76d2a717a3d863551}
+\hypertarget{sensor__tsl2561_8h_a48074a633649636c0748b851a23776df}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M6\+T@{M6\+T}}
+\index{M6\+T@{M6\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M6\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M6\+T~0x00fb}\label{sensor__tsl2561_8h_a48074a633649636c0748b851a23776df}
+\hypertarget{sensor__tsl2561_8h_acc5b1974656133787900e9bd5219c5ce}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M7\+C@{M7\+C}}
+\index{M7\+C@{M7\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M7\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M7\+C~0x002b}\label{sensor__tsl2561_8h_acc5b1974656133787900e9bd5219c5ce}
+\hypertarget{sensor__tsl2561_8h_aa3094566ff7a1a2bcd210e256c7b50cc}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M7\+T@{M7\+T}}
+\index{M7\+T@{M7\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M7\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M7\+T~0x0012}\label{sensor__tsl2561_8h_aa3094566ff7a1a2bcd210e256c7b50cc}
+\hypertarget{sensor__tsl2561_8h_ac15c8f99823ed2ff447fb568ce4d3957}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M8\+C@{M8\+C}}
+\index{M8\+C@{M8\+C}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M8\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define M8\+C~0x0000}\label{sensor__tsl2561_8h_ac15c8f99823ed2ff447fb568ce4d3957}
+\hypertarget{sensor__tsl2561_8h_acb54eadab753bfe327548d7216edd9a2}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!M8\+T@{M8\+T}}
+\index{M8\+T@{M8\+T}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{M8\+T}]{\setlength{\rightskip}{0pt plus 5cm}\#define M8\+T~0x0000}\label{sensor__tsl2561_8h_acb54eadab753bfe327548d7216edd9a2}
+\hypertarget{sensor__tsl2561_8h_a2d36ccf8157f890c015eddd64276d77c}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!R\+A\+T\+I\+O\+\_\+\+S\+C\+A\+L\+E@{R\+A\+T\+I\+O\+\_\+\+S\+C\+A\+L\+E}}
+\index{R\+A\+T\+I\+O\+\_\+\+S\+C\+A\+L\+E@{R\+A\+T\+I\+O\+\_\+\+S\+C\+A\+L\+E}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{R\+A\+T\+I\+O\+\_\+\+S\+C\+A\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+A\+T\+I\+O\+\_\+\+S\+C\+A\+L\+E~9}\label{sensor__tsl2561_8h_a2d36ccf8157f890c015eddd64276d77c}
+\hypertarget{sensor__tsl2561_8h_a59333700af73c80bc1d7c6f8dc351c82}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Address@{T\+S\+L2561\+\_\+\+Address}}
+\index{T\+S\+L2561\+\_\+\+Address@{T\+S\+L2561\+\_\+\+Address}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Address}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Address~0x29}\label{sensor__tsl2561_8h_a59333700af73c80bc1d7c6f8dc351c82}
+\hypertarget{sensor__tsl2561_8h_a25c20b0a9db2eb2120056ba3c927b7d7}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Channal0\+H@{T\+S\+L2561\+\_\+\+Channal0\+H}}
+\index{T\+S\+L2561\+\_\+\+Channal0\+H@{T\+S\+L2561\+\_\+\+Channal0\+H}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Channal0\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Channal0\+H~0x8\+D}\label{sensor__tsl2561_8h_a25c20b0a9db2eb2120056ba3c927b7d7}
+\hypertarget{sensor__tsl2561_8h_a8a25922147204b8fadfac78ae06a3eeb}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Channal0\+L@{T\+S\+L2561\+\_\+\+Channal0\+L}}
+\index{T\+S\+L2561\+\_\+\+Channal0\+L@{T\+S\+L2561\+\_\+\+Channal0\+L}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Channal0\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Channal0\+L~0x8\+C}\label{sensor__tsl2561_8h_a8a25922147204b8fadfac78ae06a3eeb}
+\hypertarget{sensor__tsl2561_8h_a3d6221afdaefda8d471cbb33c6066240}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Channal1\+H@{T\+S\+L2561\+\_\+\+Channal1\+H}}
+\index{T\+S\+L2561\+\_\+\+Channal1\+H@{T\+S\+L2561\+\_\+\+Channal1\+H}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Channal1\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Channal1\+H~0x8\+F}\label{sensor__tsl2561_8h_a3d6221afdaefda8d471cbb33c6066240}
+\hypertarget{sensor__tsl2561_8h_a36de2c81ed9acc5d08ea68a49b898c8d}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Channal1\+L@{T\+S\+L2561\+\_\+\+Channal1\+L}}
+\index{T\+S\+L2561\+\_\+\+Channal1\+L@{T\+S\+L2561\+\_\+\+Channal1\+L}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Channal1\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Channal1\+L~0x8\+E}\label{sensor__tsl2561_8h_a36de2c81ed9acc5d08ea68a49b898c8d}
+\hypertarget{sensor__tsl2561_8h_aab8e4882f253d35cd521c2f4abc45149}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Control@{T\+S\+L2561\+\_\+\+Control}}
+\index{T\+S\+L2561\+\_\+\+Control@{T\+S\+L2561\+\_\+\+Control}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Control}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Control~0x80}\label{sensor__tsl2561_8h_aab8e4882f253d35cd521c2f4abc45149}
+\hypertarget{sensor__tsl2561_8h_aed0e05fa7dea08bdcbf5828d4622724c}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Interrupt@{T\+S\+L2561\+\_\+\+Interrupt}}
+\index{T\+S\+L2561\+\_\+\+Interrupt@{T\+S\+L2561\+\_\+\+Interrupt}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Interrupt}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Interrupt~0x86}\label{sensor__tsl2561_8h_aed0e05fa7dea08bdcbf5828d4622724c}
+\hypertarget{sensor__tsl2561_8h_a0372d3100b18a1258eafec1925b214fc}{}\index{sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}!T\+S\+L2561\+\_\+\+Timing@{T\+S\+L2561\+\_\+\+Timing}}
+\index{T\+S\+L2561\+\_\+\+Timing@{T\+S\+L2561\+\_\+\+Timing}!sensor\+\_\+tsl2561.\+h@{sensor\+\_\+tsl2561.\+h}}
+\subsubsection[{T\+S\+L2561\+\_\+\+Timing}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+S\+L2561\+\_\+\+Timing~0x81}\label{sensor__tsl2561_8h_a0372d3100b18a1258eafec1925b214fc}

@@ -1,0 +1,170 @@
+\hypertarget{module__handler_8cpp}{}\section{src/module\+\_\+handler.cpp File Reference}
+\label{module__handler_8cpp}\index{src/module\+\_\+handler.\+cpp@{src/module\+\_\+handler.\+cpp}}
+
+
+Handles all module integration.  
+
+
+{\ttfamily \#include \char`\"{}module\+\_\+handler.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}communication.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensor\+\_\+dfr0161\+\_\+0300.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensor\+\_\+tsl2561.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensor\+\_\+dht22.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensor\+\_\+gc0011.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}actuator\+\_\+relay.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}sensor\+\_\+contact\+\_\+switch.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{module__handler_8cpp_aea7eb84b3bdf67ce76b8b3d1a7c1b64d}{initialize\+Modules} (void)
+\begin{DoxyCompactList}\small\item\em Called once to initialize all modules. Runs once at the beginning of the program. Calls all module $\ast$.begin() functions. \end{DoxyCompactList}\item 
+void \hyperlink{module__handler_8cpp_a691a0d8c2404cb4ce0c088e9857560ee}{update\+Incoming\+Message} (void)
+\begin{DoxyCompactList}\small\item\em Handles all incoming messages from the controller. If new message is available, receive message and pass to handler function. If handler function returns response message, send out. \end{DoxyCompactList}\item 
+void \hyperlink{module__handler_8cpp_a5897de55f349106cd3e341df9bc6ddcd}{update\+Stream\+Message} (void)
+\begin{DoxyCompactList}\small\item\em Handles all outgoing messages to the controller. Polls all objects using their $\ast$.get() function and appends to message stream Sends message stream to controller. \end{DoxyCompactList}\item 
+String \hyperlink{module__handler_8cpp_a84d5c9e2f57b3fcb377800f72edea419}{handle\+Incoming\+Message} (void)
+\begin{DoxyCompactList}\small\item\em Messages from controller are handled by this function. Each message is a single instruction string. \hyperlink{struct_instruction}{Instruction} string gets broken into instruction code, id, and parameter. Passed in piecewise to $<$module$>$.set function. If a return message is generated from the $<$module$>$.set function, this function returns that message. \end{DoxyCompactList}\item 
+\hyperlink{struct_instruction}{Instruction} \hyperlink{module__handler_8cpp_afcbd04d77356acd5e3dcf91fefb8bd11}{parse\+Incoming\+Message} (String message)
+\begin{DoxyCompactList}\small\item\em Formats an instruction string into an instruction struct. Message is broken into 3 parts\+: \hyperlink{struct_instruction}{Instruction} Code, \hyperlink{struct_instruction}{Instruction} I\+D, \hyperlink{struct_instruction}{Instruction} Parameter then returns the parts as an \hyperlink{struct_instruction}{Instruction} Object Also, the \hyperlink{struct_instruction}{Instruction} Valid parameter is set accordingly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_communication}{Communication} \hyperlink{module__handler_8cpp_acbef923ad22ef0461dd67c0aaf13c9d7}{communication}
+\item 
+\hyperlink{class_sensor_tsl2561}{Sensor\+Tsl2561} \hyperlink{module__handler_8cpp_ac80bfd1cbb89a121918c276b790b790e}{sensor\+\_\+tsl2561\+\_\+light\+\_\+intensity\+\_\+default} (\char`\"{}S\+L\+I\+N\char`\"{}, 1,\char`\"{}S\+L\+P\+A\char`\"{}, 1)
+\item 
+\hyperlink{class_sensor_dfr01610300}{Sensor\+Dfr01610300} \hyperlink{module__handler_8cpp_a2fa5ba85fa64ec83dabf61084166add5}{sensor\+\_\+dfr01610300\+\_\+water\+\_\+ph\+\_\+temperature\+\_\+ec\+\_\+default} (A1,\char`\"{}S\+W\+P\+H\char`\"{}, 1, 5,\char`\"{}S\+W\+T\+M\char`\"{}, 1, A2,\char`\"{}S\+W\+E\+C\char`\"{}, 1, 22)
+\item 
+\hyperlink{class_sensor_dht22}{Sensor\+Dht22} \hyperlink{module__handler_8cpp_a71b8e34ff72f1d153e53311443c419e6}{sensor\+\_\+dht22\+\_\+air\+\_\+temperature\+\_\+humidity\+\_\+default} (A0,\char`\"{}S\+A\+T\+M\char`\"{}, 1,\char`\"{}S\+A\+H\+U\char`\"{}, 1)
+\item 
+\hyperlink{class_sensor_gc0011}{Sensor\+Gc0011} \hyperlink{module__handler_8cpp_a8875593f7e7ffa5750599fe64d0cb659}{sensor\+\_\+gc0011\+\_\+air\+\_\+co2\+\_\+temperature\+\_\+humidity\+\_\+default} (12, 11,\char`\"{}S\+A\+C\+O\char`\"{}, 1,\char`\"{}S\+A\+T\+M\char`\"{}, 2,\char`\"{}S\+A\+H\+U\char`\"{}, 2)
+\item 
+\hyperlink{class_sensor_contact_switch}{Sensor\+Contact\+Switch} \hyperlink{module__handler_8cpp_aa9f3da0083131fdbd8cf03f27cf9d551}{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+shell\+\_\+open\+\_\+default} (4,\char`\"{}S\+G\+S\+O\char`\"{}, 1)
+\item 
+\hyperlink{class_sensor_contact_switch}{Sensor\+Contact\+Switch} \hyperlink{module__handler_8cpp_ab6630028881a21e75bbe48305c5604f7}{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+window\+\_\+open\+\_\+default} (3,\char`\"{}S\+G\+W\+O\char`\"{}, 1)
+\item 
+\hyperlink{class_actuator_relay}{Actuator\+Relay} \hyperlink{module__handler_8cpp_a0a937c87b9401ed7584696b6923185f3}{actuator\+\_\+relay\+\_\+air\+\_\+heater\+\_\+default} (6,\char`\"{}A\+A\+H\+E\char`\"{}, 1)
+\item 
+\hyperlink{class_actuator_relay}{Actuator\+Relay} \hyperlink{module__handler_8cpp_a8332988d91deeba745badf4ca8ad163e}{actuator\+\_\+relay\+\_\+light\+\_\+panel\+\_\+default} (8,\char`\"{}A\+L\+P\+N\char`\"{}, 1)
+\item 
+\hyperlink{class_actuator_relay}{Actuator\+Relay} \hyperlink{module__handler_8cpp_a0e86deb38503c2cf91314642c78cdfd3}{actuator\+\_\+relay\+\_\+air\+\_\+humidifier\+\_\+default} (9,\char`\"{}A\+A\+H\+U\char`\"{}, 1)
+\item 
+\hyperlink{class_actuator_relay}{Actuator\+Relay} \hyperlink{module__handler_8cpp_a25c0b2af14a6fb79b2f25ec1df8c838e}{actuator\+\_\+relay\+\_\+air\+\_\+vent\+\_\+default} (14,\char`\"{}A\+A\+V\+E\char`\"{}, 1)
+\item 
+\hyperlink{class_actuator_relay}{Actuator\+Relay} \hyperlink{module__handler_8cpp_a3f0b6a49faffb54d8af560b9dc3b4cc0}{actuator\+\_\+relay\+\_\+air\+\_\+circulation\+\_\+default} (15,\char`\"{}A\+A\+C\+R\char`\"{}, 1)
+\item 
+\hyperlink{class_actuator_relay}{Actuator\+Relay} \hyperlink{module__handler_8cpp_a804b6a7c6d635c11d5dd634e016e7f3b}{actuator\+\_\+relay\+\_\+light\+\_\+chamber\+\_\+illumination\+\_\+default} (53,\char`\"{}A\+L\+P\+N\char`\"{}, 2)
+\item 
+\hyperlink{class_actuator_relay}{Actuator\+Relay} \hyperlink{module__handler_8cpp_a10f9d41c1003f37e9036eb87416e30c2}{actuator\+\_\+relay\+\_\+light\+\_\+motherboard\+\_\+illumination\+\_\+default} (52,\char`\"{}A\+L\+M\+I\char`\"{}, 1)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles all module integration. 
+
+See \hyperlink{module__handler_8h}{module\+\_\+handler.\+h} for details. \begin{DoxyAuthor}{Author}
+Jake Rye 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\hypertarget{module__handler_8cpp_a84d5c9e2f57b3fcb377800f72edea419}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!handle\+Incoming\+Message@{handle\+Incoming\+Message}}
+\index{handle\+Incoming\+Message@{handle\+Incoming\+Message}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{handle\+Incoming\+Message}]{\setlength{\rightskip}{0pt plus 5cm}String handle\+Incoming\+Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8cpp_a84d5c9e2f57b3fcb377800f72edea419}
+
+
+Messages from controller are handled by this function. Each message is a single instruction string. \hyperlink{struct_instruction}{Instruction} string gets broken into instruction code, id, and parameter. Passed in piecewise to $<$module$>$.set function. If a return message is generated from the $<$module$>$.set function, this function returns that message. 
+
+\hypertarget{module__handler_8cpp_aea7eb84b3bdf67ce76b8b3d1a7c1b64d}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!initialize\+Modules@{initialize\+Modules}}
+\index{initialize\+Modules@{initialize\+Modules}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{initialize\+Modules}]{\setlength{\rightskip}{0pt plus 5cm}void initialize\+Modules (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8cpp_aea7eb84b3bdf67ce76b8b3d1a7c1b64d}
+
+
+Called once to initialize all modules. Runs once at the beginning of the program. Calls all module $\ast$.begin() functions. 
+
+\hypertarget{module__handler_8cpp_afcbd04d77356acd5e3dcf91fefb8bd11}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!parse\+Incoming\+Message@{parse\+Incoming\+Message}}
+\index{parse\+Incoming\+Message@{parse\+Incoming\+Message}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{parse\+Incoming\+Message}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Instruction} parse\+Incoming\+Message (
+\begin{DoxyParamCaption}
+\item[{String}]{message}
+\end{DoxyParamCaption}
+)}\label{module__handler_8cpp_afcbd04d77356acd5e3dcf91fefb8bd11}
+
+
+Formats an instruction string into an instruction struct. Message is broken into 3 parts\+: \hyperlink{struct_instruction}{Instruction} Code, \hyperlink{struct_instruction}{Instruction} I\+D, \hyperlink{struct_instruction}{Instruction} Parameter then returns the parts as an \hyperlink{struct_instruction}{Instruction} Object Also, the \hyperlink{struct_instruction}{Instruction} Valid parameter is set accordingly. 
+
+\hypertarget{module__handler_8cpp_a691a0d8c2404cb4ce0c088e9857560ee}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!update\+Incoming\+Message@{update\+Incoming\+Message}}
+\index{update\+Incoming\+Message@{update\+Incoming\+Message}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{update\+Incoming\+Message}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Incoming\+Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8cpp_a691a0d8c2404cb4ce0c088e9857560ee}
+
+
+Handles all incoming messages from the controller. If new message is available, receive message and pass to handler function. If handler function returns response message, send out. 
+
+\hypertarget{module__handler_8cpp_a5897de55f349106cd3e341df9bc6ddcd}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!update\+Stream\+Message@{update\+Stream\+Message}}
+\index{update\+Stream\+Message@{update\+Stream\+Message}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{update\+Stream\+Message}]{\setlength{\rightskip}{0pt plus 5cm}void update\+Stream\+Message (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{module__handler_8cpp_a5897de55f349106cd3e341df9bc6ddcd}
+
+
+Handles all outgoing messages to the controller. Polls all objects using their $\ast$.get() function and appends to message stream Sends message stream to controller. 
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{module__handler_8cpp_a3f0b6a49faffb54d8af560b9dc3b4cc0}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!actuator\+\_\+relay\+\_\+air\+\_\+circulation\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+circulation\+\_\+default}}
+\index{actuator\+\_\+relay\+\_\+air\+\_\+circulation\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+circulation\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{actuator\+\_\+relay\+\_\+air\+\_\+circulation\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actuator\+Relay} actuator\+\_\+relay\+\_\+air\+\_\+circulation\+\_\+default(15,\char`\"{}A\+A\+C\+R\char`\"{}, 1)}\label{module__handler_8cpp_a3f0b6a49faffb54d8af560b9dc3b4cc0}
+\hypertarget{module__handler_8cpp_a0a937c87b9401ed7584696b6923185f3}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!actuator\+\_\+relay\+\_\+air\+\_\+heater\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+heater\+\_\+default}}
+\index{actuator\+\_\+relay\+\_\+air\+\_\+heater\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+heater\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{actuator\+\_\+relay\+\_\+air\+\_\+heater\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actuator\+Relay} actuator\+\_\+relay\+\_\+air\+\_\+heater\+\_\+default(6,\char`\"{}A\+A\+H\+E\char`\"{}, 1)}\label{module__handler_8cpp_a0a937c87b9401ed7584696b6923185f3}
+\hypertarget{module__handler_8cpp_a0e86deb38503c2cf91314642c78cdfd3}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!actuator\+\_\+relay\+\_\+air\+\_\+humidifier\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+humidifier\+\_\+default}}
+\index{actuator\+\_\+relay\+\_\+air\+\_\+humidifier\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+humidifier\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{actuator\+\_\+relay\+\_\+air\+\_\+humidifier\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actuator\+Relay} actuator\+\_\+relay\+\_\+air\+\_\+humidifier\+\_\+default(9,\char`\"{}A\+A\+H\+U\char`\"{}, 1)}\label{module__handler_8cpp_a0e86deb38503c2cf91314642c78cdfd3}
+\hypertarget{module__handler_8cpp_a25c0b2af14a6fb79b2f25ec1df8c838e}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!actuator\+\_\+relay\+\_\+air\+\_\+vent\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+vent\+\_\+default}}
+\index{actuator\+\_\+relay\+\_\+air\+\_\+vent\+\_\+default@{actuator\+\_\+relay\+\_\+air\+\_\+vent\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{actuator\+\_\+relay\+\_\+air\+\_\+vent\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actuator\+Relay} actuator\+\_\+relay\+\_\+air\+\_\+vent\+\_\+default(14,\char`\"{}A\+A\+V\+E\char`\"{}, 1)}\label{module__handler_8cpp_a25c0b2af14a6fb79b2f25ec1df8c838e}
+\hypertarget{module__handler_8cpp_a804b6a7c6d635c11d5dd634e016e7f3b}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!actuator\+\_\+relay\+\_\+light\+\_\+chamber\+\_\+illumination\+\_\+default@{actuator\+\_\+relay\+\_\+light\+\_\+chamber\+\_\+illumination\+\_\+default}}
+\index{actuator\+\_\+relay\+\_\+light\+\_\+chamber\+\_\+illumination\+\_\+default@{actuator\+\_\+relay\+\_\+light\+\_\+chamber\+\_\+illumination\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{actuator\+\_\+relay\+\_\+light\+\_\+chamber\+\_\+illumination\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actuator\+Relay} actuator\+\_\+relay\+\_\+light\+\_\+chamber\+\_\+illumination\+\_\+default(53,\char`\"{}A\+L\+P\+N\char`\"{}, 2)}\label{module__handler_8cpp_a804b6a7c6d635c11d5dd634e016e7f3b}
+\hypertarget{module__handler_8cpp_a10f9d41c1003f37e9036eb87416e30c2}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!actuator\+\_\+relay\+\_\+light\+\_\+motherboard\+\_\+illumination\+\_\+default@{actuator\+\_\+relay\+\_\+light\+\_\+motherboard\+\_\+illumination\+\_\+default}}
+\index{actuator\+\_\+relay\+\_\+light\+\_\+motherboard\+\_\+illumination\+\_\+default@{actuator\+\_\+relay\+\_\+light\+\_\+motherboard\+\_\+illumination\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{actuator\+\_\+relay\+\_\+light\+\_\+motherboard\+\_\+illumination\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actuator\+Relay} actuator\+\_\+relay\+\_\+light\+\_\+motherboard\+\_\+illumination\+\_\+default(52,\char`\"{}A\+L\+M\+I\char`\"{}, 1)}\label{module__handler_8cpp_a10f9d41c1003f37e9036eb87416e30c2}
+\hypertarget{module__handler_8cpp_a8332988d91deeba745badf4ca8ad163e}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!actuator\+\_\+relay\+\_\+light\+\_\+panel\+\_\+default@{actuator\+\_\+relay\+\_\+light\+\_\+panel\+\_\+default}}
+\index{actuator\+\_\+relay\+\_\+light\+\_\+panel\+\_\+default@{actuator\+\_\+relay\+\_\+light\+\_\+panel\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{actuator\+\_\+relay\+\_\+light\+\_\+panel\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Actuator\+Relay} actuator\+\_\+relay\+\_\+light\+\_\+panel\+\_\+default(8,\char`\"{}A\+L\+P\+N\char`\"{}, 1)}\label{module__handler_8cpp_a8332988d91deeba745badf4ca8ad163e}
+\hypertarget{module__handler_8cpp_acbef923ad22ef0461dd67c0aaf13c9d7}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!communication@{communication}}
+\index{communication@{communication}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{communication}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Communication} communication}\label{module__handler_8cpp_acbef923ad22ef0461dd67c0aaf13c9d7}
+\hypertarget{module__handler_8cpp_aa9f3da0083131fdbd8cf03f27cf9d551}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+shell\+\_\+open\+\_\+default@{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+shell\+\_\+open\+\_\+default}}
+\index{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+shell\+\_\+open\+\_\+default@{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+shell\+\_\+open\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+shell\+\_\+open\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensor\+Contact\+Switch} sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+shell\+\_\+open\+\_\+default(4,\char`\"{}S\+G\+S\+O\char`\"{}, 1)}\label{module__handler_8cpp_aa9f3da0083131fdbd8cf03f27cf9d551}
+\hypertarget{module__handler_8cpp_ab6630028881a21e75bbe48305c5604f7}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+window\+\_\+open\+\_\+default@{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+window\+\_\+open\+\_\+default}}
+\index{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+window\+\_\+open\+\_\+default@{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+window\+\_\+open\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+window\+\_\+open\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensor\+Contact\+Switch} sensor\+\_\+contact\+\_\+switch\+\_\+general\+\_\+window\+\_\+open\+\_\+default(3,\char`\"{}S\+G\+W\+O\char`\"{}, 1)}\label{module__handler_8cpp_ab6630028881a21e75bbe48305c5604f7}
+\hypertarget{module__handler_8cpp_a2fa5ba85fa64ec83dabf61084166add5}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!sensor\+\_\+dfr01610300\+\_\+water\+\_\+ph\+\_\+temperature\+\_\+ec\+\_\+default@{sensor\+\_\+dfr01610300\+\_\+water\+\_\+ph\+\_\+temperature\+\_\+ec\+\_\+default}}
+\index{sensor\+\_\+dfr01610300\+\_\+water\+\_\+ph\+\_\+temperature\+\_\+ec\+\_\+default@{sensor\+\_\+dfr01610300\+\_\+water\+\_\+ph\+\_\+temperature\+\_\+ec\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{sensor\+\_\+dfr01610300\+\_\+water\+\_\+ph\+\_\+temperature\+\_\+ec\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensor\+Dfr01610300} sensor\+\_\+dfr01610300\+\_\+water\+\_\+ph\+\_\+temperature\+\_\+ec\+\_\+default(A1,\char`\"{}S\+W\+P\+H\char`\"{}, 1, 5,\char`\"{}S\+W\+T\+M\char`\"{}, 1, A2,\char`\"{}S\+W\+E\+C\char`\"{}, 1, 22)}\label{module__handler_8cpp_a2fa5ba85fa64ec83dabf61084166add5}
+\hypertarget{module__handler_8cpp_a71b8e34ff72f1d153e53311443c419e6}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!sensor\+\_\+dht22\+\_\+air\+\_\+temperature\+\_\+humidity\+\_\+default@{sensor\+\_\+dht22\+\_\+air\+\_\+temperature\+\_\+humidity\+\_\+default}}
+\index{sensor\+\_\+dht22\+\_\+air\+\_\+temperature\+\_\+humidity\+\_\+default@{sensor\+\_\+dht22\+\_\+air\+\_\+temperature\+\_\+humidity\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{sensor\+\_\+dht22\+\_\+air\+\_\+temperature\+\_\+humidity\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensor\+Dht22} sensor\+\_\+dht22\+\_\+air\+\_\+temperature\+\_\+humidity\+\_\+default(A0,\char`\"{}S\+A\+T\+M\char`\"{}, 1,\char`\"{}S\+A\+H\+U\char`\"{}, 1)}\label{module__handler_8cpp_a71b8e34ff72f1d153e53311443c419e6}
+\hypertarget{module__handler_8cpp_a8875593f7e7ffa5750599fe64d0cb659}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!sensor\+\_\+gc0011\+\_\+air\+\_\+co2\+\_\+temperature\+\_\+humidity\+\_\+default@{sensor\+\_\+gc0011\+\_\+air\+\_\+co2\+\_\+temperature\+\_\+humidity\+\_\+default}}
+\index{sensor\+\_\+gc0011\+\_\+air\+\_\+co2\+\_\+temperature\+\_\+humidity\+\_\+default@{sensor\+\_\+gc0011\+\_\+air\+\_\+co2\+\_\+temperature\+\_\+humidity\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{sensor\+\_\+gc0011\+\_\+air\+\_\+co2\+\_\+temperature\+\_\+humidity\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensor\+Gc0011} sensor\+\_\+gc0011\+\_\+air\+\_\+co2\+\_\+temperature\+\_\+humidity\+\_\+default(12, 11,\char`\"{}S\+A\+C\+O\char`\"{}, 1,\char`\"{}S\+A\+T\+M\char`\"{}, 2,\char`\"{}S\+A\+H\+U\char`\"{}, 2)}\label{module__handler_8cpp_a8875593f7e7ffa5750599fe64d0cb659}
+\hypertarget{module__handler_8cpp_ac80bfd1cbb89a121918c276b790b790e}{}\index{module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}!sensor\+\_\+tsl2561\+\_\+light\+\_\+intensity\+\_\+default@{sensor\+\_\+tsl2561\+\_\+light\+\_\+intensity\+\_\+default}}
+\index{sensor\+\_\+tsl2561\+\_\+light\+\_\+intensity\+\_\+default@{sensor\+\_\+tsl2561\+\_\+light\+\_\+intensity\+\_\+default}!module\+\_\+handler.\+cpp@{module\+\_\+handler.\+cpp}}
+\subsubsection[{sensor\+\_\+tsl2561\+\_\+light\+\_\+intensity\+\_\+default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Sensor\+Tsl2561} sensor\+\_\+tsl2561\+\_\+light\+\_\+intensity\+\_\+default(\char`\"{}S\+L\+I\+N\char`\"{}, 1,\char`\"{}S\+L\+P\+A\char`\"{}, 1)}\label{module__handler_8cpp_ac80bfd1cbb89a121918c276b790b790e}

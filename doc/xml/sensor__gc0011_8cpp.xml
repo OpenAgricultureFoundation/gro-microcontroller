@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="sensor__gc0011_8cpp" kind="file" language="C++">
+    <compoundname>sensor_gc0011.cpp</compoundname>
+    <includes refid="sensor__gc0011_8h" local="yes">sensor_gc0011.h</includes>
+    <incdepgraph>
+      <node id="102">
+        <label>module_handler.h</label>
+        <link refid="module__handler_8h"/>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>support_software_serial.h</label>
+        <link refid="support__software__serial_8h"/>
+        <childnode refid="100" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="98">
+        <label>WProgram.h</label>
+      </node>
+      <node id="96">
+        <label>src/sensor_gc0011.cpp</label>
+        <link refid="sensor_gc0011.cpp"/>
+        <childnode refid="97" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>Stream.h</label>
+      </node>
+      <node id="97">
+        <label>sensor_gc0011.h</label>
+        <link refid="sensor__gc0011_8h"/>
+        <childnode refid="98" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="100">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Sensor module for air co2, temperature, and humidity. </para>    </briefdescription>
+    <detaileddescription>
+<para>See <ref refid="sensor__gc0011_8h" kindref="compound">sensor_gc0011.h</ref> for details. </para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="6"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sensor__gc0011_8h" kindref="compound">sensor_gc0011.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------PUBLIC---------------------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="class_sensor_gc0011_1ac8b12368b4b524198210048fbd1d0c81" kindref="member">SensorGc0011::SensorGc0011</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>rx_pin,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tx_pin,<sp/>String<sp/>co2_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>co2_instruction_id,<sp/>String<sp/>temperature_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>temperature_instruction_id,String<sp/>humidity_instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>humidity_instruction_id)<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/>rx_pin_<sp/>=<sp/>rx_pin;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>tx_pin_<sp/>=<sp/>tx_pin;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>co2_instruction_code_<sp/>=<sp/>co2_instruction_code;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/>co2_instruction_id_<sp/>=<sp/>co2_instruction_id;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/>temperature_instruction_code_<sp/>=<sp/>temperature_instruction_code;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/>temperature_instruction_id_<sp/>=<sp/>temperature_instruction_id;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/>humidity_instruction_code_<sp/>=<sp/>humidity_instruction_code;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/>humidity_instruction_id_<sp/>=<sp/>humidity_instruction_id;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/>timeout_<sp/>=<sp/>40;<sp/></highlight><highlight class="comment">//<sp/>milliseconds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_sensor_gc0011_1a661743d47448c6b9c965fd8e1f123fbc" kindref="member">SensorGc0011::begin</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{<sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(NULL<sp/>!=<sp/>ss_)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>ss_;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/>ss_<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_software_serial" kindref="compound">SoftwareSerial</ref>(rx_pin_,tx_pin_);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/>ss_-&gt;<ref refid="class_software_serial_1af1b194359d70894b3a2f38236a68480e" kindref="member">begin</ref>(9600);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/>delay(100);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>String<sp/>message;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>sendMessage(</highlight><highlight class="stringliteral">&quot;K<sp/>2&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//set<sp/>sensor<sp/>to<sp/>polling<sp/>mode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>message<sp/>=<sp/>receiveMessage();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>sendMessage(</highlight><highlight class="stringliteral">&quot;A<sp/>32&quot;</highlight><highlight class="normal">);<sp/></highlight><highlight class="comment">//set<sp/>sensor<sp/>to<sp/>default<sp/>digital<sp/>filtering<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/>message<sp/>=<sp/>receiveMessage();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/>ss_-&gt;<ref refid="class_software_serial_1a9034270f7de617b3cc7d3f38f3a8e0df" kindref="member">end</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">String<sp/><ref refid="class_sensor_gc0011_1a2920401f54e121bba1398d52e9b2c90a" kindref="member">SensorGc0011::get</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Sensor<sp/>Data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/>getSensorData();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/>String<sp/>message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>CO2<sp/>Data<sp/>to<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>co2_instruction_code_;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>co2_instruction_id_;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" kindref="member">co2</ref>,0);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Temperature<sp/>Data<sp/>to<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>temperature_instruction_code_;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>temperature_instruction_id_;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_gc0011_1a6da77eb384ff77e28c2fa092a03a4cbb" kindref="member">temperature</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Append<sp/>Humidity<sp/>Data<sp/>to<sp/>Message</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>humidity_instruction_code_;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>humidity_instruction_id_;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/>String(<ref refid="class_sensor_gc0011_1af5964ea62f030dd4ea2f219224afa4e6" kindref="member">humidity</ref>,<sp/>1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>message;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">String<sp/><ref refid="class_sensor_gc0011_1a658b7856221577342b54e4dc7fe06d2a" kindref="member">SensorGc0011::set</ref>(String<sp/>instruction_code,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>instruction_id,<sp/>String<sp/>instruction_parameter)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>String<sp/>return_message<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>Instruction<sp/>Code<sp/>and<sp/>ID<sp/>Match</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((instruction_code<sp/>==<sp/>co2_instruction_code_)<sp/>&amp;&amp;<sp/>(instruction_id<sp/>==<sp/>co2_instruction_id_))<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>Calibration<sp/>Command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>len<sp/>=<sp/>instruction_parameter.length();</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(len<sp/>&gt;=<sp/>3)<sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(instruction_parameter[0]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>Calibration<sp/>Command</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss_-&gt;<ref refid="class_software_serial_1af1b194359d70894b3a2f38236a68480e" kindref="member">begin</ref>(9600);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sendMessage(instruction_parameter.substring(2,<sp/>len));</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>delay(20);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>response<sp/>=<sp/>receiveMessage();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(response<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_message<sp/>+=<sp/>co2_instruction_code_;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_message<sp/>+=<sp/>co2_instruction_id_;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;:\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_message<sp/>+=<sp/>response.substring(0,response.length()-2);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;,&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss_-&gt;<ref refid="class_software_serial_1a9034270f7de617b3cc7d3f38f3a8e0df" kindref="member">end</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>return_message;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//------------------------------------------------PRIVATE--------------------------------------------------//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorGc0011::getSensorData(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Reset<sp/>Values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" kindref="member">co2</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_gc0011_1a6da77eb384ff77e28c2fa092a03a4cbb" kindref="member">temperature</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><ref refid="class_sensor_gc0011_1af5964ea62f030dd4ea2f219224afa4e6" kindref="member">humidity</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Open<sp/>Connection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/>ss_-&gt;<ref refid="class_software_serial_1af1b194359d70894b3a2f38236a68480e" kindref="member">begin</ref>(9600);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>CO2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/>String<sp/>message;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/>sendMessage(</highlight><highlight class="stringliteral">&quot;Z&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/>message<sp/>=<sp/>receiveMessage();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(message[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;Z&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" kindref="member">co2</ref><sp/>=<sp/>(float)(message.substring(3,8).toInt());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" kindref="member">co2</ref><sp/>=<sp/>round(<ref refid="class_sensor_gc0011_1acd7c57373be1c5fb21c8da8c25861138" kindref="member">co2</ref>/10)*10;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Temperature</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/>sendMessage(</highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/>message<sp/>=<sp/>receiveMessage();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(message[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;T&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_gc0011_1a6da77eb384ff77e28c2fa092a03a4cbb" kindref="member">temperature</ref><sp/>=<sp/>0.1*(float)(message.substring(3,8).toInt()-1000);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>Humidity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>sendMessage(</highlight><highlight class="stringliteral">&quot;H&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>message<sp/>=<sp/>receiveMessage();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(message[1]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;H&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_sensor_gc0011_1af5964ea62f030dd4ea2f219224afa4e6" kindref="member">humidity</ref><sp/>=<sp/>0.1*(float)(message.substring(3,8).toInt());</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Close<sp/>Connection</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/>ss_-&gt;<ref refid="class_software_serial_1a9034270f7de617b3cc7d3f38f3a8e0df" kindref="member">end</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>SensorGc0011::sendMessage(String<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/>message<sp/>+=<sp/></highlight><highlight class="stringliteral">&quot;\r\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>ss_-&gt;print(message);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">String<sp/>SensorGc0011::receiveMessage(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/>String<sp/>message=</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>incoming_char;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>uint32_t<sp/>start_time<sp/>=<sp/>millis();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(millis()<sp/>-<sp/>start_time<sp/>&lt;<sp/>timeout_){</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ss_-&gt;<ref refid="class_software_serial_1a4cbf77a4e90e15ca576972d7952659c5" kindref="member">available</ref>())<sp/>{</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>incoming_char<sp/>=<sp/>ss_-&gt;<ref refid="class_software_serial_1a2d0b2f2868d519c716114777f482705b" kindref="member">read</ref>();</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>message<sp/>+=<sp/>incoming_char;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(incoming_char<sp/>==<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>message;</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_gc0011.cpp"/>
+  </compounddef>
+</doxygen>

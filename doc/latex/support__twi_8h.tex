@@ -1,0 +1,158 @@
+\hypertarget{support__twi_8h}{}\section{src/support\+\_\+twi.h File Reference}
+\label{support__twi_8h}\index{src/support\+\_\+twi.\+h@{src/support\+\_\+twi.\+h}}
+
+
+Support module for the two wire interface module.  
+
+
+{\ttfamily \#include $<$inttypes.\+h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{support__twi_8h_a3e79c6425e8cc6a0ce853eb49a45e5b9}{T\+W\+I\+\_\+\+F\+R\+E\+Q}~100000\+L
+\item 
+\#define \hyperlink{support__twi_8h_a18f2336f01cb5b7f479e65ee78020c76}{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}~32
+\item 
+\#define \hyperlink{support__twi_8h_a78f8e40420d26b512b064b1902f5d559}{T\+W\+I\+\_\+\+R\+E\+A\+D\+Y}~0
+\item 
+\#define \hyperlink{support__twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}{T\+W\+I\+\_\+\+M\+R\+X}~1
+\item 
+\#define \hyperlink{support__twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}{T\+W\+I\+\_\+\+M\+T\+X}~2
+\item 
+\#define \hyperlink{support__twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}{T\+W\+I\+\_\+\+S\+R\+X}~3
+\item 
+\#define \hyperlink{support__twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}{T\+W\+I\+\_\+\+S\+T\+X}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{support__twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}{twi\+\_\+init} (void)
+\item 
+void \hyperlink{support__twi_8h_a77c13a875e935f91b58c3b8596aae88d}{twi\+\_\+set\+Address} (uint8\+\_\+t)
+\item 
+uint8\+\_\+t \hyperlink{support__twi_8h_a8f8b3d441d9dd1bd867b83729211b183}{twi\+\_\+read\+From} (uint8\+\_\+t, uint8\+\_\+t $\ast$, uint8\+\_\+t, uint8\+\_\+t)
+\item 
+uint8\+\_\+t \hyperlink{support__twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}{twi\+\_\+write\+To} (uint8\+\_\+t, uint8\+\_\+t $\ast$, uint8\+\_\+t, uint8\+\_\+t, uint8\+\_\+t)
+\item 
+uint8\+\_\+t \hyperlink{support__twi_8h_a4fbb74866c71979506ac52d758cfdeac}{twi\+\_\+transmit} (const uint8\+\_\+t $\ast$, uint8\+\_\+t)
+\item 
+void \hyperlink{support__twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}{twi\+\_\+attach\+Slave\+Rx\+Event} (void($\ast$)(uint8\+\_\+t $\ast$, int))
+\item 
+void \hyperlink{support__twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}{twi\+\_\+attach\+Slave\+Tx\+Event} (void($\ast$)(void))
+\item 
+void \hyperlink{support__twi_8h_a54e17133aa927c4c76725f1f55e37531}{twi\+\_\+reply} (uint8\+\_\+t)
+\item 
+void \hyperlink{support__twi_8h_acf52d6c93df110dee6d402b389e5042e}{twi\+\_\+stop} (void)
+\item 
+void \hyperlink{support__twi_8h_a7f830793058786f5597ddd1d80b885ae}{twi\+\_\+release\+Bus} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Support module for the two wire interface module. 
+
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{support__twi_8h_a18f2336f01cb5b7f479e65ee78020c76}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H@{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H@{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+I\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+L\+E\+N\+G\+T\+H~32}\label{support__twi_8h_a18f2336f01cb5b7f479e65ee78020c76}
+\hypertarget{support__twi_8h_a3e79c6425e8cc6a0ce853eb49a45e5b9}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!T\+W\+I\+\_\+\+F\+R\+E\+Q@{T\+W\+I\+\_\+\+F\+R\+E\+Q}}
+\index{T\+W\+I\+\_\+\+F\+R\+E\+Q@{T\+W\+I\+\_\+\+F\+R\+E\+Q}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{T\+W\+I\+\_\+\+F\+R\+E\+Q}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+I\+\_\+\+F\+R\+E\+Q~100000\+L}\label{support__twi_8h_a3e79c6425e8cc6a0ce853eb49a45e5b9}
+\hypertarget{support__twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!T\+W\+I\+\_\+\+M\+R\+X@{T\+W\+I\+\_\+\+M\+R\+X}}
+\index{T\+W\+I\+\_\+\+M\+R\+X@{T\+W\+I\+\_\+\+M\+R\+X}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{T\+W\+I\+\_\+\+M\+R\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+I\+\_\+\+M\+R\+X~1}\label{support__twi_8h_a4e51cef0c946abc25dca6e7edaa1653b}
+\hypertarget{support__twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!T\+W\+I\+\_\+\+M\+T\+X@{T\+W\+I\+\_\+\+M\+T\+X}}
+\index{T\+W\+I\+\_\+\+M\+T\+X@{T\+W\+I\+\_\+\+M\+T\+X}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{T\+W\+I\+\_\+\+M\+T\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+I\+\_\+\+M\+T\+X~2}\label{support__twi_8h_a18bbad08828cae8d1e9fd9b8105e3ebc}
+\hypertarget{support__twi_8h_a78f8e40420d26b512b064b1902f5d559}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!T\+W\+I\+\_\+\+R\+E\+A\+D\+Y@{T\+W\+I\+\_\+\+R\+E\+A\+D\+Y}}
+\index{T\+W\+I\+\_\+\+R\+E\+A\+D\+Y@{T\+W\+I\+\_\+\+R\+E\+A\+D\+Y}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{T\+W\+I\+\_\+\+R\+E\+A\+D\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+I\+\_\+\+R\+E\+A\+D\+Y~0}\label{support__twi_8h_a78f8e40420d26b512b064b1902f5d559}
+\hypertarget{support__twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!T\+W\+I\+\_\+\+S\+R\+X@{T\+W\+I\+\_\+\+S\+R\+X}}
+\index{T\+W\+I\+\_\+\+S\+R\+X@{T\+W\+I\+\_\+\+S\+R\+X}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{T\+W\+I\+\_\+\+S\+R\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+I\+\_\+\+S\+R\+X~3}\label{support__twi_8h_a0c36c496c84490bf65979fcc79e5e1b4}
+\hypertarget{support__twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!T\+W\+I\+\_\+\+S\+T\+X@{T\+W\+I\+\_\+\+S\+T\+X}}
+\index{T\+W\+I\+\_\+\+S\+T\+X@{T\+W\+I\+\_\+\+S\+T\+X}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{T\+W\+I\+\_\+\+S\+T\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define T\+W\+I\+\_\+\+S\+T\+X~4}\label{support__twi_8h_afa37d05db1b20f3567371ef9e7bbbc48}
+
+
+\subsection{Function Documentation}
+\hypertarget{support__twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+attach\+Slave\+Rx\+Event@{twi\+\_\+attach\+Slave\+Rx\+Event}}
+\index{twi\+\_\+attach\+Slave\+Rx\+Event@{twi\+\_\+attach\+Slave\+Rx\+Event}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+attach\+Slave\+Rx\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void twi\+\_\+attach\+Slave\+Rx\+Event (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(uint8\+\_\+t $\ast$, int)}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_ac8e9aa6430dccea8d986ca33f76fe487}
+\hypertarget{support__twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+attach\+Slave\+Tx\+Event@{twi\+\_\+attach\+Slave\+Tx\+Event}}
+\index{twi\+\_\+attach\+Slave\+Tx\+Event@{twi\+\_\+attach\+Slave\+Tx\+Event}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+attach\+Slave\+Tx\+Event}]{\setlength{\rightskip}{0pt plus 5cm}void twi\+\_\+attach\+Slave\+Tx\+Event (
+\begin{DoxyParamCaption}
+\item[{void($\ast$)(void)}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a73cd75244e3fa0d7e288adb7bc7430e8}
+\hypertarget{support__twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+init@{twi\+\_\+init}}
+\index{twi\+\_\+init@{twi\+\_\+init}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+init}]{\setlength{\rightskip}{0pt plus 5cm}void twi\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a16f0e6b2fa5a26eadbf4086ab6d54467}
+\hypertarget{support__twi_8h_a8f8b3d441d9dd1bd867b83729211b183}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+read\+From@{twi\+\_\+read\+From}}
+\index{twi\+\_\+read\+From@{twi\+\_\+read\+From}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+read\+From}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t twi\+\_\+read\+From (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{, }
+\item[{uint8\+\_\+t $\ast$}]{, }
+\item[{uint8\+\_\+t}]{, }
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a8f8b3d441d9dd1bd867b83729211b183}
+\hypertarget{support__twi_8h_a7f830793058786f5597ddd1d80b885ae}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+release\+Bus@{twi\+\_\+release\+Bus}}
+\index{twi\+\_\+release\+Bus@{twi\+\_\+release\+Bus}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+release\+Bus}]{\setlength{\rightskip}{0pt plus 5cm}void twi\+\_\+release\+Bus (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a7f830793058786f5597ddd1d80b885ae}
+\hypertarget{support__twi_8h_a54e17133aa927c4c76725f1f55e37531}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+reply@{twi\+\_\+reply}}
+\index{twi\+\_\+reply@{twi\+\_\+reply}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+reply}]{\setlength{\rightskip}{0pt plus 5cm}void twi\+\_\+reply (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a54e17133aa927c4c76725f1f55e37531}
+\hypertarget{support__twi_8h_a77c13a875e935f91b58c3b8596aae88d}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+set\+Address@{twi\+\_\+set\+Address}}
+\index{twi\+\_\+set\+Address@{twi\+\_\+set\+Address}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+set\+Address}]{\setlength{\rightskip}{0pt plus 5cm}void twi\+\_\+set\+Address (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a77c13a875e935f91b58c3b8596aae88d}
+\hypertarget{support__twi_8h_acf52d6c93df110dee6d402b389e5042e}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+stop@{twi\+\_\+stop}}
+\index{twi\+\_\+stop@{twi\+\_\+stop}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+stop}]{\setlength{\rightskip}{0pt plus 5cm}void twi\+\_\+stop (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_acf52d6c93df110dee6d402b389e5042e}
+\hypertarget{support__twi_8h_a4fbb74866c71979506ac52d758cfdeac}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+transmit@{twi\+\_\+transmit}}
+\index{twi\+\_\+transmit@{twi\+\_\+transmit}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+transmit}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t twi\+\_\+transmit (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{, }
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a4fbb74866c71979506ac52d758cfdeac}
+\hypertarget{support__twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}{}\index{support\+\_\+twi.\+h@{support\+\_\+twi.\+h}!twi\+\_\+write\+To@{twi\+\_\+write\+To}}
+\index{twi\+\_\+write\+To@{twi\+\_\+write\+To}!support\+\_\+twi.\+h@{support\+\_\+twi.\+h}}
+\subsubsection[{twi\+\_\+write\+To}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t twi\+\_\+write\+To (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{, }
+\item[{uint8\+\_\+t $\ast$}]{, }
+\item[{uint8\+\_\+t}]{, }
+\item[{uint8\+\_\+t}]{, }
+\item[{uint8\+\_\+t}]{}
+\end{DoxyParamCaption}
+)}\label{support__twi_8h_a090e0c5c98f5f7255d43a349c4bb1b72}

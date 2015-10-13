@@ -1,0 +1,116 @@
+\hypertarget{class_sensor_tsl2561}{}\section{Sensor\+Tsl2561 Class Reference}
+\label{class_sensor_tsl2561}\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+
+
+Sensor module for light intensity and par.  
+
+
+
+
+{\ttfamily \#include $<$sensor\+\_\+tsl2561.\+h$>$}
+
+Inheritance diagram for Sensor\+Tsl2561\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sensor_tsl2561}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sensor_tsl2561_acb66b0b6127d1d889ff31085dbb9d8c2}{Sensor\+Tsl2561} (String lux\+\_\+instruction\+\_\+code, int lux\+\_\+instruction\+\_\+id, String par\+\_\+instruction\+\_\+code, int par\+\_\+instruction\+\_\+id)
+\item 
+void \hyperlink{class_sensor_tsl2561_ace17c892222366185df021bda708cc10}{begin} (void)
+\begin{DoxyCompactList}\small\item\em Called once at beginning of program to initialize modules. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_tsl2561_a1d9dff52af755218abca50f9025f0f5c}{get} (void)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update and report module data to controller. \end{DoxyCompactList}\item 
+String \hyperlink{class_sensor_tsl2561_ab4eb3d8197c96867f43857876df46b33}{set} (String instruction\+\_\+code, int instruction\+\_\+id, String instruction\+\_\+parameter)
+\begin{DoxyCompactList}\small\item\em Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_sensor_tsl2561_ae12c0a6210834b63eb786e81043c38c4}{lux\+\_\+}
+\item 
+float \hyperlink{class_sensor_tsl2561_a1159f0229bf7cfc07da35366f81661f7}{par\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Sensor module for light intensity and par. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sensor_tsl2561_acb66b0b6127d1d889ff31085dbb9d8c2}{}\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}!Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}!Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+\subsubsection[{Sensor\+Tsl2561}]{\setlength{\rightskip}{0pt plus 5cm}Sensor\+Tsl2561\+::\+Sensor\+Tsl2561 (
+\begin{DoxyParamCaption}
+\item[{String}]{lux\+\_\+instruction\+\_\+code, }
+\item[{int}]{lux\+\_\+instruction\+\_\+id, }
+\item[{String}]{par\+\_\+instruction\+\_\+code, }
+\item[{int}]{par\+\_\+instruction\+\_\+id}
+\end{DoxyParamCaption}
+)}\label{class_sensor_tsl2561_acb66b0b6127d1d889ff31085dbb9d8c2}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sensor_tsl2561_ace17c892222366185df021bda708cc10}{}\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}!begin@{begin}}
+\index{begin@{begin}!Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}void Sensor\+Tsl2561\+::begin (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_tsl2561_ace17c892222366185df021bda708cc10}
+
+
+Called once at beginning of program to initialize modules. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a453094bcf7c7a2fdb2a14f65bf18bff9}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_tsl2561_a1d9dff52af755218abca50f9025f0f5c}{}\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}!get@{get}}
+\index{get@{get}!Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+\subsubsection[{get}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Tsl2561\+::get (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_tsl2561_a1d9dff52af755218abca50f9025f0f5c}
+
+
+Called once per loop iteration to update and report module data to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_a55ce31fe50fc64f90602f3f70c5dc1af}{Sensor\+Actuator\+Module}.
+
+\hypertarget{class_sensor_tsl2561_ab4eb3d8197c96867f43857876df46b33}{}\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}!set@{set}}
+\index{set@{set}!Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+\subsubsection[{set}]{\setlength{\rightskip}{0pt plus 5cm}String Sensor\+Tsl2561\+::set (
+\begin{DoxyParamCaption}
+\item[{String}]{instruction\+\_\+code, }
+\item[{int}]{instruction\+\_\+id, }
+\item[{String}]{instruction\+\_\+parameter}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_sensor_tsl2561_ab4eb3d8197c96867f43857876df46b33}
+
+
+Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. 
+
+
+
+Implements \hyperlink{class_sensor_actuator_module_adf93ff40fbdfeecbb8711ea0626fe6fc}{Sensor\+Actuator\+Module}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_sensor_tsl2561_ae12c0a6210834b63eb786e81043c38c4}{}\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}!lux\+\_\+@{lux\+\_\+}}
+\index{lux\+\_\+@{lux\+\_\+}!Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+\subsubsection[{lux\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}int Sensor\+Tsl2561\+::lux\+\_\+}\label{class_sensor_tsl2561_ae12c0a6210834b63eb786e81043c38c4}
+\hypertarget{class_sensor_tsl2561_a1159f0229bf7cfc07da35366f81661f7}{}\index{Sensor\+Tsl2561@{Sensor\+Tsl2561}!par\+\_\+@{par\+\_\+}}
+\index{par\+\_\+@{par\+\_\+}!Sensor\+Tsl2561@{Sensor\+Tsl2561}}
+\subsubsection[{par\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}float Sensor\+Tsl2561\+::par\+\_\+}\label{class_sensor_tsl2561_a1159f0229bf7cfc07da35366f81661f7}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{sensor__tsl2561_8h}{sensor\+\_\+tsl2561.\+h}\item 
+src/\hyperlink{sensor__tsl2561_8cpp}{sensor\+\_\+tsl2561.\+cpp}\end{DoxyCompactItemize}

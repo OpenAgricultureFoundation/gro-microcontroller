@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_sensor_actuator_module" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>SensorActuatorModule</compoundname>
+    <derivedcompoundref refid="class_actuator_relay" prot="private" virt="non-virtual">ActuatorRelay</derivedcompoundref>
+    <derivedcompoundref refid="class_sensor_contact_switch" prot="private" virt="non-virtual">SensorContactSwitch</derivedcompoundref>
+    <derivedcompoundref refid="class_sensor_dfr01610300" prot="private" virt="non-virtual">SensorDfr01610300</derivedcompoundref>
+    <derivedcompoundref refid="class_sensor_dht22" prot="private" virt="non-virtual">SensorDht22</derivedcompoundref>
+    <derivedcompoundref refid="class_sensor_gc0011" prot="private" virt="non-virtual">SensorGc0011</derivedcompoundref>
+    <derivedcompoundref refid="class_sensor_tsl2561" prot="private" virt="non-virtual">SensorTsl2561</derivedcompoundref>
+    <includes refid="module__handler_8h" local="no">module_handler.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void SensorActuatorModule::begin</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>begin</name>
+        <reimplementedby refid="class_sensor_contact_switch_1a037d866b1e40776cc6fa00a46169b150">begin</reimplementedby>
+        <reimplementedby refid="class_sensor_gc0011_1a661743d47448c6b9c965fd8e1f123fbc">begin</reimplementedby>
+        <reimplementedby refid="class_sensor_dht22_1ae4de2976d82d060c9dc12bf84195a347">begin</reimplementedby>
+        <reimplementedby refid="class_actuator_relay_1abd921e88bb8fcecfbd5e1213e1faad56">begin</reimplementedby>
+        <reimplementedby refid="class_sensor_dfr01610300_1a456221ff4728d8985c8e980d4f22b692">begin</reimplementedby>
+        <reimplementedby refid="class_sensor_tsl2561_1ace17c892222366185df021bda708cc10">begin</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once at beginning of program to initialize modules. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>String</type>
+        <definition>virtual String SensorActuatorModule::get</definition>
+        <argsstring>(void)=0</argsstring>
+        <name>get</name>
+        <reimplementedby refid="class_sensor_contact_switch_1a99a5906b45ed441eea56fb2960d35191">get</reimplementedby>
+        <reimplementedby refid="class_sensor_gc0011_1a2920401f54e121bba1398d52e9b2c90a">get</reimplementedby>
+        <reimplementedby refid="class_sensor_dht22_1ad939eefeb967eea7029d9505cc6aad6f">get</reimplementedby>
+        <reimplementedby refid="class_actuator_relay_1affbcfa491c42a0aae3d69450cf7295b1">get</reimplementedby>
+        <reimplementedby refid="class_sensor_dfr01610300_1a21bbd0f8ee7e6576eabd9acf0e1e4d89">get</reimplementedby>
+        <reimplementedby refid="class_sensor_tsl2561_1a1d9dff52af755218abca50f9025f0f5c">get</reimplementedby>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update and report module data to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>String</type>
+        <definition>virtual String SensorActuatorModule::set</definition>
+        <argsstring>(String instruction_code, int instruction_id, String instruction_parameter)=0</argsstring>
+        <name>set</name>
+        <reimplementedby refid="class_sensor_contact_switch_1ab49acd5d6132eed50d7342717649abc2">set</reimplementedby>
+        <reimplementedby refid="class_sensor_gc0011_1a658b7856221577342b54e4dc7fe06d2a">set</reimplementedby>
+        <reimplementedby refid="class_sensor_dht22_1a177a42edbc33d5cf4fa0c4c38dc0047c">set</reimplementedby>
+        <reimplementedby refid="class_actuator_relay_1a29995263e5a05a3fdff0761cb4730306">set</reimplementedby>
+        <reimplementedby refid="class_sensor_dfr01610300_1ab675c2708ff9d5d0d9bbe10bab3d97e8">set</reimplementedby>
+        <reimplementedby refid="class_sensor_tsl2561_1ab4eb3d8197c96867f43857876df46b33">set</reimplementedby>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="51" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class used as the interface for all Sensor Actuator Modules. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>ActuatorRelay</label>
+        <link refid="class_actuator_relay"/>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>SensorTsl2561</label>
+        <link refid="class_sensor_tsl2561"/>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="14">
+        <label>SensorContactSwitch</label>
+        <link refid="class_sensor_contact_switch"/>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>SensorGc0011</label>
+        <link refid="class_sensor_gc0011"/>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>SensorDfr01610300</label>
+        <link refid="class_sensor_dfr01610300"/>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>SensorDht22</label>
+        <link refid="class_sensor_dht22"/>
+        <childnode refid="12" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" line="35" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/module_handler.h" bodystart="35" bodyend="52"/>
+    <listofallmembers>
+      <member refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9" prot="public" virt="pure-virtual"><scope>SensorActuatorModule</scope><name>begin</name></member>
+      <member refid="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af" prot="public" virt="pure-virtual"><scope>SensorActuatorModule</scope><name>get</name></member>
+      <member refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc" prot="public" virt="pure-virtual"><scope>SensorActuatorModule</scope><name>set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,187 @@
+\hypertarget{class_one_wire}{}\section{One\+Wire Class Reference}
+\label{class_one_wire}\index{One\+Wire@{One\+Wire}}
+
+
+{\ttfamily \#include $<$support\+\_\+one\+\_\+wire.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_one_wire_aa3f23dc51d861a8d257648c507b14e8d}{One\+Wire} (uint8\+\_\+t pin)
+\item 
+uint8\+\_\+t \hyperlink{class_one_wire_a6a742a9112392567eae3d06dde067c07}{reset} (void)
+\item 
+void \hyperlink{class_one_wire_accf808390abd63d3c7bce35677784384}{select} (const uint8\+\_\+t rom\mbox{[}8\mbox{]})
+\item 
+void \hyperlink{class_one_wire_ae3780e2b0ea2ebf6be88298412ac7798}{skip} (void)
+\item 
+void \hyperlink{class_one_wire_a843e9e7e57ed615b4880be0b76b40b7d}{write} (uint8\+\_\+t v, uint8\+\_\+t power=0)
+\item 
+void \hyperlink{class_one_wire_a0fc1e0bdc2ab1f062c98567fa60a69ae}{write\+\_\+bytes} (const uint8\+\_\+t $\ast$buf, uint16\+\_\+t count, bool power=0)
+\item 
+uint8\+\_\+t \hyperlink{class_one_wire_afd9bdb8b5a5b69b394dfc76352e00e21}{read} (void)
+\item 
+void \hyperlink{class_one_wire_a2407440e8e25b624617593f8ad6447d4}{read\+\_\+bytes} (uint8\+\_\+t $\ast$buf, uint16\+\_\+t count)
+\item 
+void \hyperlink{class_one_wire_a6bbc58276d1cb08653dab3ea35378f94}{write\+\_\+bit} (uint8\+\_\+t v)
+\item 
+uint8\+\_\+t \hyperlink{class_one_wire_aeae4c2798b70d9d0ba3091c03ee2d056}{read\+\_\+bit} (void)
+\item 
+void \hyperlink{class_one_wire_aa8e0f62e830ad05d8035e55c7a309256}{depower} (void)
+\item 
+void \hyperlink{class_one_wire_aae5efdf67928b5ee312ab7d7906416fa}{reset\+\_\+search} ()
+\item 
+void \hyperlink{class_one_wire_a0a1b8457adb609a693b865dd474e5116}{target\+\_\+search} (uint8\+\_\+t family\+\_\+code)
+\item 
+uint8\+\_\+t \hyperlink{class_one_wire_a383dc74fc9f8a27b76366a2859c3820a}{search} (uint8\+\_\+t $\ast$new\+Addr)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static uint8\+\_\+t \hyperlink{class_one_wire_ae3486a669581b750e4fdf3f3a12b05f1}{crc8} (const uint8\+\_\+t $\ast$addr, uint8\+\_\+t len)
+\item 
+static bool \hyperlink{class_one_wire_a089c502d26caca5214264261db82d011}{check\+\_\+crc16} (const uint8\+\_\+t $\ast$input, uint16\+\_\+t len, const uint8\+\_\+t $\ast$inverted\+\_\+crc, uint16\+\_\+t crc=0)
+\item 
+static uint16\+\_\+t \hyperlink{class_one_wire_a685131803ff9bd250926de68fb477998}{crc16} (const uint8\+\_\+t $\ast$input, uint16\+\_\+t len, uint16\+\_\+t crc=0)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_one_wire_aa3f23dc51d861a8d257648c507b14e8d}{}\index{One\+Wire@{One\+Wire}!One\+Wire@{One\+Wire}}
+\index{One\+Wire@{One\+Wire}!One\+Wire@{One\+Wire}}
+\subsubsection[{One\+Wire}]{\setlength{\rightskip}{0pt plus 5cm}One\+Wire\+::\+One\+Wire (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{pin}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_aa3f23dc51d861a8d257648c507b14e8d}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_one_wire_a089c502d26caca5214264261db82d011}{}\index{One\+Wire@{One\+Wire}!check\+\_\+crc16@{check\+\_\+crc16}}
+\index{check\+\_\+crc16@{check\+\_\+crc16}!One\+Wire@{One\+Wire}}
+\subsubsection[{check\+\_\+crc16}]{\setlength{\rightskip}{0pt plus 5cm}bool One\+Wire\+::check\+\_\+crc16 (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{input, }
+\item[{uint16\+\_\+t}]{len, }
+\item[{const uint8\+\_\+t $\ast$}]{inverted\+\_\+crc, }
+\item[{uint16\+\_\+t}]{crc = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_one_wire_a089c502d26caca5214264261db82d011}
+\hypertarget{class_one_wire_a685131803ff9bd250926de68fb477998}{}\index{One\+Wire@{One\+Wire}!crc16@{crc16}}
+\index{crc16@{crc16}!One\+Wire@{One\+Wire}}
+\subsubsection[{crc16}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t One\+Wire\+::crc16 (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{input, }
+\item[{uint16\+\_\+t}]{len, }
+\item[{uint16\+\_\+t}]{crc = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_one_wire_a685131803ff9bd250926de68fb477998}
+\hypertarget{class_one_wire_ae3486a669581b750e4fdf3f3a12b05f1}{}\index{One\+Wire@{One\+Wire}!crc8@{crc8}}
+\index{crc8@{crc8}!One\+Wire@{One\+Wire}}
+\subsubsection[{crc8}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t One\+Wire\+::crc8 (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{addr, }
+\item[{uint8\+\_\+t}]{len}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\label{class_one_wire_ae3486a669581b750e4fdf3f3a12b05f1}
+\hypertarget{class_one_wire_aa8e0f62e830ad05d8035e55c7a309256}{}\index{One\+Wire@{One\+Wire}!depower@{depower}}
+\index{depower@{depower}!One\+Wire@{One\+Wire}}
+\subsubsection[{depower}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::depower (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_aa8e0f62e830ad05d8035e55c7a309256}
+\hypertarget{class_one_wire_afd9bdb8b5a5b69b394dfc76352e00e21}{}\index{One\+Wire@{One\+Wire}!read@{read}}
+\index{read@{read}!One\+Wire@{One\+Wire}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t One\+Wire\+::read (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_afd9bdb8b5a5b69b394dfc76352e00e21}
+\hypertarget{class_one_wire_aeae4c2798b70d9d0ba3091c03ee2d056}{}\index{One\+Wire@{One\+Wire}!read\+\_\+bit@{read\+\_\+bit}}
+\index{read\+\_\+bit@{read\+\_\+bit}!One\+Wire@{One\+Wire}}
+\subsubsection[{read\+\_\+bit}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t One\+Wire\+::read\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_aeae4c2798b70d9d0ba3091c03ee2d056}
+\hypertarget{class_one_wire_a2407440e8e25b624617593f8ad6447d4}{}\index{One\+Wire@{One\+Wire}!read\+\_\+bytes@{read\+\_\+bytes}}
+\index{read\+\_\+bytes@{read\+\_\+bytes}!One\+Wire@{One\+Wire}}
+\subsubsection[{read\+\_\+bytes}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::read\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{buf, }
+\item[{uint16\+\_\+t}]{count}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_a2407440e8e25b624617593f8ad6447d4}
+\hypertarget{class_one_wire_a6a742a9112392567eae3d06dde067c07}{}\index{One\+Wire@{One\+Wire}!reset@{reset}}
+\index{reset@{reset}!One\+Wire@{One\+Wire}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t One\+Wire\+::reset (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_a6a742a9112392567eae3d06dde067c07}
+\hypertarget{class_one_wire_aae5efdf67928b5ee312ab7d7906416fa}{}\index{One\+Wire@{One\+Wire}!reset\+\_\+search@{reset\+\_\+search}}
+\index{reset\+\_\+search@{reset\+\_\+search}!One\+Wire@{One\+Wire}}
+\subsubsection[{reset\+\_\+search}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::reset\+\_\+search (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_aae5efdf67928b5ee312ab7d7906416fa}
+\hypertarget{class_one_wire_a383dc74fc9f8a27b76366a2859c3820a}{}\index{One\+Wire@{One\+Wire}!search@{search}}
+\index{search@{search}!One\+Wire@{One\+Wire}}
+\subsubsection[{search}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t One\+Wire\+::search (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{new\+Addr}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_a383dc74fc9f8a27b76366a2859c3820a}
+\hypertarget{class_one_wire_accf808390abd63d3c7bce35677784384}{}\index{One\+Wire@{One\+Wire}!select@{select}}
+\index{select@{select}!One\+Wire@{One\+Wire}}
+\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::select (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t}]{rom\mbox{[}8\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_accf808390abd63d3c7bce35677784384}
+\hypertarget{class_one_wire_ae3780e2b0ea2ebf6be88298412ac7798}{}\index{One\+Wire@{One\+Wire}!skip@{skip}}
+\index{skip@{skip}!One\+Wire@{One\+Wire}}
+\subsubsection[{skip}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::skip (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_ae3780e2b0ea2ebf6be88298412ac7798}
+\hypertarget{class_one_wire_a0a1b8457adb609a693b865dd474e5116}{}\index{One\+Wire@{One\+Wire}!target\+\_\+search@{target\+\_\+search}}
+\index{target\+\_\+search@{target\+\_\+search}!One\+Wire@{One\+Wire}}
+\subsubsection[{target\+\_\+search}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::target\+\_\+search (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{family\+\_\+code}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_a0a1b8457adb609a693b865dd474e5116}
+\hypertarget{class_one_wire_a843e9e7e57ed615b4880be0b76b40b7d}{}\index{One\+Wire@{One\+Wire}!write@{write}}
+\index{write@{write}!One\+Wire@{One\+Wire}}
+\subsubsection[{write}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::write (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{v, }
+\item[{uint8\+\_\+t}]{power = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_a843e9e7e57ed615b4880be0b76b40b7d}
+\hypertarget{class_one_wire_a6bbc58276d1cb08653dab3ea35378f94}{}\index{One\+Wire@{One\+Wire}!write\+\_\+bit@{write\+\_\+bit}}
+\index{write\+\_\+bit@{write\+\_\+bit}!One\+Wire@{One\+Wire}}
+\subsubsection[{write\+\_\+bit}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::write\+\_\+bit (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{v}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_a6bbc58276d1cb08653dab3ea35378f94}
+\hypertarget{class_one_wire_a0fc1e0bdc2ab1f062c98567fa60a69ae}{}\index{One\+Wire@{One\+Wire}!write\+\_\+bytes@{write\+\_\+bytes}}
+\index{write\+\_\+bytes@{write\+\_\+bytes}!One\+Wire@{One\+Wire}}
+\subsubsection[{write\+\_\+bytes}]{\setlength{\rightskip}{0pt plus 5cm}void One\+Wire\+::write\+\_\+bytes (
+\begin{DoxyParamCaption}
+\item[{const uint8\+\_\+t $\ast$}]{buf, }
+\item[{uint16\+\_\+t}]{count, }
+\item[{bool}]{power = {\ttfamily 0}}
+\end{DoxyParamCaption}
+)}\label{class_one_wire_a0fc1e0bdc2ab1f062c98567fa60a69ae}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{support__one__wire_8h}{support\+\_\+one\+\_\+wire.\+h}\item 
+src/\hyperlink{support__one__wire_8cpp}{support\+\_\+one\+\_\+wire.\+cpp}\end{DoxyCompactItemize}

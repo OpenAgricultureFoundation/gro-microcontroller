@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.9.1">
+  <compounddef id="class_sensor_dht22" kind="class" language="C++" prot="public">
+    <compoundname>SensorDht22</compoundname>
+    <basecompoundref refid="class_sensor_actuator_module" prot="private" virt="non-virtual">SensorActuatorModule</basecompoundref>
+    <includes refid="sensor__dht22_8h" local="no">sensor_dht22.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="class_sensor_dht22_1a93f9363f3086e00f440fc89a7f1f8a1b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDht22::humidity</definition>
+        <argsstring></argsstring>
+        <name>humidity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="46" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1af35665067c66e887afa5fef5611fb48a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDht22::temperature</definition>
+        <argsstring></argsstring>
+        <name>temperature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="47" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_sensor_dht22_1aa9fa11a68fd7c0d563e38085124a2aa9" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDht22::pin_</definition>
+        <argsstring></argsstring>
+        <name>pin_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="58" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1a6cb769718cbf71e1ecb39c08a43b8ce6" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorDht22::humidity_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>humidity_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="59" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1a8e028fff08314f01f0d43d014ef04fb8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDht22::humidity_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>humidity_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="60" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1addb35c91fdffc3b065b358a915eb9576" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String SensorDht22::temperature_instruction_code_</definition>
+        <argsstring></argsstring>
+        <name>temperature_instruction_code_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="61" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1a4101ef29258cebfcfbf768d4169f2b5d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int SensorDht22::temperature_instruction_id_</definition>
+        <argsstring></argsstring>
+        <name>temperature_instruction_id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="62" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1a44ddd791413c905a027d0379ebdfcd8f" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorDht22::data[6]</definition>
+        <argsstring>[6]</argsstring>
+        <name>data</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="64" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1ad7fee2ceb99d35d8fb1f647a7a0127f9" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t SensorDht22::count_</definition>
+        <argsstring></argsstring>
+        <name>count_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="65" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1a8c8fcf31da57adf3d41fc259c8a4c004" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t SensorDht22::last_read_time_</definition>
+        <argsstring></argsstring>
+        <name>last_read_time_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="66" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1a830cee9518cc5002cbb1146e0861c071" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean SensorDht22::first_reading_</definition>
+        <argsstring></argsstring>
+        <name>first_reading_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="67" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1ab4bdcc60b0e704b6a6144dc0f8d197d0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDht22::humidity_raw_</definition>
+        <argsstring></argsstring>
+        <name>humidity_raw_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="68" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_sensor_dht22_1ae23b4cdd930d4bffb437c5ef4274dc02" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SensorDht22::temperature_raw_</definition>
+        <argsstring></argsstring>
+        <name>temperature_raw_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="69" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_sensor_dht22_1a417840f2a31737059e6b0885d89de32f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SensorDht22::SensorDht22</definition>
+        <argsstring>(int pin, String temperature_instruction_code, int temperature_instruction_id, String humidity_instruction_code, int humidity_instruction_id)</argsstring>
+        <name>SensorDht22</name>
+        <param>
+          <type>int</type>
+          <declname>pin</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>temperature_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>temperature_instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>humidity_instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>humidity_instruction_id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="40" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="8" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dht22_1ae4de2976d82d060c9dc12bf84195a347" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SensorDht22::begin</definition>
+        <argsstring>(void)</argsstring>
+        <name>begin</name>
+        <reimplements refid="class_sensor_actuator_module_1a453094bcf7c7a2fdb2a14f65bf18bff9">begin</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once at beginning of program to initialize modules. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="41" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="19" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dht22_1ad939eefeb967eea7029d9505cc6aad6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorDht22::get</definition>
+        <argsstring>(void)</argsstring>
+        <name>get</name>
+        <reimplements refid="class_sensor_actuator_module_1a55ce31fe50fc64f90602f3f70c5dc1af">get</reimplements>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update and report module data to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="42" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="25" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dht22_1a177a42edbc33d5cf4fa0c4c38dc0047c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>String</type>
+        <definition>String SensorDht22::set</definition>
+        <argsstring>(String instruction_code, int instruction_id, String parameter)</argsstring>
+        <name>set</name>
+        <reimplements refid="class_sensor_actuator_module_1adf93ff40fbdfeecbb8711ea0626fe6fc">set</reimplements>
+        <param>
+          <type>String</type>
+          <declname>instruction_code</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>instruction_id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>instruction_parameter</declname>
+        </param>
+        <briefdescription>
+<para>Called once per loop iteration to update module state. If response is generated from updating, reports response to controller. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="43" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="54" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_sensor_dht22_1a118956037b427c86d1adb6726c222213" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorDht22::getSensorData</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSensorData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="51" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dht22_1a4c22e2a909e7bb2784840d2623899fa3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean SensorDht22::read</definition>
+        <argsstring>(void)</argsstring>
+        <name>read</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="52" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="87" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dht22_1a5722da8033ded0136ad32709097b362e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorDht22::getRawSensorData</definition>
+        <argsstring>(void)</argsstring>
+        <name>getRawSensorData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="53" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="58" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dht22_1a682c23f61b2c425eb1a2260768befc37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SensorDht22::filterSensorData</definition>
+        <argsstring>(void)</argsstring>
+        <name>filterSensorData</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="54" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="82" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_sensor_dht22_1ac35c9e53d83a03086064031f92d18258" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>String</type>
+        <definition>String SensorDht22::floatToString</definition>
+        <argsstring>(double val, unsigned int precision)</argsstring>
+        <name>floatToString</name>
+        <param>
+          <type>double</type>
+          <declname>val</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>precision</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="55" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.cpp" bodystart="152" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Sensor module for air temperature and humidity. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="29">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="28">
+        <label>SensorDht22</label>
+        <link refid="class_sensor_dht22"/>
+        <childnode refid="29" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="31">
+        <label>SensorActuatorModule</label>
+        <link refid="class_sensor_actuator_module"/>
+      </node>
+      <node id="30">
+        <label>SensorDht22</label>
+        <link refid="class_sensor_dht22"/>
+        <childnode refid="31" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" line="37" column="1" bodyfile="/Users/jakerye/projects/gro-microcontroller/src/sensor_dht22.h" bodystart="37" bodyend="70"/>
+    <listofallmembers>
+      <member refid="class_sensor_dht22_1ae4de2976d82d060c9dc12bf84195a347" prot="public" virt="virtual"><scope>SensorDht22</scope><name>begin</name></member>
+      <member refid="class_sensor_dht22_1ad7fee2ceb99d35d8fb1f647a7a0127f9" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>count_</name></member>
+      <member refid="class_sensor_dht22_1a44ddd791413c905a027d0379ebdfcd8f" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>data</name></member>
+      <member refid="class_sensor_dht22_1a682c23f61b2c425eb1a2260768befc37" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>filterSensorData</name></member>
+      <member refid="class_sensor_dht22_1a830cee9518cc5002cbb1146e0861c071" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>first_reading_</name></member>
+      <member refid="class_sensor_dht22_1ac35c9e53d83a03086064031f92d18258" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>floatToString</name></member>
+      <member refid="class_sensor_dht22_1ad939eefeb967eea7029d9505cc6aad6f" prot="public" virt="virtual"><scope>SensorDht22</scope><name>get</name></member>
+      <member refid="class_sensor_dht22_1a5722da8033ded0136ad32709097b362e" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>getRawSensorData</name></member>
+      <member refid="class_sensor_dht22_1a118956037b427c86d1adb6726c222213" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>getSensorData</name></member>
+      <member refid="class_sensor_dht22_1a93f9363f3086e00f440fc89a7f1f8a1b" prot="public" virt="non-virtual"><scope>SensorDht22</scope><name>humidity</name></member>
+      <member refid="class_sensor_dht22_1a6cb769718cbf71e1ecb39c08a43b8ce6" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>humidity_instruction_code_</name></member>
+      <member refid="class_sensor_dht22_1a8e028fff08314f01f0d43d014ef04fb8" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>humidity_instruction_id_</name></member>
+      <member refid="class_sensor_dht22_1ab4bdcc60b0e704b6a6144dc0f8d197d0" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>humidity_raw_</name></member>
+      <member refid="class_sensor_dht22_1a8c8fcf31da57adf3d41fc259c8a4c004" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>last_read_time_</name></member>
+      <member refid="class_sensor_dht22_1aa9fa11a68fd7c0d563e38085124a2aa9" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>pin_</name></member>
+      <member refid="class_sensor_dht22_1a4c22e2a909e7bb2784840d2623899fa3" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>read</name></member>
+      <member refid="class_sensor_dht22_1a417840f2a31737059e6b0885d89de32f" prot="public" virt="non-virtual"><scope>SensorDht22</scope><name>SensorDht22</name></member>
+      <member refid="class_sensor_dht22_1a177a42edbc33d5cf4fa0c4c38dc0047c" prot="public" virt="virtual"><scope>SensorDht22</scope><name>set</name></member>
+      <member refid="class_sensor_dht22_1af35665067c66e887afa5fef5611fb48a" prot="public" virt="non-virtual"><scope>SensorDht22</scope><name>temperature</name></member>
+      <member refid="class_sensor_dht22_1addb35c91fdffc3b065b358a915eb9576" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>temperature_instruction_code_</name></member>
+      <member refid="class_sensor_dht22_1a4101ef29258cebfcfbf768d4169f2b5d" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>temperature_instruction_id_</name></member>
+      <member refid="class_sensor_dht22_1ae23b4cdd930d4bffb437c5ef4274dc02" prot="private" virt="non-virtual"><scope>SensorDht22</scope><name>temperature_raw_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
