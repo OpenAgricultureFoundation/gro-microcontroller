@@ -44,7 +44,8 @@ class SensorDfr01610300 : SensorActuatorModule {
     /*
      * \brief Class constructor.
      */
-    SensorDfr01610300(int ph_pin, String ph_instruction_code, int ph_instruction_id, int temperature_pin, String temperature_instruction_code, int temperature_id, int ec_pin, String ec_instruction_code, int ec_id, int ec_enable_pin);
+    SensorDfr01610300(int ph_pin, String ph_instruction_code, int ph_instruction_id, int temperature_pin, String temperature_instruction_code, 
+                      int temperature_id, int ec_pin, String ec_instruction_code, int ec_id, int ec_enable_pin, int ec_power_pin);
 
     /**
      * \brief Called once to setup module.
@@ -95,6 +96,7 @@ class SensorDfr01610300 : SensorActuatorModule {
     String ec_instruction_code_;
     int ec_id_;
     int ec_enable_pin_;
+    int ec_power_pin_;
     float ph_calibration_coefficient_;
     float ph_calibration_offset_;
     float ec_calibration_coefficient_;

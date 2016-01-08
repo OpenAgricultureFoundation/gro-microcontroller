@@ -7,7 +7,8 @@
 #include "sensor_dfr0161_0300.h"
 
 //------------------------------------------PUBLIC FUNCTIONS----------------------------------------//
-SensorDfr01610300::SensorDfr01610300(int ph_pin, String ph_instruction_code, int ph_instruction_id, int temperature_pin, String temperature_instruction_code, int temperature_id, int ec_pin, String ec_instruction_code, int ec_id, int ec_enable_pin) {
+SensorDfr01610300::SensorDfr01610300(int ph_pin, String ph_instruction_code, int ph_instruction_id, int temperature_pin, String temperature_instruction_code, 
+                                     int temperature_id, int ec_pin, String ec_instruction_code, int ec_id, int ec_enable_pin, int ec_power_pin) {
   ph_pin_ = ph_pin;
   ph_instruction_code_ = ph_instruction_code;
   ph_instruction_id_ = ph_instruction_id;
@@ -18,6 +19,7 @@ SensorDfr01610300::SensorDfr01610300(int ph_pin, String ph_instruction_code, int
   ec_instruction_code_ = ec_instruction_code;
   ec_id_ = ec_id;
   ec_enable_pin_ = ec_enable_pin;
+  ec_power_pin_ = ec_power_pin;
 }
 
 void SensorDfr01610300::begin(void) {
@@ -30,12 +32,14 @@ void SensorDfr01610300::begin(void) {
   // Configure Initial State
   pinMode(ec_enable_pin_, OUTPUT);
   digitalWrite(ec_enable_pin_, LOW);
+  pinMode(ec_power_pin_,OUTPUT);
+  digitalWrite(ec_power_pin_,LOW);
   last_update_was_ec_ = true;
   prev_update_time_ = millis();
 
   // Set Configuration Parameters
-  ec_on_delay_ = 400; // milliseconds
-  ec_off_delay_ = 400; // milliseconds
+  ec_on_delay_ = 800; // milliseconds
+  ec_off_delay_ = 800; // milliseconds
   
   // Set Calibration Parameters
   ph_calibration_coefficient_ = 3.5;
@@ -100,6 +104,7 @@ void SensorDfr01610300::getSensorData(void) {
     ph_raw = getPh();
     ph_filtered = (float)round(ph_filter_->process(ph_raw)*10)/10; // set accuracy to +-0.05
     digitalWrite(ec_enable_pin_, HIGH);
+    digitalWrite(ec_power_pin_,HIGH); 
     prev_update_time_ = millis();
     last_update_was_ec_ = false;
   }
@@ -108,6 +113,7 @@ void SensorDfr01610300::getSensorData(void) {
     ec_raw = getEc(temperature_filtered);
     ec_filtered = (float)round(ec_filter_->process(ec_raw)*10)/10; // set accuracy to +-0.05
     digitalWrite(ec_enable_pin_, LOW);
+    digitalWrite(ec_power_pin_, LOW);
     prev_update_time_ = millis();
     last_update_was_ec_ = true;
   }

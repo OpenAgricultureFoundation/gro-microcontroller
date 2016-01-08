@@ -13,5 +13,5 @@ void setup() { // runs once
 void loop() { // runs FOREVER!
   updateIncomingMessage();
   updateStreamMessage();
-  //delay(3000); 
+  delay(2000);
 }
